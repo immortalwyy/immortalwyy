@@ -1,0 +1,33 @@
+
+state={
+	id=593
+	name="STATE_593"
+	resources={
+		tungsten=15.000
+		steel=15.000
+		chromium=3.000
+	}
+
+	history={
+		owner = GXC
+		add_core_of = CHI
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			
+
+		}
+		victory_points = {
+			12014 3
+		}
+
+	}
+
+	provinces={
+		1120 9970 9997 10080 12014 
+	}
+	manpower=5700000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

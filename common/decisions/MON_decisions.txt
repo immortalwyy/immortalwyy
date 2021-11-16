@@ -1,0 +1,672 @@
+上帝之鞭 = {
+
+	可汗的神圣命令 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 15
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_timed_idea = {
+				idea = MON_huishi
+				days = 365
+			}
+		}
+	}
+	
+	草原人民的支持 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 8000
+			    producer = MON
+			}
+		}
+	}
+	
+	招募可汗的勇士们 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 75
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			division_template = {
+				name = "上帝之鞭"
+				priority = 1
+				is_locked = yes
+				division_names_group = MON_CAV_01
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 0 y = 3 }
+
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 1 y = 2 }
+					cavalry = { x = 1 y = 3 }
+			
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+					cavalry = { x = 2 y = 2 }
+					cavalry = { x = 2 y = 3 }
+
+					cavalry = { x = 3 y = 0 }
+					cavalry = { x = 3 y = 1 }
+					cavalry = { x = 3 y = 2 }
+					cavalry = { x = 3 y = 3 }
+				}			
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"可汗的圣光\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"上帝之鞭\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"草原第一卫队\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"草原第二卫队\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"上帝之怒\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"草原勇士卫队\" division_template = \"上帝之鞭\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"蒙古卫队\" division_template = \"上帝之鞭\" start_experience_factor = 0.8"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"曙光师\" division_template = \"上帝之鞭\" start_experience_factor = 0.2"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"西征第一骑兵师\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"西征第二骑兵师\" division_template = \"上帝之鞭\" start_experience_factor = 1"  
+					owner = ROOT
+				}
+			}
+		}
+	}
+}
+
+永不止步的铁蹄 = {
+
+	向苏联进军 = {
+
+		icon = generic_independence
+
+		available = {
+			SOV = {
+				exists = YES
+			}
+		}
+
+		cost = 35
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			every_state = {
+				limit = { is_core_of = SOV }
+				add_core_of = ROOT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+				expire = 0
+			}
+		}
+	}
+	
+	向波兰进军 = {
+
+		icon = generic_independence
+
+		available = {
+			POL = {
+				exists = YES
+			}
+		}
+
+		cost = 35
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			every_state = {
+				limit = { is_core_of = POL }
+				add_core_of = ROOT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+				expire = 0
+			}
+		}
+	}
+	
+	消灭一切可见之敌 = {
+
+		icon = generic_independence
+
+		available = {
+			
+		}
+
+		cost = 150
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						is_capital = yes
+						is_on_continent = europe
+					}
+					NOT = { is_in_faction_with = ROOT }
+				}
+				MAN = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+
+来自世界各国革命同志们的支持 = {
+
+	美国革命同志们赠送的枪炮 = {
+
+		icon = generic_civil_support
+
+		available = {
+			USA = {
+				exists = YES
+			}
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 2000
+			    producer = USA
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 50
+			    producer = USA
+			}
+		}
+	}
+	
+	法国革命同志们赠送的枪炮 = {
+
+		icon = generic_civil_support
+
+		available = {
+			FRA = {
+				exists = YES
+			}
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 2000
+			    producer = FRA
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 50
+			    producer = FRA
+			}
+		}
+	}
+	
+	
+	欢迎英国飞行员革命同志 = {
+
+		icon = generic_civil_support
+
+		available = {
+			ENG = {
+				exists = YES
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MON_65
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 25
+				producer = ENG
+			}
+			add_manpower = 25
+		}
+	}
+	
+	欢迎意大利飞行员同志 = {
+
+		icon = generic_civil_support
+
+		available = {
+			ITA = {
+				exists = YES
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MON_65
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 25
+				producer = ITA
+			}
+			add_manpower = 25
+		}
+	}
+	
+	接受来自德国的装甲兵同志 = {
+
+		icon = generic_tank
+
+		available = {
+			GER = {
+				exists = YES
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MON_65
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_armor
+			}
+			add_equipment_to_stockpile = {
+			    type = heavy_tank_equipment_1
+			    amount = 2
+			    producer = GER
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 38
+			    producer = GER
+			}
+			add_manpower = 40
+		}
+	}
+	
+	接受来自各国的退伍同志 = {
+
+		icon = generic_scorched_earth
+
+		available = {
+	
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_manpower = 500
+		}
+	}
+}
+
+
+
+购买外国飞机 = {
+
+	订购英国战斗机 = {
+
+		icon = generic_air
+
+		available = {
+			ENG = {
+				exists = YES
+			}
+			NOT = { has_war_with = ENG }
+		}
+
+		cost = 70
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment
+				amount = 120
+				producer = ENG
+			}
+		}
+	}
+
+	订购意大利战斗机 = {
+
+		icon = generic_air
+
+		available = {
+			ITA = {
+				exists = YES
+			}
+			NOT = { has_war_with = ITA }
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment
+				amount = 80
+				producer = ITA
+			}
+		}
+	}
+	
+	订购日本战斗机 = {
+
+		icon = generic_air
+
+		available = {
+			JAP = {
+				exists = YES
+			}
+			NOT = { has_war_with = JAP }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment
+				amount = 150
+				producer = JAP
+			}
+		}
+	}
+	
+	订购美国轰炸机 = {
+
+		icon = generic_air
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 80
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment
+				amount = 100
+				producer = USA
+			}
+		}
+	}
+	
+	订购德国轰炸机 = {
+
+		icon = generic_air
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 60
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment
+				amount = 80
+				producer = GER
+			}
+		}
+	}
+	
+	订购法国轰炸机 = {
+
+		icon = generic_air
+
+		available = {
+			FRA = {
+				exists = YES
+			}
+			NOT = { has_war_with = FRA }
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment
+				amount = 40
+				producer = FRA
+			}
+		}
+	}
+}

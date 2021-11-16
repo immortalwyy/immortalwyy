@@ -1,0 +1,30 @@
+
+state={
+	id=717
+	name="STATE_717"
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+		victory_points = {
+			3791 1 
+		}
+		victory_points = {
+			10503 1 
+		}
+
+	}
+
+	provinces={
+		783 810 1571 3791 3815 6811 7591 7670 9766 9928 10376 10463 10503 11893 11906 12355 12412 12482 
+	}
+	manpower=3324174
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

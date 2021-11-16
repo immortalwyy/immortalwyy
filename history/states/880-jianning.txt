@@ -1,0 +1,24 @@
+state={
+	id=880
+	name="STATE_880"
+	provinces={
+		1138 4070 4113 10012 10042 
+	}
+	history={
+		owner = ZHI
+		add_core_of = CHI
+		add_core_of = ZHI
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10042  3 
+		}
+		
+
+	}
+	manpower=3657600
+	buildings_max_level_factor=1.000
+	state_category=city
+}

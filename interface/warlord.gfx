@@ -1,0 +1,543 @@
+spriteTypes = {goal_generic_wheat
+
+	### 四川图标
+	spriteType = {
+		name = "GFX_goal_Jing_Yuexui"
+		texturefile = "gfx/interface/goals/Jing_Yuexui.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SCZ_logo"
+		texturefile = "gfx/interface/goals/chuan1.png"
+	}
+	spriteType = {
+		name = "GFX_goal_sichuan2"
+		texturefile = "gfx/interface/goals/sichuan2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_liuxiang"
+		texturefile = "gfx/interface/goals/liuxiang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_liubicheng"
+		texturefile = "gfx/interface/goals/liubicheng.png"
+	}
+	spriteType = {
+		name = "GFX_goal_xiongkewu"
+		texturefile = "gfx/interface/goals/xiongkewu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_yangsen"
+		texturefile = "gfx/interface/goals/yangsen.png"
+	}
+	spriteType = {
+		name = "GFX_goal_lizongren"
+		texturefile = "gfx/interface/goals/goal_lizongren.png"
+	}
+	
+	####
+	spriteType = {
+		name = "GFX_goal_CHI_chinese_sun"
+		texturefile = "gfx/interface/goals/goal_CHI_chinese_sun.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_kmt_china"
+		texturefile = "gfx/interface/goals/goal_CHI_kmt_china.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_peoples_army"
+		texturefile = "gfx/interface/goals/CHI_peoples_army.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_szc_lijiao"
+		texturefile = "gfx/interface/goals/goal_szc_lijiao.png"
+	}
+	spriteType = {
+		name = "GFX_goal_szc_rujiao"
+		texturefile = "gfx/interface/goals/goal_szc_rujiao.png"
+	}
+	spriteType = {
+		name = "GFX_goal_kmt01"
+		texturefile = "gfx/interface/goals/kmt01.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SZC_flag_2"
+		texturefile = "gfx/interface/goals/SZC_flag_2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_revive_china"
+		texturefile = "gfx/interface/goals/CHI_revive_china.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_continue_the_peoples_tutelage"
+		texturefile = "gfx/interface/goals/goal_CHI_continue_the_peoples_tutelage.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_scz_kmtleader"
+		texturefile = "gfx/interface/goals/scz_kmtleader.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_arrests"
+		texturefile = "gfx/interface/goals/goal_generic_arrests.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_king"
+		texturefile = "gfx/interface/goals/goal_ming_king.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_agriculture"
+		texturefile = "gfx/interface/goals/goal_generic_agriculture.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_chenduxiu"
+		texturefile = "gfx/interface/goals/chenduxiu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_PRC_focus_on_red_army"
+		texturefile = "gfx/interface/goals/goal_PRC_focus_on_red_army.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_Coffee_Plantations"
+		texturefile = "gfx/interface/goals/goal_generic_Coffee_Plantations.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_communist_pride"
+		texturefile = "gfx/interface/goals/goal_generic_communist_pride.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_armed_protest"
+		texturefile = "gfx/interface/goals/goal_generic_armed_protest.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_communist_army"
+		texturefile = "gfx/interface/goals/goal_generic_communist_army.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_defeat_the_warlords"
+		texturefile = "gfx/interface/goals/goal_CHI_defeat_the_warlords.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CHI_focus_on_external_threats"
+		texturefile = "gfx/interface/goals/goal_CHI_focus_on_external_threats.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_army_mobilization2"
+		texturefile = "gfx/interface/goals/goal_generic_army_mobilization2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_bachong_army"
+		texturefile = "gfx/interface/goals/bachong_army.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_war1"
+		texturefile = "gfx/interface/goals/war1.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_machine_gun"
+		texturefile = "gfx/interface/goals/goal_generic_machine_gun.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_mountain_warfare"
+		texturefile = "gfx/interface/goals/goal_generic_mountain_warfare.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_mechanized_offensive"
+		texturefile = "gfx/interface/goals/goal_generic_mechanized_offensive.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_Hanzhong_Militaryacademy"
+		texturefile = "gfx/interface/goals/Hanzhong_Militaryacademy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_light_industry"
+		texturefile = "gfx/interface/goals/goal_generic_light_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_commie_investments"
+		texturefile = "gfx/interface/goals/goal_generic_commie_investments.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_SZC_silk"
+		texturefile = "gfx/interface/goals/SZC_silk.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_SZC_dujiangyan_irrigation_system"
+		texturefile = "gfx/interface/goals/SZC_dujiangyan_irrigation_system.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_chongqing_arsenal"
+		texturefile = "gfx/interface/ideas/SZC/chongqing_arsenal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_chengdu_machine_bureau"
+		texturefile = "gfx/interface/ideas/SZC/chengdu_machine_bureau.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_chongqing_electric_steel_refinery"
+		texturefile = "gfx/interface/ideas/SZC/chongqing_electric_steel_refinery.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_shu_hua_industrial_company"
+		texturefile = "gfx/interface/ideas/SZC/shu_hua_industrial_company.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_hejiang_artillery_arsenal"
+		texturefile = "gfx/interface/ideas/SZC/hejiang_artillery_arsenal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_minsheng_shipping"
+		texturefile = "gfx/interface/ideas/SZC/minsheng_shipping.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_nanchuan_aircraft_manufacturing_plant"
+		texturefile = "gfx/interface/ideas/SZC/nanchuan_aircraft_manufacturing_plant.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_sichuan_silk"
+		texturefile = "gfx/interface/ideas/SZC/sichuan_silk.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_tianfu_mines"
+		texturefile = "gfx/interface/ideas/SZC/tianfu_mines.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_chongqing_tank_plant"
+		texturefile = "gfx/interface/ideas/SZC/chongqing_tank_plant.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SZC_opium_monopoly"
+		texturefile = "gfx/interface/ideas/SZC_opium_monopoly.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_clean_government"
+		texturefile = "gfx/interface/ideas/SZC/chuan1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rujia"
+		texturefile = "gfx/interface/ideas/SZC/chuan2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spirit_kmt"
+		texturefile = "gfx/interface/ideas/SZC/kmt.dds"
+	}
+	
+	###
+	spriteType = {
+		name = "GFX_goal_yun1"
+		texturefile = "gfx/interface/goals/yun1.png"
+	}
+	spriteType = {
+		name = "GFX_goal_liansheng"
+		texturefile = "gfx/interface/goals/liansheng.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_chuan"
+		texturefile = "gfx/interface/goals/Attack_chuan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_dian"
+		texturefile = "gfx/interface/goals/Attack_dian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_dongnan"
+		texturefile = "gfx/interface/goals/Attack_dongnan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_gan"
+		texturefile = "gfx/interface/goals/Attack_gan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_gui"
+		texturefile = "gfx/interface/goals/Attack_gui.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_jing"
+		texturefile = "gfx/interface/goals/Attack_jing.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_agriculture2"
+		texturefile = "gfx/interface/goals/goal_generic_agriculture2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_centralize_power"
+		texturefile = "gfx/interface/goals/goal_generic_centralize_power.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_democratic_army"
+		texturefile = "gfx/interface/goals/goal_generic_democratic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_workers_support"
+		texturefile = "gfx/interface/goals/goal_generic_workers_support.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_brm"
+		texturefile = "gfx/interface/goals/Attack_brm.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_vin"
+		texturefile = "gfx/interface/goals/Attack_vin.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_sia"
+		texturefile = "gfx/interface/goals/Attack_sia.png"
+	}
+	spriteType = {
+		name = "GFX_goal_dian"
+		texturefile = "gfx/interface/goals/dian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Unrest_Myanmar"
+		texturefile = "gfx/interface/goals/Unrest_Myanmar.png"
+	}
+	spriteType = {
+		name = "GFX_goal_yun3"
+		texturefile = "gfx/interface/goals/yun3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_yun4"
+		texturefile = "gfx/interface/goals/yun4.png"
+	}
+	spriteType = {
+		name = "GFX_goal_yun5"
+		texturefile = "gfx/interface/goals/yun5.png"
+	}
+	spriteType = {
+		name = "GFX_goal_china101"
+		texturefile = "gfx/interface/goals/china101.png"
+	}
+	spriteType = {
+		name = "GFX_goal_zhupeide"
+		texturefile = "gfx/interface/goals/zhupeide.png"
+	}
+	spriteType = {
+		name = "GFX_goal_zhaohengti"
+		texturefile = "gfx/interface/goals/zhaohengti.png"
+	}
+	spriteType = {
+		name = "GFX_goal_qingxijunguan"
+		texturefile = "gfx/interface/goals/qingxijunguan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_liansheng2"
+		texturefile = "gfx/interface/goals/liansheng2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_kmt_fight"
+		texturefile = "gfx/interface/goals/kmt_fight.png"
+	}
+	spriteType = {
+		name = "GFX_goal_dain_army"
+		texturefile = "gfx/interface/goals/dain_army.png"
+	}
+	spriteType = {
+		name = "GFX_goal_freedem"
+		texturefile = "gfx/interface/goals/freedem.png"
+	}
+	spriteType = {
+		name = "GFX_goal_liansheng3"
+		texturefile = "gfx/interface/goals/liansheng3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_longyunyuanshuai"
+		texturefile = "gfx/interface/goals/longyunyuanshuai.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air1"
+		texturefile = "gfx/interface/goals/air1.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air3"
+		texturefile = "gfx/interface/goals/air3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air4"
+		texturefile = "gfx/interface/goals/air4.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air5"
+		texturefile = "gfx/interface/goals/air5.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Aircraft Bomber3"
+		texturefile = "gfx/interface/goals/Aircraft Bomber3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air2"
+		texturefile = "gfx/interface/goals/air2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_air6"
+		texturefile = "gfx/interface/goals/air6.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Aircraft_Bomber"
+		texturefile = "gfx/interface/goals/Aircraft_Bomber.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_air_bomber_new"
+		texturefile = "gfx/interface/goals/generic_air_bomber_new.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_jet"
+		texturefile = "gfx/interface/goals/generic_jet.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_multiple_bombers"
+		texturefile = "gfx/interface/goals/goal_generic_multiple_bombers.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_zero_blue"
+		texturefile = "gfx/interface/goals/goal_generic_zero_blue.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_armored_car_offensive"
+		texturefile = "gfx/interface/goals/goal_generic_armored_car_offensive.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_automobile"
+		texturefile = "gfx/interface/goals/goal_generic_automobile.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_camelry"
+		texturefile = "gfx/interface/goals/goal_generic_camelry.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_mechanized_offensive"
+		texturefile = "gfx/interface/goals/goal_generic_mechanized_offensive.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_modernizing_the_cavalry"
+		texturefile = "gfx/interface/goals/goal_generic_modernizing_the_cavalry.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_modernizing_the_cavalry2"
+		texturefile = "gfx/interface/goals/goal_generic_modernizing_the_cavalry2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_army_tanks2"
+		texturefile = "gfx/interface/goals/generic_army_tanks2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_army_tanks3"
+		texturefile = "gfx/interface/goals/generic_army_tanks3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_heavy_armour_british"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_british.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_heavy_armour_canadian"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_canadian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_heavy_armour_german"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_german.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_heavy_armour_russian"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_russian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_mobile_artillery_light"
+		texturefile = "gfx/interface/goals/generic_mobile_artillery_light.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_mobile_artillery_medium"
+		texturefile = "gfx/interface/goals/generic_mobile_artillery_medium.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_license_tanks"
+		texturefile = "gfx/interface/goals/goal_generic_license_tanks.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_manufacturers_cooperation"
+		texturefile = "gfx/interface/goals/goal_generic_manufacturers_cooperation.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_tank_map"
+		texturefile = "gfx/interface/goals/goal_generic_tank_map.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_tank_offensive"
+		texturefile = "gfx/interface/goals/goal_generic_tank_offensivey.png"
+	}
+	spriteType = {
+		name = "GFX_goal_tank"
+		texturefile = "gfx/interface/goals/tank.png"
+	}
+	spriteType = {
+		name = "GFX_goal_caie"
+		texturefile = "gfx/interface/goals/caie.png"
+	}
+	spriteType = {
+		name = "GFX_goal_Attack_tib"
+		texturefile = "gfx/interface/goals/Attack_tib.png"
+	}
+	spriteType = {
+		name = "GFX_goal_zhangweihan"
+		texturefile = "gfx/interface/goals/zhangweihan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_long_jiguang"
+		texturefile = "gfx/interface/goals/long_jiguang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_luobinghui"
+		texturefile = "gfx/interface/goals/luobinghui.png"
+	}
+	spriteType = {
+		name = "GFX_goal_yangjie"
+		texturefile = "gfx/interface/goals/yangjie.png"
+	}
+	spriteType = {
+		name = "GFX_goal_jiangwutang"
+		texturefile = "gfx/interface/goals/jiangwutang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_zhaoningjun"
+		texturefile = "gfx/interface/goals/zhaoningjun.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_wheat"
+		texturefile = "gfx/interface/goals/goal_generic_wheat.png"
+	}
+	
+	##
+	spriteType = {
+		name = "GFX_goal_gxc1"
+		texturefile = "gfx/interface/goals/gxc1.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc2"
+		texturefile = "gfx/interface/goals/gxc2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc3"
+		texturefile = "gfx/interface/goals/gxc3.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc4"
+		texturefile = "gfx/interface/goals/gxc4.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc5"
+		texturefile = "gfx/interface/goals/gxc5.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc6"
+		texturefile = "gfx/interface/goals/gxc6.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc7"
+		texturefile = "gfx/interface/goals/gxc7.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc8"
+		texturefile = "gfx/interface/goals/gxc8.png"
+	}
+	spriteType = {
+		name = "GFX_goal_gxc9"
+		texturefile = "gfx/interface/goals/gxc9.png"
+	}
+	
+}

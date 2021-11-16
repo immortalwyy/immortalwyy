@@ -1,0 +1,8 @@
+spriteTypes = {	
+
+
+	spriteType = {
+		name = "GFX_CHI_damingdidang"
+		texturefile = "gfx/party/damindidang.dds"
+	}		
+}

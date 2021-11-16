@@ -1,0 +1,26 @@
+state={
+	id=957
+	name="STATE_957"
+	provinces={
+		1723 1853 4655 4856 10575 12612 
+	}
+	
+	history={
+		owner = MON
+		victory_points = {
+			4856 1 
+		}
+		victory_points = {
+			12612 3 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = MON
+
+	}
+	manpower=176500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

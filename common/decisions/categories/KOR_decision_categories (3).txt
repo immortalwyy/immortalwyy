@@ -1,0 +1,10 @@
+请求国际援助 = {
+	icon = army_reform
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		has_completed_focus = KOR_137
+	}
+}

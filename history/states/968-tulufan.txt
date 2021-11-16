@@ -1,0 +1,24 @@
+state={
+	id=968
+	name="STATE_968"
+	provinces={
+		7732 10614 12524 12656 
+	}
+	history={
+		owner = SIK
+		add_core_of = SIK
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+
+		}
+		victory_points = {
+			12656 1 
+		}
+
+	}
+	manpower=367400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

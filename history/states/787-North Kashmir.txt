@@ -1,0 +1,25 @@
+
+state={
+	id=787
+	name="STATE_787"
+
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = TIB
+		add_core_of = SIK
+
+	}
+
+	provinces={
+		2041 7273 8005 10821 12884 
+	}
+	manpower=1415800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

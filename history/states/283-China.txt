@@ -1,0 +1,33 @@
+
+state={
+	id=283
+	name="STATE_283"
+	resources={
+		tungsten=1.000
+	}
+
+	history={
+		owner = XBJ
+		add_core_of = CHI
+		add_core_of = XBJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			4313 1 
+		}
+		victory_points = {
+			7803 1 
+		}
+
+	}
+
+	provinces={
+		7803 6638 4313 12797 1630
+	}
+	manpower=905400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,5969 @@
+focus_tree = {
+	id = burma_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 12
+			tag = BRM
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+ 
+#	focus = {
+#		id = BRM_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	#独立之路
+	focus = {
+		id = BRM_01      
+		icon = GFX_focus_generic_support_the_left_right
+		x = 14
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+			hidden_effect = {
+				news_event = brm.duli
+				remove_ideas = BRM_cg001
+		}
+	}
+	}
+
+	#推翻皇帝的统治
+	focus = {
+		id = BRM_02      
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = -10
+		y = 1
+		prerequisite = { focus = BRM_01 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+		}
+
+	#解放人民
+	focus = {
+		id = BRM_03      
+		icon = GFX_focus_generic_soviet_politics
+		x = -18
+		y = 2
+		prerequisite = { focus = BRM_02 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas  = BRM_gongchanzhuyi
+		}
+		}
+
+	#彻底铲除保皇势力
+	focus = {
+		id = BRM_04      
+		icon = GFX_focus_generic_military_mission
+		x = -18
+		y = 3
+
+		prerequisite = { focus = BRM_03 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	#缅甸人民共和国
+	focus = {
+		id = BRM_05      
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -18
+		y = 4
+
+		prerequisite = { focus = BRM_04 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			army_experience = 50
+			set_cosmetic_tag = BRM_renmingongheguo
+		}
+	}
+
+	#革命浪潮
+	focus = {
+		id = BRM_06     
+		icon = GFX_goal_generic_soviet_construction
+		x = -28
+		y = 5
+
+		prerequisite = { focus = BRM_05 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}	
+		}
+
+		bypass = {
+			add_ideas = BRM_geminglangchao
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			army_experience = 50
+			add_ideas = BRM_geminglangchao
+	}
+}
+	#发展缅北群众
+	focus = {
+		id = BRM_07   
+		icon = GFX_goal_tripartite_pact
+		x = -28
+		y = 6
+
+		prerequisite = { focus = BRM_06 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_manpower = 50000
+		add_political_power = -50
+		}
+	}
+
+	#大基建
+	focus = {
+		id = BRM_08   
+		icon = GFX_goal_generic_air_doctrine
+		x = -28
+		y = 7
+
+		prerequisite = { focus = BRM_07 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_ideas = BRM_dajijian
+		}
+	}
+
+	#仰光银行
+	focus = {
+		id = BRM_09   
+		icon = GFX_goal_generic_air_doctrine
+		x = -26
+		y = 5
+
+		prerequisite = { focus = BRM_05 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			}
+		}
+
+	#币值革新
+	focus = {
+		id = BRM_10 
+		icon = GFX_goal_generic_military_sphere
+		x = -26
+		y = 6
+
+		prerequisite = { focus = BRM_09 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	#东南亚金融中心
+	focus = {
+		id = BRM_11
+		icon = GFX_goal_generic_production2
+		x = -26
+		y = 7
+
+		prerequisite = { focus = BRM_10 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_jinrongzhongxin
+		}
+	}
+
+	#缅甸工业革命
+	focus = {
+		id = BRM_12
+		icon = GFX_goal_generic_political_pressure
+		x = -24
+		y = 5
+
+		prerequisite = { focus = BRM_05 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+
+	#外国工业设备引进
+	focus = {
+		id = BRM_13
+		icon = GFX_goal_generic_construct_military
+		x = -24
+		y = 6
+		
+		prerequisite = { focus = BRM_12 }
+		relative_position_id = BRM_01
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 3 }
+		}
+		}
+
+    #钨工业建设
+	focus = {
+		id = BRM_14
+		icon = GFX_goal_generic_fortify_city
+		x = -24
+		y = 7
+		
+		prerequisite = { focus = BRM_13 }
+		relative_position_id = BRM_01
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+			640 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    #农业合作化
+	focus = {
+		id = BRM_15
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -22
+		y = 5
+		
+		prerequisite = { focus = BRM_05 }
+		relative_position_id = BRM_01
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_nongyehezuo
+			}
+		}
+
+    #缅甸梯田整合
+	focus = {
+		id = BRM_16
+		icon = GFX_goal_generic_fortify_city
+		x = -22
+		y = 6
+		
+		prerequisite = { focus = BRM_15 }
+		relative_position_id = BRM_01
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 50000
+			add_political_power = 50
+			}
+		}
+	
+    #缅甸玉出口
+	focus = {
+		id = BRM_17
+		icon = GFX_goal_generic_soviet_construction
+		x = -22
+		y = 7
+		
+		prerequisite = { focus = BRM_16 }
+		relative_position_id = BRM_01
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_yuchukou
+			}
+		}
+
+	#斯大林主义
+	focus = {
+		id = BRM_18     
+		icon = GFX_focus_fra_loyalty_stalin
+		x = -26
+		y = 8
+
+		mutually_exclusive = { focus = BRM_25 }
+		prerequisite = { focus = BRM_11 }
+		prerequisite = { focus = BRM_14 }
+		prerequisite = { focus = BRM_17 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_stability = 0.03
+		add_political_power = 50
+		}
+	}
+
+	#加入共产国际
+	focus = {
+		id = BRM_19     
+		icon =  GFX_focus_generic_socialist_science
+		x = -27
+		y = 9
+
+		prerequisite = { focus = BRM_18 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 70
+		}
+	}
+
+	#坚定跟随斯大林同志
+	focus = {
+		id = BRM_20     
+		icon = GFX_focus_generic_military_mission
+		x = -27
+		y = 10
+
+		prerequisite = { focus = BRM_19 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_stability = 0.03
+		add_manpower = 50000
+		add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+
+	#苏联援助
+	focus = {
+		id = BRM_21     
+		icon = GFX_goal_generic_army_tanks
+		x = -27
+		y = 11
+
+		prerequisite = { focus = BRM_20 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = BUL_darzhavna_samoletna_fabrika
+			    bonus = 1.0
+			    uses = 2
+				category = land_doctrine
+				category = air_doctrine
+				category = naval_doctrine
+			}
+			army_experience = 20
+			air_experience = 20
+			navy_experience = 20
+		}
+		}
+
+	#革命输出
+	focus = {
+		id = BRM_22     
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = -25
+		y = 9
+
+		prerequisite = { focus = BRM_18 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_gemingshuchu
+		}
+	}
+
+	#解放东南亚人民
+	focus = {
+		id = BRM_23     
+		icon = GFX_focus_ger_great_red_menace
+		x = -25
+		y = 10
+
+		prerequisite = { focus = BRM_22 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 670
+					add_state_core = 670
+					transfer_state = 671
+					add_state_core = 671
+					transfer_state = 741
+					add_state_core = 741
+					transfer_state = 286
+					add_state_core = 286
+		}
+	}
+
+	#革命之火熊熊燃烧
+	focus = {
+		id = BRM_24     
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = -25
+		y = 11
+
+		prerequisite = { focus = BRM_23 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 289
+					add_state_core = 289
+					transfer_state = 724
+					add_state_core = 724
+					transfer_state = 336
+					add_state_core = 336
+
+	}
+	}
+
+	#缅甸特色社会主义
+	focus = {
+		id = BRM_25     
+		icon = GFX_focus_BUL_balkan_federation_of_socialist_republics
+		x = -22
+		y = 8
+
+		prerequisite = { focus = BRM_11 }
+		prerequisite = { focus = BRM_14 }
+		prerequisite = { focus = BRM_17 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_teseshehuizhuyi
+		}
+	}
+
+	#南亚人民联盟
+	focus = {
+		id = BRM_26     
+		icon = GFX_goal_generic_major_alliance
+		x = -23
+		y = 9
+
+		prerequisite = { focus = BRM_25 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 289
+					add_state_core = 289
+					transfer_state = 724
+					add_state_core = 724
+					transfer_state = 336
+					add_state_core = 336
+	}
+	}
+
+	#统一的东南亚
+	focus = {
+		id = BRM_27     
+		icon = GFX_goal_generic_position_armies
+		x = -23
+		y = 10
+
+		prerequisite = { focus = BRM_26 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 670
+					add_state_core = 670
+					transfer_state = 671
+					add_state_core = 671
+					transfer_state = 741
+					add_state_core = 741
+					transfer_state = 286
+					add_state_core = 286
+	}
+	}
+
+	#解放中原大地
+	focus = {
+		id = BRM_28     
+		icon = GFX_goal_generic_position_armies
+		x = -21
+		y = 9
+
+		prerequisite = { focus = BRM_25 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+				expire = 0
+			}
+	}
+	}
+
+	#反抗斯大林的强权
+	focus = {
+		id = BRM_29     
+		icon = GFX_focus_ger_strike_at_the_source
+		x = -21
+		y = 10
+
+		prerequisite = { focus = BRM_28 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+add_war_support = 0.1
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = BUL_a_balkan_confederation
+					}
+				}
+				create_wargoal = {
+					type = topple_government
+					target = SOV
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SOV
+				}
+			}
+			add_timed_idea = {
+				idea = BUL_defying_moscow
+				days = 730
+			}
+			if = {
+				limit = {
+					SOV = { has_opinion_modifier = BUL_strengthened_relations_with_us }
+				}
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = BUL_strengthened_relations_with_us
+				}
+				SOV = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = BUL_strengthened_relations_with_us
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_non_aggression_pact_with = SOV
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+			if = {
+				limit = {
+					is_guaranteed_by = SOV
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = guarantee
+					active = no
+				}
+			}
+
+			add_ai_strategy = {
+				type = declare_war
+				id = SOV
+				value = 50
+			}		
+	}
+	}
+
+	#缅甸中央委员会
+	focus = {
+		id = BRM_30     
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -15
+		y = 5
+
+		prerequisite = { focus = BRM_05 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_zhongyangweiyuanhui
+	}
+	}
+
+	#国有化运动
+	focus = {
+		id = BRM_31     
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -16
+		y = 6
+
+		prerequisite = { focus = BRM_30 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			}
+	}
+
+	#全民大生产
+	focus = {
+		id = BRM_32  
+		icon = GFX_focus_spr_class_war
+		x = -16
+		y = 7
+
+		prerequisite = { focus = BRM_31 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_dashengchan
+		}
+	}
+
+	#扫盲运动
+	focus = {
+		id = BRM_33
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -17
+		y = 8
+
+		prerequisite = { focus = BRM_32 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_research_slot = 1
+			}
+		}
+
+	#普及义务教育
+	focus = {
+		id = BRM_34
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -17
+		y = 9
+
+		prerequisite = { focus = BRM_33 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_research_slot = 1
+			}
+		}
+
+	#安抚宗教组织
+	focus = {
+		id = BRM_35
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = -15
+		y = 8
+
+		prerequisite = { focus = BRM_32 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		remove_ideas = BRM_minzuzhengduan
+		}
+	}
+
+	#缅甸宗教局
+	focus = {
+		id = BRM_36
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = -15
+		y = 9
+
+		prerequisite = { focus = BRM_35 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_stability = 0.05
+			add_manpower = 80000
+			}
+		}
+
+	#缅甸总参谋部
+	focus = {
+		id = BRM_37
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -12
+		y = 5
+
+		prerequisite = { focus = BRM_30 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+		}
+	}
+
+	#反渗透部队
+	focus = {
+		id = BRM_38
+		icon = GFX_focus_prc_infiltration
+		x = -14
+		y = 6
+
+		prerequisite = { focus = BRM_37 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		remove_ideas = BRM_shentou
+		}
+	}
+
+	#阿育王之子
+	focus = {
+		id = BRM_39
+		icon = GFX_focus_spr_war_of_independence
+		x = -14
+		y = 7
+
+		prerequisite = { focus = BRM_38 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = BRM_ayuwangzi
+			}
+		}
+
+	#人民空军总署
+	focus = {
+		id = BRM_40  
+		icon = GFX_goal_generic_air_fighter
+		x = -11
+		y = 6
+
+		prerequisite = { focus = BRM_37 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+		}
+	}
+	}
+	}
+
+	#战斗机部队
+	focus = {
+		id = BRM_41  
+		icon = GFX_goal_generic_production2
+		x = -12
+		y = 7
+
+		prerequisite = { focus = BRM_40 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GRE_protecting_our_skies
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = GRE_protecting_our_skies
+				bonus = 1.5
+				uses = 1
+				category = battlefield_support_tree
+			}
+			add_tech_bonus = {
+				name = GRE_protecting_our_skies
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	#周边空域防卫
+	focus = {
+		id = BRM_42  
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = -12
+		y = 8
+
+		prerequisite = { focus = BRM_41 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+			640 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			640 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+		}
+	}
+}
+}
+
+	#轰炸机部队
+	focus = {
+		id = BRM_43  
+		icon = GFX_goal_generic_army_artillery
+		x = -10
+		y = 7
+
+		prerequisite = { focus = BRM_40 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BRM_43
+				bonus = 2.0
+				uses = 2
+				ahead_reduction = 2
+				category = light_fighter
+				category = tactical_bomber
+
+		}
+	}
+	}
+
+	#远程打击能力
+	focus = {
+		id = BRM_44  
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = -10
+		y = 8
+
+		prerequisite = { focus = BRM_43 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+            add_tech_bonus = {
+				name = BRM_44
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = BRM_44
+				bonus = 1.5
+				uses = 1
+				category = strategic_destruction_tree
+			}
+			add_tech_bonus = {
+				name = BRM_44
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#国家飞机工厂-海达巴
+	focus = {
+		id = BRM_45  
+		icon = GFX_focus_generic_socialist_science
+		x = -11
+		y = 9
+
+		prerequisite = { focus = BRM_44 }
+		prerequisite = { focus = BRM_42 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			640 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BRM_45
+			    bonus = 2.0
+			    uses = 1
+				category = cat_strategic_bomber
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = BRM_haidaba
+		}
+	}
+
+	#从无到有的海上力量
+	focus = {
+		id = BRM_46  
+		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+		x = -7
+		y = 6
+
+		prerequisite = { focus = BRM_37 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			640 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        navy_experience = 50
+		}
+	}
+
+	#印度洋基地
+	focus = {
+		id = BRM_47  
+		icon = GFX_focus_generic_coastal_fort
+		x = -8
+		y = 7
+
+		prerequisite = { focus = BRM_46 }
+		relative_position_id = BRM_01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_extra_state_shared_building_slots = 4
+			288 = {
+				add_building_construction = {
+					type = dockyard
+					level = 6
+					instant_build = yes
+		}
+	}
+	}
+}
+
+	#沿海防卫
+	focus = {
+		id = BRM_48  
+		icon = GFX_goal_generic_construct_military
+		x = -8
+		y = 8
+
+		prerequisite = { focus = BRM_47 }
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			288 = { is_controlled_by = BRM }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+             288 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 8
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+
+	#仰光造船厂
+	focus = {
+		id = BRM_49  
+		icon = GFX_goal_generic_consumer_goods
+		x = -6
+		y = 7
+
+		prerequisite = { focus = BRM_46 }
+
+		relative_position_id = BRM_01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 15
+			288 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 1333
+				}
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = BRM_yangguangchuanchang
+		}
+		}
+
+	#国家潜艇制造
+	focus = {
+		id = BRM_50  
+		icon = GFX_focus_generic_navy_battleship2
+		x = -6
+		y = 8
+
+		prerequisite = { focus = BRM_49 }
+
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+             add_tech_bonus = {
+				name = BUL_national_submarine_production
+			    bonus = 1.0
+			    uses = 2
+			    category = ss_tech
+			}
+		}
+	}
+
+	#印度洋
+	focus = {
+		id = BRM_51  
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -7
+		y = 9
+
+		prerequisite = { focus = BRM_48 }
+		prerequisite = { focus = BRM_50 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = BUL_modern_tactics
+			    bonus = 1.0
+			    uses = 2
+			    category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = BUL_modern_tactics
+			    bonus = 0.75
+			    uses = 1
+			    category = naval_air
+			}
+		}
+	}
+
+	#缅甸人民军
+	focus = {
+		id = BRM_52 
+		icon = GFX_focus_prc_proclaim_the_peoples_republic 
+		x = -3
+		y = 5
+
+		prerequisite = { focus = BRM_05 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 50
+		}
+	}
+
+	#邀请苏联顾问
+	focus = {
+		id = BRM_53 
+		icon = GFX_goal_support_communism
+		x = -4
+		y = 6
+
+		prerequisite = { focus = BRM_52 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_high_command
+			show_ideas_tooltip = ivan_konev
+			custom_effect_tooltip = available_high_command
+			show_ideas_tooltip = stepan_krasovsky
+			custom_effect_tooltip = available_army_chief
+			show_ideas_tooltip = vasily_blucher
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_nikolai_voznesensky
+			create_field_marshal = {
+				name = "Grigory Kulik"
+				picture = "Portrait_Soviet_Grigory_Kulik.dds"
+				traits = { old_guard career_officer politically_connected inflexible_strategist }
+				skill = 2	
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 4
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Issa Pliyev"
+				picture = "Portrait_Soviet_Issa_Pliyev.dds"
+				traits = { cavalry_officer }
+				skill = 3
+				attack_skill = 5
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Maksim Purkayev"
+				picture = "Portrait_Soviet_Maksim_Purkayev.dds"
+				traits = { career_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_navy_leader = {
+				name = "Sergey Gorshkov"
+				picture = "Portrait_Soviet_Sergey_Gorshkov.dds"
+				traits = { navy_career_officer bold }
+				skill = 3
+				attack_skill = 5
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 3
+			}
+		}
+	}
+
+	#苏式训练
+	focus = {
+		id = BRM_54 
+		icon = GFX_focus_generic_manpower
+		x = -4
+		y = 7
+
+		prerequisite = { focus = BRM_53 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BRM_sushixunlian
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 2000
+			    producer = SOV
+			}
+		}
+	}
+
+	#先进山地兵团
+	focus = {
+		id = BRM_55 
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -4
+		y = 8
+
+		prerequisite = { focus = BRM_54 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_shandibingtuan
+		}
+	}
+
+	#资源换军火
+	focus = {
+		id = BRM_56 
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 6
+
+		prerequisite = { focus = BRM_52 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				add_offsite_building = { type = industrial_complex level = 3 }
+			}
+			add_offsite_building = { type = arms_factory level = 5 }
+		}
+	}
+
+	#苏联的军事援助
+	focus = {
+		id = BRM_57 
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 7
+
+		prerequisite = { focus = BRM_56 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				add_political_power = 65
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 25000
+			    producer = SOV
+				}
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 2000
+				producer = SOV				
+		}
+	}
+    }
+	
+	#曼德勒军工厂
+	focus = {
+		id = BRM_58 
+		icon = GFX_goal_generic_production
+		x = -2
+		y = 8
+
+		prerequisite = { focus = BRM_57 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = BRM_mandele
+		}
+	}
+
+	#新式陆军
+	focus = {
+		id = BRM_59 
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = -3
+		y = 9
+
+		prerequisite = { focus = BRM_58 }
+		prerequisite = { focus = BRM_55 }
+
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.05
+			army_experience = 100
+		}
+	}
+
+	#现代化军队
+	focus = {
+		id = BRM_60 
+		icon = GFX_goal_ming_ribentank
+		x = -7
+		y = 11
+
+		prerequisite = { focus = BRM_45 }
+		prerequisite = { focus = BRM_51 }
+		prerequisite = { focus = BRM_59 }
+		
+		relative_position_id = BRM_01
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_xiandaijundui
+		}
+	}
+
+	#民主的政治
+	focus = {
+		id = BRM_61      
+		icon = GFX_goal_support_democracy
+		x = 8
+		y = 2
+		prerequisite = { focus = BRM_02 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        			add_political_power = 70
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BRM_democratic_guy
+		}
+		}
+
+	#人民议会
+	focus = {
+		id = BRM_62     
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 3
+		prerequisite = { focus = BRM_61 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.1
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+		}
+		}
+		}
+
+	#仰光协定
+	focus = {
+		id = BRM_63      
+		icon = GFX_focus_generic_befriend_greece
+		x = 7
+		y = 4
+		prerequisite = { focus = BRM_62 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				ENG = {
+					diplomatic_relation = {
+						country = ROOT
+						relation = non_aggression_pact
+						active = yes
+					}
+					add_opinion_modifier = { 
+						target = ROOT
+						modifier = BUL_strengthened_relations_with_us
+					}
+				}
+				add_opinion_modifier = { 
+					target = ENG
+					modifier = BUL_strengthened_relations_with_us
+				}
+
+				every_country = {
+					limit = {
+						BUL_country_can_influence_bulgaria = yes
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { is_in_faction_with = ENG }
+					}
+					add_opinion_modifier = { 
+						target = ROOT
+						modifier = BRM_approached_english
+					}
+				}
+					ENG = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 20
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 20
+			}
+			}
+
+	
+		}
+		
+
+	#工业化建设
+	focus = {
+		id = BRM_64      
+		icon = GFX_focus_generic_combined_arms
+		x = 5
+		y = 4
+		prerequisite = { focus = BRM_62 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 5 }
+		}
+		}
+
+	#接受西方资本家投资
+	focus = {
+		id = BRM_65      
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 6
+		y = 5
+		prerequisite = { focus = BRM_64 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_xifangtouzi
+		}
+		}
+
+	#机械化农业改革
+	focus = {
+		id = BRM_66      
+		icon = GFX_focus_generic_industry_1
+		x = 4
+		y = 5
+		prerequisite = { focus = BRM_64 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_jixiehua
+		}
+		}
+
+	#集约化农业
+	focus = {
+		id = BRM_67      
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 4
+		y = 6
+		prerequisite = { focus = BRM_66 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = BUL_land_reorganization_tt
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+		}
+
+	#建立立法选举
+	focus = {
+		id = BRM_68     
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 10
+		y = 3
+		prerequisite = { focus = BRM_61 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.1
+			
+			if = {
+				limit = {
+					NOT = { has_government = democratic }
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+			}
+
+		}
+		}
+
+	#接近西方国家
+	focus = {
+		id = BRM_69     
+		icon = GFX_focus_chi_british_cooperation
+		x = 10
+		y = 4
+		prerequisite = { focus = BRM_68 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_opinion_modifier = { 
+				target = ENG
+				modifier = BUL_strengthened_relations_with_us
+			}
+			ENG = {
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BUL_strengthened_relations_with_us
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = ITA
+						tag = SOV
+					}
+					NOT = { is_in_faction_with = ENG }
+				}
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BUL_approached_the_uk
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = BUL_british_influence_flag
+				}
+				modify_country_flag = { flag = BUL_british_influence_flag value = 1 }
+			}
+			else = {
+				set_country_flag = { flag = BUL_british_influence_flag value = 1 }
+			}
+
+			if = {
+				limit = {
+					has_completed_focus = BUL_attract_foreign_capitals
+				}
+				custom_effect_tooltip = BUL_approach_british_foreign_industry_tt
+			}
+			
+
+		}
+		}
+
+	#寻求军购
+	focus = {
+		id = BRM_70     
+		icon = GFX_focus_mex_privatisation
+		x = 11
+		y = 5
+		prerequisite = { focus = BRM_69 }
+		prerequisite = { focus = BRM_63 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = ENG }
+						has_war_with = ENG
+						ENG = { BUL_is_valid_subject = no }
+					}
+				}
+				hidden_effect = {
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_artillery }
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_military_vehicles }
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_aircraft }
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_infantry_equipment }
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_armor }
+					activate_targeted_decision = { target = ENG decision = BUL_purchase_ships }
+				}
+			}
+			else = {
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_artillery }
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_military_vehicles }
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_aircraft }
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_infantry_equipment }
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_armor }
+				activate_targeted_decision = { target = ENG decision = BUL_purchase_ships }
+			}
+
+			ENG = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 20
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 20
+			}
+		}
+		}
+
+	#英国工业设备
+	focus = {
+		id = BRM_71     
+		icon = GFX_goal_generic_army_motorized
+		x = 8
+		y = 5
+		prerequisite = { focus = BRM_69 }
+		prerequisite = { focus = BRM_63 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 4 }
+		}
+		}
+
+	#法国军事顾问
+	focus = {
+		id = BRM_72     
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 10
+		y = 6
+		prerequisite = { focus = BRM_70 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_faxie_jun_tt
+			hidden_effect = {
+				division_template = {
+					name = "法式山地旅"
+					division_names_group = CHI_MNT_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+		
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+		
+						mountaineers = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Le premier法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Deuxième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}	
+					create_unit = {
+						division = "name = \"Troisième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Quatrième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Cinquième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Fran?ais山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+		}
+
+	#法式陆军操演
+	focus = {
+		id = BRM_73     
+		icon = GFX_focus_fra_french_union
+		x = 10
+		y = 7
+		prerequisite = { focus = BRM_72 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_defense = 1
+		}
+		}
+		}
+
+	#美国的援助
+	focus = {
+		id = BRM_74     
+		icon = GFX_focus_rom_coup
+		x = 12
+		y = 6
+		prerequisite = { focus = BRM_70 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_construction_battalions
+				bonus = 2.0
+				uses = 2
+				category = engineers_tech
+		}
+		}
+		}
+
+	#钨工业开采
+	focus = {
+		id = BRM_75     
+		icon = GFX_goal_generic_construction2
+		x = 12
+		y = 7
+		prerequisite = { focus = BRM_74 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_resource = {
+				type = steel 
+				amount = 16
+				state = 288
+			}
+			add_resource = {
+				type = tungsten 
+				amount = 16
+				state = 288
+			}
+			add_resource = {
+				type = oil 
+				amount = 16
+				state = 288
+			}
+			add_resource = {
+				type = steel 
+				amount = 16
+				state = 288
+			}
+		}
+		}
+
+
+
+	#加入同盟国
+	focus = {
+		id = BRM_76     
+		icon = GFX_goal_generic_alliance
+		x = 7
+		y = 7
+		prerequisite = { focus = BRM_71 }
+		prerequisite = { focus = BRM_65 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 70
+			ENG = {
+				country_event = { id = generic.2 hours = 4 random_hours = 4 }
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_war = yes
+					}
+				}
+				add_war_support = 0.1
+			}
+
+			ENG = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 100
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 100
+			}
+		}
+		}
+
+	#为民主自由而战
+	focus = {
+		id = BRM_77     
+		icon =  GFX_focus_BUL_free_balkan_states
+		x = 6
+		y = 8
+		prerequisite = { focus = BRM_76 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 70
+			add_war_support = 0.05
+		}
+		}
+
+	#反抗独裁统治
+	focus = {
+		id = BRM_78     
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 6
+		y = 9
+		prerequisite = { focus = BRM_77 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = BUL_the_fight_against_tyranny
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_major = yes
+						has_government = fascism
+						capital_scope = { is_on_continent = asia }
+						NOT = { is_in_faction_with = ROOT }
+					}
+					ROOT = {
+						create_wargoal = {
+							type = topple_government
+							target = PREV
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = BUL_fight_tyranny_wargoals_tt
+			if = {
+				limit = {
+					any_country = {
+						is_major = yes
+						has_government = fascism
+						capital_scope = { is_on_continent = asia }
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				custom_effect_tooltip = BUL_fight_tyranny_wargoals_current_tt
+				every_country = {
+					limit = {
+						is_major = yes
+						has_government = fascism
+						capital_scope = { is_on_continent = asia }
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+
+			random_country = {
+				limit = {
+					is_major = yes
+					has_government = fascism
+					capital_scope = { is_on_continent = asia }
+					NOT = { is_in_faction_with = ROOT }
+					is_neighbor_of = ROOT
+				}
+				ROOT = {
+					add_ai_strategy = {
+						type = declare_war
+						id = PREV
+						value = 100
+					}
+				}
+			}
+		}
+		}
+
+	#东南亚的领土要求
+	focus = {
+		id = BRM_79     
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 8
+		y = 8
+		prerequisite = { focus = BRM_76 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 670
+					add_state_core = 670
+					transfer_state = 671
+					add_state_core = 671
+					transfer_state = 741
+					add_state_core = 741
+					transfer_state = 286
+					add_state_core = 286
+		}
+		}
+
+	#自由的东南亚
+	focus = {
+		id = BRM_80     
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = 8
+		y = 9
+		prerequisite = { focus = BRM_79 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 289
+					add_state_core = 289
+					transfer_state = 724
+					add_state_core = 724
+					transfer_state = 336
+					add_state_core = 336
+		}
+		}
+
+	#强化皇帝集权
+	focus = {
+		id = BRM_81      
+		icon = GFX_focus_generic_monarchy_1
+		x = 25
+		y = 1
+		prerequisite = { focus = BRM_01 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_political_power = 50
+			add_stability = -0.05
+		}
+		}
+
+	#成立右翼内阁
+	focus = {
+		id = BRM_82      
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 19
+		y = 2
+		prerequisite = { focus = BRM_81 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_political_power = 70
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BRM_fascist_guy
+		}
+		}
+
+	#工业化改革
+	focus = {
+		id = BRM_83     
+		icon = GFX_goal_generic_forceful_treaty
+		x = 17
+		y = 3
+		prerequisite = { focus = BRM_82 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 200
+		}
+		}
+
+	#缅甸公路建设
+	focus = {
+		id = BRM_84      
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 16
+		y = 4
+		prerequisite = { focus = BRM_83 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			640 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			809 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+		}
+
+	#四年工业计划
+	focus = {
+		id = BRM_85      
+		icon = GFX_goal_generic_position_armies
+		x = 16
+		y = 5
+		prerequisite = { focus = BRM_84 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_sinianjihua
+		}
+		}
+
+	#民用工厂建设
+	focus = {
+		id = BRM_86      
+		icon = GFX_goal_generic_construct_civilian
+		x = 14
+		y = 6
+		prerequisite = { focus = BRM_85 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+ 			add_offsite_building = { type = industrial_complex level = 4 }
+		}
+		}
+
+	#钨金开采
+	focus = {
+		id = BRM_87      
+		icon = GFX_goal_generic_construction
+		x = 14
+		y = 7
+		prerequisite = { focus = BRM_86 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+				type = steel 
+				amount = 8
+				state = 288
+			}
+			add_resource = {
+				type = steel 
+				amount = 4
+				state = 288
+			}
+			add_resource = {
+				type = steel 
+				amount = 6
+				state = 640
+		}
+		}
+		}
+
+	#扩大缅甸采矿业
+	focus = {
+		id = BRM_88      
+		icon = GFX_goal_generic_construction2
+		x = 14
+		y = 8
+		prerequisite = { focus = BRM_87 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MAN_519
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+		}
+		}
+        }
+		
+	#德意志设备进口
+	focus = {
+		id = BRM_89      
+		icon = GFX_goal_generic_consumer_goods
+		x = 16
+		y = 6
+		prerequisite = { focus = BRM_85 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+		}
+
+	#克虏伯缅甸分厂
+	focus = {
+		id = BRM_90      
+		icon = GFX_goal_generic_production2
+		x = 16
+		y = 7
+		prerequisite = { focus = BRM_89 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = BRM_fenchang
+		}
+		}
+
+	#德缅联合工业
+	focus = {
+		id = BRM_91      
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 16
+		y = 8
+		prerequisite = { focus = BRM_90 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+		}
+		}
+		}
+		}
+
+	#仰光大学
+	focus = {
+		id = BRM_92      
+		icon = GFX_focus_research2
+		x = 18
+		y = 6
+		prerequisite = { focus = BRM_85 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		}
+
+	#德国考察团
+	focus = {
+		id = BRM_93      
+		icon = GFX_focus_research2
+		x = 18
+		y = 7
+		prerequisite = { focus = BRM_92 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+add_research_slot = 1
+		}
+		}
+
+	#烟草工业兴建
+	focus = {
+		id = BRM_94      
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 18
+		y = 8
+		prerequisite = { focus = BRM_93 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					288 = {
+						is_owned_by = BRM
+					}
+				} 
+				288 = { #PLOVDIV
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_ideas = BUL_tobacco_exports
+		}
+		}
+
+	#现代工业雏形
+	focus = {
+		id = BRM_95      
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 16
+		y = 9
+		prerequisite = { focus = BRM_88 }
+		prerequisite = { focus = BRM_91 }
+		prerequisite = { focus = BRM_94 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_xiandaigongye
+		}
+		}
+
+	#强制农民进厂
+	focus = {
+		id = BRM_96      
+		icon = GFX_goal_rhineland
+		x = 19
+		y = 4
+		prerequisite = { focus = BRM_83 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			add_manpower = 200000
+			add_ideas = BRM_nongminjinchang
+		}
+		}
+
+	#允许鸦片种植
+		focus = {
+		id = BRM_97 
+		icon = GFX_goal_generic_political_pressure
+		x = 19
+		y = 5
+		prerequisite = { focus = BRM_96 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.1
+			add_manpower = 100000
+			add_ideas = BRM_yapian
+		}
+		}
+
+
+	#民族主义影响
+		focus = {
+		id = BRM_98 
+		icon = GFX_focus_generic_self_management
+		x = 25
+		y = 2
+		prerequisite = { focus = BRM_81 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_war_support = 0.1
+		}
+		}
+
+	#首席将军吴奈温
+		focus = {
+		id = BRM_99 
+		icon = GFX_goal_reichsautobahn
+		x = 22
+		y = 3
+		prerequisite = { focus = BRM_98 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_manpower = 100000
+		add_stability = 0.1
+		add_war_support = 0.1
+		}
+		}
+
+	#军队体制改革
+		focus = {
+		id = BRM_100 
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 22
+		y = 4
+		prerequisite = { focus = BRM_99 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_manpower = 100000
+		add_war_support = 0.05
+		}
+		}
+
+	#强制土司迁居
+		focus = {
+		id = BRM_101 
+		icon = GFX_goal_generic_major_alliance
+		x = 24
+		y = 3
+		prerequisite = { focus = BRM_98 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        remove_ideas = BRM_minzuzhengduan
+		}
+		}
+		
+	#少数民族劳工
+		focus = {
+		id = BRM_102 
+		icon = GFX_goal_generic_forceful_treaty
+		x = 24
+		y = 4
+		prerequisite = { focus = BRM_101 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_manpower = 100000
+		add_stability = -0.05
+		}
+		}
+
+	#扩张准备
+		focus = {
+		id = BRM_103 
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 23
+		y = 5
+		prerequisite = { focus = BRM_100 }
+		prerequisite = { focus = BRM_102 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+		}
+
+	#允许民间右翼组织
+		focus = {
+		id = BRM_104 
+		icon = GFX_goal_generic_dangerous_deal
+		x = 26
+		y = 3
+		prerequisite = { focus = BRM_98 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 70
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_stability = -0.05
+		}
+		}
+
+	#缅甸之子组织
+		focus = {
+		id = BRM_105 
+		icon = GFX_focus_secret_rearmament
+		x = 26
+		y = 4
+		prerequisite = { focus = BRM_104 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_ideas = BRM_miandianzhizi
+		}
+		}
+
+	#扩大征兵
+		focus = {
+		id = BRM_106 
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 28
+		y = 3
+		prerequisite = { focus = BRM_98 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_manpower = 200000
+		add_stability = -0.03 
+		add_war_support = 0.05
+		}
+		}
+
+	#青年军官团
+		focus = {
+		id = BRM_107 
+		icon = GFX_focus_BUL_found_the_brannik
+		x = 28
+		y = 4
+		prerequisite = { focus = BRM_106 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_qingnianjun
+		}
+		}
+
+	#缅甸帝国军团
+		focus = {
+		id = BRM_108 
+		icon = GFX_goal_generic_trade
+		x = 27
+		y = 5
+		prerequisite = { focus = BRM_107 }
+		prerequisite = { focus = BRM_105 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_political_power = 100
+		add_war_support = 0.05
+		}
+		}
+
+	#加强德国关系
+		focus = {
+		id = BRM_109 
+		icon = GFX_focus_chi_mission_to_germany
+		x = 25
+		y = 6
+		prerequisite = { focus = BRM_103 }
+		prerequisite = { focus = BRM_108 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_opinion_modifier = { 
+				target = GER
+				modifier = BUL_strengthened_relations_with_us
+			}
+			GER = {
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BRM_strengthened_relations_with_us
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = SOV
+					}
+					NOT = { is_in_faction_with = GER }
+				}
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BUL_approached_germany
+				}
+			}
+
+			custom_effect_tooltip = available_political_advisor
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				show_ideas_tooltip = BUL_bogdan_filov_fascism
+			}
+			else = {
+				show_ideas_tooltip = BUL_bogdan_filov
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = BUL_german_influence_flag
+				}
+				modify_country_flag = { flag = BUL_german_influence_flag value = 1 }
+			}
+			else = {
+				set_country_flag = { flag = BUL_german_influence_flag value = 1 }
+			}
+
+			if = {
+				limit = {
+					has_completed_focus = BUL_attract_foreign_capitals
+				}
+				custom_effect_tooltip = BUL_approach_germany_foreign_industry_tt
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = GER }
+						has_war_with = GER
+						GER = { BUL_is_valid_subject = no }
+					}
+				}
+				hidden_effect = {
+					activate_targeted_decision = { target = GER decision = BUL_purchase_artillery }
+					activate_targeted_decision = { target = GER decision = BUL_purchase_military_vehicles }
+					activate_targeted_decision = { target = GER decision = BUL_purchase_aircraft }
+					activate_targeted_decision = { target = GER decision = BUL_purchase_infantry_equipment }
+					activate_targeted_decision = { target = GER decision = BUL_purchase_armor }
+				}
+			}
+			else = {
+				activate_targeted_decision = { target = GER decision = BUL_purchase_artillery }
+				activate_targeted_decision = { target = GER decision = BUL_purchase_military_vehicles }
+				activate_targeted_decision = { target = GER decision = BUL_purchase_aircraft }
+				activate_targeted_decision = { target = GER decision = BUL_purchase_infantry_equipment }
+				activate_targeted_decision = { target = GER decision = BUL_purchase_armor }
+			}
+
+
+			hidden_effect = {
+				news_event = { id = bftb_news.11 hours = 8 random_hours = 4 }
+			}
+
+			GER = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 20
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 20
+			}
+		}
+		}
+
+	#与意大利亲近
+		focus = {
+		id = BRM_110 
+		icon = GFX_focus_befriend_italy
+		x = 27
+		y = 7
+		prerequisite = { focus = BRM_109 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ITA =  { country_event = { id = bftb_burma_italian_influence.1 hours = 6 random_hours = 2 } } #Research Sharing 
+
+			add_opinion_modifier = { 
+				target = ITA
+				modifier = BRM_strengthened_relations_with_us
+			}
+			ITA = {
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BUL_strengthened_relations_with_us
+				}
+			}
+			every_country = {
+				limit = {
+					BUL_country_can_influence_bulgaria = yes
+					NOT = { is_in_faction_with = ITA }
+					NOT = { has_government = ITA }
+				}
+				add_opinion_modifier = { 
+					target = BRM
+					modifier = BUL_approached_italy
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = ITA }
+						has_war_with = ITA
+						ITA = { BUL_is_valid_subject = no }
+					}
+				}
+				hidden_effect = {
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_artillery }
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_military_vehicles }
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_aircraft }
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_infantry_equipment }
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_armor }
+					activate_targeted_decision = { target = ITA decision = BUL_purchase_ships }
+				}
+			}
+			else = {
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_artillery }
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_military_vehicles }
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_aircraft }
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_infantry_equipment }
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_armor }
+				activate_targeted_decision = { target = ITA decision = BUL_purchase_ships }
+			}
+
+			ITA = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 20
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ITA
+				value = 20
+			}
+		}
+		}
+
+	#轴心国的新成员
+		focus = {
+		id = BRM_111 
+		icon = GFX_goal_support_fascism
+		x = 25
+		y = 7
+		prerequisite = { focus = BRM_109 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_government = fascism
+						GER = { has_government = fascism }
+					}
+				}
+				#Using separate scopes for tooltip reasons
+				if = {
+					limit = {
+						has_unit_leader = 1203
+					}
+					random_unit_leader = {
+						limit = {
+							has_id = 1203 #Hadzhipetkov
+						}
+						retire = yes
+					}
+				}
+				if = {
+					limit = {
+						has_unit_leader = 1204
+					}
+					random_unit_leader = {
+						limit = {
+							has_id = 1204 #Boydev
+						}
+						retire = yes
+					}
+				}			
+			}
+			GER = { country_event = { id = generic.2 hours = 4 random_hours = 2 } }
+			custom_effect_tooltip = BRM_join_the_tripartite_pact_tt
+			if = {
+				limit = {
+					any_state = {
+						BRM_is_balkan_state = yes
+						has_state_flag = BRM_bulgarian_claim_warranted_flag
+					}
+				}
+				custom_effect_tooltip = BRM_join_the_tripartite_pact_warranted_claims_tt
+				every_state = {
+					limit = {
+						BRM_is_balkan_state = yes
+						has_state_flag = BRM_bulgarian_claim_warranted_flag
+					}
+				}
+			}
+
+			GER = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 100
+				}
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 100
+			}
+
+			add_ai_strategy = { #We want to garrison our potentially newly-acquired territorial claims
+				type = garrison
+				value = 25
+			}
+		}
+		}
+
+	#帝国军队改革
+		focus = {
+		id = BRM_112 
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 34
+		y = 2
+		prerequisite = { focus = BRM_81 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        army_experience = 50
+		navy_experience = 50 
+		}
+		}
+
+	#赴德军事观摩团
+		focus = {
+		id = BRM_113 
+		icon = GFX_focus_chi_mission_to_germany
+		x = 30
+		y = 3
+		prerequisite = { focus = BRM_112 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+		}
+		}
+		}
+
+	#德国陆军教官
+		focus = {
+		id = BRM_114 
+		icon = GFX_focus_generic_military_mission
+		x = 30
+		y = 4
+		prerequisite = { focus = BRM_113 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BRM_deguojiaoguan
+		}
+		}
+
+	#联合军事学院
+		focus = {
+		id = BRM_115 
+		icon = GFX_goal_generic_scientific_exchange
+		x = 30
+		y = 5
+		prerequisite = { focus = BRM_114 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_research_slot = 1
+		}
+		}
+
+	#新式陆军建设
+		focus = {
+		id = BRM_116 
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 33
+		y = 3
+		prerequisite = { focus = BRM_112 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        army_experience = 100
+		}
+		}
+
+	#德国军事援助
+		focus = {
+		id = BRM_117 
+		icon = GFX_goal_generic_army_tanks
+		x = 32
+		y = 4
+		prerequisite = { focus = BRM_116 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = light_tank_equipment_2
+			    amount = 200
+			    producer = GER
+			}
+			add_equipment_to_stockpile = {
+			    type = heavy_tank_equipment_1
+			    amount = 500
+				producer = GER		
+			}
+			custom_effect_tooltip = CHI_dexie_jun_tt
+			hidden_effect = {
+				division_template = {
+					name = "德械装甲师" 	
+					division_names_group = CHI_ZJS_01
+
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }		
+						heavy_armor = { x = 0 y = 1 }	
+						heavy_armor = { x = 0 y = 2 }					
+						heavy_armor = { x = 1 y = 0 }		
+						heavy_armor = { x = 1 y = 1 }
+						heavy_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }			
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 3 y = 0 }			
+						motorized = { x = 3 y = 1 }
+						motorized = { x = 3 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }      		
+						artillery = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Panzer-标准德式特训师\" division_template = \"德械装甲师\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Panzer-特训德械师\" division_template = \"德械装甲师\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+		}
+
+	#国家军工总厂
+		focus = {
+		id = BRM_118 
+		icon = GFX_goal_generic_production
+		x = 32
+		y = 5
+		prerequisite = { focus = BRM_117 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_tank_manufacturer
+			show_ideas_tooltip = BRM_jungongzongchang
+		}
+		}
+
+	#陆军战术研究
+		focus = {
+		id = BRM_119 
+		icon = GFX_goal_generic_air_doctrine
+		x = 34
+		y = 4
+		prerequisite = { focus = BRM_116 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+		}
+		}
+		}
+
+	#进攻型军队
+		focus = {
+		id = BRM_120 
+		icon = GFX_goal_generic_army_artillery2
+		x = 34
+		y = 5
+		prerequisite = { focus = BRM_119 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_52
+				bonus = 1.0
+				uses = 2
+				category = artillery
+		}
+		}
+		}
+
+	#重建陆军
+		focus = {
+		id = BRM_121 
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 33
+		y = 6
+		prerequisite = { focus = BRM_120 }
+		prerequisite = { focus = BRM_118 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+		}
+		}
+		}
+
+	#新建缅甸空军
+		focus = {
+		id = BRM_122 
+		icon = GFX_goal_generic_air_doctrine
+		x = 37
+		y = 3
+		prerequisite = { focus = BRM_112 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 300 
+				producer = GER
+			}
+			air_experience = 25
+			288 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			640 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+		}
+
+	#飞行员训练计划
+		focus = {
+		id = BRM_123 
+		icon = GFX_goal_generic_occupy_start_war
+		x = 36
+		y = 4
+		prerequisite = { focus = BRM_122 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_66
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+		}
+		}
+		}
+
+	#曼德勒飞机工厂
+		focus = {
+		id = BRM_124 
+		icon = GFX_goal_generic_build_airforce
+		x = 36
+		y = 5
+		prerequisite = { focus = BRM_122 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_aircraft_manufacturer
+			show_ideas_tooltip = BRM_mandele
+		}
+		}
+
+	#卡普罗尼缅甸基地
+		focus = {
+		id = BRM_125 
+		icon =  GFX_goal_generic_air_bomber
+		x = 38
+		y = 4
+		prerequisite = { focus = BRM_122 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BRM_125
+			    bonus = 1.0
+			    uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+		}
+		}
+		}
+
+	#海军轰炸机专精研究
+		focus = {
+		id = BRM_126
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 38
+		y = 5
+		prerequisite = { focus = BRM_125 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				name = BRM_126
+			    bonus = 2.0
+			    uses = 3
+				category = naval_bomber
+		}
+		}
+
+	#曼德勒飞鹰
+		focus = {
+		id = BRM_127
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 37
+		y = 6
+		prerequisite = { focus = BRM_126 }
+		prerequisite = { focus = BRM_124 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			288 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BRM_127
+			    bonus = 1.0
+			    uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}        
+		}
+		}
+
+	#新建缅甸海军
+		focus = {
+		id = BRM_128 
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 41
+		y = 3
+		prerequisite = { focus = BRM_112 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -200
+			add_offsite_building = { type = dockyard level = 6 }
+		}
+		}
+
+	#印度洋基地
+		focus = {
+		id = BRM_129 
+		icon = GFX_goal_generic_navy_cruiser
+		x = 40
+		y = 4
+		prerequisite = { focus = BRM_128 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BRM_129
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+		}
+		}
+		}
+
+	#扩建纳西船厂
+		focus = {
+		id = BRM_130 
+		icon = GFX_goal_generic_build_navy
+		x = 40
+		y = 5
+		prerequisite = { focus = BRM_129 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 2 }
+			custom_effect_tooltip = available_naval_manufacturer
+			show_ideas_tooltip = BRM_nasi
+		}
+		}
+
+	#潜艇学说研究
+		focus = {
+		id = BRM_131 
+		icon = GFX_goal_generic_navy_submarine
+		x = 42
+		y = 4
+		prerequisite = { focus = BRM_128 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BRM_131
+			    bonus = 1.0
+			    uses = 2
+			    category = ss_tech
+		}
+		}
+		}
+
+
+	#印度洋群狼
+		focus = {
+		id = BRM_132
+		icon = GFX_focus_generic_navy_battleship2
+		x = 42
+		y = 5
+		prerequisite = { focus = BRM_131 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			288 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 1330
+				}
+			}
+		}
+		}
+
+	#猎杀于大海之下
+		focus = {
+		id = BRM_133
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 41
+		y = 6
+		prerequisite = { focus = BRM_132 }
+		prerequisite = { focus = BRM_130 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = BRM_133
+			    bonus = 1.0
+			    uses = 2
+			    category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = BRM_133
+			    bonus = 0.75
+			    uses = 1
+			    category = naval_air
+		}
+		}
+		}
+
+	#东南亚的普鲁士
+		focus = {
+		id = BRM_134
+		icon = GFX_focus_BUL_prussia_of_the_balkans
+		x = 37
+		y = 8
+		prerequisite = { focus = BRM_121 }
+		prerequisite = { focus = BRM_127 }
+		prerequisite = { focus = BRM_133 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_pulushi
+		}
+		}
+
+	#恢复历史领地
+		focus = {
+		id = BRM_135
+		icon = GFX_goal_generic_attack_allies
+		x = 24
+		y = 8
+		prerequisite = { focus = BRM_111 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.1
+		}
+		}
+
+	#加入三国军事合作
+		focus = {
+		id = BRM_136
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 26
+		y = 8
+		prerequisite = { focus = BRM_111 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_tech_sharing_group = BRM_axis_research
+			GER = {add_to_tech_sharing_group = BRM_axis_research}
+			if = { 
+				limit = { is_faction_leader = yes }
+				every_country = {
+					limit = {
+						is_in_faction_with = BRM
+					}
+					add_to_tech_sharing_group = BRM_axis_research
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						is_in_faction_with = BRM
+						OR = {
+							is_major = yes
+							is_faction_leader = yes
+						}
+					}
+					add_to_tech_sharing_group = BRM_axis_research
+				}
+			}
+		}
+		}
+
+	#平定印度威胁
+		focus = {
+		id = BRM_136
+		icon = GFX_goal_ming_xindao
+		x = 23
+		y = 9
+		prerequisite = { focus = BRM_135 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RAJ
+				expire = 0
+		}
+		}
+		}
+
+	#逐鹿中原
+		focus = {
+		id = BRM_137
+		icon = GFX_goal_ming_rushi
+		x = 23
+		y = 10
+		prerequisite = { focus = BRM_136 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+				expire = 0
+		}
+		}
+		}
+
+	#合并暹罗
+		focus = {
+		id = BRM_138
+		icon = GFX_focus_jap_strike_south
+		x = 25
+		y = 9
+		prerequisite = { focus = BRM_135 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 670
+					add_state_core = 670
+					transfer_state = 671
+					add_state_core = 671
+					transfer_state = 741
+					add_state_core = 741
+					transfer_state = 286
+					add_state_core = 286
+		}
+		}
+
+	#征服马来
+		focus = {
+		id = BRM_139
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 25
+		y = 10
+		prerequisite = { focus = BRM_138 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+					transfer_state = 289
+					add_state_core = 289
+					transfer_state = 724
+					add_state_core = 724
+					transfer_state = 336
+					add_state_core = 336
+		}
+		}
+
+	#蒲甘帝国的荣光
+		focus = {
+		id = BRM_140
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
+		x = 24
+		y = 11
+		prerequisite = { focus = BRM_139 }
+		prerequisite = { focus = BRM_137 }
+		relative_position_id = BRM_01 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        add_ideas = BRM_pugandiguo
+		set_cosmetic_tag = BRM_pugan
+			every_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+		}
+}
+}
+}

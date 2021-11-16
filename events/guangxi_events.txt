@@ -1,0 +1,259 @@
+#########################
+## GXC Mod Events ##
+#########################
+
+add_namespace = GXC
+
+#########新闻事件#########
+#陆荣廷排除异己
+news_event = {
+	id = GXC.101
+	title = GXC.101.t
+	desc = GXC.101.d
+	picture = GFX_news_event_GXCg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = GXC.101.a
+		trigger = {
+			original_tag = GXC
+		}
+	}
+	option = {
+		name = GXC.101.b
+		trigger = {
+			NOT = {
+			    original_tag = GXC
+			}
+		}
+	}
+}
+#两广宣布效忠
+news_event = {
+	id = GXC.102
+	title = GXC.102.t
+	desc = GXC.102.d
+	picture = GFX_news_event_GXCg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = GXC.102.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = GXC.102.b
+		trigger = {
+			original_tag = GXC
+		}
+	}
+	option = {
+		name = GXC.102.c
+		trigger = {
+			NOT = {
+			    original_tag = GXC
+			    original_tag = CHI
+			}
+		}
+	}
+}
+
+#广州屠杀
+news_event = {
+	id = GXC.103
+	title = GXC.103.t
+	desc = GXC.103.d
+	picture = GFX_news_event_GXCg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GXC.103.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = GXC.103.b
+		trigger = {
+			original_tag = GXC
+		}
+	}
+	option = {
+		name = GXC.103.c
+		trigger = {
+			NOT = {
+			    original_tag = GXC
+			    original_tag = CHI
+			}
+		}
+	}
+}
+
+#两广宣布共和
+news_event = {
+	id = GXC.104
+	title = GXC.104.t
+	desc = GXC.104.d
+	picture = GFX_news_event_GXCg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = GXC.104.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = GXC.104.b
+		trigger = {
+			original_tag = GXC
+		}
+	}
+	option = {
+		name = GXC.104.c
+		trigger = {
+			NOT = {
+			    original_tag = GXC
+			    original_tag = CHI
+			}
+		}
+	}
+}
+#######国家事件######
+#两广服从中央
+country_event = {
+	id = GXC.201
+	title = GXC.201.t
+	desc = GXC.201.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GXC.201.a
+		add_political_power = 100
+		GXC = { country_event = { id = GXC.202 } }
+	}
+}
+#中央的援助
+country_event = {
+	id = GXC.202
+	title = GXC.202.t
+	desc = GXC.202.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GXC.202.a
+		add_political_power = 10
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+#两广的阳奉阴违
+country_event = {
+	id = GXC.203
+	title = GXC.203.t
+	desc = GXC.203.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GXC.203.a
+		add_political_power = -100
+	}
+}
+#对粤系的清洗
+country_event = {
+	id = GXC.204
+	title = GXC.204.t
+	desc = GXC.204.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	#先下手为强
+	option = {
+		name = GXC.204.a
+		add_political_power = -300
+		remove_idea = GXC_yueguizhizheng
+		remove_unit_leader = 1002
+		remove_unit_leader = 1005
+		remove_unit_leader = 1006
+		add_timed_idea = {
+				idea = GXC_guangdongpanluan
+				days = 365
+			}
+		news_event = { id = GXC.103 }	
+	}
+}
+#新桂系的答复
+country_event = {
+	id = GXC.205
+	title = GXC.205.t
+	desc = GXC.205.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	#整合他们，化敌为友
+	option = {
+		name = GXC.205.a
+		add_political_power = -100
+		ai_chance = { factor = 80 }
+	}
+	#找个刺客干掉他们
+	option = {
+		name = GXC.205.b
+		add_political_power = -200
+		ai_chance = { factor = 20 }
+		remove_unit_leader = 1001
+		remove_unit_leader = 1003
+	}
+}
+
+#代理主席选举
+country_event = {
+	id = GXC.206
+	title = GXC.206.t
+	desc = GXC.206.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	#马季将领导我们
+	option = {
+	    name = GXC.206.a
+		ai_chance = { factor = 60 }
+		create_country_leader = {
+	        name = "Ma Ji"
+	        desc = "POLITICS_GXC_MA_JI_ARMY_DESC"
+	        portrait_path = "gfx/leaders/GXC/Portrait_GXC_Ma_Ji.png"
+            expire = "1965.1.1"
+	        ideology = conservatism
+	        traits = {
+	        }
+        }
+	}
+	#显然黄绍宏更加适合
+	option = {
+		name = GXC.206.b
+		create_country_leader = {
+	        name = "Huang Shaohong"
+			desc = "POLITICS_GXC_MA_JI_ARMY_DESC"
+	        picture = "Portrait_Yunnan_Huang_Shaohong.png"
+            expire = "1965.1.1"
+	        ideology = social_conservatism
+	        traits = {
+	        }
+        }
+	}
+}

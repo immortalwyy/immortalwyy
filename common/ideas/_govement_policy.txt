@@ -1,0 +1,810 @@
+ideas = {
+
+	###政治系统###
+	government_system = {
+		law = yes
+		use_list_view = yes
+	
+	    military_government = {
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+			political_power_gain = -0.1
+			max_command_power = 15
+			command_power_gain = 0.2
+			root_out_resistance_effectiveness_factor = 0.1
+			resistance_decay = 0.1
+			supply_consumption_factor = 0.1
+			}
+		}
+		
+	    one_party_state = {
+			picture = one_party_state
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 2
+			modifier = {	
+			political_power_gain = 0.1	
+			party_popularity_stability_factor = 0.3
+			mobilization_speed = 0.1
+			production_speed_buildings_factor = 0.05
+			}
+		}
+		multi_party_state = {
+			picture = democracy_idea
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 3
+			modifier = {	
+			stability_factor = 0.1
+			research_speed_factor = 0.03
+			trade_opinion_factor = 0.2
+			drift_defence_factor = -0.1
+			}
+		}
+		colonial_government = {
+			picture = colonial_idea
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 4
+			modifier = {	
+			conscription_factor = -0.8
+			local_resources = 0.15
+			production_speed_buildings_factor = -0.1 
+			drift_defence_factor = -0.15
+			political_power_gain = -0.1	
+			}
+		}
+		autocracy = {
+			picture = autocratic_idea
+			available = { 
+			always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+			level = 5
+			modifier = {
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.05 
+			industry_free_repair_factor = 0.1
+			production_speed_buildings_factor = 0.05
+			drift_defence_factor = 0.1
+			}	
+		}
+		anarchy = {
+			picture = anarchy_idea
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 6
+			modifier = {
+			political_power_gain = -0.1
+			stability_factor = -0.3
+			resistance_damage_to_garrison_on_our_occupied_states = 1
+			production_speed_buildings_factor = -0.4
+			industrial_capacity_factory = -0.2
+			recruitable_population_factor = -0.4
+			mobilization_speed = -0.4
+			local_intel_to_enemies = 0.3
+			max_dig_in = 10
+			industrial_capacity_dockyard = -0.5
+			consumer_goods_factor = -0.1
+			}
+		}
+		warlord = {
+			picture = warlord_idea
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 7
+			modifier = {
+			supply_consumption_factor = 0.15
+			production_speed_buildings_factor = -0.3			
+			consumer_goods_factor = -0.05
+			army_morale_factor = 0.1
+			pocket_penalty = -0.2
+			drift_defence_factor = 0.1
+			}
+		}
+		
+	    bureaucratic = {
+			picture = bureaucratic_idea
+			available = { 
+			always = no
+			}
+			cancel_if_invalid = no
+			level = 8
+			modifier = {	
+			local_resources = 0.2
+			local_building_slots_factor = 0.1
+			production_lack_of_resource_penalty_factor = 0.05
+			stability_factor = -0.1
+			political_power_gain = 0.15
+			drift_defence_factor = 0.1
+			}
+		}
+	}
+	
+	
+	###外交法案###
+	foreign_policy = { 
+		law = yes
+		use_list_view = yes
+		
+		foreign_isolationism = {
+			
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+				}
+			}
+			
+			level = 5
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.5
+				conscription_cost_factor = 0.5
+				#need to lock diplo actions 
+				drift_defence_factor = 0.1
+				foreign_subversive_activites = -0.10
+				#enemy_##partisan_effect = -0.10
+				justify_war_goal_time = 0.50
+				generate_wargoal_tension = 0.50
+				join_faction_tension = 0.70
+				lend_lease_tension = 0.10
+				send_volunteers_tension = 0.70
+				guarantee_tension = 0.20
+				opinion_gain_monthly_factor = -0.2
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		foreign_neutral = {
+			
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				is_in_faction = no
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+				}
+			}
+			
+			
+			level = 4
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.2
+				conscription_cost_factor = 0.2
+				war_stability_factor = -0.05			
+				foreign_subversive_activites = -0.05
+				justify_war_goal_time = 0.25
+				join_faction_tension = 0.25
+				send_volunteers_tension = 0.25
+				guarantee_tension = 0.25
+				trade_opinion_factor = 0.05
+
+			}
+			
+			cancel_if_invalid = no #yes
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		foreign_cooperative = {
+			
+			cost = 75
+			removal_cost = -1
+			
+			default = yes
+			available = {
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+				}
+			}
+			
+			level = 3
+			
+			modifier = {
+				offensive_war_stability_factor = -0.05
+				defensive_war_stability_factor = 0.05			
+				foreign_subversive_activites = -0.05
+				join_faction_tension = -0.05
+				lend_lease_tension = -0.05
+				send_volunteers_tension = -0.05
+				trade_opinion_factor = 0.1
+				opinion_gain_monthly_factor = 0.2
+			}
+			
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		foreign_interventionism = {
+			
+			cost = 75
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					AND = {
+						OR = { 
+							has_government = vanguardism
+							has_government = communism
+							has_government = despotism
+							has_government = fascism
+							has_government = radicalism
+						}
+					}
+					has_war_support > 0.6
+					is_faction_leader = yes 
+				}
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+				}
+			}
+			
+			level = 2
+			
+			modifier = {		
+				offensive_war_stability_factor = -0.05
+				defensive_war_stability_factor = 0.05			
+				foreign_subversive_activites = -0.05
+				#enemy_##partisan_effect = 0.075
+				justify_war_goal_time = -0.1
+				generate_wargoal_tension = -0.1
+				join_faction_tension = -0.1
+				send_volunteers_tension = -0.1
+				guarantee_tension = -0.1
+				trade_opinion_factor = -0.05
+				opinion_gain_monthly_factor = 0.1
+			}
+			
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		foreign_warmonger = {
+			
+			cost = 75
+			removal_cost = -1
+			
+			available = {
+				AND = {
+					has_war_support > 0.6
+					OR = { 
+						has_government = vanguardism
+					    has_government = communism
+						has_government = despotism
+						has_government = fascism
+						has_government = radicalism
+					}
+				}
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+				}
+			}
+			
+			cancel = {
+				has_war_support < 0.4 
+			}
+			
+			level = 1
+			
+			modifier = {
+				offensive_war_stability_factor = 0.05		
+				foreign_subversive_activites = -0.05
+				justify_war_goal_time = -0.25
+				join_faction_tension = -0.25
+				send_volunteers_tension = -0.25
+				guarantee_tension = -0.25
+				trade_opinion_factor = -0.15
+				opinion_gain_monthly_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+	###文化法案###
+	culture_policy = { 
+		law = yes
+		use_list_view = yes
+		
+		moralism = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			cost = 150
+			level = 5
+			modifier = {
+				war_support_factor = 0.1
+				research_speed_factor = -0.1
+				monthly_population = 0.1
+				drift_defence_factor = 0.15
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		
+		pluralism = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			cost = 150
+			level = 4
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				research_speed_factor = 0.05
+				monthly_population = 0.05
+				drift_defence_factor = -0.2
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		
+		egalitarianism = {
+			level = 3
+			cost = 150
+			removal_cost = -1
+
+            allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			modifier = {
+				stability_factor = 0.05
+				non_core_manpower = 0.10
+				research_speed_factor = 0.03
+			}
+
+			default = yes
+		}
+		
+		cultural_revolution = {
+			level = 2
+			cost = 150
+			removal_cost = -1
+
+            allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+			available = {
+				
+			has_government = vanguardism
+			has_government = despotism
+		    has_government = fascism
+		    has_government = radicalism
+			
+			
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				conscription_factor = 0.15
+				drift_defence_factor = 0.3
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		racism = {
+			level = 1
+			cost = 150
+			removal_cost = -1
+
+            allowed_to_remove = { always = no }
+			available = {
+				
+			has_government = vanguardism
+			has_government = communism
+		    has_government = fascism
+		    has_government = radicalism
+			
+			
+			}
+			cancel_if_invalid = no
+
+			modifier = {
+				war_support_factor = 0.3
+				non_core_manpower = 0.25
+				stability_factor = -0.2
+			}
+		}
+
+	}
+	###安全法案###
+	security_policy = { 
+		law = yes
+		use_list_view = yes
+		
+		local_autonomy = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 6
+			modifier = {
+				foreign_subversive_activites = 0.5
+				enemy_operative_detection_chance_factor = -0.5
+				foreign_subversive_activites = 0.3
+				operation_coup_government_outcome = -0.6
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+		}
+		city_police = {
+		
+			allowed = {
+				always = yes
+			}
+			default = yes
+			removal_cost = -1
+			level = 5
+			modifier = {
+				foreign_subversive_activites = 0.2
+				enemy_operative_detection_chance_factor = -0.1
+				foreign_subversive_activites = 0.1
+				operation_coup_government_outcome = -0.4
+				encryption_factor = 0.1
+				stability_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		federal_agency = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 4
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.1
+				enemy_operative_detection_chance_factor = 0.1
+				encryption_factor = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = 0.01
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		armed_police = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.3
+				enemy_operative_detection_chance_factor = 0.2
+				encryption_factor = 0.15
+				stability_factor = 0.15
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		monitor_people = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			available = {	
+			has_government = vanguardism
+			has_government = communism
+		    has_government = fascism
+		    has_government = despotism
+		    has_government = radicalism
+			}
+			level = 2
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.4
+				enemy_operative_detection_chance_factor = 0.4
+				encryption_factor = 0.2
+				stability_factor = 0.2
+				consumer_goods_factor = 0.03
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		police_state = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 1
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.5
+				enemy_operative_detection_chance_factor = 0.6
+				encryption_factor = 0.25
+				stability_factor = 0.25
+				consumer_goods_factor = 0.035
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		
+		
+	}
+	###媒体政策###
+	media_policy = { 
+		law = yes
+		use_list_view = yes
+		official_media = {
+		
+			allowed = {
+				always = yes
+			}
+			available = {	
+			has_government = vanguardism
+			has_government = communism
+		    has_government = fascism
+		    has_government = despotism
+		    has_government = radicalism
+		    has_government = neutrality
+			}
+			removal_cost = -1
+			level = 5
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = -0.1
+				war_support_factor = 0.15
+				drift_defence_factor = 0.35
+				consumer_goods_factor = 0.04
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		publication_review = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 4
+			modifier = {
+				political_power_factor = 0.125
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				drift_defence_factor = 0.25
+				consumer_goods_factor = 0.03
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		state-controlled_media = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				consumer_goods_factor = 0.02		
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		corporate_holding_media = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 2
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				drift_defence_factor = -0.2
+				consumer_goods_factor = 0.01
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		freedom_of_press = {
+		
+			allowed = {
+				always = yes
+			}
+			available = {
+            NOT = {			
+			has_government = vanguardism
+			has_government = communism
+		    has_government = fascism
+		    has_government = despotism
+		    has_government = radicalism
+			}
+			}
+			removal_cost = -1
+			level = 1
+			default = yes
+			modifier = {
+				drift_defence_factor = -0.3
+				research_speed_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			cost = 150
+	    }
+		
+		
+    }
+	
+	bill_of_rights = { 
+		law = yes
+		use_list_view = yes
+		patriarchy = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 6
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				monthly_population = 0.45
+				conscription_factor = -0.15
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		male_dominance = {
+		
+			allowed = {
+				always = yes
+			}
+			default = yes
+			removal_cost = -1
+			level = 5
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				monthly_population = 0.30
+				conscription_factor = -0.10
+				research_speed_factor = 0.025
+				stability_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		traditional_mindset = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 2
+			modifier = {
+				monthly_population = 0.15
+				conscription_factor = -0.05
+				research_speed_factor = 0.01
+				stability_factor = 0.05			
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		conservative_idea = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.025
+				monthly_population = -0.20
+				conscription_factor = 0.1
+				research_speed_factor = 0.025
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		
+		women_equal_rights = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				monthly_population = -0.25
+				conscription_factor = 0.15
+				research_speed_factor = 0.05
+				stability_factor = -0.05
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		feminism_prevails = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.075
+				monthly_population = -0.30
+				conscription_factor = 0.25
+				research_speed_factor = 0.05
+				stability_factor = -0.10
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+    }
+	
+	
+}

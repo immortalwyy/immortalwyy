@@ -1,0 +1,34 @@
+scripted_gui = {
+	desicion_parliament_gui = {
+		context_type = decision_category
+		window_name = "desicion_parliament_gui_container"
+
+		dynamic_lists = {
+			yizhengyuan_grid = {
+				array = CHI_yizhengyuan_array
+				entry_container = yizhengyuan_entry
+			}
+            zhizhengyuan_grid = {
+				array = CHI_zhizhengyuan_array
+				entry_container = zhizhengyuan_entry
+			}
+			zhizhengyuan_zhichi_grid = {
+				array = zhizhengyuan_member_array
+				index = zhizhengyuan_member_index
+				entry_container = zhizhengyuan_zhichi_entry
+			}
+		}
+
+		effects = {
+		}
+
+		properties = {
+			yizhengyuan_icon = {
+				frame = v
+			}
+            zhizhengyuan_icon = {
+				frame = v
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+购买大明武器条款 = {
+	icon = army_reform
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		has_completed_focus = KOR_10
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=902
+	name="STATE_902"
+	provinces={
+		5009 7976 10413 
+	}
+	history={
+		owner = YUN
+		add_core_of = CHI
+		add_core_of = YUN
+		victory_points = {
+			5009 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+
+	}
+	manpower=280000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

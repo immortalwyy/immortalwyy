@@ -1,0 +1,183 @@
+CHI_wenguan_clear_all = {
+	remove_ideas = {
+		CHI_wenguan_1
+		CHI_wenguan_2
+		CHI_wenguan_3
+		CHI_wenguan_4
+		CHI_wenguan_5
+	}
+}
+
+#Important to put HIGHEST first
+CHI_wenguan_level_up = {
+	custom_effect_tooltip = CHI_wenguan_up_tt
+	if = {
+		limit = { has_idea = CHI_wenguan_4 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_4
+			add_idea = CHI_wenguan_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wenguan_3 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_3
+			add_idea = CHI_wenguan_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wenguan_2 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_2
+			add_idea = CHI_wenguan_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wenguan_1 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_1
+			add_idea = CHI_wenguan_2
+		}		
+	}
+	else_if = {
+		limit = { NOT = { has_idea = CHI_wenguan_1 } }
+		add_ideas = CHI_wenguan_1
+	}
+}
+
+#Important to put LOWEST first
+CHI_wenguan_level_down = {
+custom_effect_tooltip = CHI_wenguan_down_tt
+	if = {
+		limit = { has_idea = CHI_wenguan_1 }
+		#Makes the tooltip clearer if player looks at the effect early in the game
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = CHI_wenguan_1
+				add_idea = CHI_wenguan_none
+			}
+		}
+		hidden_effect = { remove_ideas = CHI_wenguan_1 }
+	}
+	if = {
+		limit = { has_idea = CHI_wenguan_2 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_2
+			add_idea = CHI_wenguan_1
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wenguan_3 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_3
+			add_idea = CHI_wenguan_2
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wenguan_4 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_4
+			add_idea = CHI_wenguan_3
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wenguan_5 }
+		swap_ideas = {
+			remove_idea = CHI_wenguan_5
+			add_idea = CHI_wenguan_4
+		}
+	}
+}
+
+CHI_wuguan_clear_all = {
+	remove_ideas = {
+		CHI_wuguan_1
+		CHI_wuguan_2
+		CHI_wuguan_3
+		CHI_wuguan_4
+		CHI_wuguan_5
+	}
+}
+
+#Important to put HIGHEST first
+CHI_wuguan_level_up = {
+	custom_effect_tooltip = CHI_wuguan_up_tt
+	if = {
+		limit = { has_idea = CHI_wuguan_4 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_4
+			add_idea = CHI_wuguan_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wuguan_3 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_3
+			add_idea = CHI_wuguan_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wuguan_2 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_2
+			add_idea = CHI_wuguan_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_wuguan_1 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_1
+			add_idea = CHI_wuguan_2
+		}		
+	}
+	else_if = {
+		limit = { NOT = { has_idea = CHI_wuguan_1 } }
+		add_ideas = CHI_wuguan_1
+	}
+}
+
+#Important to put LOWEST first
+CHI_wuguan_level_down = {
+custom_effect_tooltip = CHI_wuguan_down_tt
+	if = {
+		limit = { has_idea = CHI_wuguan_1 }
+		#Makes the tooltip clearer if player looks at the effect early in the game
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = CHI_wuguan_1
+				add_idea = CHI_wuguan_none
+			}
+		}
+		hidden_effect = { remove_ideas = CHI_wuguan_1 }
+	}
+	if = {
+		limit = { has_idea = CHI_wuguan_2 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_2
+			add_idea = CHI_wuguan_1
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wuguan_3 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_3
+			add_idea = CHI_wuguan_2
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wuguan_4 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_4
+			add_idea = CHI_wuguan_3
+		}
+	}
+	if = {
+		limit = { has_idea = CHI_wuguan_5 }
+		swap_ideas = {
+			remove_idea = CHI_wuguan_5
+			add_idea = CHI_wuguan_4
+		}
+	}
+}
+
+

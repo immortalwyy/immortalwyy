@@ -1,0 +1,77 @@
+﻿capital = 525 #South Korea - Seoul or Busan
+
+oob = "KOR_1936"
+
+set_stability = 0.3
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	mass_assault = 1
+}
+
+add_ideas = {
+	CHI_cg001
+	KOR_wuyongjundui
+	KOR_dulizhe
+	KOR_jianyuezhe
+}
+
+set_convoys = 35
+
+set_politics = {
+	ruling_party = despotism
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 30
+	conservatism = 5
+	fascism = 10
+	despotism = 55
+}
+
+create_country_leader = {
+	name = "Yi Hui"
+	desc = "Li Xi_DESC"
+	picture = "Li_xi.dds"
+	expire = "1965.1.1"
+	ideology = liyue
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Syngman Rhee"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "临时共产委员会"
+	desc = ""
+	picture = "laodongdang.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Un"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}

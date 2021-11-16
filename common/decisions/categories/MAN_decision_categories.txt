@@ -1,0 +1,49 @@
+聘请日本顾问计划 = {
+	
+	icon = GFX_decision_category_infiltration
+
+	allowed = {
+		tag = MAN
+	}
+
+	visible = {
+		has_completed_focus = MAN_10
+	}
+
+}
+
+萨尔瓦多的政变 = {
+	
+	icon = border_conflicts
+
+	allowed = {
+		tag = MAN
+	}
+
+	visible = {
+		has_completed_focus = MAN_32
+	}
+
+}
+
+订购西方军舰 = {
+	icon = generic_naval
+	allowed = {
+		original_tag = MAN
+	}
+
+	visible = {
+		has_completed_focus = MAN_104
+	}
+}
+
+军事革新 = {
+	icon = army_reform
+	allowed = {
+		original_tag = MAN
+	}
+
+	visible = {
+		has_completed_focus = MAN_214
+	}
+}

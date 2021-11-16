@@ -1,0 +1,451 @@
+﻿division_template = {
+	name = "勇营"				
+	division_names_group = MAN_INF_01
+									
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "绿营军"					
+	division_names_group = MAN_GAR_01
+									
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "旗军"			
+	division_names_group = MAN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+		
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+		cavalry = { x = 3 y = 2 }
+		cavalry = { x = 3 y = 3 }
+	}
+}
+
+
+##### OOB #####
+units = {
+	division = {
+		name = "正黄亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "正白亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "正红亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "正蓝亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "镶红亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "镶白亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "镶黄亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "镶蓝亲军营"
+		location = 4572
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "禁旅八旗甲营"
+		location = 10433
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "禁旅八旗乙营"
+		location = 10433
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "禁旅八旗丙营"
+		location = 10433
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "禁旅八旗边营"
+		location = 6868
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "禁旅八旗京营"
+		location = 887
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "第一骁骑营"
+		location = 957
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "第二骁骑营"
+		location = 9604
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "甲子骁骑营"
+		location = 957
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "第三骁骑营"
+		location = 9604
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "草原骁骑营"
+		location = 10567
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "戍边骁骑营"
+		location = 10567
+		division_template = "旗军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "大庆汉营"
+		location = 12618
+		division_template = "绿营军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "黑河汉营"
+		location = 12618
+		division_template = "绿营军"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "振威汉营"
+		location = 12618
+		division_template = "绿营军"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "汉京营"
+		location = 946
+		division_template = "绿营军"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "虎枪营"
+		location = 946
+		division_template = "绿营军"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "京师汉营"
+		location = 946
+		division_template = "绿营军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "松江警卫团"
+		location = 10463
+		division_template = "绿营军"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "汉先都统营"
+		location = 10463
+		division_template = "绿营军"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "顺汉营"
+		location = 10463
+		division_template = "绿营军"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		name = "诚营"
+		location = 10463
+		division_template = "绿营军"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		name = "中原营"
+		location = 12690
+		division_template = "绿营军"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		name = "护军营"
+		location = 12189
+		division_template = "勇营"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "海岸营"
+		location = 12189
+		division_template = "勇营"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "库页巡查协"
+		location = 1755
+		division_template = "勇营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "库页巡查卫"
+		location = 1755
+		division_template = "勇营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "北岛警卫团"
+		location = 1839
+		division_template = "勇营"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "极北保卫营"
+		location = 10641
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "北巡察卫"
+		location = 4728
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "余丁一营"
+		location = 12543
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁二营"
+		location = 12192
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁三营"
+		location = 1724
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁四营"
+		location = 1722
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁五营"
+		location = 4881
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁六营"
+		location = 3929
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁七营"
+		location = 12657
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁八营"
+		location = 7889
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁九营"
+		location = 7868
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "余丁十营"
+		location = 9798
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "余丁末营"
+		location = 4506
+		division_template = "勇营"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.2
+	}
+}
+
+
+########## STARTING PRODUCTION ##########
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MAN"
+		}
+		requested_factories = 2
+		progress = 0.52
+		efficiency = 100
+	}
+}

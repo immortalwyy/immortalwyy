@@ -1,0 +1,30 @@
+state={
+	id=856
+	name="STATE_856"
+	provinces={
+		1893 6999 10144 11865 
+	}
+	history={
+		owner = SZC
+		add_core_of = CHI
+		add_core_of = SZC
+		victory_points = {
+			10144 1 
+		}
+		victory_points = {
+			6999 20 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 2
+
+		}
+		
+
+	}
+	manpower=15678900
+	buildings_max_level_factor=1.000
+	state_category=city
+}

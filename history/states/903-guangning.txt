@@ -1,0 +1,27 @@
+state={
+	id=903
+	name="STATE_903"
+	provinces={
+		9835 11815 
+	}
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+			964 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			11815 3 
+		}
+
+	}
+	manpower=2498700
+	buildings_max_level_factor=1.000
+	state_category=town
+}

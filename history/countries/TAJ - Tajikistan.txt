@@ -1,0 +1,33 @@
+﻿capital = 742
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 50
+	fascism = 1
+	despotism = 49
+}
+
+create_country_leader = {
+	name = "Mohammed Alim"
+	desc = "Gong Bang_DESC"
+	picture = "Portrait_BUK_Mohammed_Alim.png"
+	expire = "1965.1.1"
+	ideology = islamism
+	traits = {
+	}
+}

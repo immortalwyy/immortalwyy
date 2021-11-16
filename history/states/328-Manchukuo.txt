@@ -1,0 +1,29 @@
+
+state={
+	id=328
+	name="STATE_328"
+	resources={
+		aluminium=18.000
+	}
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			4572 10 
+		}
+
+	}
+
+	provinces={
+		946 1567 3913 3929 3932 3947 4503 4572 6947 7652 7663 9782 9883 9913 11744 11862 11864 
+	}
+	manpower=4996266
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

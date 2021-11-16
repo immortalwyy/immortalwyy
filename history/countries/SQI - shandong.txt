@@ -1,0 +1,229 @@
+﻿capital = 608
+
+oob = "XBJ_1936"
+
+set_stability = 0.1
+set_war_support = 0.3
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+add_ideas = {
+local_autonomy
+no_education_system
+moralism
+male_dominance
+official_media
+agricultural_economy
+agrarian_economy
+tax_high
+foreign_isolationism
+fdi_banned
+train_low
+officer_train_none
+
+}
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 34
+	democratic = 3
+	radicalism = 1
+	social_democracy = 4
+	conservatism_ideology = 26
+	fascism = 8
+	communism = 24
+	monarchism = 0
+}
+
+create_country_leader = {
+	name = "Zhang Zongchang"
+	desc = "POLITICS_Liu_Wenhui_DESC"
+	picture = "Portrait_Shndong_Zhang_Zongchang.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy
+	traits = {
+		#
+	}
+}
+
+
+create_field_marshal = {
+	name = "Cai E"
+	desc = "POLITICS_SZC_LIU_XIANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/CHI_cai_e.dds"
+	traits = {
+		old_guard infantry_officer
+	}
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Liu_Xiang"
+	desc = "POLITICS_SZC_LIU_XIANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/Portrait_SZC_Liu_Xiang.png"
+	traits = {
+		inflexible_strategist
+		old_guard
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Liu Bocheng"
+	picture = "Portrait_SZC_liubicheng.png"
+	traits = { inflexible_strategist politically_connected  war_hero}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Jing Yuexui"
+	picture = "Portrait_Jing_Yuexui.dds"
+	traits = { politically_connected infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Liu Bocheng"
+	picture = "Portrait_Gao_Shuangcheng.dds"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Liu Wenhui"
+	picture = "Portrait_Liu_Wenhui.dds"
+	traits = { old_guard
+		politically_connected
+		substance_abuser 
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Wang Zuanxu"
+	desc = "POLITICS_SZC_WANG_ZUANXU_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/Portrait_SZC_Wang_Zuanxu.png"
+	traits = {
+		artillery_officer
+		politically_connected
+		trait_reckless
+		harsh_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Yang Sen"
+	desc = "POLITICS_SZC_YANG_SEN_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/Portrait_SZC_Yang_Sen.png"
+	traits = {
+		inflexible_strategist
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+		name = "Xiong Kewu"
+		desc = "POLITICS_SZC_XIONG_KEWU_ARMY_DESC"
+		portrait_path = "gfx/leaders/SZC/Portrait_SZC_Xiong_Kewu.png"
+		traits = {
+			old_guard
+			politically_connected
+		}
+		skill = 2
+		attack_skill = 1
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 2
+	}
+create_corps_commander = {
+	name = "He Guoguang"
+	desc = "POLITICS_SZC_HE_GUOGUANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/Portrait_SZC_He_Guoguang.png"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Deng Xihou"
+	desc = "POLITICS_SZC_DENG_XIHOU_ARMY_DESC"
+	portrait_path = "gfx/leaders/SZC/Portrait_SZC_Deng_Xihou.png"
+	traits = {
+		career_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Wu Peifu"
+	portrait_path = "gfx/leaders/SZC/Portrait_QIE_Wu_Peifu.png"
+	desc = "QIE_WU_PEIFU_ARMY_DESC"
+	traits = {
+		old_guard
+		politically_connected
+		brilliant_strategist
+		war_hero
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Zhang Qihuang"
+	portrait_path = "gfx/leaders/SZC/Portrait_QIE_Zhang_Qihuang.png"
+	desc = "QIE_ZHANG_QIHUANG_ARMY_DESC"
+	traits = {
+		substance_abuser
+		politically_connected
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}

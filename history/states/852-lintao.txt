@@ -1,0 +1,25 @@
+state={
+	id=852
+	name="STATE_852"
+	provinces={
+		1985 2022 7397 12882 
+	}
+	history={
+		owner = XBJ
+		add_core_of = CHI
+		add_core_of = XBJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			1985 3 
+		}
+		
+
+	}
+	manpower=1267800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

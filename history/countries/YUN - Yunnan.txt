@@ -1,0 +1,359 @@
+﻿capital = 325
+oob = "YUN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+}
+add_ideas = { 
+YUN_yunnanwang
+YUN_yunnanbeicanjinji
+YUN_tangjiyaodeyingxiang
+YUN_mianbeinanming
+SZC_yapianfanlan
+
+local_autonomy
+no_education_system
+moralism
+male_dominance
+official_media
+agricultural_economy
+agrarian_economy
+tax_high
+foreign_isolationism
+fdi_banned
+train_low
+officer_train_none
+}
+1939.1.1 = {
+
+	add_political_power = 1198
+
+	if = {
+		limit = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		CHI = { add_to_faction = PREV }
+		add_to_war = {
+			targeted_alliance = CHI
+			enemy = JAP
+			hostility_reason = asked_to_join
+		}
+
+		complete_national_focus = CHI_secure_internal_politics
+		complete_national_focus = CHI_cooperation_with_the_nationalists
+		complete_national_focus = CHI_industrial_investment
+		complete_national_focus = CHI_public_education_reform
+		complete_national_focus = CHI_long_term_economic_planning
+		complete_national_focus = CHI_technological_cooperation
+		complete_national_focus = CHI_local_arms_production
+		complete_national_focus = CHI_new_model_province
+		complete_national_focus = CHI_root_out_corruption
+		complete_national_focus = CHI_land_reform
+		complete_national_focus = CHI_reform_the_administration
+		else = {		
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = construction_effort_2
+			complete_national_focus = production_effort_2
+			complete_national_focus = infrastructure_effort
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort
+		}
+	}
+	
+	oob = "YUN_1939"
+
+	set_technology = {
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	despotism = 27
+	democratic = 18
+	radicalism = 28
+	neutrality = 18
+	conservatism = 1
+	fascism = 8
+}
+
+create_country_leader = {
+	name = "Long Yun"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "GFX_portrait_yun_long_yun"
+	expire = "1965.1.1"
+	ideology = militarism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Long Jiguang"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "CHI_long_jiguang.dds"
+	expire = "1965.1.1"
+	ideology = military_government
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Lu Han"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "Portrait_Yunnan_Lu_Han_w.png"
+	expire = "1965.1.1"
+	ideology = politicalism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Long Yun"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "GFX_portrait_yun_long_yun"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Zhao Hengti"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "CHI_Zhao_Hengti.dds"
+	expire = "1965.1.1"
+	ideology = liberal_socialism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Zhu De"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "portrait_PRC_Zhu_De.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Zhu De"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "portrait_PRC_Zhu_De.dds"
+	expire = "1965.1.1"
+	ideology = syndicalism
+	traits = {
+		#
+	}
+}
+create_corps_commander = {
+	name = "Long Yun"
+	gfx = "GFX_portrait_yun_long_yun"
+	traits = { trait_mountaineer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+	id = 10001
+}
+create_field_marshal = {
+	name = "Long Jiguang"
+	picture = "CHI_long_jiguang.dds"
+	traits = { trickster infantry_officer }
+	skill = 4
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Tang Jiyao"
+	desc = "POLITICS_YUNNAN_TANG_JIYAO_ARMY_DESC"
+	picture = "Portrait_Yunnan_Tang_Jiyao.png"
+	traits = {
+		old_guard
+		politically_connected
+		offensive_doctrine
+		substance_abuser
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 10002
+}
+create_corps_commander = {
+	name = "Zhu De"
+	desc = "POLITICS_YUNNAN_ZHU_DE_ARMY_DESC"
+	picture = "portrait_PRC_Zhu_De.dds"
+	skill = 5
+	traits = {
+		career_officer
+		inflexible_strategist
+		politically_connected
+		substance_abuser
+		organizer
+	}
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 3
+	id = 10003
+}
+create_corps_commander = {
+	name = "Lu Han"
+	picture = "Portrait_Yunnan_Lu_Han.png"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+	id = 10004
+}
+create_corps_commander = {
+	name = "Fan Shisheng"
+	desc = "POLITICS_YUNNAN_FAN_SHISHENG_ARMY_DESC"
+	picture = "Portrait_Yunnan_Fan_Shisheng.png"
+	skill = 3
+	traits = {
+		career_officer
+		trickster
+		trait_engineer
+	}
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 10005
+}
+create_corps_commander = {
+	name = "Hu Ruoyu"
+	desc = "POLITICS_YUNNAN_HU_RUOYU_ARMY_DESC"
+	picture = "Portrait_Yunnan_Hu_Ruoyu.png"
+	traits = {
+		infantry_officer
+		inflexible_strategist
+		trait_mountaineer
+		trickster
+		hidden_sympathies
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+	id = 10006
+}
+create_corps_commander = {
+	name = "Jin Handing"
+	desc = "POLITICS_YUNNAN_JIN_HANDING_ARMY_DESC"
+	picture = "Portrait_Yunnan_Jin_Handing.png"
+	skill = 3
+	traits = {
+		career_officer
+		trickster
+		infantry_leader
+	}
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 1
+	id = 10007
+}
+create_corps_commander = {
+	name = "Sun Yuanliang"
+	desc = "POLITICS_YUNNAN_SUN_YUANLIANG_ARMY_DESC"
+	picture = "Portrait_Yunnan_Sun_Yuanliang.png"
+	traits = {
+		politically_connected
+		career_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 10008
+}
+create_corps_commander = {
+	name = "Tang Huaiyuan"
+	desc = "POLITICS_YUNNAN_TANG_HUAIYUAN_ARMY_DESC"
+	picture = "Portrait_Yunnan_Tang_Huaiyuan.png"
+	traits = {
+		infantry_officer
+		politically_connected
+		trait_reckless
+		substance_abuser
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+	id = 10009
+}
+create_corps_commander = {
+	name = "Luo Binghui"
+	desc = "POLITICS_YUNNAN_LUO_BINGHUI_ARMY_DESC"
+	picture = "Portrait_Yunnan_Luo_Binghui.png"
+	traits = {
+		career_officer
+		infantry_leader
+		ambusher
+		winter_specialist
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 5004
+}
+create_corps_commander = {
+	name = "Yang Jie"
+	desc = "POLITICS_YUNNAN_YANG_JIE_ARMY_DESC"
+	picture = "Portrait_Yunnan_Yang_Jie.png"
+	traits = {
+		career_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 5009
+}

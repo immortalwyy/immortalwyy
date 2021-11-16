@@ -1,0 +1,29 @@
+state={
+	id=912
+	name="STATE_912"
+	provinces={
+		1302 4379 4397 7280 9988 10016 12297 
+	}
+	history={
+		add_core_of = CHI
+		add_core_of = VIN
+		owner = VIN
+		victory_points = {
+			4397 1 
+		}
+		victory_points = {
+			4075 1 
+		}
+		victory_points = {
+			4379 3 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=3165400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

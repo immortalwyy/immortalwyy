@@ -1,0 +1,30 @@
+
+state={
+	id=600
+	name="STATE_600"
+
+	history={
+		owner = ZHI
+		add_core_of = CHI
+		add_core_of = ZHI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			3992 5 
+		}
+		victory_points = {
+			10501 1 
+		}
+
+	}
+
+	provinces={
+		1628 3992 4083 7653 10114 10501 11988 12495 
+	}
+	manpower=5820400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

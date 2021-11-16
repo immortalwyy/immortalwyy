@@ -1,0 +1,27 @@
+state={
+	id=817
+	name="STATE_817"
+	provinces={
+		852 898 959 3803 3852 3860 3904 3981 6822 6922 6928 6944 9899 10083 11878 
+	}
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			3981 = {
+				naval_base = 1
+
+			}
+		}
+		
+		victory_points = {
+			3981 3
+		}	
+
+		add_core_of = KOR
+	}
+	manpower=1730090
+	buildings_max_level_factor=1.000
+	state_category = town
+}

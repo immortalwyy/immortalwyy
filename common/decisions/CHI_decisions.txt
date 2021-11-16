@@ -1,0 +1,1943 @@
+国内动荡问题 = {
+
+	
+	满洲拥护者的袭击 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = CHI
+		}
+		
+		available = {
+			MAN = {
+				exists = no
+				is_subject = yes
+			}
+		}
+
+		days_mission_timeout = 90
+		#days_remove = 1
+
+		activation = {
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = min.517
+				}
+				25 = {
+					country_event = min.518
+				}
+				25 = {
+					country_event = min.519
+				}
+				25 = {
+					
+				}
+			}	
+		}
+	}
+	
+	蒙古土匪的劫掠 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = CHI
+		}
+		
+		available = {
+			MON = {
+				exists = no
+				is_subject = yes
+			}
+		}
+
+		days_mission_timeout = 90
+		#days_remove = 1
+
+		activation = {
+			MON = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = min.514
+				}
+				25 = {
+					country_event = min.515
+				}
+				25 = {
+					country_event = min.516
+				}
+				25 = {
+					
+				}
+			}	
+		}
+	}
+	
+	
+}
+
+
+
+测试 = {
+
+	
+	太子 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Zhu Jingrui"
+				desc = "Zhu Jingrui_DESC"
+				picture = "zhu_jingrui.dds"
+				expire = "1965.1.1"
+				ideology = confucian_authoritarianism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	
+	二皇子 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Zhu Jingshuang"
+				desc = "Zhu Jingshuang_DESC"
+				picture = "zhu_jingshuang.dds"
+				expire = "1965.1.1"
+				ideology = confucian_authoritarianism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	
+	三皇子 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Zhu Jingjun"
+				desc = "Zhu Jingjun_DESC"
+				picture = "zhu_jingjun.dds"
+				expire = "1965.1.1"
+				ideology = confucian_authoritarianism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	
+	四皇子 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Zhu Jingmo"
+				desc = "Zhu Jingmo_DESC"
+				picture = "zhu_jingmo.dds"
+				expire = "1965.1.1"
+				ideology = confucian_authoritarianism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	
+	小皇子 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Zhu Jinghao"
+				desc = "Zhu Jinghao_DESC"
+				picture = "zhu_jinghao.dds"
+				expire = "1965.1.1"
+				ideology = confucian_authoritarianism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	
+}
+
+雪中送炭 = {
+
+	
+	请求支援步枪 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 20000
+			    producer = USA
+			}
+		}
+	}
+	
+	请求支援火炮 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 6000
+			    producer = USA
+			}
+		}
+	}
+	
+	请求支援设备 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 2600
+			    producer = USA
+			}
+		}
+	}
+	
+	请求支援轻型坦克 = {
+
+		icon = generic_tank
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = light_tank_equipment
+			    amount = 400
+			    producer = USA
+			}
+		}
+	}
+	
+	请求支援重型坦克 = {
+
+		icon = generic_tank
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = heavy_tank_equipment
+			    amount = 250
+			    producer = USA
+			}
+		}
+	}
+	
+	请求支援战斗机 = {
+
+		icon = generic_air
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment
+				amount = 180
+				producer = USA
+			}
+		}
+	}
+	
+	请求支援轰炸机 = {
+
+		icon = generic_air
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 40
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment
+				amount = 100
+				producer = USA
+			}
+		}
+	}
+	
+	请求支援海军舰队 = {
+
+		icon = generic_naval
+			
+		available = {
+			USA = {
+				exists = yes		
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 50
+
+		visible = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = CHI_meiguo_jiandui_tt
+			hidden_effect = {
+				USA = {
+					transfer_ship = {
+						type = battleship
+						target = CHI
+					}
+					transfer_ship = {
+						type = battleship
+						target = CHI
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = destroyer
+						target = CHI
+					}
+					transfer_ship = {
+						type = destroyer
+						target = CHI
+					}
+				}
+			}
+		}
+	}
+	
+	邀请美国工业团队 = {
+
+		icon = generic_civil_support
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_jichu_gongye_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_idea = basic_industrialization }
+					}
+					add_ideas = basic_industrialization
+				}	
+			}
+		}
+	}
+	
+	邀请美国教育团队 = {
+
+		icon = generic_civil_support
+
+		available = {
+			USA = {
+				exists = YES
+			}
+			NOT = { has_war_with = USA }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_daguimo_jiaoyu_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_idea = large-scale_education_system }
+					}
+					add_ideas = large-scale_education_system
+				}	
+			}
+		}
+	}
+}
+
+德国援助 = {
+
+	
+	接受坦克援助 = {
+
+		icon = generic_tank
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 60
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = light_tank_equipment_2
+			    amount = 200
+			    producer = GER
+			}
+			add_equipment_to_stockpile = {
+			    type = heavy_tank_equipment_1
+			    amount = 500
+				producer = GER		
+			}
+		}
+	}
+	
+	训练德械师 = {
+
+		icon = generic_tank
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_dexie_jun_tt
+			hidden_effect = {
+				division_template = {
+					name = "德械装甲师" 	
+					division_names_group = CHI_ZJS_01
+
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }		
+						heavy_armor = { x = 0 y = 1 }	
+						heavy_armor = { x = 0 y = 2 }					
+						heavy_armor = { x = 1 y = 0 }		
+						heavy_armor = { x = 1 y = 1 }
+						heavy_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }			
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 3 y = 0 }			
+						motorized = { x = 3 y = 1 }
+						motorized = { x = 3 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }      		
+						artillery = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Panzer-标准德式特训师\" division_template = \"德械装甲师\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Panzer-特训德械师\" division_template = \"德械装甲师\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	聘用保时捷 = {
+
+		icon = generic_tank
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 35
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = available_tank_manufacturer
+			show_ideas_tooltip = CHI_porsche
+		}
+	}
+	
+	聘请德国军事顾问 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_corps_commander = {
+				name = "Alexander von Falkenhausen"
+				gfx = GFX_portrait_chi_alexander_von_falkenhausen
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				id = 603
+				traits = { infantry_officer }
+			}
+		}
+	}
+	
+	聘请安全顾问 = {
+
+		icon = generic_civil_support
+
+		available = {
+			GER = {
+				exists = YES
+			}
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 35
+		
+		fire_only_once = yes
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_jiankong_mingzhong_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_idea = monitor_people }
+					}
+					add_ideas = monitor_people
+				}	
+			}
+		}
+	}
+}	
+	
+意大利合作 = {
+
+	
+	购买意大利炮 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 2500
+			    producer = ITA
+			}
+		}
+	}	
+	
+	聘请石油专家 = {
+
+		icon = generic_civil_support
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = CHI_cz63
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}	
+	
+	共享海战资料 = {
+
+		icon = generic_civil_support
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			navy_experience = 35
+			add_tech_bonus = {
+				name = CHI_112
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}	
+	
+	购置意大利空军装备 = {
+
+		icon = generic_air
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment
+				amount = 250
+				producer = IAT
+			}
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment
+				amount = 120
+				producer = IAT
+			}
+		}
+	}	
+	
+	购置意大利海军装备 = {
+
+		icon = generic_naval
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_yidali_jiandui_tt
+			hidden_effect = {
+				ITA = {
+					transfer_ship = {
+						type = battleship
+						target = CHI
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = CHI
+					}
+					transfer_ship = {
+						type = destroyer
+						target = CHI
+					}
+					transfer_ship = {
+						type = destroyer
+						target = CHI
+					}
+				}
+			}
+		}
+	}	
+	
+	购买意大利披萨和红酒以及意大利面 = {
+
+		icon = generic_civil_support
+
+		available = {
+			IAT = {
+				exists = YES
+			}
+			NOT = { has_war_with = IAT }
+		}
+
+		cost = 1800
+		
+		fire_only_once = yes
+		days_remove = 100
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_yidali_mian_tt
+			hidden_effect = {
+				country_event = min.5008
+			}
+		}
+	}	
+}
+	
+挽救帝国财政 = {
+	
+	政府干涉金融 = {
+	
+	icon = generic_scorched_earth
+
+		available = {
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 8
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		
+		visible = {
+		}
+		
+		remove_effect = {
+			add_political_power = -200
+			set_country_flag = CHI_yi_jingji
+		}
+	}
+	
+	征募劳工参与建设 = {
+	
+	icon = generic_political_discourse
+
+		available = {
+			has_country_flag = CHI_yi_jingji
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_manpower = -40000
+			set_country_flag = CHI_er_jingji
+		}
+	}
+	
+	吸纳外国劳工 = {
+	
+	icon = generic_operation
+
+		available = {
+			has_country_flag = CHI_er_jingji
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_stability = -0.1
+			set_country_flag = CHI_san_jingji
+		}
+	}
+	
+	调动士兵协助基建 = {
+	
+	icon = generic_army_support
+
+		available = {
+			has_country_flag = CHI_san_jingji
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 8
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_war_support = -0.1
+			set_country_flag = CHI_si_jingji
+		}
+	}
+	
+	彻底解决经济问题 = {
+	
+	icon = oppression
+
+		available = {
+			has_country_flag = CHI_yi_jingji
+			has_country_flag = CHI_er_jingji
+			has_country_flag = CHI_san_jingji
+			has_country_flag = CHI_si_jingji
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+		days_remove = 30
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			remove_ideas = CHI_caizheng_benkui
+		}
+	}
+}
+	
+英国合作 = {
+
+	
+	聘请英国海军顾问 = {
+
+		icon = generic_army_support
+
+		available = {
+			ENG = {
+				exists = YES
+			}
+			NOT = { has_war_with = ENG }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_navy_leader = {
+				name = "Austen Chamberlain"
+				picture = "Austen_chamberlain.dds"
+				skill = 6
+				attack_skill = 6
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 3
+				traits = { battleship_adherent fly_swatter }
+			}
+		}
+	}	
+	
+	购买英国战斗机 = {
+
+		icon = generic_army_support
+
+		available = {
+			ENG = {
+				exists = YES
+			}
+			NOT = { has_war_with = ENG }
+		}
+
+		cost = 60
+		
+		fire_only_once = yes
+		days_remove = 60
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 300 
+				producer = ENG
+			}
+		}
+	}	
+	
+	换取前卫号蓝图 = {
+
+		icon = generic_army_support
+
+		available = {
+			ENG = {
+				exists = YES
+			}
+			NOT = { has_war_with = ENG }
+			date > 1944.1.11
+		}
+
+		cost = 180
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			give_resource_rights = { receiver = ENG state = 333 }		
+			create_equipment_variant = {
+				name = "Vanguard"
+				type = ship_hull_heavy_4
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = heavy_ship_engine_4
+					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_4
+					mid_2_custom_slot = dp_ship_secondaries
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_heavy_battery_3
+				}
+			}
+		}
+	}	
+}
+	
+	
+	
+法国合作 = {
+
+	
+	邀请法国军事顾问 = {
+
+		icon = generic_army_support
+
+		available = {
+			FRA = {
+				exists = YES
+			}
+			NOT = { has_war_with = FRA }
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = CHI_construction_battalions
+				bonus = 2.0
+				uses = 2
+				category = engineers_tech
+			}
+		}
+	}	
+	
+	训练法式山地师 = {
+
+		icon = generic_army_support
+
+		available = {
+			FRA = {
+				exists = YES
+			}
+			NOT = { has_war_with = FRA }
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = CHI_faxie_jun_tt
+			hidden_effect = {
+				division_template = {
+					name = "法式山地旅"
+					division_names_group = CHI_MNT_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+		
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+		
+						mountaineers = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Le premier法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Deuxième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}	
+					create_unit = {
+						division = "name = \"Troisième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Quatrième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Cinquième法式山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Français山地师\" division_template = \"法式山地旅\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+临时地方巡捕安保队 = {
+	
+	召集辽东巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			716 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 716 }
+				create_unit = {
+					division = "name = \"辽东临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"辽东临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集北直隶巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			608 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 608 }
+				create_unit = {
+					division = "name = \"北直隶临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"北直隶临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集山东巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			597 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 597 }
+				create_unit = {
+					division = "name = \"山东临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"山东临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集江苏巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			598 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 598 }
+				create_unit = {
+					division = "name = \"江苏临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"江苏临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集淞沪巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			613 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"淞沪临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"淞沪临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集浙江巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			596 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 596 }
+				create_unit = {
+					division = "name = \"浙江临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"浙江临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集两广巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			592 = { is_controlled_by = CHI }
+			593 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 40
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 592 }
+				create_unit = {
+					division = "name = \"两广临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"两广临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 593 }
+				create_unit = {
+					division = "name = \"两广临时巡捕安保前队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"两广临时巡捕安保后队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+	
+	召集西南巡捕安保部队 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			605 = { is_controlled_by = CHI }
+			has_army_experience > 9
+			has_completed_focus = CHI_lj04 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 50
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -10		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 605 }
+				create_unit = {
+					division = "name = \"西南临时巡捕安保左队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"西南临时巡捕安保右队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"西南临时巡捕安保前队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"西南临时巡捕安保后队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"西南临时巡捕安保中队\" division_template = \"临时巡捕安保队\" start_experience_factor = 0.5" 
+					owner = CHI
+				}
+			}
+		}
+	}
+}
+
+调动老旧军舰 = {
+	
+	老旧战列舰重新服役 = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = CHI_hj10
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+		}
+
+		visible = {
+		}
+		remove_effect = {
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_pre_dreadnought
+					creator = "CHI" 
+					version_name = "Xuanwu Class"
+				}
+				requested_factories = 1
+				progress = 0.75
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_pre_dreadnought
+					creator = "CHI" 
+					version_name = "Xuanwu Class"
+				}
+				requested_factories = 1
+				progress = 0.75
+				amount = 1
+			}	
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_pre_dreadnought
+					creator = "CHI" 
+					version_name = "Xuanwu Class"
+				}
+				requested_factories = 1
+				progress = 0.65
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_pre_dreadnought
+					creator = "CHI" 
+					version_name = "Xuanwu Class"
+				}
+				requested_factories = 1
+				progress = 0.55
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_pre_dreadnought
+					creator = "CHI" 
+					version_name = "Xuanwu Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+		}
+	}
+	
+	召回老旧巡洋舰 = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = CHI_hj12
+		}
+
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+		}
+
+		visible = {
+		}
+		remove_effect = {
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_panzerschiff
+					creator = "CHI" 
+					version_name = "Dingyuan Class"
+				}
+				requested_factories = 1
+				progress = 0.85
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_panzerschiff
+					creator = "CHI" 
+					version_name = "Dingyuan Class"
+				}
+				requested_factories = 1
+				progress = 0.8
+				amount = 1
+			}	
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_panzerschiff
+					creator = "CHI" 
+					version_name = "Dingyuan Class"
+				}
+				requested_factories = 1
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					creator = "CHI" 
+					version_name = "Wusheng Class"
+				}
+				requested_factories = 1
+				progress = 0.95
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					creator = "CHI" 
+					version_name = "Wusheng Class"
+				}
+				requested_factories = 1
+				progress = 0.85
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					creator = "CHI" 
+					version_name = "Wusheng Class"
+				}
+				requested_factories = 1
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					creator = "CHI" 
+					version_name = "Wusheng Class"
+				}
+				requested_factories = 1
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					creator = "CHI" 
+					version_name = "Wusheng Class"
+				}
+				requested_factories = 1
+				progress = 0.75
+				amount = 1
+			}
+		}
+	}
+}

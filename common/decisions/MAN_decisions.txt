@@ -1,0 +1,540 @@
+聘请日本顾问计划 = {
+
+	聘请畑俊六元帅 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_field_marshal = {
+				name = "Shunroku Hata"
+				picture = "Portrait_Japan_Shunroku_Hata.dds"
+				traits = { offensive_doctrine JAP_samurai_lineage }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 4
+			}
+		}
+	}
+	
+	聘请梅津美治郎将军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_corps_commander = {
+				name = "Yoshijiro Umezu"
+				picture = "Portrait_Japan_Yoshijiro_Umezu.dds"
+				traits = { trait_cautious politically_connected }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 3
+			}
+		}
+	}
+	
+	聘请井上成美将军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_navy_leader = {
+				name = "Shigeyoshi Inoue"
+				id = 7660
+				picture = "Portrait_Japan_Shigeyoshi_Inoue.dds"
+				traits = { aviation_enthusiast navy_career_officer }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 3
+			}
+		}
+	}
+	
+	聘请长谷川清将军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 20
+		
+		fire_only_once = yes
+		days_remove = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_navy_leader = {
+				name = "Kiyoshi Hasegawa"
+				picture = "Portrait_Japan_Hasegawa_Kiyoshi.dds"
+				traits = { gentlemanly }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+		}
+	}
+}
+
+萨尔瓦多的政变 = {
+
+	进行萨尔瓦多政变 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = MAN_32
+			has_equipment = {
+				infantry_equipment > 9999
+			}
+		}
+
+		cost = 250
+		
+		fire_only_once = yes
+		days_remove = 45
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_state_core = 314
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -10000
+			}
+			annex_country = { 
+				target = ELS
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+订购西方军舰 = {
+
+	向法国订购巡洋舰 = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = MAN_104
+		}
+
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+
+		visible = {
+			FRA = {
+				exists = yes	
+			}
+			NOT = { has_war_with = FRA }
+		}
+		remove_effect = {
+			FRA = {
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+				}
+			}		
+		}
+	}
+
+	向意大利订购巡洋舰 = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = MAN_104
+		}
+
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+
+		visible = {
+			ITA = {
+				exists = yes
+			}
+			NOT = { has_war_with = ITA }
+		}
+		remove_effect = {
+			ITA = {
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+                            transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+                            transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = light_cruiser
+			        target = MAN
+				}
+			}
+		}
+	}
+	
+	请英国制造战列巡洋舰 = {
+
+		icon = generic_naval
+			
+		available = {
+			has_completed_focus = MAN_104
+		}
+
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 70
+
+		visible = {
+			ENG = {
+				exists = yes		
+			}
+			NOT = { has_war_with = ENG }
+		}
+		remove_effect = {
+			ENG = {
+			    transfer_ship = {
+			        type = battle_cruiser
+			        target = MAN
+			    }
+                transfer_ship = {
+			        type = battle_cruiser
+			        target = MAN
+			    }
+                transfer_ship = {
+			        type = battle_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = battle_cruiser
+			        target = MAN
+				}
+			}
+		}
+	}
+	
+	向英国订购重型巡洋舰 = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = MAN_104
+		}
+
+		cost = 70
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 60
+
+		visible = {
+			ENG = {
+				exists = yes	
+			}
+			NOT = { has_war_with = ENG }
+		}
+		remove_effect = {
+			ENG = {
+			    transfer_ship = {
+			        type = heavy_cruiser
+			        target = MAN
+			    }
+                transfer_ship = {
+			        type = heavy_cruiser
+			        target = MAN
+			    }
+                transfer_ship = {
+			        type = heavy_cruiser
+			        target = MAN
+			    }
+			    transfer_ship = {
+			        type = heavy_cruiser
+			        target = MAN
+				}
+			}
+		}
+	}
+}
+
+军事革新 = {
+
+	准备专注步枪研究 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MAN_214
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons	
+			}
+		}
+	}
+	
+	准备进行火炮升级 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MAN_214
+				bonus = 1.0
+				uses = 1
+				category = artillery	
+			}
+		}
+	}
+	
+	进行军事演练 = {
+
+		icon = GFX_decision_category_infiltration
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 20
+		
+		fire_only_once = no
+		days_remove = 35
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = 30
+		}
+	}
+	
+	举行参谋部军事推演 = {
+
+		icon = border_conflicts
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		days_remove = 25
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	确定自行车部队 = {
+
+		icon = generic_operation
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+	
+	
+	尝试组建坦克部队 = {
+
+		icon = generic_operation
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 75
+		
+		fire_only_once = yes
+		days_remove = 25
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = MAN_214
+				bonus = 1.0
+				uses = 2
+				category = armor	
+			}
+		}
+	}
+	
+	确立军队纪律 = {
+
+		icon = generic_operation
+
+		available = {
+			has_completed_focus = MAN_214
+		}
+
+		cost = 35
+		
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_war_support = 0.15
+		}
+	}
+}

@@ -1,0 +1,13 @@
+DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			OR = {
+				has_autonomy_state = xuanweishi
+				has_autonomy_state = dushi
+				has_autonomy_state = chaogongguo
+				has_autonomy_state = suguo
+			}
+		}
+		always = no
+	}
+}

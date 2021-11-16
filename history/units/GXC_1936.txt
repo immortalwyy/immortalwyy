@@ -1,0 +1,170 @@
+﻿division_template = {
+	name = "地方卫所"				
+	division_names_group = CHI_DWS_01
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "靖俍军"			
+	division_names_group = CHI_SJY_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "粤军"			
+	division_names_group = CHI_SJY_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+### OOB ###
+units = {
+	division = {
+		name = "靖俍军一师一团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "靖俍军一师二团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "靖俍军一师三团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "靖俍军二师一团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "靖俍军二师二团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "靖俍军三师一团"
+		location = 7137
+		division_template = "靖俍军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "粤军一师一团"
+		location = 1047
+		division_template = "粤军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "粤军二师一团"
+		location = 1047
+		division_template = "粤军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "粤军一师二团"
+		location = 1047
+		division_template = "粤军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "粤军一师五团"
+		location = 1047
+		division_template = "粤军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "粤军一师四团"
+		location = 1047
+		division_template = "粤军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "潮州卫所"
+		location = 9938
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "靖俍林卫所"
+		location = 10404
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "泗城卫所"
+		location = 4085
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+}

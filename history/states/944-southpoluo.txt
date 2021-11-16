@@ -1,0 +1,23 @@
+state={
+	id=944
+	name="STATE_944"
+	provinces={
+		1225 1416 7296 10178 12252 
+	}
+	history={
+		owner = LAF
+		add_core_of = LAF
+		victory_points = {
+			7296 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	manpower=268600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

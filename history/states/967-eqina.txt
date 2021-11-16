@@ -1,0 +1,20 @@
+state={
+	id=967
+	name="STATE_967"
+	provinces={
+		3742 5031 5057 5100 12327 12776 
+	}
+	history={
+		owner = MON
+		add_core_of = MON
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+	manpower=1177600
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

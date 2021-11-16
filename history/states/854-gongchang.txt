@@ -1,0 +1,27 @@
+state={
+	id=854
+	name="STATE_854"
+	provinces={
+		1257 2045 4375 4403 9966 
+	}
+	history={
+		owner = XBJ
+		add_core_of = CHI
+		add_core_of = XBJ
+		victory_points = {
+			2045 1 
+		}
+		victory_points = {
+			4403 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+
+	}
+	manpower=1900000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

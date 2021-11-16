@@ -1,0 +1,1248 @@
+ideas = {
+
+    economic_system = { 
+		law = yes
+		
+		planned_economy = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				drift_defence_factor = 0.15
+				political_power_gain = 0.1
+				local_resources_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.05
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = -0.05
+				consumer_goods_factor = 0.02
+			    trade_opinion_factor = -0.2	
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		
+		national_syndicalism = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = 0.25
+				political_power_gain = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				improve_relations_maintain_cost_factor = 1.0
+			}
+
+			ai_will_do = {
+   				factor = 10000
+
+   				modifier = {
+					factor = 0
+					has_idea = agrarian_society
+				}
+   			}
+		}
+		
+		corporatism = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = 0.25
+				political_power_gain = 0.1
+				local_resources_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				compliance_gain = -0.025
+				improve_relations_maintain_cost_factor = 1.0
+				consumer_goods_factor = 0.05
+			    trade_opinion_factor = 0.1
+			    industrial_capacity_factory = 0.05
+			    industrial_capacity_dockyard = 0.05
+			}
+
+			ai_will_do = {
+   				factor = 10000
+
+   				modifier = {
+					factor = 0
+					has_idea = agrarian_society
+				}
+   			}
+		}
+
+		laisez_faire = {
+
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+			    trade_opinion_factor = 0.3		
+			    global_building_slots = 0.2
+				ministry_of_business_cost_factor = -0.50
+			}
+
+			default = yes
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+
+		}
+		
+		social_market_economy = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				local_resources_factor = 0.05
+				research_speed_factor = 0.02
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		
+		protectionism = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+				drift_defence_factor = 0.25
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.1
+				economy_cost_factor = -0.5
+			    trade_opinion_factor = 0.1
+			    line_change_production_efficiency_factor = 0.03
+			}
+
+			ai_will_do = {
+   				factor = 10000
+
+   				modifier = {
+					factor = 0
+					has_idea = agrarian_society
+				}
+
+   				modifier = {
+					factor = 0
+					NOT = { has_idea = protectionism }
+				}
+   			}
+		}
+		
+		agrarian_economy = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.2
+				industry_air_damage_factor = -0.15
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.1
+				line_change_production_efficiency_factor = -0.4
+				production_factory_efficiency_gain_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				production_speed_infrastructure_factor = -0.2
+				production_speed_coastal_bunker_factor = -0.5
+				production_speed_bunker_factor = -0.5
+				production_speed_air_base_factor = -0.5
+				production_speed_anti_air_building_factor = -0.5
+				production_speed_naval_base_factor = -0.5
+				production_speed_radar_station_factor = -0.5
+			}
+
+			research_bonus = {
+				nuclear = -1.0
+			}
+
+			ai_will_do = {
+   				factor = 10000
+
+   				modifier = {
+					factor = 0
+					NOT = { has_idea = agrarian_society }
+				}
+   			}
+		}
+
+		primative_economy = {
+			available = { 
+			always = no
+			}
+
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				industry_air_damage_factor = -0.25
+				consumer_goods_factor = -0.1
+				training_time_factor = 0.5
+				mobilization_speed = -0.25
+				political_power_gain = -0.5
+				research_speed_factor = -0.4
+				line_change_production_efficiency_factor = -0.6
+				production_factory_efficiency_gain_factor = -0.5
+				production_speed_buildings_factor = -0.5
+				production_speed_infrastructure_factor = -0.4
+				production_speed_coastal_bunker_factor = -0.75
+				production_speed_bunker_factor = -0.75
+				production_speed_air_base_factor = -0.75
+				production_speed_anti_air_building_factor = -0.75
+				production_speed_naval_base_factor = -0.75
+				production_speed_radar_station_factor = -0.75
+				industrial_capacity_factory = -0.75
+				industrial_capacity_dockyard = -0.75
+			}
+
+			research_bonus = {
+				nuclear = -1.0
+			}
+
+			ai_will_do = {
+   				factor = 10000
+
+   				modifier = {
+					factor = 0
+					NOT = { has_idea = primative_economy }
+				}
+   			}
+		}
+
+	}
+
+	economy = { 
+		law = yes
+		use_list_view = yes
+		
+		undisturbed_isolation = {
+			
+			
+			allowed = {
+				always = no
+			}
+			level = 7
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = 0.50
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.30
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.30
+				guarantee_tension = 0.8
+				max_fuel_factor = -0.4
+				fuel_gain_factor = -0.6
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.5
+					has_war = yes
+					has_completed_focus = USA_limited_intervention
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		isolation = {
+						
+			allowed = {
+				always = no
+			}
+			level = 6
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_speed_industrial_complex_factor = 0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.3
+				fuel_gain_factor = -0.5
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.75
+					has_war = yes
+					has_completed_focus = USA_limited_intervention					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		civilian_economy = {
+			
+		
+			cost = 150
+			level = 5
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_bunker_factor = -0.4
+				production_speed_synthetic_refinery_factor = -0.1
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = -0.4
+				max_fuel_factor = -0.3
+				fuel_gain_factor = -0.2
+				stability_factor = 0.1
+				war_support_factor = -0.01
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
+		low_economic_mobilisation = {
+			
+			available = {
+				has_war_support > 0.15
+			}
+			
+			cost = 150
+			level = 4
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+				production_speed_bunker_factor = 0.10
+				production_speed_synthetic_refinery_factor = 0.1
+				fuel_gain_factor = -0.2
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+   			}
+		}
+		
+		partial_economic_mobilisation = {
+			
+			available = {
+				has_war_support > 0.25
+			}
+
+			cost = 150
+			level = 3
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				production_speed_infrastructure_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_dockyard_factor = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_synthetic_refinery_factor = 0.2
+				fuel_gain_factor = 0.1
+				stability_factor = -0.10
+				war_support_factor = 0.10
+			}
+			
+			cancel_if_invalid = no
+			ai_will_do = {
+   				factor = 2
+   			}
+		}
+		
+		war_economy = {
+			
+			
+			available = {
+				has_war_support > 0.5
+				OR = {
+			    has_government = vanguardism
+			    has_government = communism
+		        has_government = fascism
+		        has_government = radicalism
+				custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+				AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.4
+							}
+						}
+					}
+				}
+				
+			}
+		
+			cost = 150
+			level = 2
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				production_speed_infrastructure_factor = -0.3
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_bunker_factor = 0.30
+				production_speed_synthetic_refinery_factor = 0.3
+				fuel_gain_factor = 0.2
+				stability_factor = -0.20
+				war_support_factor = 0.20
+				political_power_factor = -0.15
+			}
+			
+			cancel_if_invalid = no
+			ai_will_do = {
+   				factor = 5
+   			}
+		}
+		
+		tot_economic_mobilisation = {
+			
+			
+			available = {
+				has_war = yes
+				has_war_support > 0.8
+				any_enemy_country = {
+					ic_ratio = { 
+						tag = ROOT 
+						ratio > 0.5
+					}
+				}
+
+			}
+			ai_will_do = {
+   				factor = 1
+				
+   			}
+			
+			cost = 150
+			level = 1
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.4
+				production_speed_dockyard_factor = 0.4
+				conversion_cost_civ_to_mil_factor = -0.5
+				conversion_cost_mil_to_civ_factor = -0.5
+				production_speed_infrastructure_factor = -0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_bunker_factor = 0.4
+				production_speed_synthetic_refinery_factor = 0.4
+				fuel_gain_factor = 0.7
+				stability_factor = -0.30
+				war_support_factor = 0.30
+				political_power_factor = -0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	
+	industriation_and_economic_development_level = { 
+		law = yes
+		use_list_view = yes
+		highly_industrialized = {
+		
+			available = {
+				industrial_complex > 100
+				num_of_factories > 200
+			}
+			removal_cost = -1
+			level = 5
+			modifier = {
+				research_speed_factor = 0.15
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.15
+			}
+			
+			cancel_if_invalid = no
+			cost = 0
+	    }
+		
+		basic_industrialization = {
+		
+			available = {
+				industrial_complex > 60
+				num_of_factories > 100
+			}
+			removal_cost = -1
+			level = 5
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.05
+			}
+			
+			cancel_if_invalid = no
+			cost = 0
+	    }
+		agricultural_dominance = {
+		
+			available = {
+				industrial_complex > 30
+			}
+			removal_cost = -1
+			level = 5
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_factor = -0.05
+				conscription_factor = -0.05
+			}
+			
+			cancel_if_invalid = no
+			cost = 0
+	    }
+		agricultural_economy = {
+		
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			default = yes
+			level = 5
+			modifier = {
+				research_speed_factor = -0.15
+				consumer_goods_factor = -0.1
+				conscription_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+			cost = 0
+	    }
+	}
+	trade_laws = { 
+		law = yes
+		use_list_view = yes
+		
+		free_trade = {
+
+			available = {
+			    always = yes
+			}
+						
+			cost = 150
+			level = 4
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.9
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.10
+			    drift_defence_factor = -0.70
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+		
+		export_focus = {
+			
+			available = {
+			    always = yes
+			}
+			
+			
+			cost = 150
+			level = 3
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.6
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				drift_defence_factor = -0.30
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+		
+		limited_exports = {
+			available = {
+				OR = {
+					AND = {
+						has_government = democratic
+						has_government = socialism
+						has_government = conservatism
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = { has_government = democratic
+						has_government = socialism
+						has_government = conservatism }
+						OR = {
+							has_idea = partial_economic_mobilisation
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+			}
+		
+			cost = 150
+			level = 2
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.30
+				production_speed_buildings_factor = -0.02
+				research_speed_factor = -0.02
+				political_power_factor= 0.1
+			    drift_defence_factor = 0.30
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 5
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+		
+		closed_economy = {
+			
+			
+			available = {
+				has_war = yes
+				OR = { 
+					has_government = vanguardism
+					has_government = communism
+					has_government = despotism
+					has_government = fascism
+		            has_government = radicalism
+				}
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			
+			cost = 150
+			level = 1
+			removal_cost = -1
+			
+			
+			modifier = {
+				min_export = 0
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = -0.05
+				political_power_factor = 0.2
+				drift_defence_factor = 0.70
+			}
+			
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+	}
+	
+	taxes = { 
+		law = yes
+		use_list_view = yes
+		tax_minimal = {
+			
+			cost = 125
+			removal_cost = -1
+			level = 5
+			available = {
+				#can_take_tax_minimal = yes
+			}
+			
+			modifier = {
+				mobilization_laws_cost_factor = 1
+				#education_cost_factor = 2
+				#production_speed_economy_switch_speed_factor = 1.0
+				political_power_factor = 0.08
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.14
+				production_speed_dockyard_factor = 0.06
+				consumer_goods_factor = -0.01
+				ruling_party_drift = 0.02
+				stability_weekly  = 0.004
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+			on_add = {
+				#custom_effect_tooltip = taxes_TT			  
+				set_country_flag = tax_minimal
+				clr_country_flag = tax_low
+				clr_country_flag = tax_average
+				clr_country_flag = tax_high
+				clr_country_flag = tax_extreme
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		tax_low = {
+			
+			cost = 125
+			removal_cost = -1
+			level = 4
+			available = {
+				#can_take_tax_low = yes
+			}
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.5
+				#education_cost_factor = 1
+				#production_speed_economy_switch_speed_factor = 0.5
+				political_power_factor = 0.04
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = -0.07
+				production_speed_dockyard_factor = 0.03
+				consumer_goods_factor = -0.02
+				ruling_party_drift = 0.01
+				stability_weekly  = 0.002
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = taxes_TT
+				set_country_flag = tax_low
+				clr_country_flag = tax_minimal
+				clr_country_flag = tax_average
+				clr_country_flag = tax_high
+				clr_country_flag = tax_extreme
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		tax_average = {
+			
+			cost = 100
+			removal_cost = -1
+			level = 3
+			available = {
+				#can_take_tax_average = yes			
+			}
+			
+			default = yes
+			
+			modifier = {
+				political_power_factor = 0.01
+				consumer_goods_factor = -0.03
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = taxes_TT
+				set_country_flag = tax_average
+				clr_country_flag = tax_minimal
+				clr_country_flag = tax_low
+				clr_country_flag = tax_high
+				clr_country_flag = tax_extreme
+			}
+			
+			cancel_if_invalid = no
+
+		}
+		tax_high = {
+			
+			cost = 125
+			removal_cost = -1
+			level = 2
+			available = {	
+				#can_take_tax_high = yes
+			}
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.25
+				political_power_factor = -0.04
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = 0.07
+				production_speed_dockyard_factor = -0.03
+				consumer_goods_factor = -0.05
+				#opposition_party_drift = 0.04
+				stability_weekly  = -0.002
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = 0.05 instant = yes
+				}
+			}
+		
+			on_add = {
+				#custom_effect_tooltip = taxes_TT
+				set_country_flag = tax_high
+				clr_country_flag = tax_minimal
+				clr_country_flag = tax_low
+				clr_country_flag = tax_average
+				clr_country_flag = tax_extreme
+			}
+			
+			cancel_if_invalid = no
+
+		}
+		tax_extreme = {
+			
+			cost = 125
+			removal_cost = -1
+			level = 1
+			available = {
+				#can_take_tax_extreme = yes
+			}
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.5
+				#education_cost_factor = -0.20
+				#production_speed_economy_switch_speed_factor = -0.25
+				political_power_factor = -0.08
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.14
+				production_speed_dockyard_factor = -0.06
+				consumer_goods_factor = -0.07
+				#opposition_party_drift = 0.08
+				stability_weekly  = -0.004
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = 0.1 instant = yes
+				}
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = taxes_TT
+				set_country_flag = tax_extreme
+				clr_country_flag = tax_minimal
+				clr_country_flag = tax_low
+				clr_country_flag = tax_average
+				clr_country_flag = tax_high
+			}
+			
+			cancel_if_invalid = no
+
+		}	
+	}
+	military_expenditure = { 
+		law = yes
+		militia = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.01
+				army_org_factor = -0.4
+				training_time_army_factor = 0.3
+				special_forces_min = 2
+				conscription_factor = -0.7
+				army_spending_cost_factor = -0.1
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		disarmament_states = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				army_org_factor = -0.3
+				training_time_army_factor = 0.2
+				minimum_training_level = -0.1
+				mobilization_speed = 0.5
+				army_morale_factor = -0.15
+				land_reinforce_rate = 0.02
+				conscription_factor = 0.2
+				army_defence_factor = 0.1
+				army_spending_cost_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		standing_army = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			default = yes
+			modifier = {
+				consumer_goods_factor = 0.04
+				special_forces_cap = 0.01
+				experience_gain_factor = 0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		
+		strong_army = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = 0.06
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				land_reinforce_rate = 0.01
+				special_forces_cap = 0.03
+				mobilization_speed = 1
+				experience_gain_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_spending_cost_factor = 0.1
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+		
+		adopt_a_war_like_policy = {
+			available = { 
+			always = no
+			}
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = 0.08
+				army_org_factor = 0.15
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.02
+				special_forces_cap = 0.05
+				mobilization_speed = 1.5
+				experience_gain_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				army_spending_cost_factor = 0.25
+			}
+
+			ai_will_do = {
+   				factor = 100
+   			}
+		}
+	}
+	education_act = { 
+		law = yes
+		use_list_view = yes
+		no_education_system = {
+		
+			allowed = {
+				always = yes
+			}
+			default = yes
+			removal_cost = -1
+			level = 5
+			modifier = {
+				monthly_population = 0.4
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		small-scale_education_system = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 4
+			modifier = {
+				monthly_population = 0.4
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05 
+				consumer_goods_factor = 0.01
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		symbolic_education_system = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 3
+			modifier = {
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1 
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		large-scale_education_system = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 2
+			modifier = {
+				monthly_population = -0.25
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
+                consumer_goods_factor = 0.03				
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+		advanced_education_system = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			level = 1
+			modifier = {
+				monthly_population = -0.5
+				research_speed_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.04
+			}
+			
+			cancel_if_invalid = no
+			cost = 300
+	    }
+    }
+	social_security = {
+		law = yes
+		Oppress_people = {
+
+			available = {
+				OR = {
+					has_idea = Oppress_people
+					has_idea = Low_security
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.20
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+   			}
+			default = yes
+		}
+		Low_security = {
+			available = {
+				OR = {
+					has_idea = Oppress_people
+					has_idea = Low_security
+					has_idea = Basic_guarantee
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				stability_factor = -0.025
+				production_factory_efficiency_gain_factor = -0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+   			}
+		}
+		Basic_guarantee = {
+			available = {
+				OR = {
+					has_idea = Basic_guarantee
+					has_idea = Low_security
+					has_idea = Limited_benefits
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+   			}
+		}
+		Limited_benefits = {
+			available = {
+				OR = {
+					has_idea = Basic_guarantee
+					has_idea = Limited_benefits
+					has_idea = welfare_state
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				stability_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+   			}
+		}
+		welfare_state = {
+			available = {
+				OR = {
+					has_idea = Limited_benefits
+					has_idea = welfare_state
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.20
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+   			}
+		}
+	}
+}

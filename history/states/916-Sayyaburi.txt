@@ -1,0 +1,21 @@
+state={
+	id=916
+	name="STATE_916"
+	provinces={
+		10330 10356 
+	}
+	history={
+		owner = LAO
+		add_core_of = LAO
+		victory_points = {
+			10330 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	manpower=56000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

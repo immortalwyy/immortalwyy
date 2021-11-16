@@ -1,0 +1,23 @@
+state={
+	id=927
+	name="STATE_927"
+	provinces={
+		1364 1376 4310 4384 12215 
+	}
+	history={
+		owner = MLJ
+		victory_points = {
+			1364 3 
+		}
+		
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = MLJ
+
+	}
+	manpower=543689
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

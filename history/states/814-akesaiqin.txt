@@ -1,0 +1,24 @@
+state={
+	id=814
+	name="STATE_814"
+
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = SIk
+		add_core_of = TIB
+
+	}
+
+	provinces={
+		5042 
+	}
+	manpower=55800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

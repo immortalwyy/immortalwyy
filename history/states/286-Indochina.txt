@@ -1,0 +1,31 @@
+
+state={
+	id=286
+	name="STATE_286"
+	resources={
+		rubber=55.000
+	}
+
+	history={
+		add_core_of = VIN
+		owner = NAY
+		add_core_of = NAY
+		victory_points = {
+			1400 1 
+		}
+		victory_points = {
+			10162 3 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+    provinces={
+	   4363 1328 1300 1400 7380 4334 4405 1605 12109 10162 1285
+	}
+	manpower=1845000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,419 @@
+defined_text = { 
+	name = GetIdeologyGroupIcon
+	text = {
+		trigger = {
+			has_government = vanguardism
+		}
+		localization_key = GFX_ideology_vanguardism_group
+	}
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = GFX_ideology_communism_group
+	}
+	text = {
+		trigger = {
+			has_government = socialism
+		}
+		localization_key = GFX_ideology_socialism_group
+	}
+	text = {
+		trigger = {
+			has_government = reformism
+		}
+		localization_key = GFX_ideology_reformism_group
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = GFX_ideology_democratic_group
+	}
+	text = {
+		trigger = {
+			has_government = conservatism
+		}
+		localization_key = GFX_ideology_conservatism_group
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = GFX_ideology_neutrality_group
+	}
+	text = {
+		trigger = {
+			has_government = despotism
+		}
+		localization_key = GFX_ideology_despotism_group
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = GFX_ideology_fascism_group
+	}
+	text = {
+		trigger = {
+			has_government = radicalism
+		}
+		localization_key = GFX_ideology_radicalism_group
+	}
+	text = {
+		trigger = {
+		}
+		localization_key = GFX_ideology_radicalism_group
+	}
+}
+
+defined_text = {
+	name = GetsIdeologyName
+	text = {
+		trigger = {
+			has_country_flag = vanguardism_ideology
+		}
+		localization_key = vanguardism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_flag = national_vanguardism
+		}
+		localization_key = national_vanguardism
+	}
+	text = {
+		trigger = {
+			has_country_flag = revolutionary_republicanism
+		}
+		localization_key = revolutionary_republicanism
+	}
+	text = {
+		trigger = {
+			has_country_flag = national_socialism
+		}
+		localization_key = national_socialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = anarchism
+		}
+		localization_key = anarchism
+	}
+	text = {
+		trigger = {
+			has_country_flag = libertarianism
+		}
+		localization_key = libertarianism
+	}
+	text = {
+		trigger = {
+			has_country_flag = marxism
+		}
+		localization_key = marxism
+	}
+	text = {
+		trigger = {
+			has_country_flag = revolutionary_communism
+		}
+		localization_key = revolutionary_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = totalitarian_communism
+		}
+		localization_key = totalitarian_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = syndicalism
+		}
+		localization_key = syndicalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = combat_communism
+		}
+		localization_key = combat_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = council_communism
+		}
+		localization_key = council_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = autonomous_communism
+		}
+		localization_key = autonomous_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = agricultural_communism
+		}
+		localization_key = agricultural_communism
+	}
+	text = {
+		trigger = {
+			has_country_flag = democrati_socialism
+		}
+		localization_key = democrati_socialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = people_socialism
+		}
+		localization_key = people_socialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = socialism_democracy
+		}
+		localization_key = socialism_democracy
+	}
+	text = {
+		trigger = {
+			has_country_flag = taoist
+		}
+		localization_key = taoist
+	}
+	text = {
+		trigger = {
+			has_country_flag = liberal_socialism
+		}
+		localization_key = liberal_socialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = buddhist_socialism
+		}
+		localization_key = buddhist_socialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = three_people_principles
+		}
+		localization_key = three_people_principles
+	}
+	text = {
+		trigger = {
+			has_country_flag = classical_liberalism
+		}
+		localization_key = classical_liberalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = liberalism
+		}
+		localization_key = liberalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = social_liberalism
+		}
+		localization_key = social_liberalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = trade_iberalism
+		}
+		localization_key = trade_iberalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = conservatism_ideology
+		}
+		localization_key = conservatism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_flag = traditionalist_conservatism
+		}
+		localization_key = traditionalist_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_flag = christian_conservatism
+		}
+		localization_key = christian_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_flag = national_conservatism
+		}
+		localization_key = national_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_flag = utilitarianism
+		}
+		localization_key = utilitarianism
+	}
+	text = {
+		trigger = {
+			has_country_flag = oligarchism
+		}
+		localization_key = oligarchism
+	}
+	text = {
+		trigger = {
+			has_country_flag = synarchism
+		}
+		localization_key = synarchism
+	}
+	text = {
+		trigger = {
+			has_country_flag = politicalism
+		}
+		localization_key = politicalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = theocracy
+		}
+		localization_key = theocracy
+	}
+	text = {
+		trigger = {
+			has_country_flag = theocracy_est
+		}
+		localization_key = theocracy_est
+	}
+	text = {
+		trigger = {
+			has_country_flag = bureaucracy
+		}
+		localization_key = bureaucracy
+	}
+	text = {
+		trigger = {
+			has_country_flag = authoritarian_democracy
+		}
+		localization_key = authoritarian_democracy
+	}
+	text = {
+		trigger = {
+			has_country_flag = elitism
+		}
+		localization_key = elitism
+	}
+	text = {
+		trigger = {
+			has_country_flag = personal_dictatorship
+		}
+		localization_key = personal_dictatorship
+	}
+	text = {
+		trigger = {
+			has_country_flag = military_government
+		}
+		localization_key = military_government
+	}
+	text = {
+		trigger = {
+			has_country_flag = autocratic_monarchy
+		}
+		localization_key = autocratic_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_flag = autocratic_monarchy_est
+		}
+		localization_key = autocratic_monarchy_est
+	}
+	text = {
+		trigger = {
+			has_country_flag = dual_monarchy
+		}
+		localization_key = dual_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_flag = liyue
+		}
+		localization_key = liyue
+	}
+	text = {
+		trigger = {
+			has_country_flag = islamism
+		}
+		localization_key = islamism
+	}
+	text = {
+		trigger = {
+			has_country_flag = fascismo
+		}
+		localization_key = fascismo
+	}
+	text = {
+		trigger = {
+			has_country_flag = corporatism
+		}
+		localization_key = corporatism
+	}
+	text = {
+		trigger = {
+			has_country_flag = frontalism
+		}
+		localization_key = frontalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = militarism
+		}
+		localization_key = militarism
+	}
+	text = {
+		trigger = {
+			has_country_flag = integrationism
+		}
+		localization_key = integrationism
+	}
+	text = {
+		trigger = {
+			has_country_flag = imperialism
+		}
+		localization_key = imperialism
+	}
+	text = {
+		trigger = {
+			has_country_flag = rexism
+		}
+		localization_key = rexism
+	}
+	text = {
+		trigger = {
+			has_country_flag = nazism
+		}
+		localization_key = nazism
+	}
+	text = {
+		trigger = {
+			has_country_flag = reactionism
+		}
+		localization_key = reactionism
+	}
+	text = {
+		trigger = {
+			has_country_flag = fundamentalism
+		}
+		localization_key = fundamentalism
+	}
+	text = {
+		trigger = {
+			has_country_flag = purity
+		}
+		localization_key = purity
+	}
+	text = {
+		trigger = {
+			has_country_flag = retrospective
+		}
+		localization_key = retrospective
+	}
+	text = {
+		trigger = {
+		}
+		localization_key = subide_TT_key
+	}
+}

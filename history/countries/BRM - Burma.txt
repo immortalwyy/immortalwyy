@@ -1,0 +1,163 @@
+﻿capital = 288
+
+oob = "BRM_1936"
+
+set_stability = 0.6
+set_war_support = 0.55
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	mass_assault = 1
+}
+
+add_ideas = {
+	BRM_cg001
+	BRM_minzuzhengduan
+	BRM_shentou
+	BRM_pinruojundui
+}
+
+set_convoys = 25
+
+set_politics = {
+	ruling_party = despotism
+	elections_allowed = no
+}
+set_popularities = {
+	despotism = 80
+	democratic = 5
+	fascism = 5
+	communism = 10
+}
+
+create_country_leader = {
+	name = "Myat Paya Lat"
+	desc = "Gong Bang_DESC"
+	picture = "Portrait_Burma_Myat_Paya_Lat.png"
+	expire = "1965.1.1"
+	ideology = autocratic_monarchy_est
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Aung San"
+	desc = ""
+	picture = "Portrait_Burma_Aung_San.png"
+	expire = "1965.1.1"
+	ideology = corporatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "U Nu"
+	desc = ""
+	picture = "Portrait_U_Nu.dds"
+	expire = "1965.1.1"
+	ideology = buddhist_socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "U Saw"
+	desc = ""
+	picture = "Portrait_Burma_U_Saw.png"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Po Hla Gyi"
+	desc = ""
+	picture = "Portrait_Burma_Po_Hla_Gyi.png"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "U Ba Pe"
+	desc = ""
+	picture = "Portrait_Burma_U_Ba_Pe.png"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Kodaw_Hmaing"
+	desc = ""
+	picture = "Portrait_Burma_Kodaw_Hmaing.png"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Smith Dun"
+	picture = "Portrait_Burma_Smith_Dun.png"
+	traits = {
+		career_officer
+		organizer
+		logistics_wizard
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Aung San"
+	picture = "Portrait_Burma_Aung_San.png"
+	traits = {
+		trait_reckless
+		trickster
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ba Maw"
+	picture = "Portrait_Burma_Ba_Maw.png"
+	traits = {
+		politically_connected
+		commando
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ne Win"
+	picture = "Portrait_Burma_Ne_Win.png"
+	traits = {
+		infantry_officer
+		jungle_rat
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}

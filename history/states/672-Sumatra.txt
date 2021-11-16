@@ -1,0 +1,30 @@
+
+state={
+	id=672
+	name="STATE_672"
+	resources={
+		rubber=150.000
+		oil=12.000
+		aluminium=28.000
+	}
+
+	history={
+		owner = JUG
+		add_core_of = JUG
+		victory_points = {
+			10354 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		1332 1373 1428 1460 1533 4364 7368 10194 10354 10382 12126 12212 12415 
+	}
+	manpower=2754900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,124 @@
+﻿division_template = {
+	name = "地方卫所"				
+	division_names_group = CHI_DWS_01
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "北秦军"			
+	division_names_group = CHI_SJY_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+	}
+}
+
+### OOB ###
+units = {
+	division = {
+		name = "北秦军一师一团"
+		location = 1985
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军一师二团"
+		location = 1985
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军一师三团"
+		location = 1985
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军一师四团"
+		location = 1985
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军一师五团"
+		location = 1985
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军三师一团"
+		location = 12732
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "北秦军三师二团"
+		location = 12732
+		division_template = "北秦军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "甘州卫所"
+		location = 7803
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "岷州卫所"
+		location = 10903
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "格尔木卫所"
+		location = 7940
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+}

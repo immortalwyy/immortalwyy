@@ -1,0 +1,64 @@
+﻿##### MAN NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+MAN_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { MAN }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	fallback_name = "%d Quzhujian"				
+
+	unique = {											
+		"福源" "福成" "中绩" "清隆" "左零" "左一" "左二" "中平" "清远" "楚河" "南图"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+MAN_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { MAN }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	fallback_name = "%d Qingxing Xunyangjian"
+
+	unique = {
+		"定师" "左三" "左四" "左五" "台洛" "赫楼" "极道" "春风" "南莲" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+MAN_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { MAN }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	fallback_name = "%d Zhong Xunyangjian"
+
+	unique = {
+		"康济" "利运" "海镜" "操江" "龙湛" "黑云" "正军" "重山" "天鹤" "湄云" 
+	}
+}
+
+### BATTLESHIP NAMES ###
+MAN_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { MAN }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	fallback_name = "%d Zhanjian"		
+
+	unique = {
+		"泰成" "蓝旗" "中和" "富煌" "朗山" "杨威" "惊勇" "惊涛" "惊远" "来康" 
+	}
+}

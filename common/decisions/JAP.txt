@@ -1,0 +1,1503 @@
+与英国的合作 = {
+
+	英式陆军训练 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = 50
+		}
+	}
+	
+	海上联合演习 = {
+
+		icon = generic_naval
+
+		available = {
+			
+		}
+
+		cost = 150
+		
+		fire_only_once = no
+		days_remove = 90
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			navy_experience = 35
+			air_experience = 35
+			add_tech_bonus = {
+				name = JAP_06
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	共同科技合作 = {
+
+		icon = generic_naval
+
+		available = {
+			
+		}
+
+		cost = 150
+		
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = JAP_04
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = JAP_04
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	采购英军战斗机 = {
+
+		icon = generic_operation
+
+		available = {
+			
+		}
+
+		cost = 150
+		
+		fire_only_once = no
+		days_remove = 90
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 250 
+				producer = ENG
+			}
+		}
+	}
+}
+
+与大清的合作 = {
+
+	向大清提供步枪 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+			has_equipment = { infantry_equipment > 1999 }
+		}
+
+		cost = 0
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			send_equipment = {
+				target = MAN
+				equipment = infantry_equipment
+				amount = 2000
+				old_prioritised = yes
+			}
+		}
+	}
+	
+	向大清提供火炮 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+			has_equipment = { artillery_equipment > 199 }
+		}
+
+		cost = 0
+		
+		fire_only_once = no
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			send_equipment = {
+				target = MAN
+				equipment = artillery_equipment
+				amount = 200
+				old_prioritised = yes
+			}
+		}
+	}
+	
+	进行日清陆军共同演习 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = 50
+			MAN = {
+				army_experience = 50
+			}
+		}
+	}
+	
+	接收清国志愿军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cost = 150
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 282 }
+				create_unit = {
+					division = "name = \"大清新军第一旅\" division_template = \"清国志愿军\" start_experience_factor = 1.0" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"清日友好旅\" division_template = \"清国志愿军\" start_experience_factor = 0.8" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"八旗第一师\" division_template = \"清国志愿军\" start_experience_factor = 0.6" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"八旗第二师\" division_template = \"清国志愿军\" start_experience_factor = 0.6" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"清国志愿第一旅\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"清国志愿第二旅\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"清国志愿第三旅\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"共同师\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"吉林师团\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"极北先锋师\" division_template = \"清国志愿军\" start_experience_factor = 0.9" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"黑龙江师团\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"松江师团\" division_template = \"清国志愿军\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+			}
+		}
+	}
+	
+	帮助大清建立空军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cost = 70
+		
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			air_experience = 50	
+			MAN = {
+				add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 150
+				producer = JAP
+				}
+				add_tech_bonus = {
+					name = JAP_24
+					bonus = 1.0
+					uses = 1
+					category = tactical_bomber
+					category = cat_strategic_bomber
+					category = naval_bomber
+					category = cas_bomber
+				}
+				add_tech_bonus = {
+					name = JAP_24
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+					category = cat_heavy_fighter
+				}
+			}
+		}
+	}
+	
+	在清国领海进行海军演习 = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = { has_war_with = MAN }
+			MAN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cost = 90
+		
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			navy_experience = 35
+			air_experience = 35
+			add_tech_bonus = {
+				name = JAP_06
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+}
+
+与蒙古的合作 = {
+
+	向蒙古提供步枪 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MON }
+			MON = {
+				exists = yes
+				is_subject = no
+			}
+			has_equipment = { infantry_equipment > 1999 }
+		}
+
+		cost = 0
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			send_equipment = {
+				target = MON
+				equipment = infantry_equipment
+				amount = 2000
+				old_prioritised = yes
+			}
+		}
+	}
+	
+	向蒙古提供火炮 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MON }
+			MON = {
+				exists = yes
+				is_subject = no
+			}
+			has_equipment = { artillery_equipment > 199 }
+		}
+
+		cost = 0
+		
+		fire_only_once = no
+		days_remove = 50
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			send_equipment = {
+				target = MON
+				equipment = artillery_equipment
+				amount = 200
+				old_prioritised = yes
+			}
+		}
+	}
+	
+	接收蒙古志愿军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_war_with = MON }
+			MON = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cost = 150
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 528 }
+				create_unit = {
+					division = "name = \"至高卫队\" division_template = \"蒙古志愿师\" start_experience_factor = 1.0" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"可汗之鞭\" division_template = \"蒙古志愿师\" start_experience_factor = 1.0" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"可汗第一卫队\" division_template = \"蒙古志愿师\" start_experience_factor = 0.7" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"可汗第八卫队\" division_template = \"蒙古志愿师\" start_experience_factor = 0.7" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"冲锋旅\" division_template = \"蒙古志愿师\" start_experience_factor = 0.2" 
+					owner = JAP
+				}
+				create_unit = {
+					division = "name = \"新编骑兵旅\" division_template = \"蒙古志愿师\" start_experience_factor = 0.1" 
+					owner = JAP
+				}
+			}
+		}
+	}
+}	
+	
+内阁更替 = {
+
+	由东条英机组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Hideki Tojo"
+				desc = "Hideki Tojo_DESC"
+				picture = "Hideki_tojo.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_dongtiao
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由近卫文麿组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Fumimaro Konoe"
+				desc = "Fumimaro Konoe_DESC"
+				picture = "Fumimaro_konoe.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_jingwei
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由小矶国昭组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Kuniaki Koiso"
+				desc = "Kuniaki Koiso_DESC"
+				picture = "Portrait_Japan_Kuniaki_Koiso.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_guanliao
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由山本五十六组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Isoroku Yamamoto"
+				desc = "Isoroku Yamamoto_DESC"
+				picture = "Portrait_Japan_Isoroku_Yamamoto.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_haijun
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由岗村宁次组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Yasuji Okamura"
+				desc = "Yasuji Okamura_DESC"
+				picture = "Portrait_Japan_Yasuji_Okamura.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_canren
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由本庄繁组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Shigeru Honjo"
+				desc = "Shigeru Honjo_DESC"
+				picture = "Portrait_Japan_Shigeru_Honjo.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_yexin
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由冈田企介组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Keisuke Okada"
+				desc = "Keisuke Okada_DESC"
+				picture = "Keisuke_okada.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_qijie
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由广田弘毅组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Hirota Kōki"
+				desc = "Hirota Kōki"
+				picture = "Hirota_koki.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_niudai
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+	
+	由德川家达组阁 = {
+
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				has_idea = JAP_xinneige
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			create_country_leader = {
+				name = "Tokugawa Iesato"
+				desc = "Tokugawa Iesato"
+				picture = "Tokugawa_iesato.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					riben_houdai
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_xinneige
+				days = 150
+			}
+		}
+	}
+}
+
+大陆作战计划 = {
+
+	闪击朝鲜 = {
+
+		icon = generic_independence
+
+		available = {
+			has_war_with = CHI
+			has_war_with = KOR
+			KOR = {
+				exists = yes
+			}
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_timed_idea = {
+				idea = jap_shanjichaoxian
+				days = 180
+			}
+		}
+	}
+	
+	神风作战令 = {
+
+		icon = generic_independence
+
+		available = {
+			has_war_with = CHI
+			CHI = {
+				exists = yes
+			}
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_timed_idea = {
+				idea = jap_shenfengzuozhan
+				days = 365
+			}
+		}
+	}
+	
+	加速战争动员 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war_with = CHI
+			CHI = {
+				exists = yes
+			}
+		}
+
+		cost = 100
+		
+		fire_only_once = yes
+		days_remove = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_timed_idea = {
+				idea = jap_zhanzhengdongyuan
+				days = 730
+			}
+		}
+	}
+	
+	一亿玉碎 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war_with = CHI
+			CHI = {
+				exists = yes
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_stability = -0.3
+			add_political_power = -100
+			add_manpower = 10000000
+		}
+	}
+}
+	
+汲取财阀利益 = {
+
+	要求财阀投资民用工业 = {
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}	
+	
+	要求财阀投资军用工业 = {
+
+		icon = generic_tank
+
+		available = {
+			
+		}
+
+		cost = 80
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	
+	要求财阀投资船坞 = {
+
+		icon = generic_naval
+
+		available = {
+			
+		}
+
+		cost = 80
+		
+		fire_only_once = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+	}
+}
+	
+	
+JAP_interservice_rivalry = {
+	JAP_steel_for_guns = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_steel_for_ships
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_steel_for_ships
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_army = yes
+			set_country_flag = JAP_steel_for_guns
+		}
+	}
+	JAP_steel_for_ships = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_steel_for_guns
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_steel_for_guns
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_navy = yes
+			set_country_flag = JAP_steel_for_ships
+		}
+	}
+	JAP_prioritize_army_aircraft_construction = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_prioritize_naval_aircraft_construction
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_prioritize_naval_aircraft_construction
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			add_ideas = JAP_prioritize_army_aircraft_construction
+			JAP_interservice_rivalry_towards_army = yes
+			set_country_flag = JAP_prioritize_army_aircraft_construction
+		}
+	}
+	JAP_prioritize_naval_aircraft_construction = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_prioritize_army_aircraft_construction
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_prioritize_army_aircraft_construction
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			add_ideas = JAP_prioritize_naval_aircraft_construction
+			JAP_interservice_rivalry_towards_navy = yes
+			set_country_flag = JAP_prioritize_naval_aircraft_construction
+		}
+	}
+	JAP_everybody_serves = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_draft_exemptions
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_draft_exemptions
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			conscription = 0.02
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_army = yes
+			set_country_flag = JAP_everybody_serves
+		}
+	}
+	JAP_draft_exemptions = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_everybody_serves
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_everybody_serves
+			}
+		}
+		cost = 50
+		days_remove = -1
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 3
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_navy = yes
+			set_country_flag = JAP_draft_exemptions
+		}
+	}
+	JAP_raiding_regiments = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_special_air_landing_force
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_special_air_landing_force
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			special_forces_cap = 0.02
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			set_country_flag = JAP_raiding_regiments
+			JAP_interservice_rivalry_towards_army = yes
+		}
+	}
+	JAP_special_air_landing_force = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			NOT = {
+				has_country_flag = JAP_raiding_regiments
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = JAP_raiding_regiments
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			special_forces_attack_factor = 0.05 
+			special_forces_defence_factor = 0.05
+		}
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			set_country_flag = JAP_special_air_landing_force
+			JAP_interservice_rivalry_towards_navy = yes
+		}
+	}
+	JAP_favor_army = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			AND = {
+				OR = { 
+					has_country_flag = JAP_raiding_regiments 
+					has_country_flag = JAP_special_air_landing_force
+				}
+				OR = { 
+					has_country_flag = JAP_everybody_serves
+					has_country_flag = JAP_draft_exemptions
+				}
+				OR = { 
+					has_country_flag = JAP_prioritize_naval_aircraft_construction
+					has_country_flag = JAP_prioritize_army_aircraft_construction
+				}
+				OR = { 
+					has_country_flag = JAP_steel_for_guns
+					has_country_flag = JAP_steel_for_ships
+				}
+			}
+			
+		}
+		visible = {
+			AND = {
+				OR = { 
+					has_country_flag = JAP_raiding_regiments 
+					has_country_flag = JAP_special_air_landing_force
+				}
+				OR = { 
+					has_country_flag = JAP_everybody_serves
+					has_country_flag = JAP_draft_exemptions
+				}
+				OR = { 
+					has_country_flag = JAP_prioritize_naval_aircraft_construction
+					has_country_flag = JAP_prioritize_army_aircraft_construction
+				}
+				OR = { 
+					has_country_flag = JAP_steel_for_guns
+					has_country_flag = JAP_steel_for_ships
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_army = yes
+		}
+	}
+	JAP_favor_navy = {
+
+		icon = generic_naval
+
+		available = { 
+			NOT = {
+				has_country_flag = JAP_war_conferences_cd
+			}
+			AND = {
+				OR = { 
+					has_country_flag = JAP_raiding_regiments 
+					has_country_flag = JAP_special_air_landing_force
+				}
+				OR = { 
+					has_country_flag = JAP_everybody_serves
+					has_country_flag = JAP_draft_exemptions
+				}
+				OR = { 
+					has_country_flag = JAP_prioritize_naval_aircraft_construction
+					has_country_flag = JAP_prioritize_army_aircraft_construction
+				}
+				OR = { 
+					has_country_flag = JAP_steel_for_guns
+					has_country_flag = JAP_steel_for_ships
+				}
+			}
+			
+		}
+		visible = {
+			AND = {
+				OR = { 
+					has_country_flag = JAP_raiding_regiments 
+					has_country_flag = JAP_special_air_landing_force
+				}
+				OR = { 
+					has_country_flag = JAP_everybody_serves
+					has_country_flag = JAP_draft_exemptions
+				}
+				OR = { 
+					has_country_flag = JAP_prioritize_naval_aircraft_construction
+					has_country_flag = JAP_prioritize_army_aircraft_construction
+				}
+				OR = { 
+					has_country_flag = JAP_steel_for_guns
+					has_country_flag = JAP_steel_for_ships
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			JAP_interservice_rivalry_towards_navy = yes
+		}
+	}
+}

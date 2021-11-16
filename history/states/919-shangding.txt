@@ -1,0 +1,24 @@
+state={
+	id=919
+	name="STATE_919"
+	provinces={
+		1620 4330 4596 7645 10204 12167 12260 12288 
+	}
+	history={
+		owner = CAM
+		add_core_of = CAM
+		victory_points = {
+			12167 3
+		}
+		victory_points = {
+			10204 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	manpower=1976800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

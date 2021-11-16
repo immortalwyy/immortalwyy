@@ -1,0 +1,26 @@
+﻿l_english:
+ machine_gun_0:0 "初级机枪装备"
+ machine_gun_1:9 "机枪装备I型"
+ machine_gun_2:9 "机枪装备II型"
+ machine_gun_3:9 "机枪装备III型"
+ ammunition:9 "战间型弹药"
+ ammunition_2:9 "改进型弹药"
+ ammunition_3:9 "优化型弹药"
+ 
+ infantry_uniforms_3:9 "军服"
+ camo:9 "初期迷彩军服"
+ camo1942:9 "改进迷彩军服"
+ winter_clothes:9 "初期冬装"
+ winter_clothes_2:9 "改进冬装"
+ sniper_rifle:9 "狙击队"
+ mortars:9 "初期迫击炮"
+ mortars_2:9 "改进型迫击炮"
+ mortars_3:9 "优化型迫击炮"
+ mortars_3:9 "优化型迫击炮"
+ tech_Headquarters:9 "设置指挥部"
+ tech_Headquarters2:9 "改进指挥部"
+ tech_Headquarters3:9 "优化指挥部"
+
+
+
+ 

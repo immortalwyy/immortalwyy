@@ -1,0 +1,1053 @@
+ideas = {
+	country = {	
+	  ###开局精神##
+	    CHI_jiayin_guonan = {
+
+			picture = jiayin_zhinan
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25			
+				war_support_factor = -0.3
+				mobilization_speed = -0.1			
+				stability_factor = -0.2
+				conscription_factor = -0.3
+			}
+		}
+		
+		CHI_fengliede_diguo = {
+
+			picture = fenglie_diguo
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.12
+				stability_factor = -0.3
+				conscription_factor = -0.1
+			}
+		}
+		
+		
+		CHI_paixilinli = {
+
+			picture = paixilinli
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.5
+				stability_weekly = -0.01
+				democratic_drift = 0.08
+				conservatism_drift = 0.08
+			}
+		}
+		
+		CHI_renshenxiaotiao = {
+
+			picture = renshenxiaotiao
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.2		
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.1
+			}
+		}
+		
+		CHI_wahezhizu = {
+
+			picture = wahezhizu
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				command_power_gain_mult = -0.5
+				training_time_army_factor = 2.00
+				military_leader_cost_factor = 5.00
+				max_command_power = -50
+				planning_speed = -0.5
+				max_planning = -0.5
+			}
+		}
+	
+		
+
+	}
+	head_of_government = {
+	    CHI_chen_gongbo = {
+
+			picture = chen_gongbo
+			
+			available = {
+				has_completed_focus = CHI_cz30 
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { fascist_demagogue }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHI_dai_jitao = {
+
+			picture = dai_jitao
+			
+			available = {
+				has_completed_focus = CHI_cz30 
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { democratic_reformer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+    }
+	foreign_minister = {
+	    CHI_chen_yi = {
+
+			picture = chi_chen_yi
+			
+			available = {
+				OR = {
+					has_completed_focus = CHI_cz12
+					has_completed_focus = CHI_cz35
+				}
+				
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { compassionate_gentleman }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		CHI_chiang_ching_kuo = {
+
+			picture = chi_chiang_ching_kuo
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { silent_workhorse }
+		}
+		CHI_soong_mei_ling = {
+
+			picture = GFX_idea_chi_soong_mei_ling
+			
+			available = {
+				has_completed_focus = CHI_cz02
+			}
+
+			allowed = {
+				original_tag = CHI
+				has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { monarchist_media_mogul }
+		}
+		CHI_chen_guofuu = {
+			
+			picture = chen_guofuu
+
+			available = {
+				has_completed_focus = CHI_jy01   
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { propaganda_expert }
+		}
+		
+		CHI_he_zhonghan = {
+			
+			picture = he_zhonghan
+
+			available = {
+				has_completed_focus = CHI_cz55
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { hawk }
+		}
+	}
+	interior_minister = {
+	   CHI_liang_shuming = {
+
+			picture = liang_shuming
+			
+			available = {
+				has_completed_focus = CHI_cz37
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { connected_citizen }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHI_zhang_jingjiang = {
+
+			picture = zhang_jingjiang
+			
+			available = {
+				has_completed_focus = CHI_cz39
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { popular_figurehead }
+		}
+		
+		CHI_chen_bijun = {
+
+			picture = chen_bijun
+			
+			available = {
+				has_completed_focus = CHI_cz52
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { zongli_furen }
+		}
+		
+		CHI_sun_fo = {
+
+			picture = sun_fo
+			
+			available = {
+				has_completed_focus = CHI_cz52
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { zhengfu_mishu }
+		}
+		CHI_chen_lifu = {
+			
+			picture = chen_lifu
+
+			available = {
+				has_completed_focus = CHI_jy01 
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { national_integralist }
+		}
+	}
+	economy_minister = {
+	    CHI_h_h_kung = {
+
+			picture = chi_h_h_kung
+			
+			available = {
+				has_completed_focus = CHI_gy02
+			}
+				
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { captain_of_industry }
+		}
+		CHI_t_v_soong = {
+
+			picture = GFX_idea_chi_t_v_soong
+
+			available = {
+				has_completed_focus = CHI_gy02
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = CHI
+					is_chinese_warlord = yes
+				}
+				has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { financial_expert }
+		}
+		
+		CHI_zhang_qun = {
+			
+			picture = zhang_qun
+
+			available = {
+				has_completed_focus = CHI_gy02  
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { economist }
+		}
+		
+		CHI_qian_dajun = {
+			
+			picture = qian_dajun
+
+			available = {
+				has_completed_focus = CHI_lj08  
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { fortification_engineer }
+		}	
+	}
+    security_minister = {
+	    CHI_dai_li = {
+
+			picture = GFX_idea_chi_dai_li
+			
+			available = {
+				has_intelligence_agency = yes
+				has_completed_focus = CHI_35
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = CHI
+					is_chinese_warlord = yes
+				}
+				has_dlc = "La Resistance"
+			}
+			
+			traits = { head_of_intelligence }
+		}
+
+		
+		CHI_tang_enbo = {
+
+			picture = tang_enbo
+			
+			allowed = {
+				original_tag = CHI
+				has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { backroom_backstabber }
+		}
+		
+		CHI_chen_yibai = {
+			
+			picture = chen_yibai
+
+			available = {
+				has_completed_focus = CHI_kj10 
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { mastermind_code_cracker }
+		}
+		
+		
+	}
+
+	army_chief = {
+	
+		CHI_chang_hsueh_liang = {
+			
+			picture = chang_hsueh_liang
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_chief_offensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_eisenhower = {
+			
+			picture = eisen_hower
+			
+			available = {
+				has_completed_focus = CHI_cz18
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRC_otto_braun = {
+			
+			picture = generic_army_europe_3
+			
+			available = {
+				has_completed_focus = CHI_lj19 
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_he_yingqin = {
+			
+			picture = generic_army_asia_1
+			
+			available = {
+				has_completed_focus = cz54 
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+						
+			traits = { army_chief_maneuver_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		
+		#Communist
+		#Fang Zeyi
+		#army_aviation_doctrine
+
+
+		#Clique
+
+		CHI_wang_shuming = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+
+			
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+
+		#Nationalist
+
+		CHI_zhouzhi_rou = {
+
+			picture = chou_chihjou
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+		#Communist
+
+		CHI_xiao_jinguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Clique
+
+		CHI_shen_honglie = {
+			
+			picture = shen_honglie
+
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+
+		#Nationalist
+
+		CHI_chenshao_kuan = {
+
+			picture = chen_shaokuan
+			
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_decisive_battle_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		
+		CHI_liang_xuzhao = {
+
+			picture = liang_xuzhao
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+	}
+
+
+	# TECHNOLOGY
+	
+	tank_manufacturer = {
+		
+		designer = yes
+		
+		CHI_taiyuan_arsenal = {
+
+			picture = generic_artillery_manufacturer_1
+			
+			allowed = {
+				tag = CHI
+			}
+			
+			available = {
+				has_completed_focus = CHI_lj17
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				armor = 0.25
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHI_liaoning_arsenal = {
+			picture = generic_motorized_equipment_manufacturer_1
+
+			
+			allowed = {
+				tag = CHI
+			}
+
+			available = {
+				has_completed_focus = CHI_lj15
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+					
+			traits = { fast_tank_manufacturer }
+			
+		}
+		
+		CHI_porsche = {
+		
+			picture = porsche
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			available = {
+				has_completed_focus = CHI_cz62
+			}
+			
+			cost = 75
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		CHI_camco_1 = {
+
+			picture = CHI_camco
+
+			available = {
+
+			}
+
+			allowed = {
+					tag = CHI
+			}
+			
+			research_bonus = {
+				air_equipment = 0.25
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		jiangnan_shipyard_group = {
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				tag = CHI
+			}
+
+			available = {
+				has_completed_focus = CHI_hj07
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.25
+			}
+						
+			traits = { pacific_fleet_naval_manufacturer }			
+		}
+	}
+	
+	materiel_manufacturer = { 
+	
+		designer = yes
+		
+		CHI_hanyan_arsenal = {
+			picture = generic_infantry_equipment_manufacturer_1
+
+			
+			allowed = {
+				tag = CHI
+			}
+
+			available = {
+				has_completed_focus = CHI_lj07
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.25
+			}
+			
+						
+			traits = { infantry_equipment_manufacturer }
+			
+		}
+		
+		CHI_mukden_arsenal = {
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				OR = {
+					is_literally_china = yes
+					tag = MAN
+				}
+				has_dlc = "Waking the Tiger"
+			}
+
+			available = {
+				has_completed_focus = CHI_gy18
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+					
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	theorist = {
+	
+		CHI_bo_yibo = { 
+			ledger = army
+
+			picture = generic_army_asia_2
+			
+			available = {
+				has_completed_focus = CHI_lj19
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.3
+			}
+			
+			traits = { mobile_warfare_expert }
+		}
+		
+		CHI_fang_zeyi = { 
+			ledger = air
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		CHI_huang_shen = {
+			ledger = navy
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}	
+		
+		CHI_wu_dayou = {
+			ledger = army
+
+			picture = wu_dayou
+			
+			
+			available = {
+				has_completed_focus = CHI_jy09
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}	
+	}
+
+
+	high_command = {
+
+		CHI_gao_zhihang = {
+			ledger = air
+
+			picture = CHI_gao_zihang
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { air_air_superiority_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		
+		
+		CHI_chiang_kai_shek = {
+			ledger = army
+
+			picture = chiang_kai_shek
+			
+			available = {
+				has_completed_focus = CHI_cz54
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_infantry_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHI_stilwell = {
+			ledger = army
+
+			picture = stil_well
+			
+			available = {
+				has_completed_focus = CHI_cz18
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_entrenchment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_chen_cheng = {
+			ledger = army
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_yu_hanmou = {
+			ledger = army
+
+			picture = generic_army_asia_1
+			
+			available = {
+				has_completed_focus = CHI_lj19
+			}
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		CHI_mining_commission = {
+
+			picture = generic_industrial_concern_3		
+			
+			available = {
+				has_completed_focus = CHI_gy11
+			}
+
+			allowed = {
+				has_dlc = "Waking the Tiger"
+				original_tag = CHI
+			}
+
+			cost = 0
+			
+			ai_will_do = {
+				factor = 1
+			}
+
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+	
+		shanghai_electronics = {
+		
+			picture = generic_electronics_concern_1
+
+			available = {
+				has_completed_focus = CHI_jy10
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1				
+			}
+		}
+	
+		MAN_western_refinery = {
+			picture = generic_refining_concern_1
+
+			available = {
+				has_completed_focus = CHI_gy12
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+}

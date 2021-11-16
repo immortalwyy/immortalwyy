@@ -1,0 +1,24 @@
+state={
+	id=840
+	name="STATE_840"
+	provinces={
+		952 1137 1590 6904 9776 
+	}
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = MON
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			1590 3 
+		}
+
+	}
+	manpower=1789600
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,296 @@
+﻿#########################
+## SZC Mod Events ##
+#########################
+
+add_namespace = szc
+
+#########新闻事件#########
+#四川国民革命
+news_event = {
+	id = szc.101
+	title = szc.101.t
+	desc = szc.101.d
+	picture = GFX_news_event_szcg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.101.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = szc.101.c
+		trigger = {
+			original_tag = SZC
+		}
+	}
+	option = {
+		name = szc.101.b
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = SZC
+			}
+		}
+	}
+}
+#刘文辉稳固了政权
+news_event = {
+	id = szc.102
+	title = szc.102.t
+	desc = szc.102.d
+	picture = GFX_news_event_szcg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.102.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	
+	option = {
+		name = szc.102.b
+		trigger = {
+			NOT = {
+				original_tag = CHI
+			}
+		}
+	}
+}
+#四川共产主义革命
+news_event = {
+	id = szc.103
+	title = szc.103.t
+	desc = szc.103.d
+	picture = GFX_news_event_szcg_dengji
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.103.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = szc.103.c
+		trigger = {
+			original_tag = SZC
+		}
+	}
+	option = {
+		name = szc.103.b
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = SZC
+			}
+		}
+	}
+}
+
+#四川日报社的成立
+news_event = {
+	id = szc.104
+	title = szc.104.t
+	desc = szc.104.d
+	picture = GFX_news_event_szcg_dengji
+
+	major = yes
+	trigger = {
+          date > 1936.7.3
+          date < 1936.7.5
+		  }
+		  
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.104.a
+		
+	}
+}
+
+#四川大饥荒
+news_event = {
+	id = szc.105
+	title = szc.105.t
+	desc = szc.105.d
+	picture = GFX_news_event_szcg_dengji
+
+	major = yes
+	trigger = {
+          date > 1936.7.3
+          date < 1936.7.5
+		  }
+		  
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.105.a
+		trigger = {
+			original_tag = SZC
+		}
+		
+	}
+	option = {
+		name = szc.105.b
+		trigger = {
+			NOT = {
+				original_tag = SZC
+			}
+		}
+	}
+}
+
+#######国家事件######
+#四川服从中央
+country_event = {
+	id = szc.201
+	title = szc.201.t
+	desc = szc.201.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.201.a
+		add_political_power = 100
+		SZC = { country_event = { id = szc.202 } }
+	}
+}
+
+#中央的援助
+country_event = {
+	id = szc.202
+	title = szc.202.t
+	desc = szc.202.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.202.a
+		add_political_power = 10
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+#刘文辉成了土皇帝
+country_event = {
+	id = szc.203
+	title = szc.203.t
+	desc = szc.203.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.203.a
+		add_political_power = -100
+	}
+}
+#四川的求助
+country_event = {
+	id = szc.204
+	title = szc.204.t
+	desc = szc.204.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.204.a
+		send_equipment = {
+        equipment = infantry_equipment
+        amount = 1000
+        target = SZC
+        }
+		SZC = { country_event = { id = szc.205 }}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = szc.204.b
+		send_equipment = {
+        equipment = infantry_equipment
+        amount = 5000
+        target = SZC
+        }
+		SZC = { country_event = { id = szc.205 } }
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = szc.204.c
+		add_political_power = 10
+		SZC = { country_event = { id = szc.206 } }
+		ai_chance = { factor = 30 }
+	}
+}
+
+#李宗仁的援助
+country_event = {
+	id = szc.205
+	title = szc.205.t
+	desc = szc.205.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.205.a
+		add_political_power = 100
+	}
+}
+
+#李宗仁拒绝
+country_event = {
+	id = szc.206
+	title = szc.206.t
+	desc = szc.206.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.206.a
+		add_political_power = -100
+	}
+}
+
+#四川驱逐了我们的官员
+country_event = {
+	id = szc.207
+	title = szc.207.t
+	desc = szc.207.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = szc.207.a
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

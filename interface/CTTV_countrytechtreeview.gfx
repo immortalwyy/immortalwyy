@@ -1,0 +1,102 @@
+spriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_machine_gun_medium"
+		texturefile = "gfx/equipments/MG_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_machine_gun1_medium"
+		texturefile = "gfx/equipments/MG_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_machine_gun2_medium"
+		texturefile = "gfx/equipments/MG_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_machine_gun3_medium"
+		texturefile = "gfx/equipments/MG_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_mortars_medium"
+		texturefile = "gfx/equipments/mortar_1.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_mortars_2_medium"
+		texturefile = "gfx/equipments/mortar_2.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_mortars_3_medium"
+		texturefile = "gfx/equipments/mortar_3.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_ammunition_medium"
+		texturefile = "gfx/equipments/tech_infantry_weapons_01.tga"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ammunition_2_medium"
+		texturefile = "gfx/equipments/techinfantry_weapons_02.tga"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ammunition_3_medium"
+		texturefile = "gfx/equipments/techinfantry_weapons_03.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_sniper_rifle_medium"
+		texturefile = "gfx/equipments/tech_sniper_rifle.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_infantry_uniforms_medium"
+		texturefile = "gfx/equipments/uniforms_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_camo_medium"
+		texturefile = "gfx/equipments/tech_camo_01.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_camo1942_medium"
+		texturefile = "gfx/equipments/tech_camo_02.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_winter_clothes_medium"
+		texturefile = "gfx/equipments/tech_winter_clothes_01.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_winter_clothes_2_medium"
+		texturefile = "gfx/equipments/tech_winter_clothes_02.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_horse_equipment_medium"
+		texturefile = "gfx/equipments/horse_equipment.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_Headquarters_medium"
+		texturefile = "gfx/equipments/headquarters_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_Headquarters2_medium"
+		texturefile = "gfx/equipments/headquarters_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_Headquarters3_medium"
+		texturefile = "gfx/equipments/headquarters_3.tga"
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=810
+	name="STATE_810"
+
+	history={
+		owner = KAZ
+		add_core_of = CHI
+		add_core_of = SIK
+		add_core_of = KAZ
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		4651 7711 7784 7795 7856 10550 10619 10680 12385 12529 12662 13148 13149 13197 
+	}
+	manpower=143123
+	buildings_max_level_factor=1.000
+	state_category =rural
+}

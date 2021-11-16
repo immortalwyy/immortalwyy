@@ -1,0 +1,473 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_goal_ming_tungri"
+		texturefile = "gfx/interface/goals/goal_ming_tungri.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_xindao"
+		texturefile = "gfx/interface/goals/goal_ming_xindao.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_rushi"
+		texturefile = "gfx/interface/goals/goal_ming_rushi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_sunzi"
+		texturefile = "gfx/interface/goals/goal_ming_sunzi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_neige"
+		texturefile = "gfx/interface/goals/goal_ming_neige.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_chufang"
+		texturefile = "gfx/interface/goals/goal_ming_chufang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_menghu"
+		texturefile = "gfx/interface/goals/goal_ming_menghu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenqing"
+		texturefile = "gfx/interface/goals/goal_ming_ribenqing.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenneige"
+		texturefile = "gfx/interface/goals/goal_ming_ribenneige.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribencefeng"
+		texturefile = "gfx/interface/goals/goal_ming_ribencefeng.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ming_ribenliuqiu"
+		texturefile = "gfx/interface/goals/goal_ming_ribenliuqiu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribengongtong"
+		texturefile = "gfx/interface/goals/goal_ming_ribengongtong.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenmeizhou"
+		texturefile = "gfx/interface/goals/goal_ming_ribenmeizhou.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenaozhou"
+		texturefile = "gfx/interface/goals/goal_ming_ribenaozhou.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenyizhi"
+		texturefile = "gfx/interface/goals/goal_ming_ribenyizhi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribenzixingche"
+		texturefile = "gfx/interface/goals/goal_ming_ribenzixingche.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_ribentank"
+		texturefile = "gfx/interface/goals/goal_ming_ribentank.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_taihuangtaihou"
+		texturefile = "gfx/interface/goals/goal_ming_taihuangtaihou.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_shouquan"
+		texturefile = "gfx/interface/goals/goal_ming_shouquan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_xiangbaiqi"
+		texturefile = "gfx/interface/goals/goal_ming_xiangbaiqi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_zhenghuangqi"
+		texturefile = "gfx/interface/goals/goal_ming_zhenghuangqi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_baqi"
+		texturefile = "gfx/interface/goals/goal_ming_baqi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_manwan"
+		texturefile = "gfx/interface/goals/goal_ming_manwan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_tianming"
+		texturefile = "gfx/interface/goals/goal_ming_tianming.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_lanqi"
+		texturefile = "gfx/interface/goals/goal_ming_lanqi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_guixia"
+		texturefile = "gfx/interface/goals/goal_ming_guixia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgbbbbbbbbb"
+		texturefile = "gfx/interface/goals/goal_ming_mgbbbbbbbbb.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgxizheng"
+		texturefile = "gfx/interface/goals/goal_ming_mgxizheng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgtiet"
+		texturefile = "gfx/interface/goals/goal_ming_mgtiet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgyewang"
+		texturefile = "gfx/interface/goals/goal_ming_mgyewang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgqima"
+		texturefile = "gfx/interface/goals/goal_ming_mgqima.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mgqishe"
+		texturefile = "gfx/interface/goals/goal_ming_mgqishe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_gu_neige"
+		texturefile = "gfx/interface/goals/goal_ming_gu_neige.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_he_zongli"
+		texturefile = "gfx/interface/goals/goal_ming_he_zongli.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_henghe_zhengce"
+		texturefile = "gfx/interface/goals/goal_ming_henghe_zhengce.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_leili_fenxin"
+		texturefile = "gfx/interface/goals/goal_ming_leili_fenxin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_meiguo_zhiyuan"
+		texturefile = "gfx/interface/goals/goal_ming_meiguo_zhiyuan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mime_hz"
+		texturefile = "gfx/interface/goals/goal_ming_mime_hz.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mmtm_xd"
+		texturefile = "gfx/interface/goals/goal_ming_mmtm_xd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_pantu_kaizhan"
+		texturefile = "gfx/interface/goals/goal_ming_pantu_kaizhan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_songsan_lm"
+		texturefile = "gfx/interface/goals/goal_ming_songsan_lm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_wang_zongli"
+		texturefile = "gfx/interface/goals/goal_ming_wang_zongli.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_weng_neige"
+		texturefile = "gfx/interface/goals/goal_ming_weng_neige.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_zhang_neige"
+		texturefile = "gfx/interface/goals/goal_ming_zhang_neige.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_jiang_fangan"
+		texturefile = "gfx/interface/goals/goal_ming_jiang_fangan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_zhang_fangan"
+		texturefile = "gfx/interface/goals/goal_ming_zhang_fangan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_zbin_juece"
+		texturefile = "gfx/interface/goals/goal_ming_zbin_juece.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_dam_hekj"
+		texturefile = "gfx/interface/goals/goal_ming_dam_hekj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_jyw_sl"
+		texturefile = "gfx/interface/goals/goal_ming_jyw_sl.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_daming_wansui"
+		texturefile = "gfx/interface/goals/goal_ming_daming_wansui.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_zfnb_baozhang"
+		texturefile = "gfx/interface/goals/goal_ming_zfnb_baozhang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_xiongmao"
+		texturefile = "gfx/interface/goals/goal_ming_xiongmao.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_diguo_bianchui"
+		texturefile = "gfx/interface/goals/goal_ming_diguo_bianchui.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_dam_junzhu"
+		texturefile = "gfx/interface/goals/goal_ming_dam_junzhu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_bingbu_gaizu"
+		texturefile = "gfx/interface/goals/goal_ming_bingbu_gaizu.dds"
+	}
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_goal_ming_meconium2"
+		texturefile = "gfx/interface/goals/goal_ming_meconium2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_meconium"
+		texturefile = "gfx/interface/goals/goal_ming_meconium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_meconium3"
+		texturefile = "gfx/interface/goals/goal_ming_meconium3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture4"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Economics1"
+		texturefile = "gfx/interface/goals/goal_ming_Economics1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Economics2"
+		texturefile = "gfx/interface/goals/goal_ming_Economics2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Economics3"
+		texturefile = "gfx/interface/goals/goal_ming_Economics3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Economics4"
+		texturefile = "gfx/interface/goals/goal_ming_Economics4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_Bills"
+		texturefile = "gfx/interface/goals/goal_ming_Bills.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_gold1"
+		texturefile = "gfx/interface/goals/goal_ming_gold1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_gold2"
+		texturefile = "gfx/interface/goals/goal_ming_gold2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_cash1"
+		texturefile = "gfx/interface/goals/goal_ming_cash1.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture6"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture6.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Industry"
+		texturefile = "gfx/interface/goals/goal_ming_Industry.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture5"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture5.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_CircularArrows2"
+		texturefile = "gfx/interface/goals/goal_ming_CircularArrows2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture2"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Industry3"
+		texturefile = "gfx/interface/goals/goal_ming_Industry3.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture3"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture3.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Industry2"
+		texturefile = "gfx/interface/goals/goal_ming_Industry2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Agriculture1"
+		texturefile = "gfx/interface/goals/goal_ming_Agriculture1.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Conscruction"
+		texturefile = "gfx/interface/goals/goal_ming_Conscruction.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_goal_ming_Steel"
+		texturefile = "gfx/interface/goals/goal_ming_Steel.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Tungsten"
+		texturefile = "gfx/interface/goals/goal_ming_Tungsten.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_NuclearAtom"
+		texturefile = "gfx/interface/goals/goal_ming_NuclearAtom.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Factories_Colored"
+		texturefile = "gfx/interface/goals/goal_ming_Factories_Colored.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Vault"
+		texturefile = "gfx/interface/goals/goal_ming_Vault.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_oil"
+		texturefile = "gfx/interface/goals/goal_ming_oil.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_GlobalTrade"
+		texturefile = "gfx/interface/goals/goal_ming_GlobalTrade.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ming_Nuclear_Cloud"
+		texturefile = "gfx/interface/goals/goal_ming_Nuclear_Cloud.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_goal_ming_emperor"
+		texturefile = "gfx/interface/goals/goal_ming_emperor.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_king"
+		texturefile = "gfx/interface/goals/goal_ming_king.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_taizi"
+		texturefile = "gfx/interface/goals/goal_ming_taizi.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ming_mabufang"
+		texturefile = "gfx/interface/goals/goal_ming_mabufang.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_generic_dalu_yinhang"
+		texturefile = "gfx/interface/goals/goal_generic_dalu_yinhang.png"
+	}
+}

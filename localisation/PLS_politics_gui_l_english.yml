@@ -1,0 +1,8 @@
+﻿l_english:
+ LeaderInfo:0 "[GetLeaderInfo]"
+ leader_name_1:0 "[GetsLeadername]"
+ subide_TT_key:0 "[GetRulingIdeology]"
+#########领导人姓名##########
+ CHI_zhu_jianchi:0 "Zhu Jianchi"
+#########领导人简介##########
+ CHI_zhu_jianchi_info:0 "这里是简介"

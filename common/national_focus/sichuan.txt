@@ -1,0 +1,4220 @@
+focus_tree = {
+	id = sichuan_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SZC
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	continuous_focus_position = { x = 20 y = 2000 }
+	###天府之国
+	focus = {
+		id = SZC_cz01      
+		icon = GFX_goal_ming_xiongmao
+		x = 8
+		y = 0
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SZC = {
+				controls_state = 856
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	###纷争难解
+	focus = {
+		id = SZC_cz02      
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_cz01 }
+		relative_position_id = SZC_cz01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = -0.1
+			add_stability = -0.05
+			add_political_power = 200
+		}
+	}
+	#设立地方议会
+	focus = {
+		id = SZC_cz03      
+		icon = GFX_goal_ming_Agriculture4
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_cz02 }
+		relative_position_id = SZC_cz02
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 100
+			add_ideas = SZC_local_council
+		}
+	}
+	#打击腐败
+	focus = {
+		id = SZC_cz04      
+		icon = GFX_goal_generic_arrests
+		x = 2
+		y = 1
+		prerequisite = { focus = SZC_cz02 }
+		relative_position_id = SZC_cz02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.02
+			add_ideas = SZC_clean_government
+		}
+	}
+	#稳定秩序
+	focus = {
+		id = SZC_cz05      
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 1
+		prerequisite = { focus = SZC_cz02 }
+		relative_position_id = SZC_cz02
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	#刘氏霸权
+	focus = {
+		id = SZC_cz06      
+		icon = GFX_goal_sichuan2
+		x = -6
+		y = 1
+		prerequisite = { focus = SZC_cz03 }
+		prerequisite = { focus = SZC_cz04 }
+		prerequisite = { focus = SZC_cz05 }
+		mutually_exclusive = { focus = SZC_kmt01 }
+		relative_position_id = SZC_cz03
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = SZC_neibodouzheng
+			neutrality > 0.35
+			NOT = {has_completed_focus = SZC_gc01 
+	    }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_neibodouzheng
+			hidden_effect = { news_event = { id = szc.102 } }
+			create_country_leader = {
+	        name = "Liu Wenhui"
+	        desc = "POLITICS_Liu_Wenhui_DESC"
+	        picture = "Portrait_Liu_Wenhui.dds"
+	        expire = "1965.1.1"
+	        ideology = despotism
+	        traits = {
+		      hardened_officer
+	        }
+}
+		}
+		
+	}
+	###遵从上谕
+	focus = {
+		id = SZC_cz07      
+		icon = GFX_goal_ming_dam_junzhu
+		x = -3
+		y = 1
+		prerequisite = { focus = SZC_cz06 }
+		relative_position_id = SZC_cz06
+		mutually_exclusive = { focus = SZC_cz08 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_country_flag = songsan_lian_meng
+		}
+
+		bypass = {
+            CHI = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}    
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+            ideology = neutrality
+             popularity = 0.1
+            }
+			hidden_effect = {
+			CHI = {
+					country_event = { id = szc.201 }
+				}
+			}	
+		}
+	}
+	#守土息民
+	focus = {
+		id = SZC_cz09      
+		icon = GFX_goal_ming_Agriculture6
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_cz07 }
+		relative_position_id = SZC_cz07
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	#救助饥荒
+	focus = {
+		id = SZC_cz10      
+		icon = GFX_goal_generic_agriculture
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_cz07 }
+		relative_position_id = SZC_cz07
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		     has_idea = SZC_dajihuang
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_dajihuang
+		}
+	}
+	#清除反对派
+	focus = {
+		id = SZC_cz11      
+		icon = GFX_goal_ming_pantu_kaizhan
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_cz09 }
+		prerequisite = { focus = SZC_cz10 }
+		relative_position_id = SZC_cz09
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+            ideology = neutrality
+             popularity = 0.1
+            }
+		}
+	}
+	#货币改革
+	focus = {
+		id = SZC_cz12      
+		icon = GFX_goal_ming_gold2
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_cz09 }
+		prerequisite = { focus = SZC_cz10 }
+		relative_position_id = SZC_cz09
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	#地税改革
+	focus = {
+		id = SZC_cz13      
+		icon = GFX_goal_ming_Bills
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_cz09 }
+		prerequisite = { focus = SZC_cz10 }
+		relative_position_id = SZC_cz09
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = tax_high
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { if = {
+				limit = {
+					NOT = { has_idea = tax_average }
+				}
+				add_ideas = tax_average
+			}
+			}
+			custom_effect_tooltip = pinjunshuishou
+		}
+	}
+	#四川之主
+	focus = {
+		id = SZC_cz14      
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_cz11 }
+		prerequisite = { focus = SZC_cz12 }
+		prerequisite = { focus = SZC_cz13 }
+		relative_position_id = SZC_cz12
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_party_name = { 
+            ideology = neutrality 
+            long_name = 大明帝党
+            name = 大明帝党
+            }
+		}
+	}
+	#宣誓效忠
+	focus = {
+		id = SZC_cz15      
+		icon = GFX_goal_ming_diguo_bianchui
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_cz11 }
+		prerequisite = { focus = SZC_cz12 }
+		prerequisite = { focus = SZC_cz13 }
+		relative_position_id = SZC_cz12
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    
+		}
+
+		bypass = {
+            CHI = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_liuwenhui
+			CHI =  { puppet = SZC }
+		}
+	}
+	#西川王
+	focus = {
+		id = SZC_cz08      
+		icon = GFX_goal_ming_king
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_cz06 }
+		relative_position_id = SZC_cz06
+		mutually_exclusive = { focus = SZC_cz07 }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			fascism > 0.3 
+            NOT = { has_country_flag = songsan_lian_meng }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+	              ruling_party = fascism
+            }
+			set_party_name = { 
+            ideology = fascism 
+            long_name = 护国党
+            name = 护国党
+            }
+			add_popularity = {
+            ideology = fascism
+             popularity = 0.2
+            }
+			set_cosmetic_tag = SZC_HAN
+			hidden_effect = {
+			CHI = {
+					country_event = { id = szc.203 }
+				}
+			}
+		} 
+	}
+	#武装中立
+	focus = {
+		id = SZC_cz16      
+		icon = GFX_focus_generic_manpower
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_cz08 }
+		relative_position_id = SZC_cz08
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_government = fascism   
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
+			}	
+			hidden_effect = { if = {
+				limit = {
+					NOT = { has_idea = foreign_neutral }
+				}
+				add_ideas = foreign_neutral
+			}
+			}
+		
+		}
+	}
+	#团结人民
+	focus = {
+		id = SZC_cz19      
+		icon = GFX_goal_generic_national_unity
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_cz16 }
+		relative_position_id = SZC_cz16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_liuxiang
+		}
+	}
+	#天命秩序
+	focus = {
+		id = SZC_cz21     
+		icon = GFX_goal_ming_neige
+		x = -2
+		y = 1
+		prerequisite = { focus = SZC_cz08 focus = SZC_cz07}
+		relative_position_id = SZC_cz08
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		  is_subject = no
+		  has_army_manpower = { size > 199999 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+	#礼教治国
+	focus = {
+		id = SZC_cz22     
+		icon = GFX_goal_szc_lijiao
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_cz17 }
+		prerequisite = { focus = SZC_cz16 }
+		relative_position_id = SZC_cz17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ustom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_liuwencai
+		}
+	}
+	#军阀互助
+	focus = {
+		id = SZC_cz20     
+		icon = GFX_goal_ming_ribengongtong
+		x = -2
+		y = 2
+		prerequisite = { focus = SZC_cz16 }
+		relative_position_id = SZC_cz16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    HNN = { has_opinion	= {
+					target = ROOT
+					value > 70
+				}
+				}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 5000
+            producer = HNN
+			
+			}
+		}
+	}
+	#民族主义激情
+	focus = {
+		id = SZC_cz23     
+		icon = GFX_goal_ming_rushi
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_cz20 }
+		prerequisite = { focus = SZC_cz18 }
+		prerequisite = { focus = SZC_cz22 }
+		relative_position_id = SZC_cz20
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   fascism > 0.5
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+            ideology = fascism
+             popularity = 0.1
+			} 
+		}
+	}
+	#蜀道难
+	focus = {
+		id = SZC_cz24     
+		icon = GFX_goal_ming_sunzi
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_cz20 }
+		prerequisite = { focus = SZC_cz18 }
+		prerequisite = { focus = SZC_cz22 }
+		relative_position_id = SZC_cz20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			856 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10144
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11865
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1893
+						instant_build = yes
+					}
+				
+			}
+		}
+	}
+	#建立国家
+	focus = {
+		id = SZC_cz25     
+		icon = GFX_goal_CHI_focus_on_external_threats
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_cz24 }
+		prerequisite = { focus = SZC_cz23 }
+		relative_position_id = SZC_cz23
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	#集中化建设
+	focus = {
+		id = SZC_cz18      
+		icon = GFX_goal_ming_Factories_Colored
+		x = 0
+		y = 2
+		prerequisite = { focus = SZC_cz16 }
+		relative_position_id = SZC_cz16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#儒家统治
+	focus = {
+		id = SZC_cz17      
+		icon = GFX_goal_szc_rujiao
+		x = 3
+		y = 2
+		prerequisite = { focus = SZC_cz08 }
+		relative_position_id = SZC_cz08
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_rujia
+		}
+	}
+	########国民党路线#######
+	#国民革命#
+	focus = {
+		id = SZC_kmt01      
+		icon = GFX_goal_CHI_chinese_sun
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_cz03 }
+		prerequisite = { focus = SZC_cz04 }
+		prerequisite = { focus = SZC_cz05 }
+		mutually_exclusive = { focus = SZC_cz06 }
+		relative_position_id = SZC_cz03
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    democratic > 0.35 
+			NOT = {has_completed_focus = SZC_gc01 
+	    }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.1
+			set_politics = {
+	              ruling_party = democratic
+            }
+            set_cosmetic_tag = SZC_KMT	
+            hidden_effect = { news_event = { id = szc.101 } }			
+		}
+	}
+	#求助李宗仁
+	focus = {
+		id = SZC_kmt02      
+		icon = GFX_goal_lizongren
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_kmt01 }
+		mutually_exclusive = { focus = SZC_kmt03 }
+		relative_position_id = SZC_kmt01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			GXC = {
+					country_event = { id = szc.204 }
+					custom_effect_tooltip = ask_Li
+				}
+		}
+	}
+	#自强不息
+	focus = {
+		id = SZC_kmt03      
+		icon = GFX_goal_CHI_kmt_china
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt01 }
+		mutually_exclusive = { focus = SZC_kmt02 }
+		relative_position_id = SZC_kmt01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_spirit_kmt
+		}
+	}
+	#人民的国家
+	focus = {
+		id = SZC_kmt04      
+		icon = GFX_goal_CHI_peoples_army
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_kmt02 focus = SZC_kmt03 }
+		relative_position_id = SZC_kmt02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = SZC_neibodouzheng
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		    add_stability = 0.1
+		}
+	}
+	#民主法案
+	focus = {
+		id = SZC_kmt06      
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_kmt04 }
+		relative_position_id = SZC_kmt04
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+            ideology = democratic
+             popularity = 0.1
+            }
+		}
+	}
+	#社会改革
+	focus = {
+		id = SZC_kmt07      
+		icon = GFX_goal_ming_zhang_neige
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_kmt06 }
+		relative_position_id = SZC_kmt06
+		mutually_exclusive = { focus = SZC_kmt08 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {has_completed_focus = CHI_cz34 
+		         has_completed_focus = CHI_cz36 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+	        name = "Zhang Lan"
+	        desc = "POLITICS_MAO_ZEDONG_DESC"
+	        picture = "portrait_prc_zhang_lan.dds"
+	        expire = "1965.1.1"
+	        ideology = socialism
+	        traits = {
+		            social_reformer
+	        }
+            }
+			set_party_name = { 
+            ideology = social_democracy
+            long_name = 国民党【社会派】
+            name = 国民党【社会派】
+            }
+		}
+	}
+	#拥抱自由
+	focus = {
+		id = SZC_kmt08      
+		icon = GFX_goal_caie
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt06 }
+		mutually_exclusive = { focus = SZC_kmt07 }
+		relative_position_id = SZC_kmt06
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+	        name = "Cai E"
+	        desc = "POLITICS_Liu_Wenhui_DESC"
+	        picture = "CHI_cai_e.dds"
+	        expire = "1965.1.1"
+	        ideology = conservatism
+	        traits = {
+		          huguo_yinxiong 
+				  rearmer
+	        }
+            }
+		}
+	}
+	#考试院
+	focus = {
+		id = SZC_kmt09      
+		icon = GFX_focus_chi_legislative_yuan
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt08 focus = SZC_kmt07 }
+		relative_position_id = SZC_kmt07
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_war = no
+		}
+
+		bypass = {
+		    amount_research_slots > 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_Examination_Yuan
+		}
+	}
+	#建设新四川
+	focus = {
+		id = SZC_kmt10      
+		icon = GFX_goal_SCZ_logo
+		x = 3
+		y = 1
+		prerequisite = { focus = SZC_kmt02 focus = SZC_kmt03 }
+		relative_position_id = SZC_kmt03
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_stability = 0.1
+			 add_political_power = 120
+		}
+	}
+	#教育人民
+	focus = {
+		id = SZC_kmt11      
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_kmt10 }
+		relative_position_id = SZC_kmt10
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    amount_research_slots > 3 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		    hidden_effect = {
+		   limit = {
+					NOT = { has_idea = small-scale_education_system }
+				}
+				add_ideas = small-scale_education_system
+			}	
+			custom_effect_tooltip = compulsory_education
+		}
+	}
+	#住房改革
+	focus = {
+		id = SZC_kmt12      
+		icon = GFX_goal_ming_Agriculture4
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt10 }
+		relative_position_id = SZC_kmt10
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					NOT = {
+						has_state_flag = FRA_industrial_expansion_target
+					}	
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = FRA_industrial_expansion_target
+				random_neighbor_state = {
+					limit = { 
+						is_core_of = ROOT 	
+						is_owned_by = ROOT
+						NOT = {
+							has_state_flag = FRA_industrial_expansion_target
+						}	
+					}
+					add_extra_state_shared_building_slots = 2
+					set_state_flag = FRA_industrial_expansion_target
+				}
+			}
+		}
+	}
+	#土地改革
+	focus = {
+		id = SZC_kmt13      
+		icon = GFX_goal_CHI_revive_china
+		x = -2
+		y = 2
+		prerequisite = { focus = SZC_kmt10 }
+		relative_position_id = SZC_kmt10
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    political_power > 300 
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_dajihuang
+			add_political_power = -300
+			
+		}
+	}
+	#川渝铁路
+	focus = {
+		id = SZC_kmt14      
+		icon = GFX_goal_ming_Industry
+		x = 2
+		y = 2
+		prerequisite = { focus = SZC_kmt10 }
+		relative_position_id = SZC_kmt10
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		completion_reward = {
+			856 = {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+			605 = {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+			859 = {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}	
+		}
+	}
+	#扫盲计划
+	focus = {
+		id = SZC_kmt15      
+		icon = GFX_focus_research2
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt11 }
+		prerequisite = { focus = SZC_kmt12 }
+		relative_position_id = SZC_kmt11
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	#顺庆军工厂
+	focus = {
+		id = SZC_kmt16      
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_kmt15 }
+		prerequisite = { focus = SZC_kmt13 }
+		prerequisite = { focus = SZC_kmt14 }
+		relative_position_id = SZC_kmt15
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			859 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+		}
+	}
+	#驱逐明监察使
+	focus = {
+		id = SZC_kmt05      
+		icon = GFX_goal_ming_ribenyizhi
+		x = 8
+		y = 1
+		prerequisite = { focus = SZC_kmt02 focus = SZC_kmt03 }
+		relative_position_id = SZC_kmt03
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SCZ_policy
+				}
+			}
+		}
+	}
+	#整顿官员
+	focus = {
+		id = SZC_kmt17      
+		icon = GFX_goal_ming_Agriculture5
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_kmt05 }
+		relative_position_id = SZC_kmt05
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.1
+            add_war_support = 0.1
+		}
+	}
+	#宁错杀毋放过
+	focus = {
+		id = SZC_kmt18      
+		icon = GFX_goal_generic_secret_weapon
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt05 }
+		relative_position_id = SZC_kmt05
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		   remove_ideas = SZC_neibodouzheng
+           add_stability = -0.1
+		}
+	}
+	#取悦大商
+	focus = {
+		id = SZC_kmt19      
+		icon = GFX_goal_ming_cash1
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_kmt17 }
+		mutually_exclusive = { focus = SZC_kmt20 }
+		prerequisite = { focus = SZC_kmt18 }
+		relative_position_id = SZC_kmt17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+             has_idea = tax_low
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { limit = {
+					NOT = { has_idea = tax_low }
+				
+				add_ideas = tax_low
+				}
+				}
+			custom_effect_tooltip = jigaoshuishou	
+		}
+	}
+	#没收财产
+	focus = {
+		id = SZC_kmt20      
+		icon = GFX_goal_ming_Economics4
+		x = 2
+		y = 1
+		prerequisite = { focus = SZC_kmt17 }
+		mutually_exclusive = { focus = SZC_kmt19 }
+		prerequisite = { focus = SZC_kmt18 }
+		relative_position_id = SZC_kmt17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+             has_idea = tax_average
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no tax_average
+
+		completion_reward = {
+			hidden_effect = { limit = {
+					NOT = { has_idea = tax_low }
+				
+				add_ideas = tax_low
+				}
+				}
+			custom_effect_tooltip = pinjunshuishou	
+		}
+	}
+	#见青天白日了
+	focus = {
+		id = SZC_kmt21      
+		icon = GFX_goal_CHI_continue_the_peoples_tutelage
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_kmt19 focus = SZC_kmt20 }
+		relative_position_id = SZC_kmt19
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	#人民的共和国
+	focus = {
+		id = SZC_kmt22      
+		icon = GFX_focus_generic_china1
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_kmt09 }
+		prerequisite = { focus = SZC_kmt16 }
+		prerequisite = { focus = SZC_kmt21 }
+		relative_position_id = SZC_kmt16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	####gc线
+	#人民的胜利
+	focus = {
+		id = SZC_gc01      
+		icon = GFX_focus_generic_join_comintern
+		x = 5
+		y = -5
+		relative_position_id = SZC_kmt05
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		     communism > 0.5
+			NOT = { has_completed_focus = SZC_cz06 
+		}
+		NOT = { has_completed_focus = SZC_kmt01 
+		}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+	              ruling_party = communism
+            }
+            set_cosmetic_tag = SZC_GC	
+            hidden_effect = { news_event = { id = szc.103 } }					
+		}
+	}
+	#大元帅万岁
+	focus = {
+		id = SZC_gc02   
+		icon = GFX_goal_liubicheng
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_gc01 }
+		relative_position_id = SZC_gc01
+		mutually_exclusive = { focus = SZC_gc03 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+	        name = "Liu Bocheng"
+	        desc = "POLITICS_Liu_Wenhui_DESC"
+	        picture = "Portrait_SZC_liubicheng.png"
+            expire = "1965.1.1"
+	        ideology = avantgarde_socialism
+	        traits = {
+		       staunch_stalinist
+	        }
+}
+		}
+	}
+	#英雄主义
+	focus = {
+		id = SZC_gc04   
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_gc02 }
+		relative_position_id = SZC_gc02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+            show_ideas_tooltip = PRC_su_yu	
+		}
+	}
+	#集体主义
+	focus = {
+		id = SZC_gc05   
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_gc03 }
+		relative_position_id = SZC_gc03
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+	#邀请陈独秀
+	focus = {
+		id = SZC_gc03   
+		icon = GFX_goal_chenduxiu
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_gc01 }
+		mutually_exclusive = { focus = SZC_gc02 }
+		relative_position_id = SZC_gc01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+	        name = "chen duxiu"
+	        desc = "POLITICS_Liu_Wenhui_DESC"
+	        picture = "portrait_PRC_Chen_Duxiu.dds"
+            expire = "1965.1.1"
+	        ideology = anti_revisionism
+	        traits = {
+		       editor
+	        }
+		}
+		}
+	}
+	#军民一体
+	focus = {
+		id = SZC_gc06   
+		icon = GFX_goal_ming_leili_fenxin
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_gc05  focus = SZC_gc04 }
+		relative_position_id = SZC_gc04
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_Junmingyiti
+		}
+	}
+	#打土豪分田地
+	focus = {
+		id = SZC_gc07   
+		icon = GFX_goal_generic_commie_investments
+		x = -2
+		y = 1
+		prerequisite = { focus = SZC_gc06 }
+		relative_position_id = SZC_gc06
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		     has_idea = SZC_dajihuang
+			 has_war = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_dajihuang
+			add_timed_idea = {
+				idea = SZC_datuhao
+				days = 150
+			}
+			add_stability = -0.1
+		}
+	}
+	#四川防线
+	focus = {
+		id = SZC_gc08   
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 2
+		prerequisite = { focus = SZC_gc07 }
+		relative_position_id = SZC_gc07
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			856 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10144
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11865
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1893
+						instant_build = yes
+					}
+				
+			}
+		}
+	}
+	#重建军队
+	focus = {
+		id = SZC_gc09   
+		icon = GFX_goal_PRC_focus_on_red_army
+		x = 0
+		y = 1
+		prerequisite = { focus = SZC_gc06 }
+		relative_position_id = SZC_gc06
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   has_idea = SZC_baichongjun
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_renmingjundui
+			remove_ideas = SZC_baichongjun
+		}
+	}
+	#乡勇营
+	focus = {
+		id = SZC_gc10  
+		icon = GFX_goal_ming_rushi
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_gc09 }
+		relative_position_id = SZC_gc09
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SZC_xiangyongjun
+			hidden_effect = {
+				division_template = {
+					name = "乡勇军" 	
+					division_names_group = CHI_ZJS_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+                        infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+		                infantry = { x = 2 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"乡勇军一团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军二团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军三团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军四团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军五团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军七团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军八团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"乡勇军九团\" division_template = \"乡勇军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	#民族主义
+	focus = {
+		id = SZC_gc11  
+		icon = GFX_goal_generic_communist_pride
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_gc09 }
+		relative_position_id = SZC_gc09
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+            set_rule = { can_send_volunteers = yes }
+            add_war_support = 0.1
+			
+			
+		}
+	}
+	#红色军队
+	focus = {
+		id = SZC_gc12  
+		icon = GFX_goal_generic_communist_army
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_gc10 }
+		prerequisite = { focus = SZC_gc11 }
+		relative_position_id = SZC_gc10
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   is_puppet = no
+			has_army_manpower = { size > 600000 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+            army_experience = 50
+			
+		}
+	}
+	#消灭敌人
+	focus = {
+		id = SZC_gc13   
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 2
+		y = 1
+		prerequisite = { focus = SZC_gc06 }
+		relative_position_id = SZC_gc06
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_war = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+           add_stability = 0.1
+		}
+	}
+	#反动派都是纸老虎
+	focus = {
+		id = SZC_gc14   
+		icon = GFX_goal_generic_armed_protest
+		x = 0
+		y = 2
+		prerequisite = { focus = SZC_gc13 }
+		relative_position_id = SZC_gc13
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = SZC_neibodouzheng
+			communism > 0.5 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_neibodouzheng
+		}	
+	}
+	#苏联军援
+	focus = {
+		id = SZC_gc15  
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = -1
+		y = 1
+		prerequisite = { focus = SZC_gc14 }
+		prerequisite = { focus = SZC_gc12 }
+		prerequisite = { focus = SZC_gc08 }
+		relative_position_id = SZC_gc12
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			SOV = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 5000
+            producer = SOV
+        }
+		}
+	}
+	##消灭军阀
+	focus = {
+		id = SZC_gc16  
+		icon = GFX_goal_CHI_defeat_the_warlords
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_gc14 }
+		prerequisite = { focus = SZC_gc12 }
+		prerequisite = { focus = SZC_gc08 }
+		relative_position_id = SZC_gc12
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+           XSM = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}
+			YUN = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}
+			GXC = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything #吞并
+				target = XSM
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything #吞并
+				target = YUN
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything #吞并
+				target = GXC
+				expire = 0
+			}
+		}
+	}
+	##西南苏维埃政府
+	focus = {
+		id = SZC_gc17  
+		icon = GFX_focus_chi_one_china_policy
+		x = 1
+		y = 1
+		prerequisite = { focus = SZC_gc15 }
+		prerequisite = { focus = SZC_gc16 }
+		relative_position_id = SZC_gc15
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	###征服线###
+	#白铳指挥部
+	focus = {
+		id = SZC_zf01     
+		icon = GFX_goal_sichuan2
+		x = -8
+		y = 0
+		relative_position_id = SZC_inf01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           army_experience = 50
+			
+		}
+	}
+	#重夺西康
+	focus = {
+		id = SZC_zf02     
+		icon = GFX_goal_Attack_tib
+		x = -2
+		y = 1
+		prerequisite =  { focus = SZC_zf01 }
+		relative_position_id = SZC_zf01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 100000 }
+		}
+
+		bypass = {
+          TIB = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           create_wargoal = {
+				type = annex_everything #吞并
+				target = TIB
+				expire = 0
+			}
+			
+		}
+	}
+	#进攻云南
+	focus = {
+		id = SZC_zf03     
+		icon = GFX_goal_Attack_dian
+		x = 0
+		y = 1
+		prerequisite =  { focus = SZC_zf01 }
+		relative_position_id = SZC_zf01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 130000 }
+		}
+
+		bypass = {
+          YUN = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           create_wargoal = {
+				type = annex_everything #吞并
+				target = YUN
+				expire = 0
+			}
+			
+		}
+	}
+	#强占甘南
+	focus = {
+		id = SZC_zf04     
+		icon = GFX_goal_Attack_gan
+		x = 2
+		y = 1
+		prerequisite =  { focus = SZC_zf01 }
+		relative_position_id = SZC_zf01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 120000 }
+		}
+
+		bypass = {
+          XSM = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           create_wargoal = {
+				type = annex_everything #吞并
+				target = XSM
+				expire = 0
+			}
+			
+		}
+	}
+	#稳定西南
+	focus = {
+		id = SZC_zf05     
+		icon = GFX_goal_ming_sunzi
+		x = 1
+		y = 1
+		prerequisite =  { focus = SZC_zf02 }
+		prerequisite =  { focus = SZC_zf03 }
+		prerequisite =  { focus = SZC_zf04 }
+		relative_position_id = SZC_zf02
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			 XSM = { exists = no }
+			 YUN = { exists = no }
+			 TIB = { exists = no }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           add_political_power = 150
+			
+		}
+	}
+	#消灭残余
+	focus = {
+		id = SZC_zf06    
+		icon = GFX_goal_ming_ribengongtong
+		x = 3
+		y = 1
+		prerequisite =  { focus = SZC_zf02 }
+		prerequisite =  { focus = SZC_zf03 }
+		prerequisite =  { focus = SZC_zf04 }
+		relative_position_id = SZC_zf02
+		cost = 14
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 200000 }
+		}
+
+		bypass = {
+			 HNN = { exists = no }
+			 SHX = { exists = no }
+			 GXC = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+          create_wargoal = {
+				type = annex_everything #吞并
+				target = HNN
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything #吞并
+				target = GXC
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything #吞并
+				target = SHX
+				expire = 0
+			}
+			
+		}
+	}
+	#夺取天命
+	focus = {
+		id = SZC_zf07     
+		icon = GFX_goal_ming_diguo_bianchui
+		x = 1
+		y = 1
+		prerequisite =  { focus = SZC_zf05 }
+		prerequisite =  { focus = SZC_zf06 }
+		relative_position_id = SZC_zf05
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 300000 }
+		}
+
+		bypass = {
+			 CHI = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+          create_wargoal = {
+				type = annex_everything #吞并
+				target = CHI
+				expire = 0
+			}
+			
+		}
+	}
+	###军事线###
+	#新川军
+	focus = {
+		id = SZC_inf01     
+		icon = GFX_goal_SZC_flag_2
+		x = 3
+		y = 1
+		relative_position_id = SZC_cz25
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           army_experience = 50
+			
+		}
+	}
+	#刘湘
+	focus = {
+		id = SZC_inf02     
+		icon = GFX_goal_liuxiang
+		x = 0
+		y = 1
+		relative_position_id = SZC_inf01
+		mutually_exclusive = { focus = SZC_inf03 }
+		mutually_exclusive = { focus = SZC_inf04 }
+		prerequisite = { focus = SZC_inf01 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			show_ideas_tooltip = SZC_liuxiang_inf
+			 add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+            }
+		}
+	}
+	#熊克武
+	focus = {
+		id = SZC_inf03     
+		icon = GFX_goal_xiongkewu
+		x = 2
+		y = 1
+		relative_position_id = SZC_inf01
+		prerequisite = { focus = SZC_inf01 }
+		mutually_exclusive = { focus = SZC_inf02 }
+		mutually_exclusive = { focus = SZC_inf04 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			show_ideas_tooltip = SZC_xiongkewu_inf	
+			 add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+            }
+		}
+	}
+	#杨森
+	focus = {
+		id = SZC_inf04     
+		icon = GFX_goal_yangsen
+		x = -2
+		y = 1
+		relative_position_id = SZC_inf01
+		prerequisite = { focus = SZC_inf01 }
+		mutually_exclusive = { focus = SZC_inf03 }
+		mutually_exclusive = { focus = SZC_inf02 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			show_ideas_tooltip = SZC_yangsen_inf
+			 add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+            }
+		}
+	}
+	#不断进攻
+	focus = {
+		id = SZC_inf05   
+		icon = GFX_goal_generic_army_mobilization2
+		x = -5
+		y = 1
+		relative_position_id = SZC_inf03
+		mutually_exclusive = { focus = SZC_inf06 }
+		prerequisite = { focus = SZC_inf02  focus = SZC_inf03 focus = SZC_inf04 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+            }
+		}
+	}
+	#拼死一战
+	focus = {
+		id = SZC_inf07   
+		icon = GFX_goal_war1
+		x = -1
+		y = 1
+		relative_position_id = SZC_inf05
+		prerequisite = { focus = SZC_inf05 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_buduanmenggong
+		}
+	}
+	#训练新军官
+	focus = {
+		id = SZC_inf08   
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		relative_position_id = SZC_inf07
+		prerequisite = { focus = SZC_inf07 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	#以退为进
+	focus = {
+		id = SZC_inf06   
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 1
+		relative_position_id = SZC_inf03
+		mutually_exclusive = { focus = SZC_inf05 }
+		prerequisite = { focus = SZC_inf02  focus = SZC_inf03 focus = SZC_inf04 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+}
+		}
+	}
+	#战略防御
+	focus = {
+		id = SZC_inf09   
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 1
+		y = 1
+		relative_position_id = SZC_inf06
+		prerequisite = { focus = SZC_inf06 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_yituiweijing
+		}
+	}
+	#火炮阵地
+	focus = {
+		id = SZC_inf10   
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		relative_position_id = SZC_inf09
+		prerequisite = { focus = SZC_inf09 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { FRA_firepower }
+		}
+	}
+	#龙安枪厂
+	focus = {
+		id = SZC_inf11   
+		icon = GFX_goal_generic_machine_gun
+		x = 1
+		y = 1
+		relative_position_id = SZC_inf05
+		prerequisite = { focus = SZC_inf05 focus = SZC_inf06 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SZC = {
+				controls_state = 858
+			}
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}	
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			858 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	#白铳参谋部
+	focus = {
+		id = SZC_inf12   
+		icon = GFX_goal_ming_ribengongtong
+		x = 3
+		y = 1
+		relative_position_id = SZC_inf05
+		prerequisite = { focus = SZC_inf05 focus = SZC_inf06 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons#步兵武器
+				category = artillery
+			}
+			army_experience = 50
+		}
+	}
+	#山地游击队
+	focus = {
+		id = SZC_inf13   
+		icon = GFX_goal_generic_mountain_warfare
+		x = 5
+		y = 1
+		relative_position_id = SZC_inf05
+		prerequisite = { focus = SZC_inf05 focus = SZC_inf06 }
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = mountaineers_tech
+				#technology = tech_mountaineers2
+			}
+		}
+	}
+	#摩托化军队
+	focus = {
+		id = SZC_inf14   
+		icon = GFX_goal_generic_mechanized_offensive
+		x = 1
+		y = 1
+		relative_position_id = SZC_inf11
+		prerequisite = { focus = SZC_inf11 }
+		prerequisite = { focus = SZC_inf12 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+	#成都要塞群
+	focus = {
+		id = SZC_inf15   
+		icon = GFX_goal_generic_fortify_city
+		x = 1
+		y = 1
+		relative_position_id = SZC_inf12
+		prerequisite = { focus = SZC_inf13 }
+		prerequisite = { focus = SZC_inf12 }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			605 = {
+				
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 4925
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1395
+						instant_build = yes
+					}
+				
+				
+		}	
+		}
+	}
+	#汉中军官学校
+	focus = {
+		id = SZC_inf16   
+		icon = GFX_goal_Hanzhong_Militaryacademy
+		x = 0
+		y = 1
+		relative_position_id = SZC_inf14
+		prerequisite = { focus = SZC_inf14 }
+		prerequisite = { focus = SZC_inf15 }
+		prerequisite = { focus = SZC_inf08 focus = SZC_inf10  }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = special_forces
+            add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}	
+		}
+	}
+	#英国军事顾问
+	focus = {
+		id = SZC_inf17   
+		icon = GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		relative_position_id = SZC_inf15
+		prerequisite = { focus = SZC_inf14 }
+		prerequisite = { focus = SZC_inf15 }
+		prerequisite = { focus = SZC_inf08 focus = SZC_inf10  }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		     OR = {
+				has_government = fascism
+				has_government = democratic
+				has_government = neutrality
+			} 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 100
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+            }
+		}
+	}
+	###工业线###
+	#天府计划
+	focus = {
+		id = SZC_ind01     
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 2
+		relative_position_id = SZC_kmt21
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#保宁矿业
+	focus = {
+		id = SZC_ind02     
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		relative_position_id = SZC_ind01 
+		prerequisite = { focus = SZC_ind01 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+            type = chromium
+            amount = 5
+            state = 858
+            }
+			add_resource = {
+            type = tungsten #钨
+            amount = 5
+            state = 858
+            }
+		}
+	}
+	#打击毒品
+	focus = {
+		id = SZC_ind03     
+		icon = GFX_goal_ming_meconium
+		x = -2
+		y = 1
+		relative_position_id = SZC_ind01 
+		prerequisite = { focus = SZC_ind01 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.1
+		}
+	}
+	#禁止鸦片
+	focus = {
+		id = SZC_ind05     
+		icon = GFX_goal_ming_meconium3
+		x = -1
+		y = 1
+		relative_position_id = SZC_ind03 
+		prerequisite = { focus = SZC_ind03 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = SZC_yapianfanlan
+		}
+	}
+	#重庆大学
+	focus = {
+		id = SZC_ind06     
+		icon = GFX_focus_research
+		x = -5
+		y = 0
+		relative_position_id = SZC_ind01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   num_of_factories > 35
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	#学习先进技术
+	focus = {
+		id = SZC_ind07     
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		relative_position_id = SZC_ind06
+		prerequisite = { focus = SZC_ind06 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    num_of_factories > 50
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	#成都食品厂
+	focus = {
+		id = SZC_ind08     
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = SZC_ind07
+		prerequisite = { focus = SZC_ind07 }
+		prerequisite = { focus = SZC_ind03 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			605 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	#促进城市化
+	focus = {
+		id = SZC_ind09     
+		icon = GFX_goal_generic_light_industry
+		x = 1
+		y = 1
+		relative_position_id = SZC_ind02
+		prerequisite = { focus = SZC_ind02 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#攀枝花钢铁厂
+	focus = {
+		id = SZC_ind10     
+		icon = GFX_focus_generic_steel
+		x = -1
+		y = 1
+		relative_position_id = SZC_ind02
+		prerequisite = { focus = SZC_ind02 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+            type = steel #铁
+            amount = 20
+            state = 858
+            }
+		}
+	}
+	#新兴工业区
+	focus = {
+		id = SZC_ind11     
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = SZC_ind09
+		prerequisite = { focus = SZC_ind09 }
+		prerequisite = { focus = SZC_ind10 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#吸引国外投资
+	focus = {
+		id = SZC_ind04     
+		icon = GFX_goal_ming_GlobalTrade
+		x = 2
+		y = 1
+		relative_position_id = SZC_ind01 
+		prerequisite = { focus = SZC_ind01 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_waiguotouzi
+		}
+	}
+	#四川机器局
+	focus = {
+		id = SZC_ind12     
+		icon = GFX_goal_ming_Industry2
+		x = 1
+		y = 1
+		relative_position_id = SZC_ind04 
+		prerequisite = { focus = SZC_ind04 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#强军强国
+	focus = {
+		id = SZC_ind13     
+		icon = GFX_goal_ming_menghu
+		x = 0
+		y = 1
+		relative_position_id = SZC_ind12 
+		prerequisite = { focus = SZC_ind12 }
+		prerequisite = { focus = SZC_ind09 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_qiangjunqianguo
+		}
+	}
+	#农业局
+	focus = {
+		id = SZC_ind14     
+		icon = GFX_goal_generic_agriculture
+		x = -1
+		y = 1
+		relative_position_id = SZC_ind05 
+		prerequisite = { focus = SZC_ind05 }
+		prerequisite = { focus = SZC_ind08 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#益汉茶庄
+	focus = {
+		id = SZC_ind15     
+		icon = GFX_goal_generic_Coffee_Plantations
+		x = 0
+		y = 1
+		relative_position_id = SZC_ind14 
+		prerequisite = { focus = SZC_ind14 }
+		prerequisite = { focus = SZC_ind11 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#改良都江堰
+	focus = {
+		id = SZC_ind16     
+		icon = GFX_goal_SZC_dujiangyan_irrigation_system
+		x = 2
+		y = 1
+		relative_position_id = SZC_ind14 
+		prerequisite = { focus = SZC_ind14 }
+		prerequisite = { focus = SZC_ind11 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			605 = {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	#蜀锦
+	focus = {
+		id = SZC_ind17     
+		icon = GFX_goal_SZC_silk
+		x = 4
+		y = 1
+		relative_position_id = SZC_ind14 
+		prerequisite = { focus = SZC_ind14 }
+		prerequisite = { focus = SZC_ind11 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			show_ideas_tooltip = sichuan_silk
+		}
+	}
+	#安居乐业
+	focus = {
+		id = SZC_ind18     
+		icon = GFX_goal_ming_Agriculture2
+		x = 2
+		y = 1
+		relative_position_id = SZC_ind15 
+		prerequisite = { focus = SZC_ind17 }
+		prerequisite = { focus = SZC_ind15 }
+		prerequisite = { focus = SZC_ind16 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SZC_anjuleye
+		}
+	}
+}	

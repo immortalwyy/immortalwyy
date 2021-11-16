@@ -1,0 +1,178 @@
+spriteTypes = {	
+	
+	
+	spriteType = {
+		name = "GFX_idea_CHI_wenguanpai"
+		texturefile = "gfx/interface/ideas/CHI_wenguanpai.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHI_wuguanpai"
+		texturefile = "gfx/interface/ideas/CHI_wuguanpai.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAN_szheng"
+		texturefile = "gfx/interface/ideas/MAN_szheng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_jiayin_zhinan"
+		texturefile = "gfx/interface/ideas/CHI/min3.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_fenglie_diguo"
+		texturefile = "gfx/interface/ideas/CHI/min1.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_renshenxiaotiao"
+		texturefile = "gfx/interface/ideas/CHI/min2.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_paixilinli"
+		texturefile = "gfx/interface/ideas/CHI/min5.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wahezhizu"
+		texturefile = "gfx/interface/ideas/CHI/min4.png"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_scz_policy"
+		texturefile = "gfx/interface/ideas/scz_policy.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_idea_dai_jitao"
+		texturefile = "gfx/interface/ideas/dai_jitao.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_gongbo"
+		texturefile = "gfx/interface/ideas/chen_gongbo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_liang_shuming"
+		texturefile = "gfx/interface/ideas/liang_shuming.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_zhang_jingjiang"
+		texturefile = "gfx/interface/ideas/zhang_jingjiang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_bijun"
+		texturefile = "gfx/interface/ideas/chen_bijun.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_sun_fo"
+		texturefile = "gfx/interface/ideas/sun_fo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chiang_kai_shek"
+		texturefile = "gfx/interface/ideas/chiang_kai_shek.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_stil_well"
+		texturefile = "gfx/interface/ideas/stil_well.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_eisen_hower"
+		texturefile = "gfx/interface/ideas/eisen_hower.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_tang_enbo"
+		texturefile = "gfx/interface/ideas/tang_enbo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_qian_dajun"
+		texturefile = "gfx/interface/ideas/qian_dajun.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_shaokuan"
+		texturefile = "gfx/interface/ideas/chen_shaokuan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_shen_honglie"
+		texturefile = "gfx/interface/ideas/shen_honglie.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chou_chihjou"
+		texturefile = "gfx/interface/ideas/chou_chihjou.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chang_hsueh_liang"
+		texturefile = "gfx/interface/ideas/chang_hsueh_liang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wu_dayou"
+		texturefile = "gfx/interface/ideas/wu_dayou.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_ming_military_academy"
+		texturefile = "gfx/interface/ideas/ming_military_academy.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ming_flag"
+		texturefile = "gfx/interface/ideas/ming_flag.png"
+	}
+	spriteType = {
+		name = "GFX_idea_zhang_qun"
+		texturefile = "gfx/interface/ideas/zhang_qun.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_yibai"
+		texturefile = "gfx/interface/ideas/chen_yibai.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_he_zhonghan"
+		texturefile = "gfx/interface/ideas/he_zhonghan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_lifu"
+		texturefile = "gfx/interface/ideas/chen_lifu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chen_guofuu"
+		texturefile = "gfx/interface/ideas/chen_guofu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_liang_xuzhao"
+		texturefile = "gfx/interface/ideas/liang_xuzhao.dds"
+	}
+	
+}

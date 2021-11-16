@@ -1,0 +1,7 @@
+has_politics_leader_s_trigger = {
+	OR = {
+		AND = {
+			tag = JAP
+		}
+	}
+}

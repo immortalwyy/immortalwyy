@@ -1,0 +1,957 @@
+focus_tree = {
+	id = guangxi_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GXC
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	continuous_focus_position = { x = 20 y = 2000 }
+	###两广的乱局
+	focus = {
+		id = GXC_zz01      
+		icon = GFX_goal_gxc1
+		x = 8
+		y = 0
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			GXC = {
+				controls_state = 594
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 100
+		}
+	}
+	###陆荣廷的建制派
+	focus = {
+		id = GXC_zz02      
+		icon = GFX_goal_gxc2
+		x = -4
+		y = 1
+		prerequisite = { focus = GXC_zz01 }
+		relative_position_id = GXC_zz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.3 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.04
+			add_popularity = {
+            ideology = neutrality
+             popularity = 0.1
+            }
+		}
+	}
+	###割据一方
+	focus = {
+		id = GXC_zz03      
+		icon = GFX_goal_generic_centralize_power
+		x = -2
+		y = 1
+		prerequisite = { focus = GXC_zz02 }
+		relative_position_id = GXC_zz02
+		mutually_exclusive = { focus = GXC_zz16 }
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.4 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_party_name = { 
+            ideology = neutrality 
+            long_name = 大明帝党
+            name = 帝党
+            }	
+			custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = GXC_lurongtin
+		}
+	}
+	#粉碎反对者
+	focus = {
+		id = GXC_zz04     
+		icon = GFX_goal_generic_seperation
+		x = -2
+		y = 1
+		prerequisite = { focus = GXC_zz03 }
+		relative_position_id = GXC_zz03
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.4 
+			has_idea = GXC_yueguizhizheng
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_war_support = -0.1
+		 add_stability = -0.2
+		 add_political_power = -150
+		 remove_ideas = GXC_yueguizhizheng
+		 hidden_effect = { news_event = { id = GXC.101 } }
+			
+		}
+	}
+	###天朝永存
+	focus = {
+		id = GXC_zz05      
+		icon = GFX_goal_ming_sunzi
+		x = 2
+		y = 1
+		prerequisite = { focus = GXC_zz03 }
+		relative_position_id = GXC_zz03
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.4 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_war_support = 0.1
+		 add_stability = 0.1
+		 add_ideas = GXC_tianchaoweiyan
+			
+		}
+	}
+	###修订两广法律
+	focus = {
+		id = GXC_zz06      
+		icon = GFX_goal_generic_deadly_treaty
+		x = -1
+		y = 1
+		prerequisite = { focus = GXC_zz05 }
+		prerequisite = { focus = GXC_zz04 }
+		relative_position_id = GXC_zz04
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_war_support = 0.1
+		 add_stability = 0.02
+		 add_ideas = GXC_liangguangfalvwenan
+			
+		}
+	}
+	###支持中央
+	focus = {
+		id = GXC_zz07      
+		icon = GFX_goal_ming_dam_junzhu
+		x = 2
+		y = 2
+		prerequisite = { focus = GXC_zz05 }
+		mutually_exclusive = { focus = GXC_zz08 }
+		prerequisite = { focus = GXC_zz04 }
+		relative_position_id = GXC_zz04
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.4 
+			has_country_flag = songsan_lian_meng
+		}
+
+		bypass = {
+            CHI = {
+				OR = {
+					exists = no 
+					is_subject = yes		
+				}
+			}    
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_stability = 0.02
+		 add_war_support = -0.08
+		 hidden_effect = { news_event = { id = GXC.102 }
+           CHI = { country_event = { id = GXC.201 } }
+		 }
+		 CHI =  { puppet = SZC }
+			
+		}
+	}
+	###纵横捭阖
+	focus = {
+		id = GXC_zz08      
+		icon = GFX_goal_ming_henghe_zhengce
+		x = 4
+		y = 2
+		prerequisite = { focus = GXC_zz05 }
+		mutually_exclusive = { focus = GXC_zz07 }
+		prerequisite = { focus = GXC_zz04 }
+		relative_position_id = GXC_zz04
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			neutrality > 0.4 
+			has_country_flag = songsan_lian_meng
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_stability = 0.04
+		 add_war_support = 0.04
+		 hidden_effect = { 
+           CHI = { country_event = { id = GXC.201 } }
+		 }
+		}
+	}
+	#泛华夏主义
+	focus = {
+		id = GXC_zz09      
+		icon = GFX_goal_yun3
+		x = 6
+		y = 2
+		prerequisite = { focus = GXC_zz05 focus = GXC_zz19 }
+		relative_position_id = GXC_zz04
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = { size > 300000 }
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+         add_stability = 0.04
+		 add_war_support = 0.04
+		 hidden_effect = { news_event = { id = GXC.102 }
+           CHI = { country_event = { id = GXC.201 } }
+		 }
+		}
+	}
+	###肢解安南
+	focus = {
+		id = GXC_zz10     
+		icon = GFX_goal_Attack_vin
+		x = 0
+		y = 1
+		prerequisite = { focus = GXC_zz09 }
+		relative_position_id = GXC_zz09
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = { size > 320000 }
+			is_subject = no
+			CHI = { has_war = yes }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything 
+				target = VIN
+				expire = 0
+			}
+		}
+	}
+	###夺回雷琼
+	focus = {
+		id = GXC_zz11      
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 1
+		prerequisite = { focus = GXC_zz09 }
+		relative_position_id = GXC_zz09
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_army_manpower = { size > 320000 }
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything 
+				target = NAY
+				expire = 0
+			}
+		}
+	}
+	###工业发展
+	focus = {
+		id = GXC_zz12      
+		icon = GFX_goal_ming_Factories_Colored
+		x = 1
+		y = 1
+		prerequisite = { focus = GXC_zz06 }
+		relative_position_id = GXC_zz06
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	###消除贫困
+	focus = {
+		id = GXC_zz13      
+		icon = GFX_goal_generic_stock_exchange
+		x = -1
+		y = 1
+		prerequisite = { focus = GXC_zz06 }
+		relative_position_id = GXC_zz06
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { limit = {
+					NOT = { has_idea = poverty_rate_25 }
+				
+				add_ideas = poverty_rate_25
+				}
+				}
+			custom_effect_tooltip = zhongdengpinkun	
+		}
+	}
+	
+	###有限贪腐
+	focus = {
+		id = GXC_zz14      
+		icon = GFX_goal_generic_Controlled_Economy
+		x = 1
+		y = 1
+		prerequisite = { focus = GXC_zz12 }
+		prerequisite = { focus = GXC_zz13 }
+		relative_position_id = GXC_zz13
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { limit = {
+					NOT = { has_idea = systematic_corruption }
+				
+				add_ideas = systematic_corruption
+				}
+				}
+			custom_effect_tooltip = zhongdengpinkun	
+		}
+	}
+	###桂人统治
+	focus = {
+		id = GXC_zz15      
+		icon = GFX_goal_gxc9
+		x = -1
+		y = 1
+		prerequisite = { focus = GXC_zz08 focus = GXC_zz07 }
+		relative_position_id = GXC_zz08
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	###马季的改革
+	focus = {
+		id = GXC_zz16      
+		icon = GFX_goal_gxc3
+		x = 6
+		y = 1
+		prerequisite = { focus = GXC_zz02 }
+		relative_position_id = GXC_zz02
+		mutually_exclusive = { focus = GXC_zz03 }
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = GXC_majigaige
+		}
+	}
+	###消除粤系威胁
+	focus = {
+		id = GXC_zz17      
+		icon = GFX_goal_gxc4
+		x = -1
+		y = 1
+		prerequisite = { focus = GXC_zz16 }
+		relative_position_id = GXC_zz16
+		cost = 6
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		  GXC = {
+				controls_state = 592
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = GXC.204 }
+		}
+	}
+	
+	###稳定新桂系
+	focus = {
+		id = GXC_zz18     
+		icon = GFX_goal_gxc5
+		x = 1
+		y = 1
+		prerequisite = { focus = GXC_zz16 }
+		relative_position_id = GXC_zz16
+		cost = 6
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		  GXC = {
+				controls_state = 594
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = GXC.205 }
+		}
+	}
+	###共和永存
+	focus = {
+		id = GXC_zz19     
+		icon = GFX_goal_gxc6
+		x = 1
+		y = 1
+		prerequisite = { focus = GXC_zz17 }
+		prerequisite = { focus = GXC_zz18 }
+		relative_position_id = GXC_zz17
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		  conservatism_ideology > 0.25
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+	              ruling_party = conservatism_ideology
+            }
+            add_popularity = {
+            ideology = conservatism_ideology
+             popularity = 0.1
+            }
+            set_party_name = { 
+            ideology = conservatism_ideology
+            long_name = 人民共和党
+            name = 人民共和党
+            }			
+		}
+	}
+	
+	###加强桂军存在
+	focus = {
+		id = GXC_zz20     
+		icon = GFX_goal_generic_army_cooperation
+		x = -1
+		y = 1
+		prerequisite = { focus = GXC_zz19 }
+		prerequisite = { focus = GXC_zz19 }
+		relative_position_id = GXC_zz19
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_grand_battle_plan
+				           ##优势火力：cat_superior_firepower
+						   ##人海突击：cat_mass_assault
+						   ##决战计划：cat_grand_battle_plan
+						   ##机动作战：cat_mobile_warfare
+            }
+            army_experience = 50			
+		}
+	}
+	
+	###号召革命者
+	focus = {
+		id = GXC_zz21     
+		icon = GFX_goal_generic_army_elite
+		x = 1
+		y = 1
+		prerequisite = { focus = GXC_zz19 }
+		prerequisite = { focus = GXC_zz19 }
+		relative_position_id = GXC_zz19
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = GXC_zhaomuzhishi
+			hidden_effect = {
+				division_template = {
+					name = "革命军" 	
+					division_names_group = CHI_ZJS_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+                        infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+		                infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"革命军一师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军二师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军三师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军四师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军五师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军七师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军八师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"革命军九师\" division_template = \"革命军\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	###广东要塞群
+	focus = {
+		id = GXC_zz22     
+		icon = GFX_goal_generic_city_chain_forts
+		x = 3
+		y = 1
+		prerequisite = { focus = GXC_zz19 }
+		prerequisite = { focus = GXC_zz19 }
+		relative_position_id = GXC_zz19
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			593 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9977
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12014
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9970
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1120
+						instant_build = yes
+					}
+				
+			}
+			884 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 7182
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 7141
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 4165
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1078
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1162
+						instant_build = yes
+					}
+				
+			}		
+		}
+	}
+	###成立护国军
+	focus = {
+		id = GXC_zz23     
+		icon = GFX_goal_gxc7
+		x = 0
+		y = 1
+		prerequisite = { focus = GXC_zz20 }
+		prerequisite = { focus = GXC_zz21 }
+		prerequisite = { focus = GXC_zz22 }
+		relative_position_id = GXC_zz21
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = GXC_huguojun		
+		}
+	}
+	
+	###北伐！
+	focus = {
+		id = GXC_zz24     
+		icon = GFX_goal_gxc8
+		x = 0
+		y = 1
+		prerequisite = { focus = GXC_zz23 }
+		relative_position_id = GXC_zz23
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = GXC_huguojun
+   			add_timed_idea = {
+				idea = GXC_beifa
+				days = 365
+			}
+		}
+	}
+	
+}	

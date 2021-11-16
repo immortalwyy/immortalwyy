@@ -1,0 +1,32 @@
+state={
+	id=336
+	name="STATE_336"
+	resources={
+		rubber=242.000
+		aluminium=15.000
+	}
+	history={
+		owner = MLJ
+		victory_points = {
+			10297 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+			10297 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = MLJ
+
+	}
+	provinces={
+		4412 10297 
+	}
+	manpower=793200
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

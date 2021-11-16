@@ -1,0 +1,45 @@
+UMH_calculate_country_special_value = {
+	set_variable = { UMH_owned_core_state_num = 0 }
+	set_variable = { UMH_owned_core_state_factories_num = 0 }
+	every_owned_state = {
+		limit = {
+			is_core_of = ROOT
+		}
+		set_variable = { UMH_state_factories_num = arms_factory_level }
+		add_to_variable = { UMH_state_factories_num = industrial_complex_level }
+		ROOT = {
+			add_to_variable = { UMH_owned_core_state_num = 1 }
+			add_to_variable = { UMH_owned_core_state_factories_num = PREV.UMH_state_factories_num }
+		}
+	}
+	divide_variable = { UMH_owned_core_state_factories_num = UMH_owned_core_state_num }
+}
+
+UMH_calculate_country_special_effect = {
+	####工业化####
+	if = { 
+		limit = {
+			OR = {
+				AND = { check_variable = { UMH_owned_core_state_factories_num > 0.5 } has_idea = agricultural_economy }
+				AND = { OR = { check_variable = { UMH_owned_core_state_factories_num < 0.51 } check_variable = { UMH_owned_core_state_factories_num > 1 } } has_idea = agricultural_dominance }
+				AND = { OR = { check_variable = { UMH_owned_core_state_factories_num < 1.01 } check_variable = { UMH_owned_core_state_factories_num > 2 } } has_idea = basic_industrialization }
+				AND = { check_variable = { UMH_owned_core_state_factories_num < 2.01 } has_idea = highly_industrialized }
+			}
+		}
+		country_event = { id = gse.1 }
+	}
+	####军费####
+	if = { 
+		limit = {
+			OR = {
+				AND = { has_army_manpower = { size > 100000 } has_idea = militia }
+				AND = { OR = { has_army_manpower = { size < 100001 } has_army_manpower = { size > 500000 } } has_idea = disarmament_states }
+				AND = { OR = { has_army_manpower = { size < 500001 } has_army_manpower = { size > 1000000 } } has_idea = standing_army }
+				AND = { OR = { has_army_manpower = { size < 1000001 } has_army_manpower = { size > 3000000 } } has_idea = strong_army }
+				AND = { has_army_manpower = { size < 3000001 } has_idea = adopt_a_war_like_policy }
+			}
+		}
+		country_event = { id = gse.2 }
+	}
+	
+}

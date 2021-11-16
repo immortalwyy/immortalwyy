@@ -1,0 +1,28 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_yizhengyuan_element"
+		texturefile = "gfx/scripted_gui/CHI/yizhengyuan_element.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_zhizhengyuan_element"
+		texturefile = "gfx/scripted_gui/CHI/zhizhengyuan_element.dds"
+		noOfFrames = 7
+	}
+
+	spriteType = {
+		name = "GFX_CHI_guohui"
+		texturefile = "gfx/scripted_gui/CHI/CHI_guohui.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ming_par_dec"
+		texturefile = "gfx/interface/decisions/ming_par_dec.dds"
+	}
+
+	
+	
+
+}

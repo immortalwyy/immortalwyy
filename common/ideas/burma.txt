@@ -1,0 +1,783 @@
+ideas = {
+	country = {
+	
+		BRM_pinruojundui = {
+		
+			picture = chi_army_corruption
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				mobilization_speed = -0.3
+				command_power_gain_mult = -0.1
+			}
+		}
+
+		BRM_minzuzhengduan = {
+		
+			picture = generic_purge
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		BRM_shentou = {
+		
+			picture = generic_purge
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.2
+			}
+		}
+
+		BRM_cg001 = {
+			allowed = { always = no }
+
+			picture =  HUN_treaty_of_triannon
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				autonomy_gain = -0.25
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		BRM_cg002 = {
+			allowed = { always = no }
+
+			picture =  HUN_treaty_of_triannon
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		BRM_cg003 = {
+			allowed = { always = no }
+
+			picture =  HUN_treaty_of_triannon
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.3
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				consumer_goods_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+		
+		BRM_damingbilei = {
+			allowed = { always = no }
+
+			picture = FRA_liberte_egalite_solidarite
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.3
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				consumer_goods_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+		
+		BRM_damingguwen = {
+		
+			picture = chi_forced_conscription
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.30
+			}
+			
+			modifier = {
+				land_doctrine = 0.30
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+
+		BRM_damingtouzi = {
+		
+			picture = HUN_treaty_of_triannon
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+	}
+
+		BRM_hushi = {
+		
+			picture = generic_foreign_capital
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		BRM_ziyuanchukou = {
+		
+			picture = man_five_year_plan_industry
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		BRM_laogongpaiqian = {
+		
+			picture = man_five_year_plan_industry
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		BRM_yitihuadaji = {
+		
+			picture = HUN_treaty_of_triannon
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+
+		BRM_anbaozongju = {
+		
+			picture = generic_spy_intel
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 2
+			}
+		}
+
+		BRM_minzuronghe = {
+		
+			picture = generic_purge
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+
+		BRM_tuanjiemiandian = {
+		
+			picture = generic_king_handled
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		BRM_wenmingkaihua = {
+		
+			picture = generic_king_handled
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+
+
+	political_advisor = {
+
+		BRM_democratic_guy = {
+			
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { democratic_reformer }
+
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		BRM_communist_guy = {
+			
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { communist_revolutionary }
+
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		BRM_fascist_guy = {
+			
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { fascist_demagogue }
+
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		BRM_pot = {
+
+			picture = generic_political_advisor_asia_2
+
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		BRM_coi = {
+
+			picture = generic_political_advisor_asia_1
+				
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		BRM_stc = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+	}
+
+	army_chief = {
+
+		BRM_aco2 = {
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = BRM
+			}		
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_aung_san = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { army_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_qi_dezhi = {
+
+			picture = generic_army_asia_3
+			
+			available = {
+				has_completed_focus = BRM_07
+			}
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { army_chief_offensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	air_chief = {
+
+		BRM_acr = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_acgs = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		BRM_nccr = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = BRM
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_ncm = {
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = BRM
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	# TECHNOLOGY
+	
+		aircraft_manufacturer = { 
+		BRM_feijizongshu = {
+
+			picture = CHI_camco
+
+			available = {
+				has_completed_focus = BRM_35
+			}
+
+			allowed = {
+					tag = BRM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.3
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		BRM_hejianjidi = {
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				tag = BRM
+			}
+
+			available = {
+				has_completed_focus = BRM_38
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.3
+			}
+						
+			traits = { pacific_fleet_naval_manufacturer }			
+		}
+	}
+
+	materiel_manufacturer = { 
+	
+		designer = yes
+		
+		BRM_damingfenchang = {
+			picture = generic_infantry_equipment_manufacturer_1
+
+			
+			allowed = {
+				tag = BRM
+			}
+
+			available = {
+				has_completed_focus = BRM_11
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.30
+			}
+			
+						
+			traits = { infantry_equipment_manufacturer }
+			
+		}
+	}
+
+	high_command = {
+
+		BRM_Ba_Maw = {
+			ledger = army
+			
+			picture = GFX_leaders_BRM_Ba_Maw_army
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		BRM_Smith_Dun = {
+			ledger = army
+
+			picture = GFX_leaders_Smith_Dun.png
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_Portrait_Saya_San = {
+			ledger = army
+
+			picture = GFX_leaders_Portrait_Saya_San.png
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_acas = {
+			ledger = air
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { air_close_air_support_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRM_ncs = {
+			ledger = navy
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		BRM_aung_san = {
+			ledger = army
+			
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = BRM
+			}
+
+			available = {
+				has_completed_focus = BRM_12
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.30
+			}
+			
+			traits = { mobile_warfare_expert }
+		}
+		
+		BRM_Ba_Maw = {
+			ledger = army
+
+			picture = GFX_leaders_BRM_Ba_Maw_army
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+	}
+		BRM_Ne_Win = {
+			ledger = navy
+
+			picture = GFX_leaders_BRM_Ne_Win
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+
+		BRM_awt = {
+			ledger = air
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = BRM
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+}

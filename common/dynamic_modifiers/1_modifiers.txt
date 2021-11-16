@@ -1,0 +1,11 @@
+
+ruling_party_modifier = {
+	#icon = "GFX_idea_POL_ideology_drift_defence" #GFX_idea_unity_100
+	
+	fascism_drift = fascism_modifier
+	communism_drift = communism_modifier
+	neutrality_drift = neutrality_modifier
+	democratic_drift = democratic_modifier
+	
+}
+

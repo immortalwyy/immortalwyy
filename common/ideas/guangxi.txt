@@ -1,0 +1,529 @@
+ideas = {
+	country = {	
+	
+        GXC_shishenhaozu = {
+		
+			picture = gx1
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.05
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+		}
+		GXC_nanyangdefengsuo = {
+		
+			picture = gx2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_refit_speed = 0.2
+				navy_refit_ic_cost = -10
+				consumer_goods_factor = 0.05
+				local_resources_factor = 0.01
+			}
+		}
+		GXC_gexinsixiang = {
+		
+			picture = gx3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.5
+			}
+		}
+		GXC_yueguizhizheng = {
+		
+			picture = gx4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				political_power_gain = -0.5
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+		GXC_junxilinli = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = -0.2
+				max_planning = -0.2
+				max_command_power = -20
+				army_defence_factor = 0.15
+				army_org_regain = -0.15
+			}
+		}
+		GXC_tianchaoweiyan = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		GXC_liangguangfalvwenan = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		GXC_majigaige = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		GXC_guangdongpanluan = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				political_power_gain = -0.2
+				consumer_goods_factor = 0.1 
+			}
+		}
+		GXC_huguojun = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.15
+				army_org_regain = 0.1
+			}
+		}
+		
+		GXC_beifa = {
+		
+			picture = gx5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.3
+				planning_speed = 0.3
+			}
+		}
+	}
+	head_of_government = {
+	    GXC_lizongren = {
+			
+			picture = GXC_1
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { warmonger }
+		}
+		GXC_lijisheng = {
+			
+			picture = gxc_li_jishen
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { permanent_revolutionary }
+		}
+		GXC_chenjiongming = {
+			
+			picture = GXC_4
+
+			
+			available = {
+				has_completed_focus = GXC_zz14
+			}				
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { Inter_provincial_faction }
+		}
+		GXC_maji = {
+			
+			picture = GXC_8
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { war_industrialist }
+		}
+		GXC_hushi = {
+			
+			picture = hu_shih
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { democratic_reformer }
+		}
+		GXC_lurongtin = {
+			
+			picture = GXC_10
+
+			available = {
+				has_completed_focus = GXC_zz03
+			}			
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { arkhigos }
+		}
+	
+	}
+	foreign_minister = {
+	    GXC_chenminshu = {
+			
+			picture = GXC_6
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { social_reformer }
+		}
+		GXC_liufei = {
+			
+			picture = GXC_7
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { communist_revolutionary }
+		}
+		CHI_lin_sen = {
+
+			picture = GFX_idea_chi_lin_sen
+			
+			allowed = {
+				original_tag = GXC
+				has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { popular_figurehead }
+		}
+	}
+	interior_minister = {
+	    GXC_chenminshu = {
+			
+			picture = GXC_6
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { armaments_organizer }
+		}
+		GXC_ZhangJunmai = {
+			
+			picture = GXC_9
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { gentle_scholar }
+		}
+		GXC_chenqiyou = {
+			
+			picture = GXC_11
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { silent_workhorse }
+		}
+	}
+	economy_minister = {
+	  GXC_chenlianbo = {
+			
+			picture = GXC_5
+			
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { the_banker }
+		}
+	}
+	defense_minister = {
+	    
+		
+		GXC_baichongxi = {
+			
+			picture = GXC_2
+
+						
+			allowed = {
+				original_tag = GXC
+			}
+
+			traits = { the_statist }
+		}
+		
+	}
+    high_command = {
+	    GXC_yangjie = {
+			
+			picture = GXC_25
+			
+			available = {
+				has_completed_focus = GXC_js11
+			}
+
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	air_chief = {
+		
+		
+		#Communist
+		#Fang Zeyi
+		#army_aviation_doctrine
+
+
+		#Clique
+
+		CHI_wang_shuming = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+			CHI = { exists = no } 
+			}
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+
+		#Nationalist
+
+		CHI_zhouzhi_rou = {
+
+			picture = chou_chihjou
+			
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+			CHI = { exists = no } 
+			}
+
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+	}
+	
+	navy_chief = {
+		
+		#Communist
+
+		CHI_xiao_jinguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Clique
+
+		CHI_shen_honglie = {
+			
+			picture = shen_honglie
+
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+
+		#Nationalist
+
+		CHI_chenshao_kuan = {
+
+			picture = chen_shaokuan
+			
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_decisive_battle_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		
+	}
+	
+		
+}

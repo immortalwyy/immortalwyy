@@ -1,0 +1,32 @@
+购买大明武器条款 = {
+
+	购买步兵装备 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_completed_focus = KOR_10
+		}
+
+		cost = 80
+		fire_only_once = no
+		ai_will_do = {
+				factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			CHI= {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 8000
+			    producer = CHI
+			}		
+		}
+	}
+}

@@ -1,0 +1,35 @@
+guiTypes = {
+	containerWindowType = {
+		name = "politics_leader_s"
+		position = { x=0 y=0 }
+		size = { width = 200 height = 200 }
+		
+		iconType = {
+			name = "leader_2"
+			position = { x = 178 y = 58 }
+			spriteType = "GFX_leader_unknown"
+			pdx_tooltip = "LeaderInfo"
+		}
+
+		iconType = {
+			name = "leader_frame2"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 170 y = 44 }		
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = {
+			name = "leader_name2"
+			position = { x = 178 y = 271 }
+			font = "hoi_18mbs"
+			text = "[GetsLeadername]"
+			pdx_tooltip = "LeaderInfo"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+
+	}
+}

@@ -1,0 +1,147 @@
+﻿division_template = {
+	name = "地方卫所"				
+	division_names_group = CHI_DWS_01
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "宣毅军"			
+	division_names_group = CHI_SJY_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 0 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	division = {
+		name = "宣毅军一师一团"
+		location = 7418
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军一师二团"
+		location = 7418
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军一师三团"
+		location = 7418
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师一团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师二团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师四团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师六团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师五团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师九团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "宣毅军二师七团"
+		location = 1519
+		division_template = "宣毅军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "大同卫所"
+		location = 12432
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "榆林卫所"
+		location = 7659
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "宁夏卫所"
+		location = 10724
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+}

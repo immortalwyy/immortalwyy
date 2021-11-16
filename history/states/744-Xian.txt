@@ -1,0 +1,26 @@
+
+state={
+	id=744
+	name="STATE_744"
+
+	history={
+		owner = XBJ
+		add_core_of = CHI
+		add_core_of = XBJ
+		victory_points = {
+			7418 10 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		1976 4256 5092 7406 7418 12713 
+	}
+	manpower=5200000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,22 @@
+state={
+	id=931
+	name="STATE_931"
+	provinces={
+		1014 1142 3651 3999 4147 4454 7122 10033 11966 12090 
+	}
+	history={
+		add_core_of = BRM
+		owner = BRM
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+
+		}
+		victory_points = {
+			12090 1 
+		}
+	}
+	manpower=1768900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

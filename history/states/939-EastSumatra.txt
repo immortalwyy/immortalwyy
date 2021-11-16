@@ -1,0 +1,37 @@
+state={
+	id=939
+	name="STATE_939"
+	provinces={
+		1277 4652 7327 7463 7673 10209 10225 12168 12181 12184 12302 12343 
+	}
+	history={
+		owner = JUG
+		add_core_of = JUG
+		victory_points = {
+			4652 3 
+		}
+		victory_points = {
+			7463 1 
+		}
+		victory_points = {
+			7327 1 
+		}
+		victory_points = {
+			10225 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+			4652 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+	manpower=2435009
+	buildings_max_level_factor=1.000
+	state_category=town
+}

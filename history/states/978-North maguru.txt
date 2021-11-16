@@ -1,0 +1,31 @@
+state={
+	id=978
+	name="STATE_978"
+	provinces={
+		1419 1437 7413 10141 10342 1351
+	}
+	history={
+		owner = PNG
+		add_core_of = PNG
+		add_claim_by = GMG
+		buildings = {
+			infrastructure = 3
+			7413 = {
+				naval_base = 1
+
+			}
+			1351 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			7413 1 
+		}
+
+	}
+	manpower=275479
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

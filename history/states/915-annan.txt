@@ -1,0 +1,30 @@
+state={
+	id=915
+	name="STATE_915"
+	provinces={
+		1248 4255 7229 10137 10180 10309 
+	}
+	history={
+		add_core_of = VIN
+		owner = VIN
+		victory_points = {
+			10309 3 
+		}
+		victory_points = {
+			10137 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			10309 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+	manpower=1657800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

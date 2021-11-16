@@ -1,0 +1,12 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_news_event_ming_dengji"
+		texturefile = "gfx/event_pictures/news_event_ming_dengji.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_ming_chaogong"
+		texturefile = "gfx/event_pictures/news_event_ming_chaogong.dds"
+	}		
+}

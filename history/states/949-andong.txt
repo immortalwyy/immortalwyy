@@ -1,0 +1,24 @@
+state={
+	id=949
+	name="STATE_949"
+	provinces={
+		 3949 9759 9803 
+	}
+	
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			3949 1 
+		}
+
+	}
+	manpower=1196376
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,26 @@
+state={
+	id=867
+	name="STATE_867"
+	provinces={
+		4130 7625 9934 12467 
+	}
+	history={
+		owner = HNN
+		add_core_of = CHI
+		add_core_of = HNN
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			9934 3 
+		}
+		victory_points = {
+			4130  3 
+		}
+
+	}
+	manpower=4456700
+	buildings_max_level_factor=1.000
+	state_category=city
+}

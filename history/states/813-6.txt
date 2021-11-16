@@ -1,0 +1,25 @@
+
+state={
+	id=813
+	name="STATE_813"
+
+	history={
+		owner = UZB
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = SIK
+		add_core_of = UZB
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1675 1825 4316 4923 5062 10408 12370 12511 
+	}
+	manpower=31232
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

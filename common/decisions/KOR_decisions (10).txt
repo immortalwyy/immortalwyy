@@ -1,0 +1,43 @@
+请求国际援助 = {
+
+	苏联的援助 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_completed_focus = KOR_138
+		}
+
+		cost = 40
+		fire_only_once = no
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			SOV = {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_0
+				amount = 50 
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 3000
+			    producer = SOV
+			}	
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 200
+			    producer = SOV
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+国内动荡问题 = {
+
+	icon = border_conflicts
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+	}
+}
+
+雪中送炭 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_cz18
+	}
+}
+
+德国援助 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_cz62
+	}
+}
+
+意大利合作 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_cz63
+	}
+}
+
+挽救帝国财政 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_gy01
+	}
+}
+
+英国合作 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_cz101
+	}
+}
+
+法国合作 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_cz102
+	}
+}
+
+测试 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+	
+	}
+}

@@ -1,0 +1,38 @@
+﻿add_namespace = gse
+
+
+country_event = {
+	id = gse.1
+	title = gse.1.t
+	desc = gse.1.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gse.1.a
+		if = { limit = { check_variable = { UMH_owned_core_state_factories_num < 0.51 } } add_ideas = agricultural_economy }
+		if = { limit = { check_variable = { UMH_owned_core_state_factories_num > 0.50 } check_variable = { UMH_owned_core_state_factories_num < 1.01 } } add_ideas = agricultural_dominance }
+		if = { limit = { check_variable = { UMH_owned_core_state_factories_num > 1 } check_variable = { UMH_owned_core_state_factories_num < 2.01 } } add_ideas = basic_industrialization }
+		if = { limit = { check_variable = { UMH_owned_core_state_factories_num > 2 } } add_ideas = highly_industrialized }
+	}
+}
+
+country_event = {
+	id = gse.2
+	title = gse.2.t
+	desc = gse.2.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gse.2.a
+		if = { limit = { has_army_manpower = { size < 100001 } } add_ideas = militia }
+		if = { limit = { has_army_manpower = { size > 100000 } has_army_manpower = { size < 500001 } } add_ideas = disarmament_states }	
+		if = { limit = { has_army_manpower = { size > 500000 } has_army_manpower = { size < 1000001 } } add_ideas = standing_army }	
+		if = { limit = { has_army_manpower = { size > 1000000 } has_army_manpower = { size < 3000001 } } add_ideas = strong_army }	
+		if = { limit = { has_army_manpower = { size > 3000000 }  } add_ideas = adopt_a_war_like_policy }	
+	}
+}
+

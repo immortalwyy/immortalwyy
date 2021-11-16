@@ -1,0 +1,444 @@
+﻿division_template = {
+	name = "地方卫所"				
+	division_names_group = CHI_DWS_01
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "神机营"			
+	division_names_group = CHI_SJY_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "京营"			
+	division_names_group = CHI_MJY_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+        infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	
+	support = {
+        artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "边军"			
+	division_names_group = CHI_BJS_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+        artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "神枢营"		
+	division_names_group = CHI_SSY_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+       recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "装甲师"
+
+	division_names_group = CHI_ZJS_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+### OOB ###
+units = {
+	division = {
+		name = "北直隶右京营"
+		location = 9843
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "北直隶左京营"
+		location = 9843
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "北直隶前京营"
+		location = 11761
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "北直隶后京营"
+		location = 4137
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "南直隶右京营"
+		location = 11913
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "南直隶左京营"
+		location = 11913
+		division_template = "京营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "北京神机营"
+		location = 9843
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "天津神机营"
+		location = 4137
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "济南神机营"
+		location = 1069
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "金陵神机营"
+		location = 11913
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+
+	
+	
+	division = {
+		name = "辽东神机营"
+		location = 11771
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+	
+	
+	
+	division = {
+		name = "淞沪神机营"
+		location = 10076
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+
+	division = {
+		name = "徐州神机营"
+		location = 9956
+		division_template = "神机营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.8
+	}
+	
+	
+	
+	division = {
+		name = "北直隶神枢营"
+		location = 9843
+		division_template = "神枢营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "通州神枢营"
+		location = 9969
+		division_template = "神枢营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "南直隶神枢营"
+		location = 996
+		division_template = "神枢营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "宁波神枢营"
+		location = 9974
+		division_template = "神枢营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东神枢营"
+		location = 11815
+		division_template = "神枢营"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "直隶装甲左营"
+		location = 9843
+		division_template = "装甲师"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "直隶装甲右营"
+		location = 9843
+		division_template = "装甲师"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+
+	
+	
+	division = {
+		name = "辽东靖边中军"
+		location = 11771
+		division_template = "边军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东靖边左军"
+		location = 11771
+		division_template = "边军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东靖边右军"
+		location = 11815
+		division_template = "边军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东靖边前军"
+		location = 6804
+		division_template = "边军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东靖边后军"
+		location = 1150
+		division_template = "边军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "辽东卫所"
+		location = 11771
+		division_template = "地方卫所"
+		start_equipment_factor = 0.4
+		start_experience_factor = 0.3
+	}
+	
+	
+	division = {
+		name = "苏州卫所"
+		location = 10076
+		division_template = "地方卫所"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		name = "杭州卫所"
+		location = 7191
+		division_template = "地方卫所"
+		start_equipment_factor = 0.6
+		start_experience_factor = 0.5
+	}
+	
+	
+	division = {
+		name = "青州卫所"
+		location = 1069
+		division_template = "地方卫所"
+		start_equipment_factor = 0.6
+		start_experience_factor = 0.4
+	}
+		
+	division = {
+		name = "青岛卫所"
+		location = 10000
+		division_template = "地方卫所"
+		start_equipment_factor = 0.6
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		name = "威海卫所"
+		location = 4205
+		division_template = "地方卫所"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		name = "冀东卫所"
+		location = 3900
+		division_template = "地方卫所"
+		start_equipment_factor = 0.6
+		start_experience_factor = 0.4
+	}
+	
+
+	division = {
+		name = "北直隶卫所"
+		location = 9843
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "北直隶守备司"
+		location = 9843
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "南直隶卫所"
+		location = 11913
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+	
+	division = {
+		name = "南直隶守备司"
+		location = 4091
+		division_template = "地方卫所"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.7
+	}
+}
+
+
+### Air Forces ###
+air_wings = {
+# Roughly 300 fighters, 21 tac bombers, but only 200 aircraft total were serviceable in 1937 due to neglect
+	# Beijing
+	608 = { 
+		fighter_equipment_0 = { owner = "CHI" amount = 30 }				# 3rd PG - Fiat CR.32
+	}
+	#Shanghai
+	613 = {
+		fighter_equipment_0 = { owner = "CHI" amount = 70 } 		# 4th PF, 5th PG, 9th PS - Curtiss Hawk
+		tac_bomber_equipment_0 =  { owner = "CHI" amount = 15 }		# Combined BG -- Martin 139WC, Savoia S.72
+	}
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+}

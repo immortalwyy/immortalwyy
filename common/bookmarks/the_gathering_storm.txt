@@ -1,0 +1,165 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1935.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "CHI"
+		default = yes
+		
+		
+		"MON"={
+			history = "MON_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				MON_goongchanyx
+				MON_fenhuacaoy
+				MON_bcanxianz
+			}
+			focuses = {
+				MON_112
+				MON_12
+				MON_67
+			}
+		}
+		
+		"KOR"={
+			history = "KOR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			CHI_cg001	
+			KOR_wuyongjundui
+			KOR_dulizhe
+			}
+			focuses = {
+			KOR_01 
+			KOR_tj05
+			KOR_136 
+			}
+		}
+		
+		"JAP"={
+			history = "JAP_MIN_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				state_shintoism
+				JAP_zaibatsus
+				jap_ribenng
+			}	
+			focuses = {
+				JAP_tj001
+				JAP_23
+				JAP_119
+			}			
+		}
+		
+		"CHI"={
+			history = "CHI_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			
+			}
+			focuses = {
+			
+			}
+		}
+		
+		
+		
+		"MAN"={
+			history = "MAN_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				MAN_jianguodacheng
+				MAN_feizhengtong
+				MAN_luohoukeji
+			}
+			focuses = {
+				MAN_08
+				MAN_19
+				MAN_20
+			}	
+		}
+		"HNN"={
+			history = "HNN_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		"GXC"={
+			history = "GXC_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		
+		####
+		"SZC"={
+			minor = yes
+			history = "SZC_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		
+		"YUN"={
+			minor = yes
+			history = "YUN_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		
+		"XSM"={
+			minor = yes
+			history = "XSM_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		
+		"SHX"={
+			minor = yes
+			history = "SHX_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+		
+		"NAY"={
+			minor = yes
+			history = "NAY_MIN_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}	
+		}
+
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

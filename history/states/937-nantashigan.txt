@@ -1,0 +1,23 @@
+state={
+	id=937
+	name="STATE_937"
+	provinces={
+		1459 10187 10660 
+	}
+	history={
+		owner = UZB
+		victory_points = {
+			1459 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+
+		}
+		add_core_of = UZB
+
+	}
+	manpower=108790
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

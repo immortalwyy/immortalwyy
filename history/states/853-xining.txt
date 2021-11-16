@@ -1,0 +1,24 @@
+state={
+	id=853
+	name="STATE_853"
+	provinces={
+		4888 10490 12732 
+	}
+	history={
+		owner = XSM
+		add_core_of = CHI
+		add_core_of = XSM
+		victory_points = {
+			12732 3 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+
+		}
+
+	}
+	manpower=367800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

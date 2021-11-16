@@ -1,0 +1,18 @@
+
+on_actions = {
+
+
+    on_daily = {
+		effect = {
+			if = { #This is the biggest performance drain - after this it only runs on the player countries, which are very few
+				limit = { #only for players or playtesters
+					always = yes
+				}
+
+				calculate_ruling_party_drift = yes
+			}
+		}		
+	}
+	
+	
+}

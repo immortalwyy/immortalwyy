@@ -1,0 +1,14 @@
+﻿l_english:
+ machine_gun:0 "初级机枪装备"
+ machine_gun1:9 "机枪装备I型"
+ machine_gun2:9 "机枪装备II型"
+ machine_gun3:9 "机枪装备III型"
+ infantry_uniforms:9 "军装"
+ horse_equipment:9 "骑兵装备"
+ infantry_uniforms_0:9 "军装"
+ infantry_uniforms_1:9 "改良军装"
+ HQ_equipment_0:9 "指挥部装备"
+ horse_equipment_0:9 "骑兵装备"
+
+
+ 

@@ -1,0 +1,53 @@
+﻿帝国皇子的视察 = {
+	
+	icon = border_conflicts
+
+	allowed = {
+		tag =  BRM
+	}
+
+	visible = {
+		has_completed_focus = BRM_02
+	}
+
+}
+
+缅甸新军训练 = {
+	
+	icon = army_reform
+
+	allowed = {
+		tag = BRM
+	}
+
+	visible = {
+		has_completed_focus = BRM_06
+	}
+
+}
+
+大明军购 = {
+	
+	icon = army_reform
+
+	allowed = {
+		tag = BRM
+	}
+
+	visible = {
+		has_completed_focus = BRM_10
+	}
+
+}
+
+大明边贸互市 = {
+	
+	icon = generic_air
+
+	allowed = {
+		tag = BRM
+	}
+
+	visible = {
+		has_completed_focus = BRM_19
+	}

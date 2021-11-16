@@ -1,0 +1,24 @@
+state={
+	id=870
+	name="STATE_870"
+	provinces={
+		4041 5030 10304 10757 10822 12414 
+	}
+	history={
+		owner = HNN
+		add_core_of = CHI
+		add_core_of = HNN
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10757 3 
+		}
+		
+
+	}
+	manpower=3768900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

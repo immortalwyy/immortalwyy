@@ -1,0 +1,23 @@
+state={
+	id=887
+	name="STATE_887"
+	provinces={
+		4160 7135 
+	}
+	history={
+		owner = NAY
+		add_core_of = CHI
+		add_core_of = NAY
+		victory_points = {
+			4160 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+	manpower=1165400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

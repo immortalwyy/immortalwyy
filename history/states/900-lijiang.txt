@@ -1,0 +1,24 @@
+state={
+	id=900
+	name="STATE_900"
+	provinces={
+		8126 
+	}
+	history={
+		owner = YUN
+		add_core_of = CHI
+		add_core_of = YUN
+		victory_points = {
+			8126 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+
+	}
+	manpower=98000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

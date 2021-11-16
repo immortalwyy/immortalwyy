@@ -1,0 +1,4039 @@
+focus_tree = {
+	id = yunnan_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YUN
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	continuous_focus_position = { x = 20 y = 2000 }
+	#云南王
+	focus = {
+		id = YUN_cz01      
+		icon = GFX_goal_long_jiguang
+		x = 3
+		y = 0
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			YUN = {
+				controls_state = 325
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	#整顿吏治
+	focus = {
+		id = YUN_cz02      
+		icon = GFX_goal_generic_arrests
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_cz01 }
+		relative_position_id = YUN_cz01
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 120
+		}
+	}
+	#富国强兵
+	focus = {
+		id = YUN_cz03      
+		icon = GFX_goal_ming_rushi
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_cz02 }
+		relative_position_id = YUN_cz02
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_ideas = SZC_qiangjunqianguo
+		}
+	}
+	#维持独裁
+	focus = {
+		id = YUN_cz07      
+		icon = GFX_goal_generic_centralize_power
+		x = -2
+		y = 2
+		prerequisite = { focus = YUN_cz03 }
+		prerequisite = { focus = YUN_cz04 }
+		relative_position_id = YUN_cz03
+		mutually_exclusive = { focus = YUN_cz08 }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   has_government = neutrality
+		   neutrality > 0.25 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_popularity = {
+            ideology = neutrality
+             popularity = 0.2
+            }
+		}
+	}
+	#宣誓效忠
+	focus = {
+		id = YUN_cz09      
+		icon = GFX_goal_ming_dam_junzhu
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_cz07 }
+		relative_position_id = YUN_cz07
+		mutually_exclusive = { focus = YUN_cz10 }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+            CHI = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}    
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+            ideology = neutrality
+             popularity = 0.1
+            }
+			hidden_effect = {
+			CHI = {
+					country_event = { id = YUN.201 }
+				}
+			}
+			CHI =  { puppet = SZC }
+		}	
+	}
+	#阳奉阴违
+	focus = {
+		id = YUN_cz10      
+		icon = GFX_goal_ming_guixia
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_cz07 }
+		relative_position_id = YUN_cz07
+		mutually_exclusive = { focus = YUN_cz09 }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+            CHI = {
+				OR = {
+					exists = no ##不是他人的傀儡
+					is_subject = yes	###不存在		
+				}
+			}    
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+            ideology = fascism
+             popularity = 0.2
+			 add_political_power = 100
+            }
+			set_politics = {
+	              ruling_party = fascism
+            }
+			hidden_effect = {
+			CHI = {
+					country_event = { id = YUN.204 }
+				}
+			}
+		}	
+	}
+	#龙云参谋部
+	focus = {
+		id = YUN_cz11      
+		icon = GFX_goal_generic_democratic_army
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_cz09 focus = YUN_cz10 }
+		relative_position_id = YUN_cz09
+		
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUN_longyuncanmoubu
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = YUN_Longyun	
+		}	
+	}
+	#清洗军官
+	focus = {
+		id = YUN_cz12      
+		icon = GFX_goal_qingxijunguan
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_cz09 focus = YUN_cz10 }
+		relative_position_id = YUN_cz09
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		    has_idea = YUN_tangjiyaodeyingxiang
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+			YUN = {
+					country_event = { id = YUN.203 }
+				}
+			}
+		    custom_effect_tooltip = yunnan.1
+		}	
+	}
+	#昆明大会
+	focus = {
+		id = YUN_cz17      
+		icon = GFX_goal_ming_Agriculture4
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_cz12 }
+		prerequisite = { focus = YUN_cz11 }
+		relative_position_id = YUN_cz12
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+            add_stability = 0.1
+		}	
+	}
+	#博采众长
+	focus = {
+		id = YUN_cz08      
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 2
+		prerequisite = { focus = YUN_cz03 }
+		prerequisite = { focus = YUN_cz04 }
+		relative_position_id = YUN_cz03
+		mutually_exclusive = { focus = YUN_cz07 }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   democratic > 0.2 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_popularity = {
+            ideology = democratic
+             popularity = 0.1
+            }
+			add_popularity = {
+            ideology = social_democracy
+             popularity = 0.1
+            }
+			add_popularity = {
+            ideology = conservatism_ideology
+             popularity = 0.1
+            }
+		}
+	}
+	#允许民主党
+	focus = {
+		id = YUN_cz14      
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_cz08 }
+		relative_position_id = YUN_cz08
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   democratic > 0.4 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+            add_stability = 0.07
+			add_popularity = {
+            ideology = democratic
+             popularity = 0.15
+            }
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = YUN_Luhan
+		}
+	}
+	#远交近攻
+	focus = {
+		id = YUN_cz13      
+		icon = GFX_goal_ming_henghe_zhengce
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_cz08 }
+		relative_position_id = YUN_cz08
+		
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	       HNN = {has_opinion	= {
+					target = ROOT
+					value > 50
+				}
+			}	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			HNN = {
+				add_opinion_modifier = { target = YUN modifier = YUN_yuanjiao }
+			}
+			GXC = {
+				add_opinion_modifier = { target = YUN modifier = YUN_jingong }
+			}
+			SZC = {
+				add_opinion_modifier = { target = YUN modifier = YUN_jingong }
+			}
+		}
+	}
+	#党国一体
+	focus = {
+		id = YUN_cz15      
+		icon = GFX_goal_CHI_chinese_sun
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_cz13 }
+		prerequisite = { focus = YUN_cz14 }
+		relative_position_id = YUN_cz13
+		mutually_exclusive = { focus = YUN_cz16 }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   democratic > 0.5 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		set_party_name = { 
+            ideology = democratic 
+            long_name = 中华国民党
+            name = 国民党
+            }	
+		
+		set_politics = {
+	              ruling_party = democratic
+            }
+		 create_country_leader = {
+	     name = "Lu Han"
+	     desc = "POLITICS_LONG_YUN_DESC"
+	     picture = "Portrait_Yunnan_Lu_Han_w.png"
+	     expire = "1965.1.1"
+	     ideology = conservatism
+	     traits = {
+		    #
+	      }
+        }
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = YUN_Zhupeide
+        hidden_effect = { news_event = { id = YUN.101 } }
+		}
+		
+	}
+	#联省自治
+	focus = {
+		id = YUN_cz16      
+		icon = GFX_goal_liansheng
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_cz13 }
+		prerequisite = { focus = YUN_cz14 }
+		relative_position_id = YUN_cz13
+		mutually_exclusive = { focus = YUN_cz15 }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   democratic > 0.45 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		set_party_name = { 
+            ideology = democratic 
+            long_name = 华夏致公党
+            name = 致公党
+            }	
+		
+		set_politics = {
+	              ruling_party = democratic
+            }
+		 create_country_leader = {
+	     name = "Long Yun"
+	     desc = "POLITICS_LONG_YUN_DESC"
+	     picture = "GFX_portrait_yun_long_yun"
+	     expire = "1965.1.1"
+	     ideology = socialism
+	     traits = {
+		    #
+	      }
+        }
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = YUN_zhaohengti	
+		}
+		
+	}
+	#任人唯才
+	focus = {
+		id = YUN_cz18      
+		icon = GFX_goal_ming_menghu
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_cz16 focus = YUN_cz15 }
+		relative_position_id = YUN_cz15
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    has_idea = YUN_tangjiyaodeyingxiang
+		    }
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -400
+            add_stability = -0.1
+		    remove_ideas = YUN_tangjiyaodeyingxiang
+		}	
+	}
+	#审时度势
+	focus = {
+		id = YUN_cz19      
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_cz17 focus = YUN_cz18 }
+		relative_position_id = YUN_cz17
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+		}
+
+		bypass = {
+            
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}	
+	}
+	#镇压革命党
+	focus = {
+		id = YUN_cz04      
+		icon = GFX_goal_generic_armed_protest
+		x = 4
+		y = 1
+		prerequisite = { focus = YUN_cz02 }
+		relative_position_id = YUN_cz02
+		mutually_exclusive = { focus = YUN_cz05 }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           add_stability = -0.2
+		   
+		    add_popularity = {
+            ideology = communism
+            popularity = -0.2
+            }
+		}
+	}
+	#迈向现代化
+	focus = {
+		id = YUN_cz06      
+		icon = GFX_goal_generic_light_industry
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_cz04 }
+		prerequisite = { focus = YUN_cz03 }
+		relative_position_id = YUN_cz03
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUN_xiandaihuagaige
+		}
+	}
+	#贵阳起义
+	focus = {
+		id = YUN_cz05      
+		icon = GFX_goal_generic_workers_support
+		x = 6
+		y = 1
+		prerequisite = { focus = YUN_cz02 }
+		mutually_exclusive = { focus = YUN_cz04 }
+		relative_position_id = YUN_cz02
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+          communism > 0.4 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			create_country_leader = {
+				name = "Zhu De"
+				desc = "portrait_PRC_Zhu_De"
+				picture = "portrait_PRC_Zhu_De.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+		    }
+			
+          show_ideas_tooltip = YUN_Zhude
+		}
+	}
+	#工农红军的建立	
+	focus = {
+		id = YUN_gt02
+		icon = GFX_goal_PRC_focus_on_red_army
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_cz05 }
+		relative_position_id = YUN_cz05
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 160
+			add_ideas = YUN_hongjun
+		}
+	}
+	#建立党支部	
+	focus = {
+		id = YUN_gt03
+		icon = GFX_goal_generic_communist_army
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt02 }
+		relative_position_id = YUN_gt02
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	#三大纪律	
+	focus = {
+		id = YUN_gt04
+		icon = GFX_goal_generic_army_mobilization2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_gt03 }
+		relative_position_id = YUN_gt03
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 50
+			add_ideas = YUN_sandajilv
+	    	}
+	}
+	#建立民兵团
+	focus = {
+		id = YUN_gt05
+		icon = GFX_goal_ming_ribengongtong
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt02  }
+		relative_position_id = YUN_gt02
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = YUN_mingbing
+			hidden_effect = {
+				division_template = {
+					name = "民兵" 	
+					division_names_group = CHI_ZJS_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+                        infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+		                infantry = { x = 2 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"民兵一团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"民兵二团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"民兵四团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"民兵五团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"民兵七团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"民兵九团\" division_template = \"民兵\" start_experience_factor = 1"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	#俘虏再教育
+	focus = {
+		id = YUN_gt06
+		icon = GFX_goal_ming_rushi
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_gt05  }
+		relative_position_id = YUN_gt05
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.04
+			add_manpower = 30000
+		}
+	}
+	#新式军队
+	focus = {
+		id = YUN_gt07
+		icon = GFX_focus_chi_army_reform
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt04 }
+		prerequisite = { focus = YUN_gt06 }
+		relative_position_id = YUN_gt04
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUN_xinshijundui
+		}
+	}
+	#社会改革
+	focus = {
+		id = YUN_gt08
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = YUN_cz05 }
+		relative_position_id = YUN_cz05
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -200
+			remove_ideas = YUN_tangjiyaodeyingxiang
+		}
+	}
+	#平抑物价
+	focus = {
+		id = YUN_gt09
+		icon = GFX_goal_ming_Bills
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt08 }
+		relative_position_id = YUN_gt08
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		    custom_effect_tooltip = jiangdishuishou 
+			hidden_effect = { limit = {
+					NOT = { has_idea = tax_average }
+				}
+				add_ideas = tax_average
+			}	
+		}
+	}
+	#土地改革
+	focus = {
+		id = YUN_gt10
+		icon = GFX_goal_generic_agriculture2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_gt09 }
+		relative_position_id = YUN_gt09
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SZC_datuhao
+				days = 150
+			}
+			add_stability = -0.1
+		}
+	}
+	#农业合作社
+	focus = {
+		id = YUN_gt11
+		icon = GFX_goal_generic_commie_investments
+		x = 3
+		y = 1
+		
+		prerequisite = { focus = YUN_gt08 }
+		relative_position_id = YUN_gt08
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUN_nongyehezuo
+		}
+	}
+	#进行工业投资
+	focus = {
+		id = YUN_gt12
+		icon = GFX_goal_ming_Conscruction
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_gt11 }
+		relative_position_id = YUN_gt11
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#社会主义经济
+	focus = {
+		id = YUN_gt13
+		icon = GFX_goal_generic_communist_pride
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt10 }
+		prerequisite = { focus = YUN_gt12 }
+		relative_position_id = YUN_gt10
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		   custom_effect_tooltip = shehuizhuyijingji 
+			hidden_effect = { limit = {
+					NOT = { has_idea = agrarian_socialism }
+				}
+				add_ideas = agrarian_socialism
+			}
+		}
+	}
+	#苏联军援
+	focus = {
+		id = YUN_gt22
+		icon =GFX_focus_chi_mission_to_the_soviet_union
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt07 }
+		relative_position_id = YUN_gt07
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 350
+			    producer = SOV
+		}
+	}
+	}
+	#夺取西川
+	focus = {
+		id = YUN_gt24
+		icon = GFX_goal_Attack_chuan
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = YUN_gt22 }
+		relative_position_id = YUN_gt22
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SZC
+				expire = 0
+		}
+	}
+	}
+	#打通海运线
+	focus = {
+		id = YUN_gt25
+		icon = GFX_goal_Attack_gui
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = YUN_gt22 }
+		relative_position_id = YUN_gt22
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SZC
+				expire = 0
+		}
+	}
+	}
+	#昆明军工厂
+	focus = {
+		id = YUN_gt19
+		icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt13 }
+		prerequisite = { focus = YUN_gt07 }
+		relative_position_id = YUN_gt07
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			325 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+	#扩大根据地
+	focus = {
+		id = YUN_gt23
+		icon = GFX_focus_generic_soviet_politics
+		x = 3
+		y = 1
+		
+		prerequisite = { focus = YUN_gt13 }
+		prerequisite = { focus = YUN_gt07 }
+		relative_position_id = YUN_gt07
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+           add_stability = 0.06
+	    }
+	}
+    #云南苏维埃政府
+	focus = {
+		id = YUN_gt14
+		icon = GFX_goal_CHI_focus_on_external_threats
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = YUN_gt19 }
+		prerequisite = { focus = YUN_gt23 }
+		relative_position_id = YUN_gt19
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			has_country_flag = YUN_suweiai_flag 
+			is_in_faction = no
+			has_government = communism
+			is_subject = no
+		}
+	}	
+	
+	#####战争线######
+	#西南军政委员会
+	focus = {
+		id = YUN_zz01
+		icon = GFX_goal_dain_army
+		x = 0
+		y = 1
+		
+		relative_position_id = YUN_gt24
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		OR = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = democratic
+			}
+			has_completed_focus = YUN_cz19
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUN_xinanjunzhenweiyuanhui
+		}
+	}
+    #缅甸问题
+	focus = {
+		id = YUN_zz02
+		icon = GFX_goal_yun4
+		x = -2
+		y = 1
+		prerequisite = { focus = YUN_zz01 }
+		relative_position_id = YUN_zz01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = YUN_mianbeinanming
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_war_support = 0.05
+		    add_political_power = 100
+		}
+	}
+    #驱逐难民
+	focus = {
+		id = YUN_zz03
+		icon = GFX_goal_ming_ribencefeng
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_zz02 }
+		relative_position_id = YUN_zz02
+		mutually_exclusive = { focus = YUN_zz05 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		    has_idea = YUN_mianbeinanming
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+          add_stability = -0.16
+		  add_manpower = -260000
+		  remove_ideas = YUN_mianbeinanming
+		  hidden_effect = {
+			BRM = {
+					country_event = { id = YUN.205 }
+				}
+				news_event = { id = YUN.103 }
+			}
+		}
+	}
+	#保境息民
+	focus = {
+		id = YUN_zz04
+		icon = GFX_goal_generic_agriculture
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz03 }
+		relative_position_id = YUN_zz03
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = 0.1
+		    add_political_power = 100
+		}
+	}
+	#东南亚民族华夏同宗论
+	focus = {
+		id = YUN_zz05
+		icon = GFX_goal_yun5
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_zz02 }
+		relative_position_id = YUN_zz02
+		mutually_exclusive = { focus = YUN_zz03 }
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    has_idea = YUN_mianbeinanming
+			OR = {	has_government = fascism
+				has_government = neutrality
+			}	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+          add_stability = -0.2
+		  hidden_effect = {
+			
+				news_event = { id = YUN.104 }
+			}
+		}
+	}
+	#划分少数民族
+	focus = {
+		id = YUN_zz06
+		icon = GFX_goal_ming_ribenliuqiu
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz05 }
+		relative_position_id = YUN_zz05
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = 0.1
+		    add_political_power = -100
+		
+		add_popularity = {
+            ideology = fascism
+             popularity = 0.1
+            }
+		}	
+	}
+	#缅北动乱
+	focus = {
+		id = YUN_zz07
+		icon = GFX_goal_Unrest_Myanmar
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_zz05 }
+		relative_position_id = YUN_zz05
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = -0.06
+			BRM = {
+				add_opinion_modifier = { target = YUN modifier = YUN_tonghua }
+			}
+			hidden_effect = {
+			
+				country_event = { id = YUN.206 }
+			}
+		}
+	}
+	#泛华夏主义
+	focus = {
+		id = YUN_zz08
+		icon = GFX_goal_yun3
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_zz06 }
+		prerequisite = { focus = YUN_zz07 }
+		relative_position_id = YUN_zz06
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = 0.06
+			add_popularity = {
+            ideology = fascism
+             popularity = 0.1
+            }
+		}
+	}
+	#仰光计划
+	focus = {
+		id = YUN_zz09
+		icon = GFX_goal_Attack_brm
+		x = -2
+		y = 1
+		prerequisite = { focus = YUN_zz08 }
+		relative_position_id = YUN_zz08
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 100000 }
+			CHI = { has_war = yes }
+			
+		}
+
+		bypass = {
+          BRM = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   create_wargoal = {
+				type = annex_everything #吞并
+				target = BRM
+				expire = 0
+			}
+		}
+	}
+	#曼谷计划
+	focus = {
+		id = YUN_zz10
+		icon = GFX_goal_Attack_sia
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz08 }
+		relative_position_id = YUN_zz08
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 250000 }
+			CHI = { has_war = yes }
+		}
+
+		bypass = {
+          SIA = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   create_wargoal = {
+				type = annex_everything #吞并
+				target = SIA
+				expire = 0
+			}
+		}
+	}
+	#河内计划
+	focus = {
+		id = YUN_zz11
+		icon = GFX_goal_Attack_vin
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_zz08 }
+		relative_position_id = YUN_zz08
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    OR = {
+				has_government = fascism
+				has_government = neutrality
+		    }
+			has_army_manpower = { size > 350000 }
+			CHI = { has_war = yes }
+		}
+
+		bypass = {
+          VIN = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   create_wargoal = {
+				type = annex_everything #吞并
+				target = VIN
+				expire = 0
+			}
+		}
+	}
+	##彩云之南
+	focus = {
+		id = YUN_zz12
+		icon = GFX_goal_dian
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_zz11 }
+		prerequisite = { focus = YUN_zz10 }
+		prerequisite = { focus = YUN_zz09 }
+		relative_position_id = YUN_zz09
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+          add_stability = 0.1
+		  set_rule = {
+				can_create_factions = yes
+			}	
+		}
+	}
+	
+    #统一之路
+	focus = {
+		id = YUN_zz13
+		icon = GFX_goal_china101
+		x = 4
+		y = 1
+		prerequisite = { focus = YUN_zz01 }
+		relative_position_id = YUN_zz01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_war_support = 0.1
+		    add_political_power = 60
+		}
+	}
+    #静待时变
+	focus = {
+		id = YUN_zz14
+		icon = GFX_goal_ming_ribenaozhou
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_zz13 }
+		relative_position_id = YUN_zz13
+		mutually_exclusive = { focus = YUN_zz17 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = 0.08
+		    add_political_power = 50
+		}
+	}
+    #镇南防线
+	focus = {
+		id = YUN_zz15
+		icon = GFX_goal_generic_fortify_city
+		x =0
+		y = 1
+		prerequisite = { focus = YUN_zz14 }
+		relative_position_id = YUN_zz14
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            893 = {
+				
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 7521
+						instant_build = yes
+					}
+				
+				
+		    }
+			892 = {
+				
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 7577
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1474
+						instant_build = yes
+					}
+				
+		    }
+		}
+	}
+	#依附强者
+	focus = {
+		id = YUN_zz16
+		icon = GFX_goal_ming_ribengongtong
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz15 }
+		relative_position_id = YUN_zz15
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		    add_political_power = 10
+			hidden_effect = {
+			country_event = { id = YUN.207 }
+			}
+		}
+	}
+    #民主共和
+	focus = {
+		id = YUN_zz17
+		icon = GFX_goal_freedem
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_zz13 }
+		relative_position_id = YUN_zz13
+		mutually_exclusive = { focus = YUN_zz14 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+            add_stability = 0.08
+		    add_political_power = 50
+		}
+	}
+    #朱培德计划
+	focus = {
+		id = YUN_zz18
+		icon = GFX_goal_zhupeide
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz17 }
+		relative_position_id = YUN_zz17
+		mutually_exclusive = { focus = YUN_zz20 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+				has_completed_focus = YUN_cz15
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		    add_popularity = {
+            ideology = democratic
+             popularity = 0.04
+            }
+			add_ideas = YUN_zhupeidejihua
+		}
+	}
+    #党国军魂
+	focus = {
+		id = YUN_zz19
+		icon = GFX_goal_kmt_fight
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz18 }
+		relative_position_id = YUN_zz18
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			add_ideas = YUN_dangguojunhun
+		}
+	}
+    #赵恒惕计划
+	focus = {
+		id = YUN_zz20
+		icon = GFX_goal_zhaohengti
+		x = 3
+		y = 1
+		prerequisite = { focus = YUN_zz17 }
+		relative_position_id = YUN_zz17
+		mutually_exclusive = { focus = YUN_zz18 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+				has_completed_focus = YUN_cz16
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		    add_popularity = {
+            ideology = democratic
+             popularity = 0.08
+            }
+			add_ideas = YUN_zhaohengtijihua
+		}
+	}
+    #联省自治
+	focus = {
+		id = YUN_zz21
+		icon = GFX_goal_liansheng2
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_zz20 }
+		relative_position_id = YUN_zz20
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			add_ideas = YUN_lianshengzizhi
+		}
+	}
+    #中华归正大会
+	focus = {
+		id = YUN_zz22
+		icon = GFX_goal_liansheng3
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_zz20 }
+		relative_position_id = YUN_zz20
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_political_power = 20
+		}
+	}
+	
+    #东方破晓
+	focus = {
+		id = YUN_zz23
+		icon = GFX_goal_ming_xindao
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_zz21 focus = YUN_zz22 focus = YUN_zz19 }
+		relative_position_id = YUN_zz21
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_government = democratic
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_political_power = 20
+		}
+	}
+	##工业部分##
+	#张维翰的改革
+	focus = {
+		id = YUN_gy01
+		icon = GFX_goal_zhangweihan
+		x = 12
+		y = 0
+		relative_position_id = YUN_cz05
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_political_power = 100
+		}
+	}
+	##现代化进程##
+	
+	focus = {
+		id = YUN_gy02
+		icon = GFX_goal_generic_banking_legislation
+		x = -2
+		y = 1
+		prerequisite = { focus = YUN_gy01 }
+		relative_position_id = YUN_gy01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_ideas = YUN_maixiangxiandai
+		}
+	}
+	
+	##山区经济##
+	focus = {
+		id = YUN_gy04
+		icon = GFX_goal_generic_extraction_gold
+		x = -2
+		y = 1
+		prerequisite = { focus = YUN_gy02 }
+		relative_position_id = YUN_gy02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_ideas = YUN_shanqujingji
+		}
+	}
+	
+	##矿业优势##
+	focus = {
+		id = YUN_gy05
+		icon = GFX_goal_ming_Industry2
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy04 }
+		relative_position_id = YUN_gy04
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_resource = {
+            type = chromium#铬
+            amount = 12
+            state = 325
+            }
+			add_resource = {
+            type = tungsten #钨
+            amount = 15
+            state = 325
+            }
+		}
+	}
+	
+	##大理矿局##
+	focus = {
+		id = YUN_gy06
+		icon = GFX_goal_generic_coal_mining
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy05 }
+		relative_position_id = YUN_gy05
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_resource = {
+            type = steel #铁
+            amount = 20
+            state = 747
+            }
+		}
+	}
+	##投资东陆大学##
+	focus = {
+		id = YUN_gy07
+		icon = GFX_goal_generic_research_silver_cooperation
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy02 }
+		relative_position_id = YUN_gy02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+         num_of_factories > 30
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_research_slot = 1
+		}
+	}
+	
+	##建设西南联大##
+	focus = {
+		id = YUN_gy08
+		icon = GFX_goal_generic_supremacy_of_will
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy07 }
+		relative_position_id = YUN_gy07
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+         num_of_factories > 45
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_research_slot = 1
+		}
+	}
+	
+	##义务教育##
+	focus = {
+		id = YUN_gy09
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy08 }
+		relative_position_id = YUN_gy08
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+         num_of_factories > 50
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		    hidden_effect = {
+		   limit = {
+					NOT = { has_idea = small-scale_education_system }
+				}
+				add_ideas = small-scale_education_system
+			}	
+			custom_effect_tooltip = compulsory_education
+		}
+	}
+	##工业振兴##
+	focus = {
+		id = YUN_gy10
+		icon = GFX_goal_ming_Factories_Colored
+		x = 3
+		y = 1
+		prerequisite = { focus = YUN_gy02 }
+		relative_position_id = YUN_gy02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		      add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	##镇南针织厂##
+	focus = {
+		id = YUN_gy11
+		icon = GFX_goal_generic_light_industry
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_gy10 }
+		relative_position_id = YUN_gy10
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		      892 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+	}
+	
+	
+	##云南民事局##
+	focus = {
+		id = YUN_gy12
+		icon = GFX_goal_generic_land_seizure
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy11 }
+		relative_position_id = YUN_gy11
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	##富滇铁路##
+	focus = {
+		id = YUN_gy13
+		icon = GFX_goal_generic_road
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_gy10 }
+		relative_position_id = YUN_gy10
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		      325= {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+				899= {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+				895= {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+				603= {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+				894= {
+					add_building_construction = {
+						type = infrastructure#基础建设
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+	}
+	
+	##吸引外资##
+	focus = {
+		id = YUN_gy14
+		icon = GFX_goal_generic_stock_exchange
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy13 }
+		relative_position_id = YUN_gy13
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		
+		}
+	}
+	
+	##打击腐败##
+	focus = {
+		id = YUN_gy16
+		icon = GFX_goal_generic_seize_money
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_gy09 }
+		prerequisite = { focus = YUN_gy06 }
+		relative_position_id = YUN_gy06
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_ideas = SZC_clean_government
+		}
+	}
+	
+	##土司问题##
+	focus = {
+		id = YUN_gy26
+		icon = GFX_goal_generic_deadly_treaty
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_gy12 }
+		prerequisite = { focus = YUN_gy14 }
+		relative_position_id = YUN_gy12
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_stability = 0.02
+		   hidden_effect = {
+		   country_event = { id = germany.60 } }
+		}
+	}
+	##以农为本##
+	
+	focus = {
+		id = YUN_gy03
+		icon = GFX_goal_generic_wheat
+		x = 6
+		y = 1
+		prerequisite = { focus = YUN_gy01 }
+		relative_position_id = YUN_gy01
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					NOT = {
+						has_state_flag = FRA_industrial_expansion_target
+					}	
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = FRA_industrial_expansion_target
+				random_neighbor_state = {
+					limit = { 
+						is_core_of = ROOT 	
+						is_owned_by = ROOT
+						NOT = {
+							has_state_flag = FRA_industrial_expansion_target
+						}	
+					}
+					add_extra_state_shared_building_slots = 2
+					set_state_flag = FRA_industrial_expansion_target
+				}
+			}
+		}
+	}
+	
+	##自给自足##
+	focus = {
+		id = YUN_gy17
+		icon = GFX_goal_generic_promote_ruralism
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_gy03 }
+		relative_position_id = YUN_gy03
+		mutually_exclusive = { focus = YUN_gy18 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_zijizizu
+		}
+	}
+	
+	##因地制宜##
+	focus = {
+		id = YUN_gy18
+		icon = GFX_goal_generic_agriculture
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_gy03 }
+		relative_position_id = YUN_gy03
+		mutually_exclusive = { focus = YUN_gy17 }
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_yindizhiyi
+		}
+	}
+	##农业增产##
+	focus = {
+		id = YUN_gy21
+		icon = GFX_goal_generic_farm_tractor
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_gy17 focus = YUN_gy18 }
+		relative_position_id = YUN_gy17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  random_owned_state = {
+				limit = { 
+					is_core_of = ROOT 
+					NOT = {
+						has_state_flag = FRA_industrial_expansion_target
+					}	
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = FRA_industrial_expansion_target
+				random_neighbor_state = {
+					limit = { 
+						is_core_of = ROOT 	
+						is_owned_by = ROOT
+						NOT = {
+							has_state_flag = FRA_industrial_expansion_target
+						}	
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = FRA_industrial_expansion_target
+				}
+			}
+		}
+	}
+	##鼓励农产品出口##
+	focus = {
+		id = YUN_gy22
+		icon = GFX_goal_generic_rice_field
+		x = 1
+		y = 2
+		prerequisite = { focus = YUN_gy17 focus = YUN_gy18 }
+		relative_position_id = YUN_gy17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_nongchanpingchukou
+		}
+	}
+	##农业结构优化##
+	focus = {
+		id = YUN_gy19
+		icon = GFX_goal_generic_agriculture2
+		x = 2
+		y = 2
+		prerequisite = { focus = YUN_gy03 }
+		relative_position_id = YUN_gy03
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_youhuanongyejiegou
+		}
+	}
+	##现代化农业##
+	focus = {
+		id = YUN_gy24
+		icon = GFX_goal_generic_castle
+		x = -3
+		y = 1
+		prerequisite = { focus = YUN_gy22 }
+		prerequisite = { focus = YUN_gy20 }
+		relative_position_id = YUN_gy20
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_xiandaihuanongye
+		}
+	}
+	
+	##东亚明珠##
+	focus = {
+		id = YUN_gy25
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy23 }
+		prerequisite = { focus = YUN_gy26 }
+		prerequisite = { focus = YUN_gy16 }
+		prerequisite = { focus = YUN_gy24 }
+		relative_position_id = YUN_gy26
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  remove_ideas = YUN_yunnanbeicanjinji
+		}
+	}
+	##重振茶叶贸易##
+	focus = {
+		id = YUN_gy23
+		icon = GFX_goal_generic_Coffee_Plantations
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_gy22 }
+		prerequisite = { focus = YUN_gy20 }
+		relative_position_id = YUN_gy20
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	##销毁鸦片##
+	focus = {
+		id = YUN_gy20
+		icon = GFX_goal_ming_meconium3
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_gy19 }
+		relative_position_id = YUN_gy19
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  remove_ideas = SZC_yapianfanlan
+		  add_stability = -0.1
+		  add_political_power = -200
+		}
+	}
+	
+	##昭宁新军##
+	focus = {
+		id = YUN_js01
+		icon = GFX_goal_zhaoningjun
+		x = 3
+		y = 1
+		relative_position_id = YUN_gy25
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  army_experience = 30
+		}
+	}
+	##云南飞军##
+	focus = {
+		id = YUN_js02
+		icon = GFX_goal_air1
+		x = -4
+		y = 1
+		prerequisite = { focus = YUN_js01 }
+		relative_position_id = YUN_js01
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  air_experience = 25
+		}
+	}
+	
+	##采购飞机图纸##
+	focus = {
+		id = YUN_js03
+		icon = GFX_goal_air3
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_js02 }
+		relative_position_id = YUN_js02
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	##外教空军训练##
+	focus = {
+		id = YUN_js04
+		icon = GFX_focus_generic_air_defense
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js02 }
+		relative_position_id = YUN_js02
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}	
+		}
+	}
+	##缅北生命线##
+	focus = {
+		id = YUN_js05
+		icon = GFX_goal_generic_air_fighter2
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js03 }
+		prerequisite = { focus = YUN_js04 }
+		relative_position_id = YUN_js03
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_ideas = YUN_mianbeishengmingxian	
+		}
+	}
+	##发展战斗机##
+	focus = {
+		id = YUN_js06
+		icon = GFX_goal_generic_zero_blue
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_js05 }
+		relative_position_id = YUN_js05
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	##发展近距离支援机##
+	focus = {
+		id = YUN_js07
+		icon = GFX_goal_generic_air_fighter
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js05 }
+		relative_position_id = YUN_js05
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	##扩建昆明机场##
+	focus = {
+		id = YUN_js08
+		icon = GFX_goal_generic_air_production
+		x = -2
+		y = 2
+		prerequisite = { focus = YUN_js02 }
+		relative_position_id = YUN_js02
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   325 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	##创建空降兵##
+	focus = {
+		id = YUN_js09
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 2
+		prerequisite = { focus = YUN_js08 }
+		relative_position_id = YUN_js08
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.0
+				uses = 1
+				category = para_tech
+				#technology = paratroopers
+				#technology = paratroopers2
+			}
+		}
+	}
+	#现代化空军##
+	focus = {
+		id = YUN_js10
+		icon = GFX_goal_generic_jet
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_js09 }
+		prerequisite = { focus = YUN_js06 }
+		prerequisite = { focus = YUN_js07 }
+		relative_position_id = YUN_js09
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   
+			add_tech_bonus = {
+				name = ITA_jet_engine_effort
+				bonus = 1.0
+				uses = 1
+				category = jet_technology
+				#technology = jet_engines
+				#technology = jet_fighter1
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	##杨杰方案##
+	focus = {
+		id = YUN_js11
+		icon = GFX_goal_yangjie
+		x = -1
+		y = 1
+		prerequisite = { focus = YUN_js01 }
+		relative_position_id = YUN_js01
+		mutually_exclusive = { focus = YUN_js12 }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+           add_ideas = YUN_yangjie			
+		}
+	}
+	##罗炳辉方案##
+	focus = {
+		id = YUN_js12
+		icon = GFX_goal_luobinghui
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js01 }
+		mutually_exclusive = { focus = YUN_js11 }
+		relative_position_id = YUN_js01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_mass_assault
+			}
+           add_ideas = YUN_luobinghui
+		}
+	}
+	##忠于人民##
+	focus = {
+		id = YUN_js13
+		icon = GFX_focus_generic_little_entente
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js12 focus = YUN_js11 }
+		relative_position_id = YUN_js11
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		 
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons#步兵武器
+			}	
+		}
+	}
+	##军事研究院##
+	focus = {
+		id = YUN_js14
+		icon = GFX_goal_generic_army_mobilization
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_js13 }
+		relative_position_id = YUN_js13
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		 add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+        }
+		}
+	}
+	##山地步兵训练##
+	focus = {
+		id = YUN_js15
+		icon = GFX_goal_generic_mountain_warfare
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_js13 }
+		relative_position_id = YUN_js13
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		 add_tech_bonus = {
+				name = special_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = mountaineers_tech
+				#technology = tech_mountaineers2
+			}	
+		}
+	}
+	##各民族团结##
+	focus = {
+		id = YUN_js16
+		icon = GFX_goal_generic_multinational_army
+		x = -2
+		y = 1
+		prerequisite = { focus = YUN_js13 }
+		relative_position_id = YUN_js13
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		 add_ideas = YUN_duominzujundui
+		}
+	}
+	##后勤连##
+	focus = {
+		id = YUN_js17
+		icon = GFX_goal_generic_support_equipment
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js16 }
+		prerequisite = { focus = YUN_js15 }
+		prerequisite = { focus = YUN_js14 }
+		relative_position_id = YUN_js16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		   add_tech_bonus = {
+			name = YUN_improve_logistical_support
+			bonus = 1
+			uses = 2
+			technology = tech_logistics_company
+			technology = tech_logistics_company2
+			technology = tech_logistics_company3
+			technology = tech_logistics_company4
+		  }
+		}
+	}
+	##协同战斗##
+	focus = {
+		id = YUN_js18
+		icon = GFX_goal_generic_army_cooperation
+		x = 3
+		y = 1
+		prerequisite = { focus = YUN_js16 }
+		prerequisite = { focus = YUN_js15 }
+		prerequisite = { focus = YUN_js14 }
+		relative_position_id = YUN_js16
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+			name = YUN_engineer_corps
+			bonus = 1
+			uses = 2
+			technology = tech_engineers
+			technology = tech_engineers2
+			technology = tech_engineers3
+			technology = tech_engineers4
+		}
+		}
+	}
+	##国之劲旅##
+	focus = {
+		id = YUN_js19
+		icon = GFX_goal_generic_army_elite
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js18 }
+		prerequisite = { focus = YUN_js17 }
+		relative_position_id = YUN_js17
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		  NOT = { has_government = communism }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_zhaoningjun
+		}
+	}
+	##云南讲武堂##
+	focus = {
+		id = YUN_js20
+		icon = GFX_goal_jiangwutang
+		x = 4
+		y = 1
+		prerequisite = { focus = YUN_js01 }
+		relative_position_id = YUN_js01
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_ideas = YUN_jiangwutang
+		}
+	}
+	##加强军官训练##
+	focus = {
+		id = YUN_js21
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_js20 }
+		relative_position_id = YUN_js20
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  every_army_leader = {
+				add_max_trait = 1
+			}	
+		}
+	}
+	##制定新教材##
+	focus = {
+		id = YUN_js22
+		icon = GFX_goal_generic_military_government
+		x = 2
+		y = 1
+		prerequisite = { focus = YUN_js20 }
+		relative_position_id = YUN_js20
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  every_army_leader = {
+				add_planning = 1#计划
+			}	
+		}
+	}
+	##英国教官##
+	focus = {
+		id = YUN_js23
+		icon = GFX_focus_chi_british_cooperation
+		x = 1
+		y = 1
+		prerequisite = { focus = YUN_js21 }
+		prerequisite = { focus = YUN_js22 }
+		relative_position_id = YUN_js21
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		  ENG = {
+		  has_opinion	= {
+					target = ROOT
+					value > 24
+				}
+			}	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+            }	
+		}
+	}
+	##注重后勤##
+	focus = {
+		id = YUN_js24
+		icon = GFX_goal_generic_gun_purchase
+		x = 0
+		y = 1
+		prerequisite = { focus = YUN_js23 }
+		relative_position_id = YUN_js23
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+		  every_army_leader = {
+				add_logistics = 1#后勤
+			}	
+		}
+	}
+}	

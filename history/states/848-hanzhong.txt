@@ -1,0 +1,23 @@
+state={
+	id=848
+	name="STATE_848"
+	provinces={
+		4167 4295 7301 
+	}
+	history={
+		owner = XBJ
+		add_core_of = CHI
+		add_core_of = XBJ
+		victory_points = {
+			4295 3
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=3378900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,737 @@
+spriteTypes = {
+
+	### 意识形态
+	spriteType = {
+		name = "GFX_ideology_vanguardism_group"
+		texturefile = "gfx/interface/ideologies/xf1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_vanguardism"
+		texturefile = "gfx/interface/ideologies/xf2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_socialism"
+		texturefile = "gfx/interface/ideologies/xf3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolutionary_republicanism"
+		texturefile = "gfx/interface/ideologies/xf4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchism"
+		texturefile = "gfx/interface/ideologies/xf5.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_libertarianism"
+		texturefile = "gfx/interface/ideologies/xf6.png"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_communism_group"
+		texturefile = "gfx/interface/ideologies/gc4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolutionary_communism"
+		texturefile = "gfx/interface/ideologies/gc1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_totalitarian_communism"
+		texturefile = "gfx/interface/ideologies/gc3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_council_communism"
+		texturefile = "gfx/interface/ideologies/gc6.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syndicalism"
+		texturefile = "gfx/interface/ideologies/gc2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autonomous_communism"
+		texturefile = "gfx/interface/ideologies/gc7.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_agricultural_communism"
+		texturefile = "gfx/interface/ideologies/gc5.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_combat_communism"
+		texturefile = "gfx/interface/ideologies/gc8.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_socialism_group"
+		texturefile = "gfx/interface/ideologies/gc9.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_democrati_socialism"
+		texturefile = "gfx/interface/ideologies/gc10.png"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_ideology_reformism_group"
+		texturefile = "gfx/interface/ideologies/sh5.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_taoist"
+		texturefile = "gfx/interface/ideologies/sh1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy"
+		texturefile = "gfx/interface/ideologies/sh4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_buddhist_socialism"
+		texturefile = "gfx/interface/ideologies/sh2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_three_people_principles"
+		texturefile = "gfx/interface/ideologies/sh3.png"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_democratic_group"
+		texturefile = "gfx/interface/ideologies/zy1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_classical_liberalism"
+		texturefile = "gfx/interface/ideologies/zy2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_trade_iberalism"
+		texturefile = "gfx/interface/ideologies/zy3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_liberalism"
+		texturefile = "gfx/interface/ideologies/zy4.png"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_conservatism_group"
+		texturefile = "gfx/interface/ideologies/bs1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_traditionalist_conservatism"
+		texturefile = "gfx/interface/ideologies/bs2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_christian_conservatism"
+		texturefile = "gfx/interface/ideologies/bs3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_conservatism"
+		texturefile = "gfx/interface/ideologies/bs4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_utilitarianism"
+		texturefile = "gfx/interface/ideologies/bs5.png"
+	}
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_neutrality_group"
+		texturefile = "gfx/interface/ideologies/wq1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_oligarchism"
+		texturefile = "gfx/interface/ideologies/wq3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_synarchism"
+		texturefile = "gfx/interface/ideologies/wq2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_politicalism"
+		texturefile = "gfx/interface/ideologies/wq7.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy"
+		texturefile = "gfx/interface/ideologies/wq6.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy_est"
+		texturefile = "gfx/interface/ideologies/wq8.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_bureaucracy"
+		texturefile = "gfx/interface/ideologies/wq4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_elitism"
+		texturefile = "gfx/interface/ideologies/wq5.png"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_despotism_group"
+		texturefile = "gfx/interface/ideologies/zz7.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_military_government"
+		texturefile = "gfx/interface/ideologies/zz2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autocratic_monarchy"
+		texturefile = "gfx/interface/ideologies/zz4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autocratic_monarchy_est"
+		texturefile = "gfx/interface/ideologies/zz8.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_dual_monarchy"
+		texturefile = "gfx/interface/ideologies/zz5.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_liyue"
+		texturefile = "gfx/interface/ideologies/zz3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_islamism"
+		texturefile = "gfx/interface/ideologies/zz6.png"
+	}
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_ideology_fascism_group"
+		texturefile = "gfx/interface/ideologies/mc1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_fascismo"
+		texturefile = "gfx/interface/ideologies/mc2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporatism"
+		texturefile = "gfx/interface/ideologies/mc10.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_frontalism"
+		texturefile = "gfx/interface/ideologies/mc4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_militarism"
+		texturefile = "gfx/interface/ideologies/mc5.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_integrationism"
+		texturefile = "gfx/interface/ideologies/mc7.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_imperialism"
+		texturefile = "gfx/interface/ideologies/mc6.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_radicalism_group"
+		texturefile = "gfx/interface/ideologies/jj2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_purity"
+		texturefile = "gfx/interface/ideologies/jj1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_nazism"
+		texturefile = "gfx/interface/ideologies/jj3.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_retrospective"
+		texturefile = "gfx/interface/ideologies/jj4.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_reactionism"
+		texturefile = "gfx/interface/ideologies/jj5.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_unknown"
+		texturefile = "gfx/interface/ideologies/unknown.dds"
+		legacy_lazy_load = no
+	}
+	
+	###政治制度###
+	
+	spriteType = {
+		name = "GFX_idea_military_government"
+		texturefile = "gfx/interface/ideas/policy/zz3.png"
+	}
+	spriteType = {
+		name = "GFX_idea_one_party_state"
+		texturefile = "gfx/interface/ideas/policy/zz1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_multi_party_state"
+		texturefile = "gfx/interface/ideas/policy/zz2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_colonial_government"
+		texturefile = "gfx/interface/ideas/policy/zz4.png"
+	}
+	spriteType = {
+		name = "GFX_idea_autocracy"
+		texturefile = "gfx/interface/ideas/policy/zz5.png"
+	}
+	spriteType = {
+		name = "GFX_idea_anarchy"
+		texturefile = "gfx/interface/ideas/policy/zz6.png"
+	}
+	spriteType = {
+		name = "GFX_idea_warlord"
+		texturefile = "gfx/interface/ideas/policy/zz7.png"
+	}
+	spriteType = {
+		name = "GFX_idea_bureaucratic"
+		texturefile = "gfx/interface/ideas/policy/zz8.png"
+	}
+	###外交政策
+	spriteType = {
+		name = "GFX_idea_foreign_isolationism"
+		texturefile = "gfx/interface/ideas/policy/foreign_isolationism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_foreign_neutral"
+		texturefile = "gfx/interface/ideas/policy/foreign_neutral.png"
+	}
+	spriteType = {
+		name = "GFX_idea_foreign_cooperative"
+		texturefile = "gfx/interface/ideas/policy/foreign_cooperative.png"
+	}
+	spriteType = {
+		name = "GFX_idea_foreign_interventionism"
+		texturefile = "gfx/interface/ideas/policy/foreign_interventionism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_foreign_warmonger"
+		texturefile = "gfx/interface/ideas/policy/foreign_warmonger.png"
+	}
+	
+	###文化政策###
+	spriteType = {
+		name = "GFX_idea_moralism"
+		texturefile = "gfx/interface/ideas/policy/culture1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_pluralism"
+		texturefile = "gfx/interface/ideas/policy/culture2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_egalitarianism"
+		texturefile = "gfx/interface/ideas/policy/culture3.png"
+	}
+	spriteType = {
+		name = "GFX_idea_cultural_revolution"
+		texturefile = "gfx/interface/ideas/policy/culture4.png"
+	}
+	spriteType = {
+		name = "GFX_idea_racism"
+		texturefile = "gfx/interface/ideas/policy/culture5.png"
+	}
+		
+	
+	####经济系统###
+	spriteType = {
+		name = "GFX_idea_planned_economy"
+		texturefile = "gfx/interface/ideas/policy/economics1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_corporatism"
+		texturefile = "gfx/interface/ideas/policy/economics6.png"
+	}
+	spriteType = {
+		name = "GFX_idea_national_syndicalism"
+		texturefile = "gfx/interface/ideas/policy/economics2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_laisez_faire"
+		texturefile = "gfx/interface/ideas/policy/economics3.png"
+	}
+	spriteType = {
+		name = "GFX_idea_social_market_economy"
+		texturefile = "gfx/interface/ideas/policy/economics4.png"
+	}
+	spriteType = {
+		name = "GFX_idea_protectionism"
+		texturefile = "gfx/interface/ideas/policy/economics5.png"
+	}
+	spriteType = {
+		name = "GFX_idea_agrarian_economy"
+		texturefile = "gfx/interface/ideas/policy/economics7.png"
+	}
+	spriteType = {
+		name = "GFX_idea_primative_economy"
+		texturefile = "gfx/interface/ideas/policy/economics8.png"
+	}
+	
+	
+	###军费法案###
+	spriteType = {
+		name = "GFX_idea_militia"
+		texturefile = "gfx/interface/ideas/policy/army1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_disarmament_states"
+		texturefile = "gfx/interface/ideas/policy/army2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_standing_army"
+		texturefile = "gfx/interface/ideas/policy/army3.png"
+	}
+	spriteType = {
+		name = "GFX_idea_strong_army"
+		texturefile = "gfx/interface/ideas/policy/army4.png"
+	}
+	spriteType = {
+		name = "GFX_idea_adopt_a_war_like_policy"
+		texturefile = "gfx/interface/ideas/policy/army5.png"
+	}
+	
+	###安全法案###
+    spriteType = {
+		name = "GFX_idea_local_autonomy"
+		texturefile = "gfx/interface/ideas/policy/local_autonomy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_city_police"
+		texturefile = "gfx/interface/ideas/policy/city_police.png"
+	}
+	spriteType = {
+		name = "GFX_idea_federal_agency"
+		texturefile = "gfx/interface/ideas/policy/federal_agency.png"
+	}
+	spriteType = {
+		name = "GFX_idea_armed_police"
+		texturefile = "gfx/interface/ideas/policy/armed_police.png"
+	}
+	spriteType = {
+		name = "GFX_idea_monitor_people"
+		texturefile = "gfx/interface/ideas/policy/monitor_people.png"
+	}
+	spriteType = {
+		name = "GFX_idea_police_state"
+		texturefile = "gfx/interface/ideas/policy/police_state.png"
+	}
+	###教育法案###
+    spriteType = {
+		name = "GFX_idea_no_education_system"
+		texturefile = "gfx/interface/ideas/policy/no_education_system.png"
+	}
+	spriteType = {
+		name = "GFX_idea_small-scale_education_system"
+		texturefile = "gfx/interface/ideas/policy/small-scale_education_system.png"
+	}
+	spriteType = {
+		name = "GFX_idea_symbolic_education_system"
+		texturefile = "gfx/interface/ideas/policy/symbolic_education_system.png"
+	}
+	spriteType = {
+		name = "GFX_idea_large-scale_education_system"
+		texturefile = "gfx/interface/ideas/policy/large-scale_education_system.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advanced_education_system"
+		texturefile = "gfx/interface/ideas/policy/advanced_education_system.png"
+	}
+	###工业法案###
+    spriteType = {
+		name = "GFX_idea_highly_industrialized"
+		texturefile = "gfx/interface/ideas/policy/highly_industrialized.png"
+	}
+	spriteType = {
+		name = "GFX_idea_basic_industrialization"
+		texturefile = "gfx/interface/ideas/policy/basic_industrialization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_agricultural_dominance"
+		texturefile = "gfx/interface/ideas/policy/agricultural_dominance.png"
+	}
+	spriteType = {
+		name = "GFX_idea_agricultural_economy"
+		texturefile = "gfx/interface/ideas/policy/agricultural_economy_idea.png"
+	}
+	
+	### 经济法案
+
+	spriteType = {
+		name = "GFX_idea_closed_economy"
+		texturefile = "gfx/interface/ideas/idea_generic_closed_economy.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_limited_exports"
+		texturefile = "gfx/interface/ideas/idea_generic_limited_exports.png"
+	}		
+	
+	spriteType = {
+		name = "GFX_idea_free_trade"
+		texturefile = "gfx/interface/ideas/idea_generic_free_trade.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_export_focus"
+		texturefile = "gfx/interface/ideas/idea_generic_export_focus.png"
+	}
+	
+	### 战争经济法案
+	spriteType = {
+		name = "GFX_idea_undisturbed_isolation"
+		texturefile = "gfx/interface/ideas/idea_undisturbed_isolation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_isolation"
+		texturefile = "gfx/interface/ideas/idea_undisturbed_isolation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_civilian_economy"
+		texturefile = "gfx/interface/ideas/idea_civilian_economy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_low_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/idea_low_economic_mobilisation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_partial_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/idea_partial_economic_mobilisation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_war_economy"
+		texturefile = "gfx/interface/ideas/idea_war_economy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tot_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/idea_tot_economic_mobilisation.png"
+	}
+	
+	###文化法案###
+    spriteType = {
+		name = "GFX_idea_moralism"
+		texturefile = "gfx/interface/ideas/policy/culture1.png"
+	}
+    spriteType = {
+		name = "GFX_idea_pluralism"
+		texturefile = "gfx/interface/ideas/policy/culture2.png"
+	}
+    spriteType = {
+		name = "GFX_idea_egalitarianism"
+		texturefile = "gfx/interface/ideas/policy/culture3.png"
+	}
+    spriteType = {
+		name = "GFX_idea_cultural_revolution"
+		texturefile = "gfx/interface/ideas/policy/culture4.png"
+	}
+    spriteType = {
+		name = "GFX_idea_racism"
+		texturefile = "gfx/interface/ideas/policy/culture5.png"
+	}
+	###妇女法案###
+    spriteType = {
+		name = "GFX_idea_patriarchy"
+		texturefile = "gfx/interface/ideas/policy/patriarchy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_male_dominance"
+		texturefile = "gfx/interface/ideas/policy/male_dominance.png"
+	}
+	spriteType = {
+		name = "GFX_idea_traditional_mindset"
+		texturefile = "gfx/interface/ideas/policy/traditional_mindset.png"
+	}
+	spriteType = {
+		name = "GFX_idea_conservative_idea"
+		texturefile = "gfx/interface/ideas/policy/conservative_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_women_equal_rights"
+		texturefile = "gfx/interface/ideas/policy/women_equal_rights.png"
+	}
+	spriteType = {
+		name = "GFX_idea_feminism_prevails"
+		texturefile = "gfx/interface/ideas/policy/feminism_prevails.png"
+	}
+	###媒体法案###
+    spriteType = {
+		name = "GFX_idea_official_media"
+		texturefile = "gfx/interface/ideas/policy/official_media.png"
+	}
+	spriteType = {
+		name = "GFX_idea_publication_review"
+		texturefile = "gfx/interface/ideas/policy/publication_review.png"
+	}
+	spriteType = {
+		name = "GFX_idea_state-controlled_media"
+		texturefile = "gfx/interface/ideas/policy/state-controlled_media.png"
+	}
+	spriteType = {
+		name = "GFX_idea_corporate_holding_media"
+		texturefile = "gfx/interface/ideas/policy/corporate_holding_media.png"
+	}
+	spriteType = {
+		name = "GFX_idea_freedom_of_press"
+		texturefile = "gfx/interface/ideas/policy/freedom_of_press.png"
+	}
+	
+	#####税收
+	spriteType = {
+		name = "GFX_idea_tax_minimal"
+		texturefile = "gfx/interface/ideas/policy/tax_minimal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tax_low"
+		texturefile = "gfx/interface/ideas/policy/tax_low.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tax_average"
+		texturefile = "gfx/interface/ideas/policy/tax_average.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tax_high"
+		texturefile = "gfx/interface/ideas/policy/tax_high.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tax_extreme"
+		texturefile = "gfx/interface/ideas/policy/tax_extreme.png"
+	}
+	
+	###士兵训练
+	spriteType = {
+		name = "GFX_idea_train_none"
+		texturefile = "gfx/interface/ideas/policy/idea_train_none.png"
+	}
+	spriteType = {
+		name = "GFX_idea_train_low"
+		texturefile = "gfx/interface/ideas/policy/idea_train_medium.png"
+	}
+	spriteType = {
+		name = "GFX_idea_train_medium"
+		texturefile = "gfx/interface/ideas/policy/idea_train_low.png"
+	}
+	spriteType = {
+		name = "GFX_idea_train_high"
+		texturefile = "gfx/interface/ideas/policy/idea_train_high.png"
+	}
+	spriteType = {
+		name = "GFX_idea_train_elite"
+		texturefile = "gfx/interface/ideas/policy/idea_train_extensive.png"
+	}
+	###军官训练
+	spriteType = {
+		name = "GFX_idea_officer_train_none"
+		texturefile = "gfx/interface/ideas/policy/officer_train_none.png"
+	}
+	spriteType = {
+		name = "GFX_idea_officer_train_low"
+		texturefile = "gfx/interface/ideas/policy/officer_train_low.png"
+	}
+	spriteType = {
+		name = "GFX_idea_officer_train_medium"
+		texturefile = "gfx/interface/ideas/policy/officer_train_low.png"
+	}
+	spriteType = {
+		name = "GFX_idea_officer_train_high"
+		texturefile = "gfx/interface/ideas/policy/officer_train_high.png"
+	}
+	spriteType = {
+		name = "GFX_idea_officer_train_elite"
+		texturefile = "gfx/interface/ideas/policy/officer_train_elite.png"
+	}
+	###社会保障
+	spriteType = {
+		name = "GFX_idea_Oppress_people"
+		texturefile = "gfx/interface/ideas/policy/Oppress_people.png"
+	}
+	spriteType = {
+		name = "GFX_idea_Low_security"
+		texturefile = "gfx/interface/ideas/policy/Low_security.png"
+	}
+	spriteType = {
+		name = "GFX_idea_Basic_guarantee"
+		texturefile = "gfx/interface/ideas/policy/Basic_guarantee.png"
+	}
+	spriteType = {
+		name = "GFX_idea_Limited_benefits"
+		texturefile = "gfx/interface/ideas/policy/Limited_benefits.png"
+	}
+	spriteType = {
+		name = "GFX_idea_welfare_state"
+		texturefile = "gfx/interface/ideas/policy/welfare_state.png"
+	}
+	####符号
+	spriteType = {
+		name = "GFX_idea_slot_head_of_government"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_foreign_minister"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_economy_minister"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_interior_minister"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_defense_minister"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_security_minister"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_security_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_education_act"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_industriation_and_economic_development_level"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_religious_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_women_empowerment_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}spriteType = {
+		name = "GFX_idea_slot_media_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_minority_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_labor_law"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_government_system"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_military_expenditure"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_chief_of_staff"
+		textureFile = "gfx/interface/idea_slot_high_command.dds"
+	}
+	
+}

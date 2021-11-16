@@ -1,0 +1,164 @@
+﻿capital = 853
+
+oob = "XSM_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 32
+	neutrality = 30
+	despotism = 38
+}
+
+create_country_leader = {
+	name = "Ma Lin"
+	desc = ""
+	picture = "Portrait_Ma_Lin.png"
+	expire = "1965.1.1"
+	ideology = islamism
+	traits = {
+		#
+	}
+}
+create_field_marshal = {
+	name = "Ma Bufang"
+	desc = ""
+	picture = "portrait_xsm_ma_bufang.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ma Hongbin"
+	picture = "portrait_XSM_Ma_Hongbin.png"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ma Hongkui"
+	desc = "POLITICS_XSM_MA_HONGKUI_ARMY_DESC"
+	picture = "Ma_Hongkui.dds"
+	traits = {
+		infantry_leader
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ma Hongkui"
+	desc = "POLITICS_XSM_MA_HONGKUI_ARMY_DESC"
+	picture = "Portrait_Ma_Lin.dds"
+	traits = {
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Han Youwen"
+	desc = "POLITICS_XSM_HAN_YOUWEN_ARMY_DESC"
+	picture = "Portrait_XSM_Han_Youwen.png"
+	traits = {
+		infantry_leader
+		commando
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ma Biao"
+	desc = "POLITICS_XSM_MA_BIAO_ARMY_DESC"
+	picture = "Portrait_XSM_Ma_Biao.png"
+	traits = {
+		urban_assault_specialist
+		politically_connected
+	}
+	id = 2206
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ma Buqing"
+	desc = "POLITICS_XSM_MA_BUQING_ARMY_DESC"
+	picture = "Portrait_XSM_Ma_Buqing.png"
+	traits = {
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ma Fuxiang"
+	desc = "POLITICS_XSM_MA_FUXIANG_ARMY_DESC"
+	picture = "Portrait_XSM_Ma_Fuxiang.png"
+	traits = {
+		brilliant_strategist
+		war_hero
+		old_guard
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ma Dunjing"
+	desc = "POLITICS_XSM_MA_DUNJING_ARMY_DESC"
+	picture = "Portrait_XSM_Ma_Dunjing.png"
+	traits = {
+		urban_assault_specialist
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ma Jiyuan"
+	desc = "POLITICS_XSM_MA_JIYUAN_ARMY_DESC"
+	picture = "Portrait_XSM_Ma_Jiyuan.png"
+	traits = {
+		cavalry_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

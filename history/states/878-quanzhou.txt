@@ -1,0 +1,34 @@
+state={
+	id=878
+	name="STATE_878"
+	provinces={
+		7027 7131 11986 
+	}
+	history={
+		owner = ZHI
+		add_core_of = CHI
+		add_core_of = ZHI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11986  = {
+				naval_base = 1
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+		victory_points = {
+			7027 1 
+		}
+		victory_points = {
+			11986  3 
+		}
+		
+
+	}
+	manpower=2768700
+	buildings_max_level_factor=1.000
+	state_category=city
+}

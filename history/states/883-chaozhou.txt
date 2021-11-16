@@ -1,0 +1,30 @@
+state={
+	id=883
+	name="STATE_883"
+	provinces={
+		7182 9938 
+	}
+	history={
+		owner = GXC
+		add_core_of = CHI
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			9938 = {
+				naval_base = 1
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+		victory_points = {
+			9938 3
+		}
+
+	}
+	manpower=2759800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

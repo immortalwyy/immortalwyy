@@ -1,0 +1,35 @@
+请求国际援助 = {
+
+	苏联顾问 = {
+
+		icon = generic_army_support
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_completed_focus = KOR_139
+		}
+
+		cost = 20
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			SOV = {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			create_corps_commander = {
+				name = "Aleksandr Cherepanov"
+				gfx = "GFX_portrait_sov_aleksandr_cherepanov"
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+	}
+}

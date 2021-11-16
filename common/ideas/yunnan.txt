@@ -1,0 +1,1058 @@
+ideas = {
+	country = {	
+	
+        YUN_yunnanwang = {
+		
+			picture = longyun
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		YUN_yunnanbeicanjinji = {
+		
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_factory_efficiency_gain_factor = -0.1
+				min_export = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+		YUN_tangjiyaodeyingxiang = {
+		
+			picture = tangjiyao
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.1
+				political_power_gain = -0.4
+				consumer_goods_factor = 0.1
+			}
+		}
+		YUN_mianbeinanming = {
+		
+			picture = Myanmar_refugees
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = 0.4
+			}
+		}
+		SZC_yapianfanlan = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1		
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		YUN_xiandaihuagaige = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+             production_speed_industrial_complex_factor = 0.25 
+             consumer_goods_factor = 0.2 
+			}
+		}
+		YUN_longyuncanmoubu = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+             army_attack_factor = 0.02
+			 planning_speed = 0.1
+			 max_planning = 0.05
+			 command_power_gain_mult = 0.05
+			}
+		}
+		YUN_xinanjunzhenweiyuanhui = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+			 planning_speed = 0.1
+			 max_planning = 0.05
+			}
+		}
+		YUN_zhupeidejihua = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {	
+			    army_attack_factor = 0.18
+				training_time_army_factor = -0.3
+			}
+		}
+		YUN_zhaohengtijihua = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {	
+			   army_defence_factor = 0.1
+				training_time_army_factor = -0.4
+			}
+		}
+		YUN_lianshengzizhi = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {	
+			   production_speed_industrial_complex_factor = 0.16
+			   consumer_goods_factor = -0.07
+			   research_speed_factor = 0.01
+			}
+		}
+		YUN_dangguojunhun = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {	
+			    command_power_gain_mult = 0.24
+				max_planning = 0.2
+			}
+		}
+		
+		YUN_maixiangxiandai = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             production_speed_industrial_complex_factor = 0.16
+             consumer_goods_factor = 0.08
+			}
+		}
+		
+		YUN_shanqujingji = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             min_export = 0.2
+             production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		YUN_zijizizu = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             production_factory_efficiency_gain_factor = 0.05
+			 production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		YUN_yindizhiyi = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             production_factory_efficiency_gain_factor = 0.05
+			 production_speed_industrial_complex_factor = 0.1
+			 local_resources_factor = 0.1
+			}
+		}
+		
+		YUN_youhuanongyejiegou = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             line_change_production_efficiency_factor = 0.14
+			 production_factory_max_efficiency_factor = 0.08
+			 consumer_goods_factor = -0.02
+			}
+		}
+		
+		YUN_nongchanpingchukou = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.05
+			   consumer_goods_factor = -0.01
+			}
+		}
+		
+		YUN_xiandaihuanongye = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   consumer_goods_factor = -0.03
+			   production_factory_max_efficiency_factor = 0.15
+			   monthly_population = 0.3
+			}
+		}
+		
+		YUN_mianbeishengmingxian = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   air_attack_factor = 0.1
+			   air_accidents_factor = -0.1
+
+			}
+		}
+		YUN_duominzujundui = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              army_attack_factor = 0.08
+			  training_time_army_factor = 1.1
+			  consumer_goods_factor = 0.01
+			}
+		}
+		YUN_zhaoningjun = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              army_attack_factor = 0.1
+			  army_defence_factor = 0.15
+			  planning_speed = 0.2
+			  max_planning = 0.05
+			}
+		}
+		YUN_jiangwutang = {
+
+			picture = SZC_opium_monopoly
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes		
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              army_org_regain = 0.15
+			  experience_gain_army_unit_factor = 0.15
+			}
+		}
+		#####
+		
+		YUN_hongjun = {
+
+			picture = raj_risk_of_famine
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				stability_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.04
+			}
+		}
+	
+		YUN_sandajilv = {
+		
+			picture = generic_communism_drift_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+			}
+		}
+		
+		YUN_xinshijundui = {
+		
+			picture = FRA_scw_intervention_nationalists_focus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 10
+				command_power_gain_mult = 0.1
+			}
+		}
+		
+		YUN_nongyehezuo = {
+		
+			picture = generic_local_self_management
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.06
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		
+	}
+	political_advisor = {
+	    
+		YUN_Longyun = {
+			
+			picture = YUN_16
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				has_completed_focus = YUN_cz11
+			}
+
+			traits = { hawk }
+		}
+		YUN_Gong_Shou = {
+			
+			picture = YUN_17
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { compassionate_gentleman }
+		}
+		YUN_Hu_Ruoyu = {
+			
+			picture = YUN_18
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { war_industrialist }
+		}
+		YUN_Lixin = {
+			
+			picture = YUN_19
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { marxist_academic }
+		}
+		YUN_Tangjiyao = {
+			
+			picture = YUN_20
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				NOT = { has_completed_focus = YUN_cz12 }
+			}
+
+			traits = { jefe }
+		}
+		YUN_Luhan = {
+			
+			picture = yun_lu_han
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				has_completed_focus = YUN_cz14
+			}
+
+			traits = { democratic_reformer }
+		}
+		YUN_Zhangweihan = {
+			
+			picture = YUN_21
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { silent_workhorse }
+		}
+		YUN_Zhupeide = {
+			
+			picture = YUN_14
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				has_completed_focus = YUN_cz15
+			}
+
+			traits = { freedom_fighter }
+		}
+		YUN_zhang_qun = {
+			
+			picture = advisor_CHI_zhang_qun
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { dealbroker }
+		}
+		YUN_zhaohengti = {
+			
+			picture = YUN_23
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				has_completed_focus = YUN_cz16
+			}
+
+			traits = { Inter_provincial_faction }
+		}
+		YUN_hejian = {
+			
+			picture = YUN_22
+
+						
+			allowed = {
+				original_tag = YUN
+			}
+
+			traits = { backroom_backstabber }
+		}
+		
+	}
+    high_command = {
+	    YUN_yangjie = {
+			
+			picture = YUN_25
+			
+			available = {
+				has_completed_focus = YUN_js11
+			}
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_luobinghui = {
+			
+			picture = YUN_3
+			
+			available = {
+				has_completed_focus = YUN_js12
+			}
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_longjiguang = {
+			
+			picture = YUN_24
+			
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_entrenchment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_zheng_dongguo = {
+			
+			picture = zheng_dongguo
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+	army_chief = {
+	    YUN_tangjiyao_inf = {
+			
+			picture = YUN_4
+			
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			available = {
+				NOT = { has_completed_focus = YUN_cz12 }
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_Hu_Ruoyu = {
+			
+			picture = YUN_7
+
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_Zhude = {
+			
+			picture = YUN_15
+
+
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+				has_completed_focus = YUN_cz05
+			}
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_Sun_Yuanliang = {
+			
+			picture = YUN_11
+
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		YUN_Zheng_Zhesheng = {
+			
+			picture = YUN_13
+
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		
+		
+		#Communist
+		#Fang Zeyi
+		#army_aviation_doctrine
+
+
+		#Clique
+
+		CHI_wang_shuming = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+			CHI = { exists = no } 
+			}
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+
+		#Nationalist
+
+		CHI_zhouzhi_rou = {
+
+			picture = chou_chihjou
+			
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+			CHI = { exists = no } 
+			}
+
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		YUN_xiangwei = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+
+		YUN_lindelianke = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+		#Communist
+
+		CHI_xiao_jinguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Clique
+
+		CHI_shen_honglie = {
+			
+			picture = shen_honglie
+
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+
+		#Nationalist
+
+		CHI_chenshao_kuan = {
+
+			picture = chen_shaokuan
+			
+			allowed = {
+				original_tag = YUN
+			}
+			available = {
+			CHI = { exists = no } 
+			}		
+			traits = { navy_chief_decisive_battle_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		nikolay_kuznetsov = {
+			
+			
+			allowed = {
+				original_tag = YUN
+
+			}
+		
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+	}
+	industrial_concern = {
+	
+		kunming_factory = {
+			
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.3
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+	
+		designer = yes
+
+		nanfang_arms_plant = {
+			
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.2
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}	
+	}	
+
+	
+
+	theorist = {
+		YUN_longyun = {
+			ledger = army
+
+			picture = YUN_16
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.30
+			}
+			
+			traits = { military_theorist }
+		}
+
+
+	}
+		
+}

@@ -1,0 +1,34 @@
+state={
+	id=977
+	name="STATE_977"
+	provinces={
+		1063 1165 3848 6870 6873 6994 9807 9859 9865 11847 12056 
+	}
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 3
+			air_base = 2
+			9859 = {
+				naval_base = 6
+
+			}
+
+		}
+		victory_points = {
+			6994 3 
+		}
+		victory_points = {
+			9807 1 
+		}
+		victory_points = {
+			9865 1 
+		}
+
+	}
+	manpower=3145678
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

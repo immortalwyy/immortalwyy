@@ -1,0 +1,2799 @@
+ideas = {
+	### Foreign Investment
+	fdi_regulations = { 
+		law = yes
+		use_list_view = yes
+		
+		fdi_encouraged = {
+			
+			cost = 300
+			removal_cost = -1
+			level = 1
+			available = {
+				NOT = {
+					has_government = fascism
+					has_government = communism
+					has_government = neutrality
+					##has_government = monarchism
+				}
+				NOT = { has_idea = tariffs_high }
+				NOT = { has_idea = closed_economy }
+			}
+			
+			modifier = {
+				political_power_factor = -0.06
+				industrial_capacity_factory = 0.04
+				industrial_capacity_dockyard = 0.04
+				production_speed_industrial_complex_factor = 0.04
+				production_speed_arms_factory_factor = 0.04
+				production_speed_dockyard_factor = 0.04
+				research_speed_factor = 0.02
+				local_resources_factor = 0.06
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+				stability_weekly = -0.002
+				#opposition_party_drift = 0.03
+				#production_speed_foreign_build_speed_factor = 0.15
+				civilian_intel_to_others = 5.0
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		fdi_allowed = {
+			
+			cost = 300
+			removal_cost = -1
+			level = 2
+			available = {
+				NOT = { has_government = communism }
+			}
+			
+			modifier = {
+				political_power_factor = -0.02
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				production_speed_industrial_complex_factor = 0.02
+				production_speed_arms_factory_factor = 0.02
+				production_speed_dockyard_factor = 0.02
+				local_resources_factor = 0.03
+				trade_opinion_factor = 0.05
+				consumer_goods_factor = -0.01
+				research_speed_factor = 0.01
+				stability_weekly = -0.001
+				#opposition_party_drift = 0.02
+				#production_speed_foreign_build_speed_factor = 0.10
+				civilian_intel_to_others = 3.0
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		fdi_regulated = {
+			
+			cost = 300
+			removal_cost = -1
+			level = 3
+			available = {
+				if = {
+					limit = {
+						is_independent_china_or_warlord = yes
+					}
+					not = { has_idea = CHI_nine_power_treaty }
+				}
+			
+			}
+			
+			default = yes
+			
+			modifier = {
+				political_power_factor = 0.02
+				industrial_capacity_factory = -0.02
+				industrial_capacity_dockyard = -0.02
+				production_speed_industrial_complex_factor = -0.02
+				production_speed_arms_factory_factor = -0.02
+				production_speed_dockyard_factor = -0.02
+				research_speed_factor = -0.010
+				stability_weekly = 0.001
+				local_resources_factor = -0.03
+				trade_opinion_factor = -0.05
+				#opposition_party_drift = 0.01
+				#production_speed_foreign_build_speed_factor = 0.05
+				civilian_intel_to_others = 1.0
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		fdi_banned = {
+			
+			cost = 300
+			removal_cost = -1
+			level = 4
+			available = {
+				if = {
+					limit = {
+						is_independent_china_or_warlord = yes
+					}
+					not = { has_idea = CHI_nine_power_treaty }
+				}
+				OR = { 
+					has_government = fascism
+					has_government = communism
+					##has_government = monarchism
+					has_government = neutrality
+				}
+				NOT = {
+					has_idea = tariffs_none
+					has_idea = free_trade
+				}
+			}
+			
+			modifier = {
+				political_power_factor = 0.06
+				industrial_capacity_factory = -0.04
+				industrial_capacity_dockyard = -0.04
+				production_speed_industrial_complex_factor = -0.04
+				production_speed_arms_factory_factor = -0.04
+				production_speed_dockyard_factor = -0.04
+				research_speed_factor = -0.02
+				local_resources_factor = -0.06
+				trade_opinion_factor = -0.10
+				stability_weekly = 0.002
+				#production_speed_foreign_build_speed_factor = -0.1
+			}
+				
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	cadet_training_standards = { 
+		law = yes
+		use_list_view = yes
+		
+		train_none = {
+			
+			cost = 50
+			removal_cost = -1
+			
+			available = {
+				#can_take_train_none = yes
+			}
+			level = 3
+			modifier = {
+				training_time_factor = 0.20
+				training_time_army_factor = -0.10
+				#max_training = -0.2
+				minimum_training_level = -0.1
+				experience_gain_army_unit_factor = -0.05
+				#army_org_factor = -0.08
+				#army_morale_factor = -0.08
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = train_none_switch
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.072 }
+					set_temp_variable = { navy_org_factor = -0.072 }
+					set_temp_variable = { army_morale = -0.072 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.056 }
+					set_temp_variable = { navy_org_factor = -0.056 }
+					set_temp_variable = { army_morale = -0.056 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.04 }
+					set_temp_variable = { navy_org_factor = -0.04 }
+					set_temp_variable = { army_morale = -0.04 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = train_low
+							}
+						}
+						set_country_flag = cadet_training_switch 
+						set_country_flag = train_none_switch 
+						#Move this to on_add
+						set_variable = { cadet_training_switch_progress_required = @CADET_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { cadet_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { cadet_training_switch_progress_required_divisions = @CADET_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = cadet_training_switch_progress_required_divisions
+						
+						add_to_variable = { cadet_training_switch_progress_required = cadet_training_switch_progress_required_divisions }
+						
+						set_variable = { cadet_training_switch_stage_trigger = cadet_training_switch_progress_required }
+						divide_variable = { cadet_training_switch_stage_trigger = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { cadet_training_switch_stages_left = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						#if = {
+						#	limit = {
+						#		has_country_flag = train_low
+						#	}
+						#	set_variable = { cadet_training_switch_current_stage = 1 }
+						#	subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+						#	set_country_flag = cadet_training_switch_up
+						#	#add_cadet_training_switch_ideas/UP = yes
+						#}
+						if = {
+							limit = {
+								has_country_flag = train_low
+							}
+							set_variable = { cadet_training_switch_current_stage = 5 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_down
+							#add_cadet_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_cadet_training_flags = yes
+						set_country_flag = train_none
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+		
+		}
+		train_none_0 = { allowed = { always = no } }
+		train_none_1 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.19
+				training_time_army_factor = -0.092
+
+				minimum_training_level = -0.08
+				experience_gain_army_unit_factor = -0.04
+		
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.066 }
+					set_temp_variable = { navy_org_factor = -0.066 }
+					set_temp_variable = { army_morale = -0.066 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.051 }
+					set_temp_variable = { navy_org_factor = -0.051 }
+					set_temp_variable = { army_morale = -0.051 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.037 }
+					set_temp_variable = { navy_org_factor = -0.037 }
+					set_temp_variable = { army_morale = -0.037 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_none_2 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.18
+				training_time_army_factor = -0.085
+
+				minimum_training_level = -0.06
+				experience_gain_army_unit_factor = -0.03			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.060 }
+					set_temp_variable = { navy_org_factor = -0.060 }
+					set_temp_variable = { army_morale = -0.060 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.047 }
+					set_temp_variable = { navy_org_factor = -0.047 }
+					set_temp_variable = { army_morale = -0.047 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.033 }
+					set_temp_variable = { navy_org_factor = -0.033 }
+					set_temp_variable = { army_morale = -0.033 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_none_3 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.17
+				training_time_army_factor = -0.080
+
+				minimum_training_level = -0.04
+				experience_gain_army_unit_factor = -0.03				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.054 }
+					set_temp_variable = { navy_org_factor = -0.054 }
+					set_temp_variable = { army_morale = -0.054 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.042 }
+					set_temp_variable = { navy_org_factor = -0.042 }
+					set_temp_variable = { army_morale = -0.042 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.030 }
+					set_temp_variable = { navy_org_factor = -0.030 }
+					set_temp_variable = { army_morale = -0.030 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_none_4 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.16
+				training_time_army_factor = -0.077
+
+				minimum_training_level = -0.02
+				experience_gain_army_unit_factor = -0.025				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.048 }
+					set_temp_variable = { navy_org_factor = -0.048 }
+					set_temp_variable = { army_morale = -0.048 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.038 }
+					set_temp_variable = { navy_org_factor = -0.038 }
+					set_temp_variable = { army_morale = -0.038 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.026 }
+					set_temp_variable = { navy_org_factor = -0.026 }
+					set_temp_variable = { army_morale = -0.026 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_none_5 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.15
+				training_time_army_factor = -0.075
+				experience_gain_army_unit_factor = -0.02
+				#max_training = -0.1			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.042 }
+					set_temp_variable = { navy_org_factor = -0.042 }
+					set_temp_variable = { army_morale = -0.042 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.033 }
+					set_temp_variable = { navy_org_factor = -0.033 }
+					set_temp_variable = { army_morale = -0.033 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.023 }
+					set_temp_variable = { navy_org_factor = -0.023 }
+					set_temp_variable = { army_morale = -0.023 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_low = {
+			
+			cost = 50
+			removal_cost = -1
+
+			available = {
+				#can_take_train_low = yes
+			}
+			level = 2
+			modifier = {
+				training_time_factor = 0.15
+				training_time_army_factor = -0.075
+				experience_gain_army_unit_factor = -0.02
+				#max_training = -0.1
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = train_low_switch
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.036 }
+					set_temp_variable = { navy_org_factor = -0.036 }
+		 			set_temp_variable = { army_morale = -0.036 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.028 }
+					set_temp_variable = { navy_org_factor = -0.028 }
+					set_temp_variable = { army_morale = -0.028 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.02 }
+					set_temp_variable = { navy_org_factor = -0.02 }
+					set_temp_variable = { army_morale = -0.02 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = train_none
+								has_country_flag = train_medium
+							}
+						}
+						set_country_flag = cadet_training_switch 
+						set_country_flag = train_low_switch 
+						#Move this to on_add
+						set_variable = { cadet_training_switch_progress_required = @CADET_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { cadet_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { cadet_training_switch_progress_required_divisions = @CADET_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = cadet_training_switch_progress_required_divisions
+						
+						add_to_variable = { cadet_training_switch_progress_required = cadet_training_switch_progress_required_divisions }
+						
+						set_variable = { cadet_training_switch_stage_trigger = cadet_training_switch_progress_required }
+						divide_variable = { cadet_training_switch_stage_trigger = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { cadet_training_switch_stages_left = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = train_none
+							}
+							set_variable = { cadet_training_switch_current_stage = 1 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_up
+							#add_cadet_training_switch_ideas/UP = yes
+						}
+						if = {
+							limit = {
+								has_country_flag = train_medium
+							}
+							set_variable = { cadet_training_switch_current_stage = 5 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_down
+							#add_cadet_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_cadet_training_flags = yes
+						set_country_flag = train_low
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		train_low_0 = { allowed = { always = no } }
+		train_low_1 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.10
+				training_time_army_factor = -0.04
+				experience_gain_army_unit_factor = -0.015		
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.026 }
+					set_temp_variable = { navy_org_factor = -0.026 }
+		 			set_temp_variable = { army_morale = -0.026 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.019 }
+					set_temp_variable = { navy_org_factor = -0.019 }
+					set_temp_variable = { army_morale = -0.019 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.012 }
+					set_temp_variable = { navy_org_factor = -0.012 }
+					set_temp_variable = { army_morale = -0.012 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_low_2 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = 0.05
+				training_time_army_factor = -0.005
+				experience_gain_army_unit_factor = -0.010				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.017 }
+					set_temp_variable = { navy_org_factor = -0.017 }
+		 			set_temp_variable = { army_morale = -0.017 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.01 }
+					set_temp_variable = { navy_org_factor = -0.01 }
+					set_temp_variable = { army_morale = -0.01 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.003 }
+					set_temp_variable = { navy_org_factor = -0.003 }
+					set_temp_variable = { army_morale = -0.003 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_low_3 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_army_factor = 0.02
+				experience_gain_army_unit_factor = -0.005				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = -0.007 }
+					set_temp_variable = { navy_org_factor = -0.007 }
+		 			set_temp_variable = { army_morale = -0.007 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = -0.001 }
+					set_temp_variable = { navy_org_factor = -0.001 }
+					set_temp_variable = { army_morale = -0.001 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = -0.005 }
+					set_temp_variable = { navy_org_factor = -0.005 }
+					set_temp_variable = { army_morale = -0.005 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_low_4 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.035
+				training_time_army_factor = 0.05
+				experience_gain_army_unit_factor = -0.002					
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.003 }
+					set_temp_variable = { navy_org_factor = -0.003 }
+		 			set_temp_variable = { army_morale = -0.003 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.008 }
+					set_temp_variable = { navy_org_factor = 0.008 }
+					set_temp_variable = { army_morale = 0.008 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.013 }
+					set_temp_variable = { navy_org_factor = 0.013 }
+					set_temp_variable = { army_morale = 0.013 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_low_5 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.07
+				training_time_army_factor = 0.07			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.012 }
+					set_temp_variable = { navy_org_factor = 0.012 }
+		 			set_temp_variable = { army_morale = 0.012 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.017 }
+					set_temp_variable = { navy_org_factor = 0.017 }
+					set_temp_variable = { army_morale = 0.017 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.022 }
+					set_temp_variable = { navy_org_factor = 0.022 }
+					set_temp_variable = { army_morale = 0.022 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+			
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_medium = {
+			
+			cost = 75
+			removal_cost = -1
+			
+			available = {
+				#can_take_train_medium = yes
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = train_medium_switch
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.022 }
+					set_temp_variable = { navy_org_factor = 0.022 }
+					set_temp_variable = { army_morale = 0.022 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.026 }
+					set_temp_variable = { navy_org_factor = 0.026 }
+					set_temp_variable = { army_morale = 0.026 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.03 }
+					set_temp_variable = { navy_org_factor = 0.03 }
+					set_temp_variable = { army_morale = 0.03 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {	
+							OR = {
+								has_country_flag = train_low
+								has_country_flag = train_high
+							}
+						}
+						set_country_flag = cadet_training_switch 
+						set_country_flag = train_medium_switch 
+						#Move this to on_add
+						set_variable = { cadet_training_switch_progress_required = @CADET_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { cadet_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { cadet_training_switch_progress_required_divisions = @CADET_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = cadet_training_switch_progress_required_divisions
+						
+						add_to_variable = { cadet_training_switch_progress_required = cadet_training_switch_progress_required_divisions }
+						
+						set_variable = { cadet_training_switch_stage_trigger = cadet_training_switch_progress_required }
+						divide_variable = { cadet_training_switch_stage_trigger = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { cadet_training_switch_stages_left = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = train_low
+							}
+							set_variable = { cadet_training_switch_current_stage = 1 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_up
+							#add_cadet_training_switch_ideas/UP = yes
+						}
+						if = {
+							limit = {
+								has_country_flag = train_high
+							}
+							set_variable = { cadet_training_switch_current_stage = 5 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_down
+							#add_cadet_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_cadet_training_flags = yes
+						set_country_flag = train_medium
+					}
+				}
+			}
+			level = 1
+			modifier = {
+				training_time_factor = -0.07
+				training_time_army_factor = 0.07
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+			
+		}
+		train_medium_0 = { allowed = { always = no } }
+		train_medium_1 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.083
+				training_time_army_factor = 0.083
+				experience_gain_army_unit_factor = 0.005
+				minimum_training_level = 0.0125			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.026 }
+					set_temp_variable = { navy_org_factor = 0.026 }
+					set_temp_variable = { army_morale = 0.026 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.030 }
+					set_temp_variable = { navy_org_factor = 0.030 }
+					set_temp_variable = { army_morale = 0.030 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.035 }
+					set_temp_variable = { navy_org_factor = 0.035 }
+					set_temp_variable = { army_morale = 0.035 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_medium_2 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.096
+				training_time_army_factor = 0.096
+				experience_gain_army_unit_factor = 0.01
+				minimum_training_level = 0.025				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.029 }
+					set_temp_variable = { navy_org_factor = 0.029 }
+					set_temp_variable = { army_morale = 0.029 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.035 }
+					set_temp_variable = { navy_org_factor = 0.035 }
+					set_temp_variable = { army_morale = 0.035 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.04 }
+					set_temp_variable = { navy_org_factor = 0.04 }
+					set_temp_variable = { army_morale = 0.04 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_medium_3 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.109
+				training_time_army_factor = 0.109
+				experience_gain_army_unit_factor = 0.015
+				minimum_training_level = 0.0375				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.033 }
+					set_temp_variable = { navy_org_factor = 0.033 }
+					set_temp_variable = { army_morale = 0.033 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.039 }
+					set_temp_variable = { navy_org_factor = 0.039 }
+					set_temp_variable = { army_morale = 0.039 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.045 }
+					set_temp_variable = { navy_org_factor = 0.045 }
+					set_temp_variable = { army_morale = 0.045 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_medium_4 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.122
+				training_time_army_factor = 0.122
+				experience_gain_army_unit_factor = 0.02
+				minimum_training_level = 0.04				
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.037 }
+					set_temp_variable = { navy_org_factor = 0.037 }
+					set_temp_variable = { army_morale = 0.037 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.043 }
+					set_temp_variable = { navy_org_factor = 0.043 }
+					set_temp_variable = { army_morale = 0.043 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.05 }
+					set_temp_variable = { navy_org_factor = 0.05 }
+					set_temp_variable = { army_morale = 0.05 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_medium_5 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.125
+				training_time_army_factor = 0.125
+				experience_gain_army_unit_factor = 0.02
+				#max_training = 0.1
+				minimum_training_level = 0.05			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.040 }
+					set_temp_variable = { navy_org_factor = 0.040 }
+					set_temp_variable = { army_morale = 0.040 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.048 }
+					set_temp_variable = { navy_org_factor = 0.048 }
+					set_temp_variable = { army_morale = 0.048 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.055 }
+					set_temp_variable = { navy_org_factor = 0.055 }
+					set_temp_variable = { army_morale = 0.055 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_high = {
+			
+			cost = 100
+			removal_cost = -1
+			
+			available = {
+				#can_take_train_high = yes
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = train_high_switch
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.044 }
+					set_temp_variable = { navy_org_factor = 0.044 }
+					set_temp_variable = { army_morale = 0.044 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.052 }
+					set_temp_variable = { navy_org_factor = 0.052 }
+					set_temp_variable = { army_morale = 0.052 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.06 }
+					set_temp_variable = { navy_org_factor = 0.06 }
+					set_temp_variable = { army_morale = 0.06 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = train_medium
+								has_country_flag = train_elite
+							}
+						}
+						set_country_flag = cadet_training_switch 
+						set_country_flag = train_high_switch 
+						#Move this to on_add
+						set_variable = { cadet_training_switch_progress_required = @CADET_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { cadet_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { cadet_training_switch_progress_required_divisions = @CADET_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = cadet_training_switch_progress_required_divisions
+						
+						add_to_variable = { cadet_training_switch_progress_required = cadet_training_switch_progress_required_divisions }
+						
+						set_variable = { cadet_training_switch_stage_trigger = cadet_training_switch_progress_required }
+						divide_variable = { cadet_training_switch_stage_trigger = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { cadet_training_switch_stages_left = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = train_medium
+							}
+							set_variable = { cadet_training_switch_current_stage = 1 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_up
+							#add_cadet_training_switch_ideas/UP = yes
+						}
+						if = {
+							limit = {
+								has_country_flag = train_elite
+							}
+							set_variable = { cadet_training_switch_current_stage = 5 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_down
+							#add_cadet_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_cadet_training_flags = yes
+						set_country_flag = train_high
+					}
+				}
+			}
+
+			modifier = {
+				training_time_factor = -0.125
+				training_time_army_factor = 0.125
+				experience_gain_army_unit_factor = 0.02
+				#max_training = 0.1
+				minimum_training_level = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		train_high_0 = { allowed = { always = no } }
+		train_high_1 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.140
+				training_time_army_factor = 0.140
+				experience_gain_army_unit_factor = 0.026
+				#max_training = 0.1
+				minimum_training_level = 0.06			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.051 }
+					set_temp_variable = { navy_org_factor = 0.051 }
+					set_temp_variable = { army_morale = 0.051 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.061 }
+					set_temp_variable = { navy_org_factor = 0.061 }
+					set_temp_variable = { army_morale = 0.061 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.07 }
+					set_temp_variable = { navy_org_factor = 0.07 }
+					set_temp_variable = { army_morale = 0.07 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_high_2 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.155
+				training_time_army_factor = 0.155
+				experience_gain_army_unit_factor = 0.032
+				#max_training = 0.1
+				minimum_training_level = 0.07			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.059 }
+					set_temp_variable = { navy_org_factor = 0.059 }
+					set_temp_variable = { army_morale = 0.059 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.069 }
+					set_temp_variable = { navy_org_factor = 0.069 }
+					set_temp_variable = { army_morale = 0.069 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.08 }
+					set_temp_variable = { navy_org_factor = 0.08 }
+					set_temp_variable = { army_morale = 0.08 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_high_3 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.170
+				training_time_army_factor = 0.170
+				experience_gain_army_unit_factor = 0.038
+				#max_training = 0.1
+				minimum_training_level = 0.08			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.066 }
+					set_temp_variable = { navy_org_factor = 0.066 }
+					set_temp_variable = { army_morale = 0.066 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.078 }
+					set_temp_variable = { navy_org_factor = 0.078 }
+					set_temp_variable = { army_morale = 0.078 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.09 }
+					set_temp_variable = { navy_org_factor = 0.09 }
+					set_temp_variable = { army_morale = 0.09 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_high_4 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.185
+				training_time_army_factor = 0.185
+				experience_gain_army_unit_factor = 0.044
+				#max_training = 0.1
+				minimum_training_level = 0.09			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.073 }
+					set_temp_variable = { navy_org_factor = 0.073 }
+					set_temp_variable = { army_morale = 0.073 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.087 }
+					set_temp_variable = { navy_org_factor = 0.087 }
+					set_temp_variable = { army_morale = 0.087 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.1 }
+					set_temp_variable = { navy_org_factor = 0.1 }
+					set_temp_variable = { army_morale = 0.1 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_high_5 = {
+			name = cadet_training_standards_switch_name
+			picture = cadet_training_switch
+
+			allowed = { always = no }
+			
+			modifier = {
+				training_time_factor = -0.2
+				training_time_army_factor = 0.2
+				experience_gain_army_unit_factor = 0.05
+				#max_training = 0.2
+				minimum_training_level = 0.1			
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.081 }
+					set_temp_variable = { navy_org_factor = 0.081 }
+					set_temp_variable = { army_morale = 0.081 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.095 }
+					set_temp_variable = { navy_org_factor = 0.095 }
+					set_temp_variable = { army_morale = 0.095 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.11 }
+					set_temp_variable = { navy_org_factor = 0.11 }
+					set_temp_variable = { army_morale = 0.11 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				#custom_effect_tooltip = cadet_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		train_elite = {
+			
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				#can_take_train_elite = yes
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = train_elite_switch
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = officer_train_low
+					}
+					set_temp_variable = { army_org = 0.088 }
+					set_temp_variable = { navy_org_factor = 0.088 }
+					set_temp_variable = { army_morale = 0.088 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_high
+					}
+					set_temp_variable = { army_org = 0.104 }
+					set_temp_variable = { navy_org_factor = 0.104 }
+					set_temp_variable = { army_morale = 0.104 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				else_if = {
+					limit = {
+						has_idea = officer_train_elite
+					}
+					set_temp_variable = { army_org = 0.12 }
+					set_temp_variable = { navy_org_factor = 0.12 }
+					set_temp_variable = { army_morale = 0.12 }
+					
+					set_variable = { officer_cadet_army_org = army_org }
+					set_variable = { officer_cadet_navy_org = navy_org_factor }
+					set_variable = { officer_cadet_army_morale = army_morale }
+				}
+				#custom_effect_tooltip = cadet_training_standards_army_org_TT
+				#custom_effect_tooltip = cadet_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = train_high
+							}
+						}
+						set_country_flag = cadet_training_switch 
+						set_country_flag = train_elite_switch 
+						#Move this to on_add
+						set_variable = { cadet_training_switch_progress_required = @CADET_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { cadet_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { cadet_training_switch_progress_required_divisions = @CADET_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = cadet_training_switch_progress_required_divisions
+						
+						add_to_variable = { cadet_training_switch_progress_required = cadet_training_switch_progress_required_divisions }
+						
+						set_variable = { cadet_training_switch_stage_trigger = cadet_training_switch_progress_required }
+						divide_variable = { cadet_training_switch_stage_trigger = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { cadet_training_switch_stages_left = @CADET_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = train_high
+							}
+							set_variable = { cadet_training_switch_current_stage = 1 }
+							subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+							set_country_flag = cadet_training_switch_up
+							#add_cadet_training_switch_ideas/UP = yes
+						}
+						#if = {
+						#	limit = {
+						#		has_country_flag = train_elite
+						#	}
+						#	set_variable = { cadet_training_switch_current_stage = 5 }
+						#	subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+						#	set_country_flag = cadet_training_switch_down
+						#	#add_cadet_training_switch_ideas/DOWN = yes
+						#}
+					}
+					else = {
+						#clear_cadet_training_flags = yes
+						set_country_flag = train_elite
+					}
+				}
+			}
+
+			modifier = {
+				training_time_factor = -0.2
+				training_time_army_factor = 0.2
+				experience_gain_army_unit_factor = 0.05
+				#max_training = 0.2
+				minimum_training_level = 0.1
+				consumer_goods_factor = 0.01
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+	officer_training_standards = { 
+		law = yes
+		use_list_view = yes
+		
+		officer_train_none = {
+			cost = 100
+			removal_cost = -1
+			
+			available = {
+				NOT = { has_country_flag = officer_training_switch }
+				has_idea = officer_train_low
+			}
+			
+			level = 4
+			
+			modifier = {
+				#max_army_experience_factor = -0.20
+				#max_air_experience_factor = -0.20
+				#max_navy_experience_factor = -0.20
+				#production_speed_mobilization_switch_speed_factor = -0.05
+				consumer_goods_factor = -0.01
+				special_forces_cap = -0.03	
+				naval_coordination = -0.05
+			}
+			
+			do_effect = {
+				NOT = {
+					has_country_flag = officer_train_none_switch
+				}
+			}
+			on_add = {
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = officer_train_low
+							}
+						}
+						set_country_flag = officer_training_switch 
+						set_country_flag = officer_train_none_switch 
+						#Move this to on_add
+						set_variable = { officer_training_switch_progress_required = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { officer_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { officer_training_switch_progress_required_divisions = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = officer_training_switch_progress_required_divisions
+						
+						add_to_variable = { officer_training_switch_progress_required = officer_training_switch_progress_required_divisions }
+						
+						set_variable = { officer_training_switch_stage_trigger = officer_training_switch_progress_required }
+						divide_variable = { officer_training_switch_stage_trigger = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { officer_training_switch_stages_left = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						#if = {
+						#	limit = {
+						#		has_country_flag = train_none
+						#	}
+						#	set_variable = { cadet_training_switch_current_stage = 1 }
+						#	subtract_from_variable = { cadet_training_switch_stages_left = 1 }
+						#	set_country_flag = cadet_training_switch_up
+						#	add_cadet_training_switch_ideas/UP = yes
+						#}
+						if = {
+							limit = {
+								has_country_flag = officer_train_low
+							}
+							set_variable = { officer_training_switch_current_stage = 5 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_down
+							#add_officer_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_officer_training_flags = yes
+						set_country_flag = officer_train_none
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+	
+		}
+		officer_train_none_0 = { allowed = { always = no } }
+		officer_train_none_1 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.18
+				#max_air_experience_factor = -0.18
+				#max_navy_experience_factor = -0.18
+				#production_speed_mobilization_switch_speed_factor = -0.04
+				consumer_goods_factor = -0.009
+				military_leader_cost_factor = 0.04
+				max_command_power = 1
+				command_power_gain = -0.001
+				special_forces_cap = -0.025
+				naval_coordination = -0.04
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_none_2 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.15
+				#max_air_experience_factor = -0.15
+				#max_navy_experience_factor = -0.15
+				#production_speed_mobilization_switch_speed_factor = -0.02
+				consumer_goods_factor = -0.007
+				military_leader_cost_factor = 0.08
+				max_command_power = 2
+				command_power_gain = -0.002
+				special_forces_cap = -0.02
+				naval_coordination = -0.03
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_none_3 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.125
+				#max_air_experience_factor = -0.125
+				#max_navy_experience_factor = -0.125
+				consumer_goods_factor = -0.005
+				military_leader_cost_factor = 0.125
+				max_command_power = 2.5
+				command_power_gain = -0.0025
+				special_forces_cap = -0.015
+				naval_coordination = -0.02
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_none_4 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.10
+				#max_air_experience_factor = -0.10
+				#max_navy_experience_factor = -0.10
+				#production_speed_mobilization_switch_speed_factor = 0.02
+				consumer_goods_factor = -0.003
+				military_leader_cost_factor = 0.17
+				max_command_power = 3
+				command_power_gain = -0.003
+				special_forces_cap = -0.010
+				naval_coordination = -0.01
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_none_5 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.07
+				#max_air_experience_factor = -0.07
+				#max_navy_experience_factor = -0.07
+				#production_speed_mobilization_switch_speed_factor = 0.04
+				consumer_goods_factor = -0.001
+				military_leader_cost_factor = 0.21
+				max_command_power = 4
+				command_power_gain = -0.004
+				special_forces_cap = -0.005
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		#
+		officer_train_low = {
+			cost = 100
+			removal_cost = -1
+
+			available = {
+				NOT = { has_country_flag = officer_training_switch }
+				OR = {
+					has_idea = officer_train_high
+					has_idea = officer_train_none
+				}
+				custom_trigger_tooltip = {
+					tooltip = tax_low_or_higher 
+					OR = {
+						has_idea  = tax_low 
+						has_idea  = tax_average 
+						has_idea  = tax_high
+						has_idea  = tax_extreme
+					}
+				}
+				
+				set_temp_variable = { trigger = 1 }
+				custom_trigger_tooltip = {
+					tooltip = upper_average_trigger_TT
+					check_variable = { upper_average > trigger }
+				}
+				custom_trigger_tooltip = {
+					tooltip = num_skill_2_trigger_TT
+					check_variable = { num_skill_2 > 4 }
+				}
+				if = {
+					limit = { #Visible only when not true
+						tag = SOV
+						OR = {
+							has_idea = officers_purged 		
+							has_idea = officers_purged_2 	
+						}
+					}	
+					custom_trigger_tooltip = {
+						tooltip = SOV_has_not_officers_purged_tt
+						NOT = { has_idea = officers_purged }			
+						NOT = { has_idea = officers_purged_2 }					
+					}
+				}
+				
+			}
+			
+			level = 3
+			default = yes
+
+			
+			modifier = {
+				#max_army_experience_factor = -0.05
+				#max_air_experience_factor = -0.05
+				#max_navy_experience_factor = -0.05
+				#production_speed_mobilization_switch_speed_factor = 0.05
+				military_leader_cost_factor = 0.25
+				max_command_power = 5
+				command_power_gain = -0.005	
+				#army_org of Cadet Training factor = 0.1
+				#army_morale of Officer Training factor	 = 0.1
+			}
+				
+			do_effect = {
+				NOT = {
+					has_country_flag = officer_train_low_switch
+				}
+			}
+			on_add = {
+				set_temp_variable = { army_org = 0.1 }
+				set_temp_variable = { army_morale = 0.1 }
+				#custom_effect_tooltip = officer_training_standards_army_org_TT
+				#custom_effect_tooltip = officer_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = officer_train_none
+								has_country_flag = officer_train_high
+							}
+						}
+						set_country_flag = officer_training_switch 
+						set_country_flag = officer_train_low_switch 
+						#Move this to on_add
+						set_variable = { officer_training_switch_progress_required = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { officer_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { officer_training_switch_progress_required_divisions = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = officer_training_switch_progress_required_divisions
+						
+						add_to_variable = { officer_training_switch_progress_required = officer_training_switch_progress_required_divisions }
+						
+						set_variable = { officer_training_switch_stage_trigger = officer_training_switch_progress_required }
+						divide_variable = { officer_training_switch_stage_trigger = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { officer_training_switch_stages_left = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = officer_train_none
+							}
+							set_variable = { officer_training_switch_current_stage = 1 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_up
+							#add_officer_training_switch_ideas/UP = yes
+						}
+						if = {
+							limit = {
+								has_country_flag = officer_train_high
+							}
+							set_variable = { officer_training_switch_current_stage = 5 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_down
+							#add_officer_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_officer_training_flags = yes
+						set_country_flag = officer_train_high
+					}
+				}
+			}
+			cancel_if_invalid = no
+			
+		}
+		officer_train_low_0 = { allowed = { always = no } }
+		officer_train_low_1 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.03
+				#max_air_experience_factor = -0.03
+				#max_navy_experience_factor = -0.03
+				#production_speed_mobilization_switch_speed_factor = 0.06
+				consumer_goods_factor = 0.001
+				military_leader_cost_factor = 0.29
+				max_command_power = 6
+				command_power_gain = -0.006
+				special_forces_cap = 0.003
+				naval_coordination = 0.01
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_low_2 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = -0.01
+				#max_air_experience_factor = -0.01
+				#max_navy_experience_factor = -0.01
+				#production_speed_mobilization_switch_speed_factor = 0.08
+				consumer_goods_factor = 0.003
+				military_leader_cost_factor = 0.33
+				max_command_power = 7
+				command_power_gain = -0.007
+				special_forces_cap = 0.007
+				naval_coordination = 0.02
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_low_3 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.01
+				#max_air_experience_factor = 0.01
+				#max_navy_experience_factor = 0.01
+				#production_speed_mobilization_switch_speed_factor = 0.1
+				consumer_goods_factor = 0.005
+				military_leader_cost_factor = 0.375
+				max_command_power = 7.5
+				command_power_gain = -0.0075
+				special_forces_cap = 0.01
+				naval_coordination = 0.03
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_low_4 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.04
+				#max_air_experience_factor = 0.04
+				#max_navy_experience_factor = 0.04
+				#production_speed_mobilization_switch_speed_factor = 0.12
+				consumer_goods_factor = 0.007
+				military_leader_cost_factor = 0.42
+				max_command_power = 8
+				command_power_gain = -0.008
+				special_forces_cap = 0.013
+				naval_coordination = 0.04
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_low_5 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.07
+				#max_air_experience_factor = 0.07
+				#max_navy_experience_factor = 0.07
+				#production_speed_mobilization_switch_speed_factor = 0.14
+				consumer_goods_factor = 0.009
+				military_leader_cost_factor = 0.46
+				max_command_power = 9
+				command_power_gain = -0.009
+				special_forces_cap = 0.017
+				naval_coordination = 0.05
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		#
+		officer_train_high = {
+			cost = 100
+			removal_cost = -1
+			
+			level = 2
+			
+			available = {
+				#NOT = { has_country_flag = officer_training_switch }
+				OR = {
+					has_idea = officer_train_elite
+					has_idea = officer_train_low
+				}
+				set_temp_variable = { trigger = 2 }
+				#custom_trigger_tooltip = {
+				#	tooltip = upper_average_trigger_TT
+				#	check_variable = { upper_average > trigger }
+				#}
+				#custom_trigger_tooltip = {
+				#	tooltip = num_skill_3_trigger_TT
+				#	check_variable = { num_skill_3 > 4 }
+				#}
+				custom_trigger_tooltip = {
+					tooltip = "正常税收及以上税收" 
+					OR = {
+						has_idea  = tax_average 
+						has_idea  = tax_high
+						has_idea  = tax_extreme
+					}
+				}
+				if = {
+					limit = {
+						tag = CHI 
+					}
+					NOT = { has_idea = CHI_incompetent_officers }
+				}
+				
+				if = {
+					limit = {
+						tag = SOV
+						OR = {
+							has_idea = officers_purged 		
+							has_idea = officers_purged_2 			
+							has_idea = officers_purged_3 			
+							has_idea = officers_purged_4 			
+							has_idea = officers_purged_5 			
+							has_idea = officers_purged_6 			
+							has_idea = officers_purged_7 			
+							has_idea = officers_purged_8 			
+							has_idea = officers_purged_9 			
+							has_idea = officers_purged_10 
+						}		
+					}
+					custom_trigger_tooltip = {
+						tooltip = SOV_has_not_officers_purged_tt
+						NOT = { has_idea = officers_purged }			
+						NOT = { has_idea = officers_purged_2 }			
+						NOT = { has_idea = officers_purged_3 }			
+						NOT = { has_idea = officers_purged_4 }			
+						NOT = { has_idea = officers_purged_5 }			
+						NOT = { has_idea = officers_purged_6 }			
+						NOT = { has_idea = officers_purged_7 }			
+						NOT = { has_idea = officers_purged_8 }			
+						NOT = { has_idea = officers_purged_9 }			
+						NOT = { has_idea = officers_purged_10 }			
+					}
+				}
+				#if = {
+					#limit = {
+					#	original_tag = USA
+					#}
+					#has_completed_focus = USA_army_incompetence
+				#}
+			}
+			
+			
+			modifier = {
+				#max_army_experience_factor = 0.10
+				#max_air_experience_factor = 0.10
+				#max_navy_experience_factor = 0.10
+				#production_speed_mobilization_switch_speed_factor = 0.15
+				military_leader_cost_factor = 0.5
+				consumer_goods_factor = 0.01
+				max_command_power = 10
+				command_power_gain = -0.01
+				special_forces_cap = 0.02	
+				naval_coordination = 0.05
+				#army_org of Cadet Training factor = 0.3
+				#army_morale of Officer Training factor	 = 0.3
+			}
+			do_effect = {
+				NOT = {
+					has_country_flag = officer_train_high_switch
+				}
+			}
+			on_add = {
+				set_temp_variable = { army_org = 0.3 }
+				set_temp_variable = { army_morale = 0.3 }
+				#custom_effect_tooltip = officer_training_standards_army_org_TT
+				#custom_effect_tooltip = officer_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = officer_train_low
+								has_country_flag = officer_train_elite
+							}
+						}
+						set_country_flag = officer_training_switch 
+						set_country_flag = officer_train_high_switch 
+						#Move this to on_add
+						set_variable = { officer_training_switch_progress_required = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { officer_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { officer_training_switch_progress_required_divisions = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = officer_training_switch_progress_required_divisions
+						
+						add_to_variable = { officer_training_switch_progress_required = officer_training_switch_progress_required_divisions }
+						
+						set_variable = { officer_training_switch_stage_trigger = officer_training_switch_progress_required }
+						divide_variable = { officer_training_switch_stage_trigger = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { officer_training_switch_stages_left = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = officer_train_low
+							}
+							set_variable = { officer_training_switch_current_stage = 1 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_up
+							#add_officer_training_switch_ideas/UP = yes
+						}
+						if = {
+							limit = {
+								has_country_flag = officer_train_elite
+							}
+							set_variable = { officer_training_switch_current_stage = 5 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_down
+							#add_officer_training_switch_ideas/DOWN = yes
+						}
+					}
+					else = {
+						#clear_officer_training_flags = yes
+						set_country_flag = officer_train_high
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		officer_train_high_0 = { allowed = { always = no } }
+		officer_train_high_1 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.12
+				#max_air_experience_factor = 0.12
+				#max_navy_experience_factor = 0.12
+				#production_speed_mobilization_switch_speed_factor = 0.16
+				consumer_goods_factor = 0.011
+				military_leader_cost_factor = 0.54
+				max_command_power = 11
+				command_power_gain = -0.011
+				special_forces_cap = 0.023
+				naval_coordination = 0.06
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_high_2 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.14
+				#max_air_experience_factor = 0.14
+				#max_navy_experience_factor = 0.14
+				#production_speed_mobilization_switch_speed_factor = 0.18
+				consumer_goods_factor = 0.013
+				military_leader_cost_factor = 0.58
+				max_command_power = 12
+				command_power_gain = -0.012
+				special_forces_cap = 0.027
+				naval_coordination = 0.07
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_high_3 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.175
+				#max_air_experience_factor = 0.175
+				#max_navy_experience_factor = 0.175
+				#production_speed_mobilization_switch_speed_factor = 0.20
+				consumer_goods_factor = 0.015
+				military_leader_cost_factor = 0.625
+				max_command_power = 12.5
+				command_power_gain = -0.0125
+				special_forces_cap = 0.03
+				naval_coordination = 0.08
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_high_4 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.21
+				#max_air_experience_factor = 0.21
+				#max_navy_experience_factor = 0.21
+				#production_speed_mobilization_switch_speed_factor = 0.22
+				consumer_goods_factor = 0.017
+				military_leader_cost_factor = 0.67
+				max_command_power = 13
+				command_power_gain = -0.013
+				special_forces_cap = 0.033
+				naval_coordination = 0.09
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		officer_train_high_5 = {
+			picture = officer_training_switch
+			name = officer_training_standards_switch_name
+
+			allowed = { always = no }
+			
+			modifier = {
+				#max_army_experience_factor = 0.23
+				#max_air_experience_factor = 0.23
+				#max_navy_experience_factor = 0.23
+				#production_speed_mobilization_switch_speed_factor = 0.24
+				consumer_goods_factor = 0.019
+				military_leader_cost_factor = 0.71
+				max_command_power = 14
+				command_power_gain = -0.014
+				special_forces_cap = 0.037
+				naval_coordination = 0.10
+			}
+			
+			on_add = {
+				#custom_effect_tooltip = officer_training_standards_switch_TT
+			}
+
+			cancel_if_invalid = no
+		}
+		#
+		officer_train_elite = {
+			cost = 100
+			removal_cost = -1
+			
+			level = 1
+			
+			available = {
+				#NOT = { has_country_flag = officer_training_switch }
+				has_idea = officer_train_high
+				
+				set_temp_variable = { trigger = 3 }
+				#custom_trigger_tooltip = {
+				#	tooltip = upper_average_trigger_TT
+				#	check_variable = { upper_average > trigger }
+				#}
+				#custom_trigger_tooltip = { 
+				#	tooltip = num_skill_4_trigger_TT
+				#	check_variable = { num_skill_4 > 4 }
+				#}
+				custom_trigger_tooltip = {
+					tooltip = "高税收及以上税收"
+					OR = {
+						has_idea  = tax_high
+						has_idea  = tax_extreme
+					}
+				}
+				if = {
+					limit = {
+						tag = CHI 
+					}
+					NOT = { has_idea = CHI_incompetent_officers }
+				}
+				
+				if = {
+					limit = {
+						tag = SOV
+						OR = {
+							has_idea = officers_purged 		
+							has_idea = officers_purged_2 			
+							has_idea = officers_purged_3 			
+							has_idea = officers_purged_4 			
+							has_idea = officers_purged_5 			
+							has_idea = officers_purged_6 			
+							has_idea = officers_purged_7 			
+							has_idea = officers_purged_8 			
+							has_idea = officers_purged_9 			
+							has_idea = officers_purged_10 
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = SOV_has_not_officers_purged_tt
+						NOT = { has_idea = officers_purged }			
+						NOT = { has_idea = officers_purged_2 }			
+						NOT = { has_idea = officers_purged_3 }			
+						NOT = { has_idea = officers_purged_4 }			
+						NOT = { has_idea = officers_purged_5 }			
+						NOT = { has_idea = officers_purged_6 }			
+						NOT = { has_idea = officers_purged_7 }			
+						NOT = { has_idea = officers_purged_8 }			
+						NOT = { has_idea = officers_purged_9 }			
+						NOT = { has_idea = officers_purged_10 }			
+					}
+				}
+				#if = {
+				#	limit = {
+				#		original_tag = USA
+				#	}
+				#	has_completed_focus = USA_army_incompetence
+				#}
+				
+			}
+			modifier = { 
+				#max_army_experience_factor = 0.25
+				#max_air_experience_factor = 0.25
+				#max_navy_experience_factor = 0.25
+				#production_speed_mobilization_switch_speed_factor = 0.25
+				military_leader_cost_factor = 0.75
+				consumer_goods_factor = 0.02
+				max_command_power = 15
+				command_power_gain = -0.02
+				special_forces_cap = 0.04	
+				naval_coordination = 0.10
+				#army_org of Cadet Training factor = 0.5
+				#army_morale of Officer Training factor	 = 0.5
+			}
+			do_effect = {
+				NOT = {
+					has_country_flag = officer_train_elite_switch
+				}
+			}
+			on_add = {
+				set_temp_variable = { army_org = 0.5 }
+				set_temp_variable = { army_morale = 0.5 }
+				#custom_effect_tooltip = officer_training_standards_army_org_TT
+				#custom_effect_tooltip = officer_training_standards_army_morale_TT
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = officer_train_high
+							}
+						}
+						set_country_flag = officer_training_switch 
+						set_country_flag = officer_train_elite_switch 
+						#Move this to on_add
+						set_variable = { officer_training_switch_progress_required = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_BASE }
+						
+						set_temp_variable = { officer_training_switch_progress_required_divisions = num_divisions }
+						multiply_temp_variable = { officer_training_switch_progress_required_divisions = @OFFICER_TRAINING_SWITCH_MAX_PROGRESS_DIVISIONS_FACTOR }
+						round_temp_variable = officer_training_switch_progress_required_divisions
+						
+						add_to_variable = { officer_training_switch_progress_required = officer_training_switch_progress_required_divisions }
+						
+						set_variable = { officer_training_switch_stage_trigger = officer_training_switch_progress_required }
+						divide_variable = { officer_training_switch_stage_trigger = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						set_variable = { officer_training_switch_stages_left = @OFFICER_TRAINING_SWITCH_NUM_STEPS }
+						
+						if = {
+							limit = {
+								has_country_flag = officer_train_high
+							}
+							set_variable = { officer_training_switch_current_stage = 1 }
+							subtract_from_variable = { officer_training_switch_stages_left = 1 }
+							set_country_flag = officer_training_switch_up
+							#add_officer_training_switch_ideas/UP = yes
+						}
+						#if = {
+						#	limit = {
+						#		has_country_flag = officer_train_elite
+						#	}
+						#	set_variable = { officer_training_switch_current_stage = 5 }
+						#	subtract_from_variable = { officer_training_switch_stages_left = 1 }
+						#	set_country_flag = officer_training_switch_down
+						#	#add_officer_training_switch_ideas/DOWN = yes
+						#}
+					}
+					else = {
+						#clear_officer_training_flags = yes
+						set_country_flag = officer_train_elite
+					}
+				}
+			}
+			
+			
+			cancel_if_invalid = no
+		}
+	}
+}
+### EOF ###

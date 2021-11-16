@@ -1,0 +1,321 @@
+﻿division_template = {
+	name = "Morit Diviziin"			# Cavalry Division
+
+	division_names_group = MON_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	##### Mongol Ardyn Armiin #####
+	division = {
+		#name = "1-r Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4801
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "2-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4792
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		#name = "3-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12557
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		#name = "4-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 1743
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		#name = "5-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 4873
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 10575
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "7-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 4856
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+    
+	}
+
+	division = {
+		name = "8-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 1723
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "9-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 7860
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "10-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 10565
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "11-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 10363
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "12-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11752
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "13-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 10451
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "14-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 7511
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "15-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 12596
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "16-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 1766
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "17-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 7792
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "18-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 10839
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "19-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 10563
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "20-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 12541
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		name = "21-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 4729
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		name = "22-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 1791
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		name = "23-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 10558
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		name = "24-p Morit Diviziin"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 10911
+		division_template = "Morit Diviziin"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+}
+
+
+##### No notable air force (only about 6 aircraft in 1936) #####
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MON"
+		}
+		requested_factories = 1
+		progress = 0.20
+		efficiency = 100
+	}
+}

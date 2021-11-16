@@ -1,0 +1,8 @@
+﻿l_english:
+ global_special_event_decision_categories:0 "全局计算（请忽略）"
+ global_statistics_decision:0 "全局周计算（请忽略）"
+ gse.1.t:0 "经济政策改变"
+ gse.2.t:0 "军费政策改变"
+ EFFECT_CHANGE_LAW_military_expenditure:0 "将军费政策改为'$NAME|Y$' 其效果为 ($DESC$)."
+ EFFECT_CHANGE_LAW_industriation_and_economic_development_level:0 "经济政策改变为'$NAME|Y$' 其效果为 ($DESC$)."
+ 

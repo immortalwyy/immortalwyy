@@ -1,0 +1,22 @@
+state={
+	id=965
+	name="STATE_965"
+	provinces={
+		1787 4729 10632 10704 12686 
+	}
+	history={
+		owner = MON
+		victory_points = {
+			12686 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = MON
+
+	}
+	manpower=142900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

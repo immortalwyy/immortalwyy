@@ -1,0 +1,24 @@
+state={
+	id=961
+	name="STATE_961"
+	provinces={
+		1689 4697 4777 7799 12544 12675 
+	}
+	
+	history={
+		owner = MON
+		victory_points = {
+			7799 3 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = MON
+
+	}
+	manpower=134100
+	buildings_max_level_factor=1.000
+	state_category=town
+}

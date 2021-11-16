@@ -1,0 +1,41 @@
+﻿capital = 430
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 34
+	democratic = 3
+	radicalism = 1
+	despotism = 14
+	conservatism = 26
+	fascism = 8
+	communism = 14
+}
+
+create_country_leader = {
+	name = "Bhimrao Ambedkar"
+	desc = "POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC"
+	picture = "portrait_RAJ_bhimrao_ambedkar.dds"
+	expire = "1965.1.1"
+	ideology = bureaucracy
+	traits = {
+		#
+	}
+}
+
+

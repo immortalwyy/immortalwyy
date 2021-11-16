@@ -1,0 +1,26 @@
+state={
+	id=845
+	name="STATE_845"
+	provinces={
+		1034 1575 7571 
+	}
+	history={
+		owner = SHX
+		add_core_of = CHI
+		add_core_of = SHX
+		victory_points = {
+			7571 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 4
+
+		}
+		
+
+	}
+	manpower=3167800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

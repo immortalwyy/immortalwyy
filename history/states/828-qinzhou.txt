@@ -1,0 +1,27 @@
+state={
+	id=828
+	name="STATE_828"
+	provinces={
+		1124 1154 4071 4089 7055 9971 12045 12074 
+	}
+	history={
+		owner = CHI
+		add_core_of = CHI
+		victory_points = {
+			4071 3
+		}
+		victory_points = {
+			1124 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			
+
+		}
+
+	}
+	manpower=8976500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

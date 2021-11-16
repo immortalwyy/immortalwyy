@@ -1,0 +1,33 @@
+
+state={
+	id=599
+	name="STATE_599"
+	resources={
+		tungsten=15.000
+		steel=15.000
+		chromium=3.000
+	}
+
+	history={
+		owner = GXC
+		add_core_of = CHI
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			air_base = 2
+
+		}
+		victory_points = {
+			1597 3 
+		}
+
+	}
+
+	provinces={
+		1597 4028 4134 7095 7650 10039 10431 
+	}
+	manpower=2685200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,10 @@
+朝鲜新军训练政策 = {
+	icon = army_reform
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		has_completed_focus = KOR_06  
+	}
+}

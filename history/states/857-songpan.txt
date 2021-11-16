@@ -1,0 +1,21 @@
+state={
+	id=857
+	name="STATE_857"
+	provinces={
+		10132 
+	}
+	history={
+		owner = SZC
+		add_core_of = CHI
+		add_core_of = SZC
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+
+	}
+	manpower=74945
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

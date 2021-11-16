@@ -1,0 +1,251 @@
+﻿capital = 594
+
+oob = "HNN_1936"
+
+set_stability = 0.6
+set_war_support = 0.4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+add_ideas = {
+Little_prince
+}
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 34
+	democratic = 7
+	radicalism = 21
+	despotism = 4
+	conservatism = 26
+	fascism = 8
+}
+
+create_country_leader = {
+	name = "Feng Guozhang"
+	desc = "POLITICS_Liu_Wenhui_DESC"
+	picture = "CHI_feng_kuo_chang.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+create_field_marshal = {
+	name = "Xuanyuan li"
+	picture = "Portrait_Xuanyuan_li.png"
+	traits = { thorough_planner trait_reckless career_officer }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Feng Yuxiang"
+	picture = "CHI_Feng_Yuhsiang.dds"
+	traits = { war_hero thorough_planner }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Feng Guozhang"
+	picture = "CHI_feng_kuo_chang.dds"
+	traits = { war_hero defensive_doctrine trait_cautious }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Wu Peifu"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Wu_Peifu.png"
+	desc = "QIE_WU_PEIFU_ARMY_DESC"
+	traits = {
+		old_guard
+		politically_connected
+		brilliant_strategist
+		war_hero
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 1170
+}
+create_corps_commander = {
+	name = "Zhang Qihuang"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Zhang_Qihuang.png"
+	desc = "QIE_ZHANG_QIHUANG_ARMY_DESC"
+	traits = {
+		substance_abuser
+		politically_connected
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Zhang Shaozeng"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Zhang_Shaozeng.png"
+	desc = "QIE_ZHANG_SHAOZENG_ARMY_DESC"
+	traits = {
+		politically_connected
+		artillery_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Li Jinglin"
+	desc = "POLITICS_LI_JINGLIN_DESC"
+	picture = "Portrait_Shandong_Li_Jinglin.png"
+	traits = {
+		thorough_planner
+		trait_cautious
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	
+}
+create_corps_commander = {
+	name = "Song Zheyuan"
+	desc = "POLITICS_SONG_ZHEYUAN_ARMY_DESC"
+	picture = "Portrait_Shandong_Song_Zheyuan.png"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Shangguan Yunxiang"
+	desc = "POLITICS_LEP_SHANGGUAN_YUNXIANG_DESC"
+	picture = "Portrait_LEP_Shangguan_Yunxiang.png"
+	traits = {
+		politically_connected
+		substance_abuser
+		war_hero
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Yang Yuting"
+	desc = "POLITICS_YANG_YUTING_ARMY_DESC"
+	picture = "Portrait_FNG_Yang_Yuting.png"
+	traits = {
+		career_officer
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+create_corps_commander = {
+	name = "Liu Menggeng"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Liu_Menggeng.png"
+	desc = "QIE_LIU_MENGGENG_ARMY_DESC"
+	traits = {
+		career_officer
+		trait_cautious
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Lu Xiangting"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Lu_Xiangting.png"
+	desc = "QIE_LU_XIANGTING_ARMY_DESC"
+	traits = {
+		politically_connected
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Wang Huaiqing"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Wang_Huaiqing.png"
+	desc = "QIE_WANG_HUAIQING_ARMY_DESC"
+	traits = {
+		substance_abuser
+		trickster
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_navy_leader = {
+	name = "Yang Shuzhuang"
+	desc = "POLITICS_LEP_YANG_SHUZHUANG_DESC"
+	picture = "Portrait_LEP_Yang_Shuzhuang.png"
+	traits = {
+		navy_career_officer
+		torpedo_expert
+		ground_pounder
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "Sa Zhenbing"
+	portrait_path = "gfx/leaders/HNN/Portrait_QIE_Sa_Zhenbing.png"
+	desc = "QIE_SA_ZHENBING_NAVY_DESC"
+	traits = {
+		battleship_adherent
+		navy_career_officer
+		gentlemanly
+		naval_lineage
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 3
+}

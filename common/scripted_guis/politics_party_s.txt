@@ -1,0 +1,24 @@
+scripted_gui = {
+    politics_party_s = {
+        window_name = politics_party_s
+        context_type = player_context
+        parent_window_token = politics_tab
+         
+        visible = {
+            is_ai = no
+        }
+        
+        effects = {
+        }
+        
+        triggers = {
+            
+        }
+        
+        properties = {
+            party = {
+                image = [GetPartyPicture]
+            }
+        }
+    }
+}

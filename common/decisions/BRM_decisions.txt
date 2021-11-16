@@ -1,0 +1,465 @@
+缅甸新军训练 = {
+	
+	仰光新军第一军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光一师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光二师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光三师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+
+	仰光新军第二军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光四师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光五师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光六师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+
+	仰光新军第三军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光七师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光八师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光九师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+
+	仰光新军第四军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光十师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十一师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十二师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+
+	仰光新军第五军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光十三师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十四师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十五师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+
+	仰光新军第六军 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 19
+			has_completed_focus = BRM_06 
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			army_experience = -20		
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 288·· }
+				create_unit = {
+					division = "name = \"仰光十六师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十七师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+				create_unit = {
+					division = "name = \"仰光十八师\" division_template = \"缅甸新军\" start_experience_factor = 1.0" 
+					owner = BRM
+				}
+			}
+		}
+	}
+}
+
+大明军购 = {
+
+	购买步兵装备 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_completed_focus = BRM_10
+		}
+
+		cost = 80
+		fire_only_once = no
+		ai_will_do = {
+				factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			CHI= {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 8000
+			    producer = CHI
+			}		
+		}
+	}
+
+	购买制式火炮 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_completed_focus = BRM_10
+		}
+
+		cost = 60
+		fire_only_once = no
+		ai_will_do = {
+				factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			CHI= {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 600
+			    producer = CHI
+			}		
+		}
+	}
+
+	购买支援装备 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_completed_focus = BRM_10
+		}
+
+		cost = 40
+		fire_only_once = no
+		ai_will_do = {
+				factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			CHI= {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 480
+			    producer = CHI
+			}		
+		}
+	}
+}
+
+帝国皇子的视察 = {
+
+	帝国太子的视察 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = BRM_03
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_stability = 0.05
+			add_political_power = 50
+			}
+		}
+
+	二皇子的视察 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = BRM_03
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_war_support = 0.05
+			add_BRMpower = 150000
+			}
+		}
+
+	三皇子的视察 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = BRM_03
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	四皇子的视察 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = BRM_03
+		}
+
+		cost = 30
+		
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+			add_research_slot = 1
+			}
+		}
+	}
+
+	大明边贸互市 = {
+
+	明缅互市 = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = BRM_19
+		}
+
+		cost = 50
+		
+		days_re_enable = 80
+		fire_only_once = no
+		days_remove = 15
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+		}
+		
+		remove_effect = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+

@@ -1,0 +1,26 @@
+guiTypes = {
+	containerWindowType = {
+		name = "politics_party_s"
+		position = { x=0 y=0 }
+		size = { width = 200 height = 200 }
+		
+		iconType = {
+			name = "party"
+			position = { x = 617 y =310 }
+		}
+		
+
+		instantTextboxType = {
+			name = "party_name"
+			position = { x = 571 y = 370 }
+			font = "hoi_16mbs"
+			text = "[GetsPartyname]"
+			pdx_tooltip = "PartyInfo"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+
+	}
+}

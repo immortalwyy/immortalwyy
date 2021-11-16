@@ -1,0 +1,32 @@
+﻿capital = 757
+
+oob = "TIB_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 12
+	neutrality = 50
+	despotism = 38
+}
+
+create_country_leader = {
+	name = "Dalailama thubtengyatso"
+	desc = "POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC"
+	picture = "TIB_dalai_lama_thubten_gyatso.dds"
+	expire = "1965.1.1"
+	ideology = theocracy_est
+	traits = {
+		#
+	}
+}

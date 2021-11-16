@@ -1,0 +1,26 @@
+state={
+	id=897
+	name="STATE_897"
+	provinces={
+		1114 1522 4501 
+	}
+	history={
+		owner = YUN
+		add_core_of = CHI
+		add_core_of = YUN
+		victory_points = {
+			4501 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+
+		}
+		
+
+	}
+	manpower=2476500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

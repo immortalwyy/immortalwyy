@@ -1,0 +1,10 @@
+CHI_parliament_gui_decision_category = {
+	icon = GFX_ming_par_dec
+
+	allowed = { original_tag = CHI }
+
+	priority = 100
+
+	scripted_gui = desicion_parliament_gui
+	visible_when_empty = yes
+}

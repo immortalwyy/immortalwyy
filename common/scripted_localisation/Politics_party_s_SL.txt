@@ -1,0 +1,31 @@
+defined_text = { 
+	name = GetPartyPicture
+	text = {
+		trigger = {
+			tag = CHI
+			has_country_flag = CHI_damingdidang
+		}
+		localization_key = GFX_CHI_damingdidang
+	}
+}
+defined_text = {
+	name = GetsPartyname
+	text = {
+		trigger = {
+			tag = CHI
+			has_country_flag = CHI_damingdidang
+		}
+		localization_key = CHI_damingdidang
+	}
+}
+
+defined_text = {
+	name = GetPartyInfo
+	text = {
+		trigger = {
+			tag = CHI
+			has_country_flag = CHI_damingdidang
+		}
+		localization_key = CHI_damingdidang_info
+	}
+}

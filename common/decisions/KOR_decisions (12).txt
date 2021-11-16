@@ -1,0 +1,38 @@
+请求国际援助 = {
+
+	西班牙共产主义者的援助 = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			NOT = { has_war_with = SPR }
+			has_completed_focus = KOR_138
+		}
+
+		cost = 20
+		fire_only_once = no
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+
+		
+		visible = {
+			SPR = {
+				exists = yes
+			}	
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 1500
+			    producer = SOV
+			}	
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = 120
+			    producer = SOV
+			}
+		}
+	}
+}

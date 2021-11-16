@@ -1,0 +1,359 @@
+CHI_all_parliament_gui_initial = {
+
+	######GUI信息######
+	
+	####请确保这些数的和为150####
+	add_to_array = { yizhengyuan_seat_array = 43 }
+	add_to_array = { yizhengyuan_seat_array = 17 }
+	add_to_array = { yizhengyuan_seat_array = 57 }
+	add_to_array = { yizhengyuan_seat_array = 16 }
+	add_to_array = { yizhengyuan_seat_array = 17 }
+
+	add_to_array = { yizhengyuan_member_array = 1 }
+	add_to_array = { yizhengyuan_member_array = 2 }
+	add_to_array = { yizhengyuan_member_array = 3 }
+	add_to_array = { yizhengyuan_member_array = 4 }
+	add_to_array = { yizhengyuan_member_array = 5 }
+
+	####请确保这些数的和为300####
+	add_to_array = { zhizhengyuan_seat_array = 30 }
+	add_to_array = { zhizhengyuan_seat_array = 37 }
+	add_to_array = { zhizhengyuan_seat_array = 69 }
+	add_to_array = { zhizhengyuan_seat_array = 14 }
+	add_to_array = { zhizhengyuan_seat_array = 16 }
+	add_to_array = { zhizhengyuan_seat_array = 121 }
+	add_to_array = { zhizhengyuan_seat_array = 13 }
+
+	add_to_array = { zhizhengyuan_member_array = 1 }
+	add_to_array = { zhizhengyuan_member_array = 2 }
+	add_to_array = { zhizhengyuan_member_array = 3 }
+	add_to_array = { zhizhengyuan_member_array = 4 }
+	add_to_array = { zhizhengyuan_member_array = 5 }
+	add_to_array = { zhizhengyuan_member_array = 6 }
+	add_to_array = { zhizhengyuan_member_array = 7 }
+
+	####支持数####
+	add_to_array = { yizhengyuan_i_seat_array = 0 }
+	add_to_array = { yizhengyuan_i_seat_array = 0 }
+	add_to_array = { yizhengyuan_i_seat_array = 0 }
+	add_to_array = { yizhengyuan_i_seat_array = 0 }
+	add_to_array = { yizhengyuan_i_seat_array = 0 }
+
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+	add_to_array = { zhizhengyuan_i_seat_array = 0 }
+
+	set_variable = { yizhengyuan_i_seat = 0 }
+	set_variable = { zhizhengyuan_i_seat = 0 }
+
+	for_each_loop = {
+		array = yizhengyuan_i_seat_array
+
+		add_to_variable = { yizhengyuan_i_seat = yizhengyuan_i_seat_array^i }
+	}
+
+	for_each_loop = {
+		array = zhizhengyuan_i_seat_array
+
+		add_to_variable = { zhizhengyuan_i_seat = zhizhengyuan_i_seat_array^i }
+	}
+
+	CHI_reload_all_parliament_gui = yes
+}
+
+CHI_reload_all_parliament_gui = {
+
+	clear_array = CHI_yizhengyuan_array
+	clear_array = CHI_zhizhengyuan_array
+	for_each_loop = {
+		array = yizhengyuan_seat_array
+
+		add_to_array = { temp_seat_1 = yizhengyuan_seat_array^i }
+	}
+	for_each_loop = {
+		array = zhizhengyuan_seat_array
+
+		add_to_array = { temp_seat_2 = zhizhengyuan_seat_array^i }
+	}
+	set_temp_variable = { temp_size = temp_seat_1^num }
+	subtract_from_temp_variable = { temp_size = 1 }
+	set_temp_variable = { temp_index_1 = 0 }
+	set_temp_variable = { temp_index_2 = 1 }
+	while_loop_effect = {
+		limit = {
+			check_variable = { temp_index_1 < temp_size }
+		}
+		add_to_variable = { temp_seat_1^temp_index_2 = temp_seat_1^temp_index_1 }
+		add_to_temp_variable = { temp_index_1 = 1 }
+		add_to_temp_variable = { temp_index_2 = 1 }
+	}
+	for_loop_effect = {
+		start = 0
+		end = temp_seat_1^num
+
+		resize_array = { array = CHI_yizhengyuan_array value = yizhengyuan_member_array^v size = temp_seat_1^v }
+	}
+	set_temp_variable = { temp_size = temp_seat_2^num }
+	subtract_from_temp_variable = { temp_size = 1 }
+	set_temp_variable = { temp_index_1 = 0 }
+	set_temp_variable = { temp_index_2 = 1 }
+	while_loop_effect = {
+		limit = {
+			check_variable = { temp_index_1 < temp_size }
+		}
+		add_to_variable = { temp_seat_2^temp_index_2 = temp_seat_2^temp_index_1 }
+		add_to_temp_variable = { temp_index_1 = 1 }
+		add_to_temp_variable = { temp_index_2 = 1 }
+	}
+	for_loop_effect = {
+		start = 0
+		end = temp_seat_2^num
+
+		resize_array = { array = CHI_zhizhengyuan_array value = zhizhengyuan_member_array^v size = temp_seat_2^v }
+	}
+
+	clear_array = temp_seat_1
+	clear_array = temp_seat_2
+}
+
+CHI_modify_yizhengyuan_seat = {
+
+	subtract_from_temp_variable = { temp_member = 1 }
+	set_temp_variable = { temp = yizhengyuan_seat_array^temp_member }
+	add_to_temp_variable = { temp = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp > CHI_yizhengyuan_array^num }
+		}
+		subtract_from_temp_variable = { temp = CHI_yizhengyuan_array^num }
+		subtract_from_temp_variable = { temp_seats = temp }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp < 0 }
+		}
+		multiply_temp_variable = { temp = -1 }
+		subtract_from_temp_variable = { temp_seats = temp }
+	}
+
+	for_loop_effect = {
+		start = 0
+		end = yizhengyuan_seat_array^num
+
+		add_to_temp_array = { temp_array = v }
+	}
+
+	remove_from_temp_array = { array = temp_array value = temp_member }
+	add_to_variable = { yizhengyuan_seat_array^temp_member = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp_seats > 0 }
+		}
+		set_temp_variable = { sign = -1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp_seats < 0 }
+		}
+		set_temp_variable = { sign = 1 }
+		multiply_temp_variable = { temp = -1 }
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = { temp_seats > 0 }
+		}
+		for_loop_effect = {
+			start = 0
+			end = temp_array^num
+			if = {
+				limit = {
+					check_variable = { yizhengyuan_seat_array^temp_array^v > 0 }
+					check_variable = { temp_seats > 0 }
+				}
+				add_to_variable = { yizhengyuan_seat_array^temp_array^v = sign } 
+				subtract_from_temp_variable = { temp_seats = 1 }
+			}
+		}
+	}
+	CHI_remodify_yizhengyuan_i_seat = yes
+	CHI_reload_all_parliament_gui = yes
+}
+
+CHI_modify_zhizhengyuan_seat = {
+
+	subtract_from_temp_variable = { temp_member = 1 }
+	set_temp_variable = { temp = zhizhengyuan_seat_array^temp_member }
+	add_to_temp_variable = { temp = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp > CHI_zhizhengyuan_array^num }
+		}
+		subtract_from_temp_variable = { temp = CHI_zhizhengyuan_array^num }
+		subtract_from_temp_variable = { temp_seats = temp }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp < 0 }
+		}
+		multiply_temp_variable = { temp = -1 }
+		subtract_from_temp_variable = { temp_seats = temp }
+	}
+
+	for_loop_effect = {
+		start = 0
+		end = zhizhengyuan_seat_array^num
+
+		add_to_temp_array = { temp_array = v }
+	}
+
+	remove_from_temp_array = { array = temp_array value = temp_member }
+	add_to_variable = { zhizhengyuan_seat_array^temp_member = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp_seats > 0 }
+		}
+		set_temp_variable = { sign = -1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp_seats < 0 }
+		}
+		set_temp_variable = { sign = 1 }
+		multiply_temp_variable = { temp = -1 }
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = { temp_seats > 0 }
+		}
+		for_loop_effect = {
+			start = 0
+			end = temp_array^num
+			if = {
+				limit = {
+					check_variable = { zhizhengyuan_seat_array^temp_array^v > 0 }
+					check_variable = { temp_seats > 0 }
+				}
+				add_to_variable = { zhizhengyuan_seat_array^temp_array^v = sign } 
+				subtract_from_temp_variable = { temp_seats = 1 }
+			}
+		}
+	}
+	CHI_remodify_zhizhengyuan_i_seat = yes
+	CHI_reload_all_parliament_gui = yes
+}
+
+CHI_modify_yizhengyuan_i_seat = {
+
+	subtract_from_temp_variable = { temp_member = 1 }
+	set_temp_variable = { temp = yizhengyuan_i_seat_array^temp_member }
+	add_to_temp_variable = { temp = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp > yizhengyuan_seat_array^temp_member }
+		}
+		set_variable = { yizhengyuan_i_seat_array^temp_member = yizhengyuan_seat_array^temp_member }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp < 0 }
+		}
+		set_variable = { yizhengyuan_i_seat_array^temp_member = 0 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { temp < 0 }
+				check_variable = { temp > yizhengyuan_seat_array^temp_member }
+			}
+		}
+		add_to_variable = { yizhengyuan_i_seat_array^temp_member = temp_seats }
+	}
+	set_variable = { yizhengyuan_i_seat = 0 }
+	for_each_loop = {
+		array = yizhengyuan_i_seat_array
+
+		add_to_variable = { yizhengyuan_i_seat = yizhengyuan_i_seat_array^i }
+	}
+
+}
+
+CHI_modify_zhizhengyuan_i_seat = {
+
+	subtract_from_temp_variable = { temp_member = 1 }
+	set_temp_variable = { temp = zhizhengyuan_i_seat_array^temp_member }
+	add_to_temp_variable = { temp = temp_seats }
+
+	if = {
+		limit = {
+			check_variable = { temp > zhizhengyuan_seat_array^temp_member }
+		}
+		set_variable = { zhizhengyuan_i_seat_array^temp_member = zhizhengyuan_seat_array^temp_member }
+	}
+	else_if = {
+		limit = {
+			check_variable = { temp < 0 }
+		}
+		set_variable = { zhizhengyuan_i_seat_array^temp_member = 0 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { temp < 0 }
+				check_variable = { temp > zhizhengyuan_seat_array^temp_member }
+			}
+		}
+		add_to_variable = { zhizhengyuan_i_seat_array^temp_member = temp_seats }
+	}
+	set_variable = { zhizhengyuan_i_seat = 0 }
+	for_each_loop = {
+		array = zhizhengyuan_i_seat_array
+
+		add_to_variable = { zhizhengyuan_i_seat = zhizhengyuan_i_seat_array^i }
+	}
+
+}
+
+CHI_remodify_yizhengyuan_i_seat = {
+	for_each_loop = {
+		array = yizhengyuan_seat_array
+		if = {
+			limit = {
+				check_variable = { yizhengyuan_i_seat_array^i > yizhengyuan_seat_array^i }
+			}
+			set_variable = { yizhengyuan_i_seat_array^i = yizhengyuan_seat_array^i }
+		}
+	}
+	set_variable = { yizhengyuan_i_seat = 0 }
+	for_each_loop = {
+		array = yizhengyuan_i_seat_array
+
+		add_to_variable = { yizhengyuan_i_seat = yizhengyuan_i_seat_array^i }
+	}
+}
+
+CHI_remodify_zhizhengyuan_i_seat = {
+	for_each_loop = {
+		array = zhizhengyuan_seat_array
+		if = {
+			limit = {
+				check_variable = { zhizhengyuan_i_seat_array^i > zhizhengyuan_seat_array^i }
+			}
+			set_variable = { zhizhengyuan_i_seat_array^i = zhizhengyuan_seat_array^i }
+		}
+	}
+	set_variable = { zhizhengyuan_i_seat = 0 }
+	for_each_loop = {
+		array = zhizhengyuan_i_seat_array
+
+		add_to_variable = { zhizhengyuan_i_seat = zhizhengyuan_i_seat_array^i }
+	}
+}

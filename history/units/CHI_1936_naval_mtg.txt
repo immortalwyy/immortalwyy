@@ -1,0 +1,175 @@
+﻿units = {
+
+	##### ROCN #####
+	fleet = {
+		name = "北直隶水师"
+		naval_base = 1150
+		task_force = {
+			name = "北直隶中舰队"
+			location = 1150
+			ship = { name = "定远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "同远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "齐远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "平远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "宁远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "惠远" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "武胜" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "共胜" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "义胜" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "公胜" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "诚胜" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+		}
+		task_force = {
+			name = "北直隶左舰队"
+			location = 3900
+			ship = { name = "破阵" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "腾飞" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "祈风" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "鼎珀" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "德勤" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "天鹤" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "万隆" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "清湖" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "闪电" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "如风" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "迅捷" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "神速" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "速腾" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "雷霆" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "灵巧" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "云锋" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "剑宏" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+			ship = { name = "名风" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = CHI  version_name = "Shandian Class"} } }
+		}	
+	}
+
+	fleet = {
+		name = "南直隶舰队"
+		naval_base = 7014 #Shanghai
+		task_force = {
+			name = "南直隶中舰队"
+			location = 7014 #Shanghai
+			ship = { name = "日辰" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "江贞" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "楚诚" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "康泰" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "武源" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Wusheng Class" } } }
+			ship = { name = "宁隆" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "剑重" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+			ship = { name = "天铭" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = {amount = 1 owner = CHI version_name = "Dingyuan Class" } } }
+		}
+		task_force = {
+			name = "南直隶左舰队"
+			location = 7191
+			ship = { name = "Ninghai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = CHI version_name = "Ninghai Class" } } }
+			ship = { name = "Haiqi" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "Hairong" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Haichen" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Haichou" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Zhaohe" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Yingrui" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Dadong" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Zejiang" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Daqing" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Zhehe" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "DaTong" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Zenshui" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Ruihe" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Jianhun" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Weiyuan" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Zhicheng" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Ziqiang" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Hongshi" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "xuanhui" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Tihe" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+		}		
+		task_force = {
+			name = "南直隶右舰队"
+			location = 9974
+			ship = { name = "Ningzhan" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = CHI version_name = "Ninghai Class" } } }
+			ship = { name = "Ningchi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = CHI version_name = "Ninghai Class" } } }
+			ship = { name = "Ningxun" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = CHI version_name = "Ninghai Class" } } }
+			ship = { name = "Ningtai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = CHI version_name = "Ninghai Class" } } }
+			ship = { name = "Haiqie" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "Haiqing" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "Haiyuan" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "Haishi" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Haiqi Class" } } }
+			ship = { name = "Jianan" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Ninghuai" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Tongde" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Dafeng" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Shanshi" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = CHI version_name = "Hairong Class" } } }
+			ship = { name = "Ruihai" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Zhanyang" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Tiezi" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Hefeng" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+			ship = { name = "Zhiqian" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI version_name = "Jianwei Class" } } }
+			ship = { name = "Huanghong" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = CHI  version_name = "Jianwei Class"} } }
+		}
+	}
+}
+
+##### SHIP CONSTRUCTION #####
+instant_effect = {
+#Under Construction in Shanghai
+	add_equipment_production = { 		
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "CHI" 
+			version_name = "Zhenshan Class"
+		}
+		name = "Tianchong" 
+		requested_factories = 1
+		progress = 0.9
+		amount = 1
+	}
+	
+	add_equipment_production = { 		
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "CHI" 
+			version_name = "Zhenshan Class"
+		}
+		name = "Dinghong" 
+		requested_factories = 1
+		progress = 0.9
+		amount = 1
+	}
+	
+	# Light Cruiser 
+	add_equipment_production = { 		# "Pinghai"
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "CHI" 
+			version_name = "Ninghai Class"
+		}
+		name = "Pinghai" 
+		requested_factories = 1
+		progress = 0.8
+		amount = 1
+	}
+	
+	add_equipment_production = { 		
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "CHI" 
+			version_name = "Ninghai Class"
+		}
+		name = "Qianhong" 
+		requested_factories = 1
+		progress = 0.65
+		amount = 1
+	}
+	
+	add_equipment_production = { 		
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "CHI" 
+			version_name = "Ninghai Class"
+		}
+		name = "Mingchu" 
+		requested_factories = 1
+		progress = 0.5
+		amount = 1
+	}
+}

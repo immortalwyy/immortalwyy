@@ -1,0 +1,27 @@
+state={
+	id=891
+	name="STATE_891"
+	provinces={
+		1469 1625 4077 4085 4628 4656 10459 12436 
+	}
+	history={
+		owner = GXC
+		add_core_of = CHI
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			4628 3 
+		}
+		victory_points = {
+			4085 1 
+		}
+
+	}
+	manpower=3267100
+	buildings_max_level_factor=1.000
+	state_category=town
+}

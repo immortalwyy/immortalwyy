@@ -1,0 +1,54 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_nato_unit_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_light_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	
+	
+	spriteType = {
+		name = "GFX_unit_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_light_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_nato_unit_MG_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_heavy_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	
+	
+	spriteType = {
+		name = "GFX_unit_MG_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_heavy_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	
+	spriteType = { name = "GFX_unit_DIV_HQ_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/support_unit_DIV_HQ_bice_icon.dds" noOfFrames = 2 
+	}
+	spriteType = { name = "GFX_unit_HQ_icon_medium_white"									textureFile = "gfx/interface/counters/divisions_small/onmap_unit_HQ_icon.dds" noOfFrames = 2 }
+	
+	spriteType = { name = "GFX_unit_garrison_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_garrison_icon.dds" noOfFrames = 2 
+	}
+	spriteType = { name = "GFX_unit_garrison_icon_medium_white"									textureFile = "gfx/interface/counters/divisions_small/unit_garrison_icon.dds" noOfFrames = 2 }
+	
+	
+	spriteType = { name = "GFX_unit_militia_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_militia_icon.dds" noOfFrames = 2 
+	}
+	spriteType = { name = "GFX_unit_militia_icon_medium_white"									textureFile = "gfx/interface/counters/divisions_small/unit_militia_icon.dds" noOfFrames = 2 }
+	
+	
+	spriteType = { name = "GFX_unit_Shenjicamp_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_Shenjicamp_icon.dds" noOfFrames = 2 
+	}
+	spriteType = { name = "GFX_unit_Shenjicamp_icon_medium_white"									textureFile = "gfx/interface/counters/divisions_small/unit_Shenjicamp_icon.dds" noOfFrames = 2 }
+	
+	spriteType = { name = "GFX_unit_assault_infantry_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_assault_infantry_icon.dds" noOfFrames = 2 
+	}
+	spriteType = { name = "GFX_unit_assault_infantry_icon_medium_white"									textureFile = "gfx/interface/counters/divisions_small/unit_assault_infantry_icon.dds" noOfFrames = 2 }
+}

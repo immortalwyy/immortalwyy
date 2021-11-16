@@ -1,0 +1,12 @@
+integrate_china = {
+	icon = jap_intervene_in_china
+	priority = 99
+	picture = GFX_decision_cat_picture_chinafrist
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_completed_focus = CHI_lj04 
+	}
+}

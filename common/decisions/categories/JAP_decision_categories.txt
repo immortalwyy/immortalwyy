@@ -1,0 +1,78 @@
+与英国的合作 = {
+
+	icon = border_conflicts
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_04
+	}
+}
+
+与大清的合作 = {
+
+	icon = border_conflicts
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_24
+	}
+}
+
+与蒙古的合作 = {
+
+	icon = border_conflicts
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_32
+	}
+}
+
+内阁更替 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_tj001
+	}
+}
+
+大陆作战计划 = {
+
+	icon = jap_conquer_china
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_30
+	}
+}
+
+汲取财阀利益 = {
+
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_completed_focus = JAP_111
+	}
+}
+
+JAP_interservice_rivalry = {
+	allowed = {
+		original_tag = JAP
+		has_dlc = "Waking the Tiger"
+	}
+}

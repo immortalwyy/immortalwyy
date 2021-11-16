@@ -1,0 +1,13 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			CHI = {
+				CHI_all_parliament_gui_initial = yes
+			}
+			every_country = {
+				UMH_calculate_country_special_value = yes
+				activate_mission = global_statistics_decision
+			}
+		}
+	}
+}

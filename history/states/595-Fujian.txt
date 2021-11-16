@@ -1,0 +1,40 @@
+
+state={
+	id=595
+	name="STATE_595"
+	resources={
+		aluminium=11.000
+	}
+
+	history={
+		owner = ZHI
+		add_core_of = CHI
+		add_core_of = ZHI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			4196 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+		victory_points = {
+			4196 5 
+		}
+		victory_points = {
+			10069 1 
+		}
+		
+
+	}
+
+	provinces={
+		1094 1166 4169 4196 10069 
+	}
+	manpower=4755600
+	buildings_max_level_factor=1.000
+	state_category=city
+}

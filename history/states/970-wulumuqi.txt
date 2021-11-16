@@ -1,0 +1,27 @@
+state={
+	id=970
+	name="STATE_970"
+	provinces={
+		1783 4709 4788 10674 10691 
+	}
+	history={
+		owner = SIK
+		add_core_of = SIK
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			4709 5 
+		}
+		victory_points = {
+			1783 1 
+		}
+
+	}
+	manpower=478690
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

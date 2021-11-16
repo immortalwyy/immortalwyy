@@ -1,0 +1,27 @@
+state={
+	id=950
+	name="STATE_950"
+	provinces={
+		800 861 927 6905 9841 11781 11823 11850 
+	}
+	
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			861 1 
+		}
+		victory_points = {
+			11850 1 
+		}
+
+	}
+	manpower=2936416
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

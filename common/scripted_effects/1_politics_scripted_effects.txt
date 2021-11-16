@@ -1,0 +1,102 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+			
+calculate_ruling_party_drift = {
+	if = {
+		limit = {
+			NOT = { check_variable = { modifier@ruling_party_drift = 0 } }
+		}
+
+		if = { limit = { NOT = { has_dynamic_modifier = { #so that not every country updates it daily
+			modifier = ruling_party_modifier } } }
+			add_dynamic_modifier = {
+				modifier = ruling_party_modifier
+			}
+		}
+		
+		set_temp_variable = { ruling_drift = modifier@ruling_party_drift }
+		
+		set_temp_variable = { mod = modifier@ruling_party_drift_factor }
+		add_to_temp_variable = { mod = 1 }
+		
+		multiply_temp_variable = { ruling_drift = mod }
+
+		divide_temp_variable = { ruling_drift = government^num }
+		
+		set_temp_variable = { ruling_mod = 1 }
+		subtract_from_temp_variable = { ruling_mod = modifier@ruling_party_drift_on_government }
+		
+		if = {
+			limit = { 
+				is_in_array = {
+					array = government
+					value = token:fascism
+				}
+			}
+			if = { limit = { has_government = fascism }
+				add_to_temp_variable = { ruling_mod = 1 }
+			}
+			multiply_variable = { fascism_modifier = ruling_mod }	
+			set_variable = { fascism_modifier = ruling_drift }
+		}
+		if = {
+			limit = { 
+				is_in_array = {
+					array = government
+					value = token:communism
+				}
+			}
+			if = { limit = { has_government = communism }
+				add_to_temp_variable = { ruling_mod = 1 }
+			}
+			multiply_variable = { communism_modifier = ruling_mod }	
+			set_variable = { communism_modifier = ruling_drift }
+		}
+		if = {
+			limit = { 
+				is_in_array = {
+					array = government
+					value = token:democratic
+				}
+			}
+			if = { limit = { has_government = democratic}
+				add_to_temp_variable = { ruling_mod = 1 }
+			}
+			multiply_variable = { democratic_modifier = ruling_mod }
+			set_variable = { democratic_modifier = ruling_drift }
+		}
+
+
+		if = {
+			limit = { 
+				is_in_array = {
+					array = government
+					value = token:neutrality
+				}
+			}
+			if = { limit = { has_government = neutrality }
+				add_to_temp_variable = { ruling_mod = 1 }
+			}
+			multiply_variable = { neutrality_modifier = ruling_mod }
+			set_variable = { neutrality_modifier = ruling_drift }
+		}					
+	}
+}
+
+#Other ideas =  

@@ -1,0 +1,616 @@
+focus_tree = {
+	id = shanxi_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SHX
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2000 }
+
+#	focus = {
+#		id = SHX_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+	#接触中央官员
+	focus = {
+		id = SHX_tz01      
+		icon = GFX_goal_ming_neige
+		x = 10
+		y = 0
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	#密谋
+	focus = {
+		id = SHX_tz02
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		prerequisite = { focus = SHX_tz01 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#自诩太子党
+	focus = {
+		id = SHX_tz03
+		icon = GFX_goal_ming_king
+		x = -2
+		y = 2
+		prerequisite = { focus = SHX_tz02 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#暗电
+	focus = {
+		id = SHX_tz04
+		icon = GFX_goal_generic_secret_weapon
+		x = -4
+		y = 3
+		prerequisite = { focus = SHX_tz03 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#开封行动
+	focus = {
+		id = SHX_tz05
+		icon = GFX_goal_war1
+		x = -4
+		y = 4
+		prerequisite = { focus = SHX_tz04 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#联络马步芳
+	focus = {
+		id = SHX_tz06
+		icon = GFX_goal_ming_mabufang
+		x = 2
+		y = 2
+		prerequisite = { focus = SHX_tz02 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#收编北秦军
+	focus = {
+		id = SHX_tz07
+		icon = GFX_focus_generic_manpower
+		x = 4
+		y = 3
+		prerequisite = { focus = SHX_tz06 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#后方基地
+	focus = {
+		id = SHX_tz08
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 4
+		prerequisite = { focus = SHX_tz07 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#征募令
+	focus = {
+		id = SHX_tz09
+		icon = GFX_goal_ming_Bills
+		x = 0
+		y = 3
+		prerequisite = { focus = SHX_tz03 }
+		prerequisite = { focus = SHX_tz06 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#鼓动宣传
+	focus = {
+		id = SHX_tz10
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 4
+		prerequisite = { focus = SHX_tz09 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	#永治靖难军
+	focus = {
+		id = SHX_tz11
+		icon = GFX_goal_ming_diguo_bianchui
+		x = -2
+		y = 5
+		prerequisite = { focus = SHX_tz10 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#秘密训练
+	focus = {
+		id = SHX_tz12
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 1
+		y = 4
+		prerequisite = { focus = SHX_tz09 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#斩龙
+	focus = {
+		id = SHX_tz13
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 5
+		prerequisite = { focus = SHX_tz10 }
+		prerequisite = { focus = SHX_tz12 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#安插死士
+	focus = {
+		id = SHX_tz14
+		icon = GFX_focus_prc_infiltration
+		x = 2
+		y = 5
+		prerequisite = { focus = SHX_tz12 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#代号
+	focus = {
+		id = SHX_tz15
+		icon = GFX_goal_generic_arrests
+		x = -1
+		y = 6
+		prerequisite = { focus = SHX_tz13 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	#宣布拥立皇太子
+	focus = {
+		id = SHX_tz16
+		icon = GFX_goal_ming_taizi
+		x = 1
+		y = 6
+		prerequisite = { focus = SHX_tz13 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#父慈子孝
+	focus = {
+		id = SHX_tz17
+		icon = GFX_goal_ming_emperor
+		x = 0
+		y = 7
+		prerequisite = { focus = SHX_tz15 }
+		prerequisite = { focus = SHX_tz16 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	#建政
+	focus = {
+		id = SHX_tz18
+		icon = GFX_goal_ming_dam_junzhu
+		x = 0
+		y = 8
+		prerequisite = { focus = SHX_tz17 }
+		relative_position_id = SHX_tz01
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}

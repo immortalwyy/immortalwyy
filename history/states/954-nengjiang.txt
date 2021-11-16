@@ -1,0 +1,31 @@
+state={
+	id=954
+	name="STATE_954"
+	provinces={
+		1502 1545 1588 1645 1732 4506 4592 4649 4876 7523 7526 7582 7767 7894 10368 10379 10433 12485 1847 12618
+	}
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			10433 3 
+		}
+		victory_points = {
+			1847 3 
+		}
+
+		victory_points = {
+			4506 5 
+		}
+
+
+	}
+	manpower=2194191
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

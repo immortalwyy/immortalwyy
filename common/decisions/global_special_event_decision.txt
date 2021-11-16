@@ -1,0 +1,37 @@
+global_special_event_decision_categories = {
+
+	
+	global_statistics_decision = {
+
+		icon = generic_independence
+
+		allowed = {
+			always = yes
+		}
+		
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 7
+
+		activation = {
+			always = no
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			hidden_effect = {
+				activate_mission = global_statistics_decision
+				UMH_calculate_country_special_value = yes
+				UMH_calculate_country_special_effect = yes
+			}
+		}
+	}
+	
+}

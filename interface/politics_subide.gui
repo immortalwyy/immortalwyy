@@ -1,0 +1,25 @@
+guiTypes = {
+	containerWindowType = {
+		name = "politics_subide"
+		position = { x=10 y=400 }
+		size = { width = 200 height = 200 }
+		
+		iconType ={
+			name ="pol_faction_group_icon"
+			spriteType = "GFX_ideology_socialism_group"
+			position = { x= 8 y = -89 } #19*305
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		}
+
+		instantTextboxType = {
+			name = "ideology_group"
+			position = { x = 120 y = 0 } #9*-1
+			font = "hoi_24header"
+			text = "[GetsIdeologyName]"
+			maxWidth = 155
+			maxHeight = 20
+		}
+
+	}
+}

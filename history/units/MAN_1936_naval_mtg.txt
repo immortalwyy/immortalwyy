@@ -1,0 +1,50 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "大清水师"
+		naval_base = 9604
+		task_force = {				
+			name = "禁卫舰队"
+			location = 9604
+			ship = { name = "济远" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "经远" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "靖远" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "镇西" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "镇南" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "镇北" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = {amount = 1 owner = MAN version_name = "shenglong Class" } } }
+			ship = { name = "甲一" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲二" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲三" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲四" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲五" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲六" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲七" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "甲八" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "广甲" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "广乙" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "广丙" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "广丁" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "广末" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "泉镇" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "书录" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "刊贺" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+			ship = { name = "中融" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = MAN  version_name = "jiefeng Class"} } }
+		}
+	}
+}
+
+##### SHIP CONSTRUCTION #####
+instant_effect = {
+	add_equipment_production = { 		
+		equipment = {
+			type = ship_hull_light_1
+			creator = "MAN" 
+			version_name = "jiefeng Class"
+		}
+		name = "甲九" 
+		requested_factories = 1
+		progress = 0.75
+		amount = 1
+	}
+}

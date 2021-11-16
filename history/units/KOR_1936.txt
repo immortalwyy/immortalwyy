@@ -1,0 +1,121 @@
+﻿division_template = {
+	name = "旧军"				
+	division_names_group = KOR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "宫廷禁军"			
+	division_names_group = KOR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+### OOB ###
+units = {
+	division = {
+		name = "宫廷禁卫左营"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "宫廷禁卫前营"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "宫廷禁卫后营"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "宫廷禁卫右营"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "宫廷禁卫中军"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "国王卫队"
+		location = 7125
+		division_template = "宫廷禁军"
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+	}
+	
+	division = {
+		name = "平壤防卫营"
+		location = 4052
+		division_template = "旧军"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "釜山防卫营"
+		location = 4056
+		division_template = "旧军"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "平壤卫所"
+		location = 4052
+		division_template = "旧军"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "釜山卫所"
+		location = 4056
+		division_template = "旧军"
+		start_equipment_factor = 0.1
+		start_experience_factor = 0.1
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KOR"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}
+}

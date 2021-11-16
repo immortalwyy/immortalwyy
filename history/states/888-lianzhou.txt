@@ -1,0 +1,23 @@
+state={
+	id=888
+	name="STATE_888"
+	provinces={
+		1131 7039 
+	}
+	history={
+		owner = GXC
+		add_core_of = CHI
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			1131 3
+		}
+
+	}
+	manpower=3298700
+	buildings_max_level_factor=1.000
+	state_category=town
+}

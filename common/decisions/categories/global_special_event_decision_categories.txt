@@ -1,0 +1,10 @@
+global_special_event_decision_categories = {
+
+	icon = border_conflicts
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+	}
+}

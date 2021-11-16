@@ -1,0 +1,22 @@
+guiTypes = {
+	containerWindowType = {
+		name = "politics_subide_dip"
+		position = { x=0 y=0 }
+		size = { width = 200 height = 200 }
+		
+		iconType = {
+			name = "leader_portrait1"
+			position = { x = 144 y = 119 }
+			spriteType = "GFX_leader_unknown"
+			scale = 0.74
+		}
+		
+		iconType = {
+			name = "diplo_leader_frame1"
+			position = { x = 135 y = 109 }
+			spriteType = "GFX_diplo_leader_frame"
+			alwaystransparent = yes
+		}
+
+	}
+}
